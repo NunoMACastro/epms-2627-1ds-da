@@ -1,0 +1,25 @@
+# O Git ignora os caminhos listados aqui. Ficheiros gerados pela máquina,
+# configuração pessoal do editor e segredos não pertencem ao histórico.
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuração pessoal de editores
+.vscode/
+.idea/
+*.swp
+
+# Cache criada ao executar os scripts dos laboratórios
+__pycache__/
+*.py[cod]
+
+# Segredos: nunca versionar credenciais; versionar apenas o exemplo
+.env
+.env.*
+!.env.example
+
+# Dependências e resultados de build, se um projeto vier a usá-los
+node_modules/
+dist/
+build/
