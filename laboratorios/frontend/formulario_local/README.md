@@ -6,7 +6,7 @@ Competências trabalhadas: formulários, validação no cliente, DOM, eventos, a
 
 O HTML define o formulário inicial; o browser constrói o DOM. O JavaScript mantém um array de tarefas e atualiza a interface quando recebe eventos. O CSS controla apresentação e adaptação à largura. A entrada de texto é inserida com `textContent`, para não executar HTML fornecido pelo utilizador. A validação no cliente ajuda a utilização; não substitui validação num futuro servidor.
 
-Abrir [index.html](index.html) num browser moderno. Não exige Node, npm, conta, rede ou servidor. Alternativa para praticar uma origem HTTP local: executar `python3 -m http.server 8000 --directory labs/frontend/formulario-local` na raiz deste repositório e abrir `http://localhost:8000`. Parar com Ctrl+C.
+Abrir [index.html](index.html) num browser moderno. Não exige Node, npm, conta, rede ou servidor. Alternativa para praticar uma origem HTTP local: executar `python3 -m http.server 8000 --directory laboratorios/frontend/formulario_local` na raiz deste repositório e abrir `http://localhost:8000`. Parar com Ctrl+C.
 
 1. Ler o HTML e identificar labels, constraints, secções e a mensagem de estado.
 2. Inspecionar o DOM em Elements antes de submeter o formulário.

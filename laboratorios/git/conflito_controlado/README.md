@@ -7,7 +7,7 @@ Um merge combina alterações desde um antepassado comum. Quando duas branches a
 Executar, a partir da raiz:
 
 ```sh
-python3 labs/git/conflito-controlado/run.py
+python3 laboratorios/git/conflito_controlado/run.py
 ```
 
 O script cria um repositório temporário com `main`, cria `equipa-a` e `equipa-b` a partir da mesma base, altera a mesma linha e tenta juntar A em B. Verifica o conflito, mostra os marcadores, escolhe uma versão combinada e confirma um commit com dois pais e working tree limpa. A pasta temporária é removida no fim. Usar `--keep` para a preservar e inspecionar.
