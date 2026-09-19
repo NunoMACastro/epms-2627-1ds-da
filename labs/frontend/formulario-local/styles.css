@@ -1,0 +1,30 @@
+/* A grelha adapta-se ao conteúdo; foco e contraste fazem parte do exemplo. */
+:root {
+  font-family: system-ui, sans-serif;
+  color: #17243b;
+  background: #f4f7fb;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+
+body { max-width: 68rem; margin: 0 auto; padding: 1.5rem; }
+main { display: grid; gap: 1.5rem; }
+section { background: #fff; padding: 1.5rem; border: 1px solid #8a98ab; border-radius: 0.5rem; min-width: 0; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+form { display: grid; gap: 0.75rem; }
+label { font-weight: 700; }
+input, select, button { font: inherit; min-height: 2.75rem; border-radius: 0.25rem; }
+input, select { width: 100%; padding: 0.5rem; border: 1px solid #59697e; }
+button { background: #174ea6; color: #fff; border: 2px solid #174ea6; padding: 0.5rem 0.75rem; cursor: pointer; }
+button:hover { background: #103971; }
+button:disabled { background: #dee4ec; border-color: #59697e; color: #374359; cursor: default; }
+:focus-visible { outline: 3px solid #8a3600; outline-offset: 3px; }
+[aria-invalid="true"] { border: 2px solid #a21c28; }
+.error { color: #a21c28; font-weight: 700; }
+form p { margin: 0; }
+li { overflow-wrap: anywhere; margin-block: 0.5rem; }
+
+@media (min-width: 48rem) {
+  main { grid-template-columns: 1fr 1fr; }
+}

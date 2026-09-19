@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plano de estudo local</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>Desenvolvimento de Aplicações · Laboratório frontend</p>
+      <h1>Plano de estudo local</h1>
+      <p>Acrescenta uma tarefa. Os dados ficam apenas em memória até atualizares a página.</p>
+    </header>
+    <main>
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Nova tarefa</h2>
+        <form id="task-form">
+          <label for="task-title">O que vais praticar?</label>
+          <input id="task-title" name="title" type="text" required maxlength="80"
+                 aria-describedby="title-help title-error">
+          <p id="title-help">Escreve uma ação concreta, até 80 caracteres.</p>
+          <p id="title-error" class="error" aria-live="polite"></p>
+          <label for="task-area">Área</label>
+          <select id="task-area" name="area">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Git">Git</option>
+          </select>
+          <button type="submit">Adicionar tarefa</button>
+        </form>
+        <noscript>Este exercício necessita de JavaScript para adicionar tarefas localmente.</noscript>
+      </section>
+      <section aria-labelledby="list-heading">
+        <h2 id="list-heading">Tarefas planeadas</h2>
+        <p id="summary" role="status">Ainda não adicionaste tarefas.</p>
+        <ul id="task-list"></ul>
+        <button id="clear-tasks" type="button" disabled>Limpar tarefas</button>
+      </section>
+    </main>
+    <footer><p>Exemplo pedagógico: HTML + CSS + JavaScript nativo.</p></footer>
+  </body>
+</html>
