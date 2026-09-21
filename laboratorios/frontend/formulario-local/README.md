@@ -1,3 +1,5 @@
+![Cabeçalho](../../../imagens/cabecalho.png)
+
 # Formulário local, eventos e DOM
 
 UC02833 · exemplo executável sobre formulários, DOM e eventos.
@@ -6,7 +8,7 @@ Competências trabalhadas: formulários, validação no cliente, DOM, eventos, a
 
 O HTML define o formulário inicial; o browser constrói o DOM. O JavaScript mantém um array de tarefas e atualiza a interface quando recebe eventos. O CSS controla apresentação e adaptação à largura. A entrada de texto é inserida com `textContent`, para não executar HTML fornecido pelo utilizador. A validação no cliente ajuda a utilização; não substitui validação num futuro servidor.
 
-Abrir [index.html](index.html) num browser moderno. Não exige Node, npm, conta, rede ou servidor. Alternativa para praticar uma origem HTTP local: executar `python3 -m http.server 8000 --directory laboratorios/frontend/formulario_local` na raiz deste repositório e abrir `http://localhost:8000`. Parar com Ctrl+C.
+Abrir [index.html](index.html) num browser moderno. Não exige Node, npm, conta, rede ou servidor. Alternativa para praticar uma origem HTTP local: executar `python3 -m http.server 8000 --directory laboratorios/frontend/formulario-local` na raiz deste repositório e abrir `http://localhost:8000`. Parar com Ctrl+C.
 
 1. Ler o HTML e identificar labels, constraints, secções e a mensagem de estado.
 2. Inspecionar o DOM em Elements antes de submeter o formulário.
@@ -20,3 +22,5 @@ Casos verificáveis: título vazio usa a validação nativa; título com espaço
 Exercício progressivo: primeiro alterar texto e áreas; depois explicar cada handler; finalmente acrescentar um contador por área, se arrays/condições estiverem disponíveis. Não introduzir persistência nem backend neste lab.
 
 Debug: se nada acontecer, abrir Console e confirmar o caminho de `app.js`; se a lista não atualizar, confirmar o breakpoint em `renderTasks`; se a página navegar, observar `preventDefault`. Recuperação: consultar `git diff` e repor apenas a alteração do exercício depois de guardar trabalho útil. Artefacto: pequena alteração explicada, checklist de testes e commit lógico. Avaliação formativa: o aluno explica a diferença entre array, HTML e DOM, demonstra um caso inválido e justifica uma correção.
+
+![Rodapé](../../../imagens/rodape.png)

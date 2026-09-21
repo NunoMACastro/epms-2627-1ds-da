@@ -22,7 +22,7 @@ function renderTasks() {
   taskList.replaceChildren();
   for (const task of tasks) {
     const item = document.createElement("li");
-    item.textContent = `${task.title} — ${task.area}`;
+    item.textContent = `${task.title} (${task.area})`;
     taskList.append(item);
   }
   summary.textContent = tasks.length === 0

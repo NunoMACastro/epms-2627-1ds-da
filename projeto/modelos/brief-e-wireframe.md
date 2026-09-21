@@ -1,3 +1,5 @@
+![Cabeçalho](../../imagens/cabecalho.png)
+
 # {{titulo}}
 
 UC: {{uc}} · Competências: {{competencias}} · Bloco: {{bloco}} · Duração: {{duracao}}
@@ -27,3 +29,5 @@ Percurso por teclado e foco: {{acessibilidade}}
 {{criterios}}
 Verificação com um colega antes de implementar: {{verificacao}}
 Artefacto de planeamento e versão Git: {{artefacto}}
+
+![Rodapé](../../imagens/rodape.png)

@@ -1,3 +1,5 @@
+![Cabeçalho](../../imagens/cabecalho.png)
+
 # {{titulo}}
 
 UC: {{uc}} · Competências: {{competencias}} · Bloco: {{bloco}} · Duração: {{duracao}}
@@ -35,3 +37,5 @@ Rubrica descritiva: {{rubrica}}
 Código, README, plano, registo de testes, histórico e URL quando publicada: {{artefacto}}
 Estado real de publicação, limitações e pendentes: {{estado_entrega}}
 Competências demonstradas, diagnósticos em falta e handoff para o 11.º: {{handoff}}
+
+![Rodapé](../../imagens/rodape.png)

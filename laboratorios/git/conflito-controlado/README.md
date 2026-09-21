@@ -1,3 +1,5 @@
+![Cabeçalho](../../../imagens/cabecalho.png)
+
 # Duas branches, a mesma linha, um conflito
 
 UC00617 · branches, merge e conflitos. Pré-requisitos: repositório, staging, commits e branches. Git deve estar disponível; não é necessária conta GitHub. O exemplo usa identidade fictícia, não configura a tua identidade global e não contacta serviços externos.
@@ -7,7 +9,7 @@ Um merge combina alterações desde um antepassado comum. Quando duas branches a
 Executar, a partir da raiz:
 
 ```sh
-python3 laboratorios/git/conflito_controlado/run.py
+python3 laboratorios/git/conflito-controlado/run.py
 ```
 
 O script cria um repositório temporário com `main`, cria `equipa-a` e `equipa-b` a partir da mesma base, altera a mesma linha e tenta juntar A em B. Verifica o conflito, mostra os marcadores, escolhe uma versão combinada e confirma um commit com dois pais e working tree limpa. A pasta temporária é removida no fim. Usar `--keep` para a preservar e inspecionar.
@@ -28,3 +30,5 @@ O nome final é `Título: catálogo de recursos da turma`. Verificar `git log --
 Recuperação durante o conflito: `git merge --abort` regressa ao estado anterior à tentativa de merge, neste repositório de exercício inicialmente limpo. Se um aluno alterou outros ficheiros, guardar primeiro esse trabalho e pedir apoio. Se não houver conflito, confirmar que ambas as branches partiram do commit inicial e modificaram a mesma linha.
 
 Evidência: ficheiro com os marcadores antes da resolução, justificação da escolha, conteúdo final, histórico e estado limpo. Exercício seguinte: criar alterações em linhas diferentes e explicar por que motivo o merge automático pode funcionar. Avaliação formativa: explicar os dois pais, distinguir commit de merge de simples cópia e demonstrar recuperação.
+
+![Rodapé](../../../imagens/rodape.png)
