@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Imagem provisória do laboratório de HTML e semântica.
+       Serve só enquanto não tens uma imagem do tema do teu site. -->
+  <rect width="400" height="300" fill="#e3e6ea"/>
+  <rect x="10" y="10" width="380" height="280" fill="none" stroke="#5b6573" stroke-width="4" stroke-dasharray="12 8"/>
+  <polygon points="90,220 160,130 220,200 260,160 320,220" fill="#9aa3ae"/>
+  <circle cx="290" cy="95" r="22" fill="#9aa3ae"/>
+  <text x="200" y="262" fill="#2f3640" font-family="sans-serif" font-size="22" text-anchor="middle">Imagem provisória</text>
+</svg>

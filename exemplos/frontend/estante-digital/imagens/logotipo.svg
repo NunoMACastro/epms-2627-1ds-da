@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- Logótipo da Estante Digital: quatro livros em cima de uma prateleira.
+       Desenho simples, feito para este exemplo. -->
+  <rect x="2" y="40" width="44" height="4" fill="#5b3a1e"/>
+  <rect x="6" y="12" width="8" height="28" fill="#1f5fa8"/>
+  <rect x="16" y="8" width="8" height="32" fill="#b03a2e"/>
+  <rect x="26" y="14" width="8" height="26" fill="#2e7d4f"/>
+  <rect x="35" y="19" width="7" height="21" fill="#c98a00" transform="rotate(10 38.5 29.5)"/>
+</svg>

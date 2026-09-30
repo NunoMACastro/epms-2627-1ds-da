@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- Página inicial da Estante Digital, o site de exemplo dos guias de
+     Desenvolvimento de Aplicações. Todo o conteúdo é fictício.
+     Esta página ainda não tem CSS: o aspeto que vês no browser é o aspeto
+     por omissão, e a ordem de leitura é a ordem em que o HTML está escrito. -->
+<html lang="pt-PT">
+  <head>
+    <!-- A primeira linha do head diz ao browser como ler os acentos. -->
+    <meta charset="utf-8">
+    <!-- Sem esta linha, um telemóvel mostra a página como se fosse um ecrã largo e encolhe-a. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- O título aparece no separador do browser: primeiro a página, depois o site. -->
+    <title>Início | Estante Digital</title>
+  </head>
+  <body>
+    <!-- Cabeçalho do site: repete-se igual em todas as páginas. -->
+    <header>
+      <p>
+        <!-- alt vazio porque o nome do site está escrito logo a seguir:
+             descrever o desenho só repetia a mesma informação. -->
+        <img src="imagens/logotipo.svg" alt="" width="48" height="48">
+        Estante Digital
+      </p>
+      <!-- A navegação principal é uma lista de ligações. -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- O conteúdo principal: só existe um main por página. -->
+    <main>
+      <h1>Recursos de estudo recomendados pela turma</h1>
+      <p>
+        A Estante Digital reúne livros, vídeos e sítios que ajudaram alunos
+        de Desenvolvimento de Aplicações a estudar. Cada recurso tem uma
+        descrição curta. Os que já têm página própria têm uma ligação para ela.
+      </p>
+      <p>
+        Todos os recursos deste site são fictícios: foram inventados para
+        servir de exemplo nos guias da disciplina.
+      </p>
+
+      <!-- Uma section por tipo de recurso. Cada section começa pelo seu título. -->
+      <section>
+        <h2>Livros</h2>
+        <ul>
+          <li>
+            <a href="primeiros-passos-na-web.html">Primeiros passos na Web</a>:
+            livro para quem nunca escreveu uma página, disponível na biblioteca da escola.
+          </li>
+          <li>
+            Pequeno dicionário de HTML: consulta rápida das etiquetas mais usadas,
+            com um exemplo curto para cada uma.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Vídeos</h2>
+        <ul>
+          <li>
+            Como uma página chega ao teu ecrã: vídeo de 12 minutos sobre o que
+            acontece entre escreveres um endereço e veres a página.
+          </li>
+          <li>
+            Títulos, listas e ligações em 10 minutos: demonstração passo a passo,
+            boa para rever antes de um teste.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Sítios e aplicações</h2>
+        <ul>
+          <li>
+            Laboratório de Etiquetas: sítio onde se escreve HTML de um lado
+            e se vê o resultado do outro.
+          </li>
+          <li>
+            Cartões de estudo da Web: aplicação de perguntas e respostas
+            para treinar o vocabulário da disciplina.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Rodapé do site: também se repete igual em todas as páginas. -->
+    <footer>
+      <p>
+        Estante Digital, site de exemplo dos materiais de Desenvolvimento de
+        Aplicações do 10.º ano. Conteúdo fictício.
+      </p>
+    </footer>
+  </body>
+</html>

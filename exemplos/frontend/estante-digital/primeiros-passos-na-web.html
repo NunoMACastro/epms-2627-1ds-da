@@ -1,0 +1,145 @@
+<!doctype html>
+<!-- Página de um recurso da Estante Digital. Tem o mesmo esqueleto,
+     o mesmo cabeçalho e o mesmo rodapé da página inicial: só o main muda.
+     Todo o conteúdo é fictício, incluindo o livro e o horário. -->
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primeiros passos na Web | Estante Digital</title>
+  </head>
+  <body>
+    <header>
+      <p>
+        <img src="imagens/logotipo.svg" alt="" width="48" height="48">
+        Estante Digital
+      </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- A ficha do livro faz sentido sozinha, mesmo fora deste site:
+           por isso é um article. -->
+      <article>
+        <h1>Primeiros passos na Web</h1>
+        <p>
+          Um livro curto, com capítulos de poucas páginas, para quem quer
+          perceber como se faz uma página web sem saber nada de programação.
+        </p>
+
+        <!-- A imagem e a sua legenda formam uma unidade: figure e figcaption.
+             O alt descreve o que a imagem mostra; a legenda diz de onde ela vem. -->
+        <figure>
+          <img src="imagens/capa-primeiros-passos-na-web.svg"
+               alt="Capa azul com o título Primeiros passos na Web em letras brancas e o desenho de um globo terrestre."
+               width="240" height="320">
+          <figcaption>
+            Capa da edição que está na biblioteca da escola.
+            Livro fictício, criado para este exemplo.
+          </figcaption>
+        </figure>
+
+        <section>
+          <h2>Para quem é</h2>
+          <p>
+            Para quem nunca escreveu uma página web e quer começar do zero.
+            Não é preciso saber programar, nem instalar nada além de um
+            editor de texto e de um browser.
+          </p>
+        </section>
+
+        <section>
+          <h2>O que vais aprender</h2>
+          <!-- A ordem destes itens não importa: lista não ordenada. -->
+          <ul>
+            <li>O que fazem o browser e o servidor quando abres uma página.</li>
+            <li>Como se escreve a estrutura de uma página com HTML.</li>
+            <li>Como se ligam várias páginas umas às outras.</li>
+            <li>Como se descreve uma imagem a quem não a pode ver.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Como o usar</h2>
+          <!-- Aqui a ordem importa: são passos. Por isso é uma lista ordenada. -->
+          <ol>
+            <li>Lê os capítulos pela ordem, porque cada um usa o anterior.</li>
+            <li>No fim de cada capítulo, faz o exercício no computador antes de avançar.</li>
+            <li>Anota as dúvidas e leva-as à aula seguinte.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Onde o encontrar</h2>
+          <p>
+            Está na biblioteca da escola, na estante de Informática,
+            e pode ser requisitado por uma semana.
+          </p>
+          <!-- Um horário é informação em linhas e colunas: é uma tabela de dados.
+               O caption dá-lhe um nome; os th dizem o que é cada coluna e cada linha. -->
+          <table>
+            <caption>Horário da biblioteca da escola (fictício)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Abre</th>
+                <th scope="col">Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Segunda-feira</th>
+                <td>08:30</td>
+                <td>17:30</td>
+              </tr>
+              <tr>
+                <th scope="row">Terça-feira</th>
+                <td>08:30</td>
+                <td>17:30</td>
+              </tr>
+              <tr>
+                <th scope="row">Quarta-feira</th>
+                <td>08:30</td>
+                <td>13:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Quinta-feira</th>
+                <td>08:30</td>
+                <td>17:30</td>
+              </tr>
+              <tr>
+                <th scope="row">Sexta-feira</th>
+                <td>08:30</td>
+                <td>16:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+
+      <!-- Informação ao lado do conteúdo principal, que se pode saltar
+           sem perder nada do essencial: aside. -->
+      <aside>
+        <h2>Dica de quem já o leu</h2>
+        <p>
+          Não saltes o capítulo sobre ligações: é o que mais vais usar
+          quando fizeres o teu próprio site.
+        </p>
+      </aside>
+
+      <p><a href="index.html">Voltar à lista de recursos</a></p>
+    </main>
+
+    <footer>
+      <p>
+        Estante Digital, site de exemplo dos materiais de Desenvolvimento de
+        Aplicações do 10.º ano. Conteúdo fictício.
+      </p>
+    </footer>
+  </body>
+</html>
