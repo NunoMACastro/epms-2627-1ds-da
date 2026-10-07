@@ -11,8 +11,8 @@ Requisitos: UC02833.K01, UC02833.K02, UC02833.A02, UC02833.A03
 | Identificação | Valor |
 | --- | --- |
 | Material | Ficha do bloco F01, acompanha o [guia](01-web-e-planeamento.md) e o [laboratório](01-web-e-planeamento-laboratorio.md) |
-| Tempo total | 45 minutos dos 240 do bloco, nos exercícios 1 a 6. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 45 minutos |
-| Entrega | As respostas escritas dos exercícios 1 a 4 e 6, e o mapa do exercício 5, desenhado à mão; o desafio e o exercício de "Para ires mais longe", se os fizeres |
+| Tempo total | 50 minutos dos 240 do bloco, nos exercícios 1 a 6. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 50 minutos |
+| Entrega | As respostas escritas dos exercícios 1 a 6, com o mapa do exercício 5 desenhado à mão; o desafio e o exercício de "Para ires mais longe", se os fizeres |
 
 ## Objetivos e conceitos necessários
 
@@ -33,16 +33,16 @@ Resolve os exercícios pela ordem. Cada exercício treina uma só coisa.
 | 3 | Partir um endereço nas suas partes | 10 min |
 | 4 | Ler os códigos de resposta | 5 min |
 | 5 | Desenhar o mapa de um site a partir do seu conteúdo | 10 min |
-| 6 | Encontrar ligações sem destino entre um mapa e um wireframe | 10 min |
-| Total da parte obrigatória | Exercícios 1 a 6 | 45 min |
+| 6 | Encontrar ligações sem destino entre um mapa e um wireframe | 15 min |
+| Total da parte obrigatória | Exercícios 1 a 6 | 50 min |
 | Desafio opcional | Passar um wireframe estreito a largo | 20 min |
-| Para ires mais longe | Opcional: um endereço com parâmetros | fora dos 45 min |
+| Para ires mais longe | Opcional: um endereço com parâmetros | fora dos 50 min |
 
 ## Exercício 1: Internet ou Web? (5 min)
 
 A matéria está na secção "A Internet e a Web não são a mesma coisa" do guia.
 
-Para cada situação, diz se a pessoa está a usar a Web, ou se está a usar a Internet mas não a Web.
+Para cada situação, diz se a pessoa está a usar a Web, ou se está a usar a Internet mas não a Web. Justifica cada resposta numa frase curta.
 
 **a)** A Rita abre o site da escola no browser para ver a ementa da cantina.
 
@@ -56,7 +56,7 @@ Para cada situação, diz se a pessoa está a usar a Web, ou se está a usar a I
 
 A matéria está na secção "Três linguagens, três trabalhos" do guia.
 
-Para cada mudança pedida num site, diz se é trabalho do HTML, do CSS ou do JavaScript.
+Para cada mudança pedida num site, diz se é trabalho do HTML, do CSS ou do JavaScript. Justifica cada resposta numa frase curta.
 
 **a)** Os títulos das páginas passam a ser azuis e maiores.
 
@@ -66,7 +66,7 @@ Para cada mudança pedida num site, diz se é trabalho do HTML, do CSS ou do Jav
 
 **d)** Esta linha de código:
 
-```css
+```text
 nav { background: #1f4e8c; }
 ```
 
@@ -83,7 +83,7 @@ https://www.example.com/clube/torneios/outono.html#inscricoes
 **b)** Neste segundo endereço, diz qual é o protocolo e onde está o ficheiro:
 
 ```text
-file:///C:/Users/aluno/Documentos/clube-de-xadrez/index.html
+file:///C:/Users/aluno/Documents/clube-de-xadrez/index.html
 ```
 
 **c)** Se enviares o endereço da alínea b) a um colega, por mensagem, e ele o abrir no computador dele, vê a tua página? Explica numa frase.
@@ -92,7 +92,7 @@ file:///C:/Users/aluno/Documentos/clube-de-xadrez/index.html
 
 A matéria está na secção "O que se diz num pedido e numa resposta" do guia.
 
-Diz que código de resposta espera o browser em cada situação, e a família a que pertence.
+Diz que código de resposta recebe o browser em cada situação e a família a que pertence. Justifica cada resposta numa frase curta.
 
 **a)** A página pedida existe, e o servidor envia-a sem problemas.
 
@@ -107,14 +107,14 @@ A matéria está na secção "O mapa do site" do guia e nos passos 3 a 5 do exem
 A Carolina quer fazer o site "Receitas da Avó", com este conteúdo, já agrupado:
 
 - uma apresentação do site, a dizer que as receitas são da família e para quem é;
-- três receitas de sopas e quatro receitas de doces, cada uma com os ingredientes e os passos;
+- 36 receitas, cada uma com os ingredientes e os passos: 12 sopas, 14 pratos principais e 10 doces;
 - uma página com a história do caderno de receitas da família, sem dados pessoais.
 
-**a)** Desenha o mapa do site, com uma caixa por página e linhas para as ligações. Há mais do que um mapa certo; escolhe um e segue as regras do guia.
+**a)** Desenha o mapa do site, com uma caixa por página e linhas para as ligações. Há mais do que um mapa certo; escolhe um e segue as regras do guia. Justifica numa frase onde puseste a lista das receitas.
 
 **b)** Diz que páginas vão para o menu, que se repete em todas as páginas, e justifica numa frase porque é que as outras ficam de fora.
 
-## Exercício 6: O mapa e o wireframe concordam? (10 min)
+## Exercício 6: O mapa e o wireframe concordam? (15 min)
 
 A matéria está na secção "O mapa e os wireframes têm de concordar" do guia e no passo 9 do exemplo explicado.
 
@@ -167,9 +167,9 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 4.** Relê a tabela das quatro famílias de códigos. O primeiro algarismo diz de quem é o problema, se houver problema.
 
-**Exercício 5.** Começa pela página inicial, no topo. Depois pergunta se cada receita merece uma página só dela, ou se todas cabem numa página. Para o menu, relê a nota sobre as páginas dos recursos da Estante Digital, no fim da secção "O mapa do site".
+**Exercício 5.** Começa pela página inicial, no topo. Depois pergunta se cada receita merece uma página só dela, ou se todas cabem numa página. Para a lista, relê o fim do passo 4 do exemplo explicado: a Estante Digital tem seis recursos, e aqui há muitos mais. Para o menu, relê a nota sobre as páginas dos recursos da Estante Digital, no fim da secção "O mapa do site".
 
-**Exercício 6.** Faz uma linha por cada palavra marcada como ligação nas anotações, incluindo as do menu e a do rodapé. Para cada uma, procura no mapa uma caixa com o mesmo nome. Um dos problemas não é uma página que falta: é um nome.
+**Exercício 6.** Faz uma linha por cada palavra marcada como ligação nas anotações, incluindo as do menu e a do rodapé. Para cada uma, procura no mapa uma caixa com o mesmo nome. Compara também os nomes, letra a letra, e não só se a página existe.
 
 ## Desafio opcional (20 min)
 
@@ -177,7 +177,7 @@ Desenha o wireframe largo da página inicial do clube de teatro do exercício 6,
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 45 minutos da ficha.
+Esta secção é opcional e fica fora dos 50 minutos da ficha.
 
 ### Mais longe 1: Um endereço com parâmetros (10 min)
 
@@ -195,10 +195,10 @@ https://receitas.example.com/pesquisa.html?termo=sopa&pagina=2
 
 ## Critérios de conclusão
 
-- [ ] Nos exercícios 1 e 2, justifiquei cada resposta com a pergunta do apoio, e não por palpite.
+- [ ] Nos exercícios 1, 2 e 4, justifiquei cada resposta numa frase, e não por palpite.
 - [ ] No exercício 3, separei as partes do endereço e expliquei porque é que um endereço `file://` não funciona noutro computador.
 - [ ] No exercício 4, escrevi o código e a família de cada situação.
-- [ ] No exercício 5, o meu mapa tem a página inicial no topo, todas as páginas ligadas a ela, e um menu justificado.
+- [ ] No exercício 5, o meu mapa tem a página inicial no topo, todas as páginas ligadas a ela, a lista das receitas num sítio justificado, e um menu justificado.
 - [ ] No exercício 6, verifiquei todas as ligações do wireframe, encontrei os três problemas e propus uma correção para cada um.
 
 ## Autoavaliação breve

@@ -12,7 +12,7 @@ Requisitos: UC02833.K03, UC02833.K04, UC02833.K09, UC02833.A04, UC02833.A05, UC0
 | --- | --- |
 | Material | Ficha do bloco F02, acompanha o [guia](02-html-e-semantica.md) e o [laboratório](02-html-e-semantica-laboratorio.md) |
 | Tempo total | 80 minutos dos 300 do bloco, nos exercícios 1 a 7. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 80 minutos |
-| Entrega | As respostas escritas dos sete exercícios, no caderno ou num ficheiro, com o HTML dos exercícios 6 e 7 escrito à mão ou num ficheiro `.html`; o desafio e os exercícios de "Para ires mais longe", se os fizeres |
+| Entrega | As respostas escritas dos sete exercícios, no caderno ou num ficheiro, com o HTML do exercício 7 escrito à mão ou num ficheiro `.html`; o desafio e os exercícios de "Para ires mais longe", se os fizeres |
 
 ## Objetivos e conceitos necessários
 
@@ -34,10 +34,10 @@ Resolve os exercícios pela ordem. Cada exercício treina uma só coisa, e em ca
 | 4 | Escrever caminhos relativos, incluindo para a pasta de cima | 15 min |
 | 5 | Escrever o texto alternativo conforme o contexto | 10 min |
 | 6 | Escolher os elementos semânticos das zonas de uma página | 15 min |
-| 7 | Construir uma tabela de dados e distingui-la de uma tabela de arrumação | 15 min |
+| 7 | Construir uma tabela de dados | 15 min |
 | Total da parte obrigatória | Exercícios 1 a 7 | 80 min |
 | Desafio opcional | Acrescentar uma terceira página ao teu site | 30 min |
-| Para ires mais longe | Opcional: erros que o browser esconde | fora dos 80 min |
+| Para ires mais longe | Opcional: erros que o browser esconde e uma tabela usada para arrumar a página | fora dos 80 min |
 
 ## Exercício 1: Elementos, etiquetas e atributos (10 min)
 
@@ -117,15 +117,13 @@ Escreve o valor do `href` ou do `src` em cada caso.
 
 **a)** No `index.html`, uma ligação para a página dos concertos.
 
-**b)** No `concertos.html`, a imagem do palco.
+**b)** No `index.html`, uma ligação para a página da vocalista.
 
-**c)** No `index.html`, uma ligação para a página da vocalista.
+**c)** No `musicos/baterista.html`, uma ligação de volta para a página inicial.
 
-**d)** No `musicos/baterista.html`, uma ligação de volta para a página inicial.
+**d)** No `musicos/baterista.html`, a imagem do logótipo.
 
-**e)** No `musicos/baterista.html`, a imagem do logótipo.
-
-**f)** Um colega escreveu, no `concertos.html`, `src="C:\Users\Rui\Desktop\banda-da-escola\imagens\palco.jpg"`. A imagem aparece no computador dele? E no teu, se lhe copiares a pasta? Explica porquê numa frase.
+**e)** Um colega escreveu, no `concertos.html`, `src="C:\Users\Rui\Desktop\banda-da-escola\imagens\palco.jpg"`. A imagem aparece no computador dele? E no teu, se lhe copiares a pasta? Explica porquê numa frase.
 
 ## Exercício 5: O texto alternativo (10 min)
 
@@ -151,7 +149,7 @@ Este é o wireframe da página dos concertos, descrito por palavras, zona a zona
 4. Ao lado dos concertos, uma caixa "Sabias que?", com uma curiosidade sobre a história da banda.
 5. Uma faixa no fundo, com o contacto do professor responsável e o ano letivo.
 
-**a)** Para cada zona, diz que elemento ou elementos usavas: `header`, `nav`, `main`, `section`, `article`, `aside` ou `footer`. Uma das zonas precisa de dois elementos, um dentro do outro.
+**a)** Para cada zona, diz que elemento ou elementos usavas: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, ou um título, de `h1` a `h6`. Uma das zonas precisa de dois elementos, um dentro do outro.
 
 **b)** Diz quais das cinco zonas ficam dentro do `main`.
 
@@ -163,11 +161,9 @@ A matéria está na secção "Tabelas de dados" do guia e no passo 11 do exemplo
 
 Os bilhetes do concerto de primavera têm estes preços (inventados): um aluno da escola paga 2 euros se comprar antes e 3 euros no dia; um adulto paga 5 euros antes e 7 euros no dia; uma criança até aos 12 anos não paga, antes nem no dia.
 
-**a)** Escreve o HTML de uma tabela com estes preços, com uma legenda, uma linha por tipo de bilhete e uma coluna por momento da compra. Usa `caption`, `thead`, `tbody`, `th` com `scope` e `td`.
+**a)** Escreve o HTML de uma tabela com estes preços, com uma legenda. Decide o que fica nas linhas e o que fica nas colunas, e justifica a escolha numa frase. Usa `caption`, `thead`, `tbody`, `th` com `scope` e `td`.
 
 **b)** Um leitor de ecrã chega à célula com o preço do adulto no dia. Que duas informações é que os teus cabeçalhos lhe permitem anunciar, além do preço?
-
-**c)** Um colega fez a página dos concertos com uma tabela de uma linha e duas colunas: o menu na coluna da esquerda e os concertos na da direita. Dá-lhe duas razões para não o fazer, e diz com que elementos a devia escrever.
 
 ## Apoio
 
@@ -179,13 +175,13 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 3.** Para cada lista, imagina que trocas o primeiro item com o último. Pergunta se a informação passa a estar errada, e não se passa a ser estranha.
 
-**Exercício 4.** Põe o dedo na pasta onde está o ficheiro que tem a ligação: é daí que o caminho parte. Para descer a uma pasta, escreves o nome dela e uma barra. Para subir à pasta de cima, escreves `../`. Nas alíneas d) e e), o ficheiro com a ligação está dentro da pasta `musicos`.
+**Exercício 4.** Põe o dedo na pasta onde está o ficheiro que tem a ligação: é daí que o caminho parte. Para descer a uma pasta, escreves o nome dela e uma barra. Para subir à pasta de cima, escreves `../`. Nas alíneas c) e d), o ficheiro com a ligação está dentro da pasta `musicos`.
 
 **Exercício 5.** Faz a pergunta do telefone para cada imagem. Na alínea a), lê o que está escrito ao lado do logótipo. Na alínea b), lê o que a legenda já diz, para não o repetires. Na alínea c), pensa no que perde quem não vê o mapa, sabendo que o texto da página não o substitui.
 
 **Exercício 6.** Segue as perguntas da lista do guia, pela ordem, para cada zona. Na zona 1, repara que há duas coisas: a faixa inteira e o menu dentro dela. Na zona 3, cada bloco é um conteúdo separado, e são três.
 
-**Exercício 7.** Começa por desenhar a tabela à mão, com os cabeçalhos no topo e à esquerda, antes de escreveres o HTML. Na primeira linha, a do `thead`, a célula do canto também é um `th`. Para a alínea c), relê a secção "Tabelas não servem para arrumar a página".
+**Exercício 7.** Começa por desenhar a tabela à mão, com os cabeçalhos no topo e à esquerda, antes de escreveres o HTML. Para decidir o que fica nas linhas, desenha as duas arrumações possíveis e vê qual se lê melhor; o que conta é a justificação que dás. Na primeira linha, a do `thead`, a célula do canto também é um `th`.
 
 ## Desafio opcional (30 min)
 
@@ -193,7 +189,7 @@ Acrescenta ao teu site uma terceira página do teu mapa, com o mesmo esqueleto, 
 
 **a)** Antes de escreveres, decide onde entra a nova página na navegação, e altera o `nav` das três páginas para que todas tenham o mesmo menu. Explica numa frase porque é que o menu tem de ser igual nas três.
 
-**b)** Na nova página, usa pelo menos um elemento semântico que ainda não tenhas usado no teu site, como um `article` ou um `aside`, e justifica a escolha com o teste da secção do guia.
+**b)** Na nova página, se o conteúdo o justificar, usa um elemento semântico que ainda não tenhas usado no teu site, como um `article` ou um `aside`, e justifica a escolha com o teste da secção do guia. Se nenhum se justificar, não o inventes: explica numa frase porquê.
 
 **c)** Refaz a verificação da parte 8 do laboratório para as três páginas: ligações, ordem de leitura, teclado e árvore.
 
@@ -216,7 +212,7 @@ Esta página da Banda da Escola aparece no browser sem nenhum aviso, e parece qu
   <body>
     <main>
       <h1>Os músicos</h1>
-      <p>A banda tem cinco músicos. Conhece-os:
+      <p>Conhece alguns dos músicos da banda:
         <ul>
           <li>Vocalista</li>
           <li>Baterista</li>
@@ -231,5 +227,11 @@ Esta página da Banda da Escola aparece no browser sem nenhum aviso, e parece qu
 ```
 
 Pista: um dos erros não muda nada do que se vê na página, e só aparece no separador Elements. Outro só se nota quando a página é lida em voz alta.
+
+### Mais longe 2: Uma tabela para arrumar a página (10 min)
+
+A matéria está na secção "Tabelas não servem para arrumar a página" do guia.
+
+Um colega fez a página dos concertos com uma tabela de uma linha e duas colunas: o menu na coluna da esquerda e os concertos na da direita. Dá-lhe duas razões para não o fazer, e diz com que elementos a devia escrever.
 
 ![Rodapé](../imagens/rodape.png)

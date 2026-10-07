@@ -11,7 +11,7 @@ Primeira área da disciplina de Desenvolvimento de Aplicações. Aprender a faze
 
 Cada assunto tem três documentos. O guia é para ler e estudar: tem a teoria e um exemplo explicado até ao fim. O laboratório é para seguir passo a passo no computador, com o guia aberto ao lado. A ficha é para fazeres sozinho: traz só os enunciados, porque a ideia é tentares antes de veres como se faz, e as resoluções são trabalhadas em aula com o professor.
 
-Os guias usam como exemplo a [Estante Digital](../exemplos/frontend/estante-digital/index.html), um pequeno site de recursos de estudo que está na pasta de exemplos e que podes abrir no browser. Os laboratórios usam o teu próprio site, com o tema que escolheste no assunto 01, e que vai crescendo ao longo do ano.
+Os guias usam como exemplo a [Estante Digital](../exemplos/frontend/estante-digital/index.html), um pequeno site de recursos de estudo que está na pasta de exemplos e que podes abrir no browser. A partir do assunto 02, os laboratórios usam o teu próprio site, com o tema que escolheste no assunto 01, e que vai crescendo ao longo do ano.
 
 Para os dois primeiros assuntos precisas de papel e lápis, de um browser (Chrome ou Edge) e do editor Visual Studio Code. Não é preciso instalar mais nada.
 

@@ -41,9 +41,9 @@ Este guia continua o guia [A Web, os utilizadores e o planeamento](01-web-e-plan
 
 Do [laboratório do bloco 01](01-web-e-planeamento-laboratorio.md) precisas de saber abrir as ferramentas do programador e usar o separador Elements. Se ainda não fizeste esse laboratório, o laboratório deste bloco explica o mínimo necessário no momento em que for preciso.
 
-Se já tiveste uma primeira aula sobre HTML, vais reconhecer as primeiras secções da teoria. O guia retoma tudo desde o princípio, porque o vocabulário tem de ficar muito seguro antes de avançar, e acrescenta o que ainda falta: o esqueleto completo, os títulos com hierarquia, as imagens com texto alternativo, os elementos semânticos, as tabelas e a verificação de uma página.
+Se já tiveste as primeiras aulas sobre HTML, vais reconhecer as primeiras secções da teoria. O guia retoma tudo desde o princípio, porque o vocabulário tem de ficar muito seguro antes de avançar, e acrescenta o que ainda falta: o esqueleto completo, os títulos com hierarquia, as imagens com texto alternativo, os elementos semânticos, as tabelas e a verificação de uma página.
 
-Este guia não usa Git. A pasta do teu site que vais criar é a pasta que, no bloco de Git, vais pôr sob controlo de versões. A partir daí, cada página nova passa a ficar registada no histórico.
+Este guia não usa Git. Se já fizeste o bloco de Git, guarda uma versão da pasta do teu site depois de cada página; se ainda não, é esta a pasta que vais pôr sob controlo de versões nesse bloco. A partir daí, cada página nova passa a ficar registada no histórico.
 
 ## Material e preparação
 
@@ -62,9 +62,11 @@ Este bloco tem 5 horas, ou seja 300 minutos. Não corresponde a uma aula: o prof
 | --- | --- | ---: |
 | Teoria | Neste guia | 60 min |
 | Exemplo explicado | Neste guia | 30 min |
-| Prática guiada | No [laboratório](02-html-e-semantica-laboratorio.md) | 100 min |
+| Prática guiada | No [laboratório](02-html-e-semantica-laboratorio.md) | 115 min |
 | Prática autónoma | Na [ficha](02-html-e-semantica-exercicios.md) | 80 min |
 | Consolidação | Neste guia | 30 min |
+
+As partes somam 315 minutos, um pouco mais do que as 5 horas do bloco, porque o laboratório precisa de tempo para quem o faz pela primeira vez. O professor ajusta a repartição às aulas que houver.
 
 A ordem recomendada é esta: ler a teoria e o exemplo explicado, fazer o laboratório no computador, resolver a ficha e fechar com a consolidação, no fim deste guia.
 
@@ -104,7 +106,7 @@ Tu percebes que "Estante Digital" é o nome de um site, que "Livros" é o títul
 
 Agora o browser sabe que há um parágrafo, um título principal, um título de segundo nível e uma lista com dois itens. As palavras são as mesmas; o que mudou foi que cada pedaço passou a dizer o que é.
 
-O HTML não é uma linguagem de programação. Uma linguagem de programação, como as que estás a aprender em Fundamentos de Programação, dá ordens ao computador: faz esta conta, se isto acontecer faz aquilo, repete dez vezes. O HTML não dá ordens nem toma decisões. Descreve. Por isso diz-se que um ficheiro HTML não se executa: lê-se. Isto tem uma consequência prática que vais encontrar muitas vezes: quando te enganas a escrever HTML, não aparece nenhuma mensagem de erro. O browser tenta adivinhar o que querias dizer e continua. A secção "Como o browser lida com os erros", mais à frente, explica o que isso quer dizer e como se descobrem esses erros escondidos.
+O HTML não é uma linguagem de programação. Uma linguagem de programação, como as que estás a aprender em Fundamentos de Programação, dá ordens ao computador: faz esta conta, se isto acontecer faz aquilo, repete dez vezes. O HTML não dá ordens nem toma decisões: descreve o conteúdo, e o browser lê essa descrição e mostra-a. Isto tem uma consequência prática que vais encontrar muitas vezes: quando te enganas a escrever HTML, não aparece nenhuma mensagem de erro. O browser tenta adivinhar o que querias dizer e continua. A secção "Como o browser lida com os erros", mais à frente, explica o que isso quer dizer e como se descobrem esses erros escondidos.
 
 ### Elementos, etiquetas e atributos
 
@@ -161,6 +163,8 @@ Um elemento pode ter outros elementos dentro do seu conteúdo. A isto chama-se *
 O elemento `strong` está dentro do elemento `p`. Diz-se que o `p` é o **pai** do `strong`, e que o `strong` é **filho** do `p`. Dois elementos com o mesmo pai são **irmãos**. Este vocabulário de família vai servir-te durante o ano inteiro, no CSS e no JavaScript.
 
 A regra de ouro do aninhamento é esta: fecha-se primeiro o que se abriu por último. Pensa em caixas dentro de caixas. Se puseres uma caixa pequena dentro de uma grande, tens de fechar a pequena antes de fechar a grande. É a mesma regra dos parênteses em Matemática: em `[ ( 2 + 3 ) × 4 ]`, o parêntese curvo abre depois do reto e fecha antes dele.
+
+No exemplo seguinte, as linhas entre `<!--` e `-->` são comentários: notas para quem lê o código, que o browser ignora. A secção "Comentários", mais à frente, explica-os melhor.
 
 ```html
 <!-- Certo: o strong abriu dentro do p e fecha dentro do p. -->
@@ -253,7 +257,7 @@ Neste bloco o `head` leva sempre três elementos. No bloco de CSS vais acrescent
 
 **`<meta charset="utf-8">`** diz ao browser como transformar os bytes do ficheiro em letras. Um computador não guarda letras: guarda números, e usa uma tabela para saber que número corresponde a que letra. Houve muitas tabelas diferentes ao longo da história, e a maioria não tinha as letras portuguesas. A UTF-8 é a tabela usada hoje em quase toda a Web, e tem as letras de todas as línguas, incluindo o ç, o ã e o é. Se o browser ler o teu ficheiro com a tabela errada, as letras acentuadas aparecem trocadas por símbolos estranhos, como `Ã§` no lugar de `ç`. Esta linha tem de ser a primeira dentro do `head`, porque o browser precisa de saber a tabela antes de ler qualquer texto, incluindo o título. Há uma segunda condição: o ficheiro tem de estar mesmo guardado em UTF-8. O VS Code guarda assim por omissão, e mostra `UTF-8` na barra de baixo da janela.
 
-**`<meta name="viewport" content="width=device-width, initial-scale=1">`** é para os telemóveis. Quando apareceram os telemóveis com ecrã tátil e um browser completo, quase todos os sites tinham sido feitos para ecrãs de computador. Para não os estragar, os telemóveis passaram a fingir que tinham um ecrã largo, de cerca de 980 píxeis, e encolhiam a página até caber. Esta linha diz ao telemóvel: não finjas; usa a largura verdadeira do teu ecrã (`width=device-width`) e não encolhas nada (`initial-scale=1`). Sem ela, a tua página aparece minúscula num telemóvel, e a pessoa tem de fazer zoom para ler. Neste bloco ainda não se nota a diferença, porque a página não tem CSS. No bloco de responsividade, sem ela, nada do que fizeres para ecrãs pequenos vai funcionar num telemóvel, e por isso pomo-la desde o primeiro dia.
+**`<meta name="viewport" content="width=device-width, initial-scale=1">`** é para os telemóveis. Quando apareceram os telemóveis com ecrã tátil e um browser completo, quase todos os sites tinham sido feitos para ecrãs de computador. Para não os estragar, os telemóveis passaram a fingir que tinham um ecrã largo, de cerca de 980 píxeis, e encolhiam a página até caber. Esta linha diz ao telemóvel: não finjas; usa a largura verdadeira do teu ecrã (`width=device-width`) e não encolhas nada (`initial-scale=1`). Sem ela, a tua página aparece minúscula num telemóvel, e a pessoa tem de fazer zoom para ler. No computador não vais notar diferença nenhuma. Num telemóvel nota-se já neste bloco, mesmo com páginas sem CSS. No bloco de responsividade, sem ela, nada do que fizeres para ecrãs pequenos vai funcionar num telemóvel, e por isso pomo-la desde o primeiro dia.
 
 **`<title>`** é o título da página. Não aparece dentro da página: aparece no separador do browser. Mas é muito mais usado do que parece. É o nome que fica gravado quando alguém guarda a página nos favoritos, é o que aparece no histórico, é o título azul do resultado num motor de pesquisa, e é a primeira coisa que um leitor de ecrã diz quando a página abre. Por isso cada página tem de ter um título diferente, que diga o que ela é.
 
@@ -312,7 +316,7 @@ Dentro de um parágrafo, há dois elementos que dão significado a palavras solt
 <p>Não disse que o livro era difícil. Disse que era <em>comprido</em>.</p>
 ```
 
-Existem também os elementos `b` e `i`, que põem o texto a negrito e em itálico sem lhe dar significado nenhum. Não os vamos usar: se queres importância, usa `strong`; se queres ênfase, usa `em`; se só queres mudar o aspeto, isso é trabalho do CSS.
+Existem também os elementos `b` e `i`, que põem o texto a negrito e em itálico com um significado muito fraco: o `b` só chama a atenção para umas palavras, e o `i` marca um tom diferente do resto do texto, como uma palavra estrangeira. Não os vamos usar: se queres importância, usa `strong`; se queres ênfase, usa `em`; se só queres mudar o aspeto, isso é trabalho do CSS.
 
 ### Listas
 
@@ -540,7 +544,7 @@ Algumas regras e testes para escolheres bem:
 - **`section`**: tem sempre um título. O teste é perguntar se consegues dar-lhe um título que faça sentido. Se não consegues, provavelmente não é uma secção.
 - **`article`**: o teste é imaginar que o copias sozinho para outro site. Uma notícia, uma publicação de um blogue, a ficha de um produto ou de um livro continuam a fazer sentido. Um parágrafo solto a meio de uma explicação não.
 - **`aside`**: o teste é perguntar se, ao saltares esse bloco, perdes alguma coisa essencial. Uma dica, uma caixa de "sabias que", ligações para assuntos parecidos: saltam-se e o conteúdo principal continua completo.
-- **`header` e `footer`**: além do cabeçalho e do rodapé da página inteira, também podem ser o cabeçalho e o rodapé de um `article`. Não se põe um `header` dentro de outro `header`, nem um `footer` dentro de outro `footer`.
+- **`header` e `footer`**: além do cabeçalho e do rodapé da página inteira, também podem ser o cabeçalho e o rodapé de um `article`. Não se põe um `header` nem um `footer` dentro de outro `header` ou de outro `footer`.
 
 E quando nenhum destes elementos serve? Existe o elemento `div`, que é uma caixa genérica, sem significado nenhum. Não é proibido: vais usá-lo no CSS para agrupar coisas por razões de arrumação. Mas é o último recurso, e não o primeiro. Uma página feita só de `div` funciona para quem a vê, e não diz nada a mais ninguém.
 
@@ -549,10 +553,12 @@ Quando estiveres indeciso, faz as perguntas por esta ordem:
 1. É o conteúdo principal desta página, o que não se repete nas outras? Então é o `main`.
 2. É o bloco de ligações que leva às partes principais do site? Então é um `nav`.
 3. É a zona de introdução do topo, ou a zona de informação final do fundo? Então é o `header` ou o `footer`.
-4. Faria sentido sozinho, copiado para outro sítio? Então é um `article`.
-5. É uma parte do conteúdo a que consegues dar um título? Então é uma `section`.
-6. É secundário, e pode saltar-se sem perder nada? Então é um `aside`.
+4. É secundário, e pode saltar-se sem perder nada? Então é um `aside`.
+5. Faria sentido sozinho, copiado para outro sítio? Então é um `article`.
+6. É uma parte do conteúdo a que consegues dar um título? Então é uma `section`.
 7. Nenhuma das anteriores? Então é talvez um `div`, ou talvez não precise de caixa nenhuma, e basta um parágrafo ou uma lista.
+
+A ordem das perguntas conta. Quase tudo se pode pôr debaixo de um título, e por isso a pergunta da `section` fica para o fim: se viesse antes, uma caixa secundária com título, como a dica da Estante Digital, ficava classificada como secção sem chegar à pergunta do `aside`.
 
 #### Porque é que a semântica importa
 
@@ -570,7 +576,7 @@ O quarto são as outras linguagens. No bloco de CSS vais dar aspeto aos elemento
 
 Já sabes que o browser constrói uma árvore em memória a partir do teu ficheiro, o DOM. A partir do DOM constrói ainda uma segunda árvore, mais simples, chamada **árvore de acessibilidade**. É essa árvore que os leitores de ecrã e outras tecnologias de apoio recebem.
 
-Na árvore de acessibilidade, cada coisa aparece com duas informações principais: o **papel**, que diz o que a coisa é (título, ligação, lista, imagem, navegação, conteúdo principal), e o **nome**, que é o texto que a identifica (o texto de uma ligação, o `alt` de uma imagem). Um `div` não tem papel nenhum. Uma imagem com `alt=""` nem sequer aparece, porque foi marcada como decorativa. É por isto que a semântica importa tanto: o que não está no HTML não chega à árvore, e o que não chega à árvore não existe para quem usa um leitor de ecrã.
+Na árvore de acessibilidade, cada coisa aparece com duas informações principais: o **papel**, que diz o que a coisa é (título, ligação, lista, imagem, navegação, conteúdo principal), e o **nome**, que é o texto que a identifica (o texto de uma ligação, o `alt` de uma imagem). Um `div` tem só um papel genérico (em inglês, *generic*), que não diz nada sobre o conteúdo. Uma imagem com `alt=""` nem sequer aparece, porque foi marcada como decorativa. É por isto que a semântica importa tanto: o que não está no HTML não chega à árvore, e o que não chega à árvore não existe para quem usa um leitor de ecrã.
 
 Os elementos `header`, `nav`, `main`, `aside` e `footer` da página inteira aparecem nesta árvore como **pontos de referência** (em inglês, *landmarks*), com os papéis *banner*, *navigation*, *main*, *complementary* e *contentinfo*. São esses nomes que vais encontrar se abrires a árvore nas ferramentas do programador, como vais fazer no laboratório.
 
@@ -590,7 +596,7 @@ Uma tabela usa vários elementos, que se encaixam uns nos outros:
 | `th` | Uma célula de cabeçalho (de *table header*): diz o que é uma coluna ou uma linha |
 | `td` | Uma célula de dados (de *table data*): um valor |
 
-Vê como se constrói o horário da biblioteca, com as duas primeiras linhas de dados:
+Vê como se constrói o horário da biblioteca, com as três primeiras linhas de dados:
 
 ```html
 <table>
@@ -612,6 +618,11 @@ Vê como se constrói o horário da biblioteca, com as duas primeiras linhas de 
       <th scope="row">Terça-feira</th>
       <td>08:30</td>
       <td>17:30</td>
+    </tr>
+    <tr>
+      <th scope="row">Quarta-feira</th>
+      <td>08:30</td>
+      <td>13:00</td>
     </tr>
   </tbody>
 </table>
@@ -644,7 +655,7 @@ Nos anos 90, o CSS ainda não conseguia pôr coisas lado a lado em colunas. Para
 </table>
 ```
 
-Para quem olha, fica um menu à esquerda e o texto à direita. Mas repara no que isto diz ao browser: "aqui há uma tabela de dados com uma linha e duas colunas". Um leitor de ecrã anuncia uma tabela e lê-a célula a célula, e a pessoa fica à espera de dados que não existem. Não há navegação nem conteúdo principal na árvore de acessibilidade, porque não há `nav` nem `main`. Num telemóvel, as duas colunas não se conseguem pôr uma debaixo da outra, porque uma tabela é sempre uma grelha de linhas e colunas. E para mudar o menu de sítio é preciso reescrever a tabela toda.
+Para quem olha, fica um menu à esquerda e o texto à direita. Mas repara no que isto diz ao browser: "aqui há uma tabela de dados com uma linha e duas colunas". Os browsers tentam adivinhar quando uma tabela só serve para arrumar e, nesse caso, escondem-na do leitor de ecrã, mas é um palpite: quando falham, o leitor de ecrã anuncia uma tabela, lê-a célula a célula, e a pessoa fica à espera de dados que não existem. Mesmo quando acertam, não há navegação nem conteúdo principal na árvore de acessibilidade, porque não há `nav` nem `main`. Num telemóvel, para pôr as duas colunas uma debaixo da outra é preciso desfazer a tabela com CSS, porque ela foi feita para ser uma grelha de linhas e colunas. E para mudar o menu de sítio é preciso reescrever a tabela toda.
 
 A forma certa de escrever o mesmo é com os elementos semânticos, deixando a arrumação em colunas para o CSS, nos blocos de Flexbox e de Grid:
 
@@ -673,7 +684,7 @@ Estes são quatro casos reais, experimentados no browser, com o que o browser fa
 | --- | --- | --- |
 | Um `strong` que nunca fechaste, a meio de um parágrafo | Fecha-o no fim do parágrafo, e volta a abri-lo no parágrafo seguinte | Tudo o que vem a seguir fica a negrito |
 | Uma lista `ul` dentro de um `p` | Fecha o `p` antes da lista e cria um parágrafo vazio a seguir, com o `</p>` que sobrou | A lista aparece, mas o DOM tem um parágrafo vazio a mais |
-| Um `h2` fechado com `</h3>` | Ignora o `</h3>` errado e fecha o `h2` | Nada de estranho: o erro fica escondido até ao dia em que deixar de dar certo |
+| Um `h2` fechado com `</h3>` | Aceita o `</h3>` como fecho do `h2`, porque qualquer etiqueta de fecho de título fecha o título que estiver aberto | Nada de estranho: o erro fica escondido até ao dia em que deixar de dar certo |
 | Uma ligação `a` dentro de outra `a` | Parte-a em duas ligações separadas | Duas ligações seguidas, em vez de uma |
 
 A forma de apanhar estes erros é comparar o que escreveste com o que o browser construiu. Abre as ferramentas do programador, vai ao separador Elements e percorre a árvore. Se a árvore for diferente do teu ficheiro (um parágrafo vazio que não escreveste, um elemento dentro de outro onde não o puseste), o browser corrigiu um erro teu. O laboratório tem uma parte só para isto.
@@ -682,7 +693,7 @@ Existe também um serviço público do W3C, a organização que escreve muitas d
 
 ### Verificar uma página
 
-Uma página não está pronta quando acabas de a escrever: está pronta quando a verificaste. Neste bloco, verificar quer dizer quatro coisas, que vais fazer no laboratório.
+Uma página só está pronta depois de verificada. Neste bloco, verificar quer dizer quatro coisas, que vais fazer no laboratório.
 
 **Seguir todas as ligações.** Abre a página no browser e carrega em cada ligação, uma de cada vez. Cada uma tem de levar ao sítio certo, e cada página de destino tem de ter uma forma de voltar. Uma ligação que dá "ficheiro não encontrado" é uma ligação sem destino, o erro que aprendeste a procurar no mapa do site, no guia 01.
 
@@ -694,11 +705,11 @@ Uma página não está pronta quando acabas de a escrever: está pronta quando a
 
 ## Exemplo explicado: as páginas da Estante Digital (30 min)
 
-Neste exemplo constróis, passo a passo, duas páginas do site da Estante Digital: a página inicial e a página de um recurso. A terceira página, "Sobre", é curta e aparece no fim. Os ficheiros completos estão na pasta [estante-digital](../exemplos/frontend/estante-digital/index.html), e podes abri-los no browser e no editor para comparar com o que vais lendo.
+Neste exemplo vês construir, passo a passo, duas páginas do site da Estante Digital: a página inicial e a página de um recurso. A terceira página, "Sobre", é curta e aparece no fim. Os ficheiros completos estão na pasta [estante-digital](../exemplos/frontend/estante-digital/index.html), e podes abri-los no browser e no editor para comparar com o que vais lendo.
 
 ### Passo 1: Partir do plano
 
-No guia 01 fizemos o plano deste site: o mapa do site com as páginas e as ligações, e os wireframes da página inicial e da página de um recurso. O HTML não se inventa ao escrever: traduz o plano. Por isso, antes de abrir o editor, olha para o wireframe e dá nome a cada zona.
+No guia 01 fizemos o plano deste site: o mapa do site com as páginas e as ligações, e os wireframes da página inicial e da página de um recurso. O HTML não se inventa ao escrever: traduz o plano. Por isso, antes de abrir o editor, olha para o wireframe e dá nome a cada zona. O wireframe da página inicial está no passo 6 do exemplo explicado do [guia 01](01-web-e-planeamento.md).
 
 | Zona desenhada no wireframe | Elemento | Porquê |
 | --- | --- | --- |
@@ -799,7 +810,7 @@ A seguir ao `header` vem o `main`, com o `h1`, dois parágrafos de introdução 
 
 Cada secção começa pelo seu `h2`, e o conteúdo é uma lista não ordenada, porque a ordem dos recursos não importa. Aplica o teste: trocar dois livros de lugar não torna a informação errada.
 
-Repara que só o primeiro livro tem ligação. É o único que já tem página própria. Pôr uma ligação no segundo livro seria criar uma ligação sem destino, que dá erro quando alguém carrega nela. Um site em construção não tem mal nenhum; ligações para páginas que não existem têm. Quando a página do dicionário existir, acrescenta-se a ligação.
+Repara que só o primeiro livro tem ligação. É o único que já tem página própria. Pôr uma ligação no segundo livro seria criar uma ligação sem destino, que dá erro quando alguém carrega nela. Um site pode estar em construção, desde que não tenha ligações para páginas que ainda não existem. Quando a página do dicionário existir, acrescenta-se a ligação.
 
 O texto da ligação é o título do livro, "Primeiros passos na Web", e não "ver mais" nem "clica aqui". Numa lista de ligações lida fora do contexto, continua a dizer para onde vai.
 
@@ -840,7 +851,7 @@ A página do livro chama-se `primeiros-passos-na-web.html`, com o nome derivado 
 - o `title`, que passa a `Primeiros passos na Web | Estante Digital`;
 - todo o conteúdo do `main`.
 
-O cabeçalho e o rodapé ficam exatamente iguais em todas as páginas. Isto não é preguiça: é uma regra de navegação. Quem muda de página deve encontrar o menu no mesmo sítio, com as mesmas opções, para não ter de reaprender o site em cada página.
+O cabeçalho e o rodapé ficam exatamente iguais em todas as páginas, por uma regra de navegação: quem muda de página deve encontrar o menu no mesmo sítio, com as mesmas opções, para não ter de reaprender o site em cada página.
 
 ### Passo 9: Um article com uma figura
 
@@ -952,11 +963,11 @@ As ligações: a partir da página inicial, "Início" leva à própria página i
 
 O teclado: na página inicial, a primeira tecla Tab leva o foco a "Início", a segunda a "Sobre" e a terceira a "Primeiros passos na Web". Com o foco nessa ligação, Enter abre a página do livro. A ordem do foco é a ordem do HTML, e é a ordem de leitura.
 
-A árvore: no separador Elements, a árvore de cada página tem exatamente os elementos do ficheiro, pela mesma ordem, sem parágrafos vazios nem elementos mudados de sítio. Isto quer dizer que o browser não teve de corrigir nenhum erro. Na árvore de acessibilidade aparecem o cabeçalho (*banner*), a navegação (*navigation*), o conteúdo principal (*main*), a caixa da dica (*complementary*) e o rodapé (*contentinfo*); a capa aparece como imagem com o nome que lhe demos no `alt`, e o logótipo não aparece, porque tem o `alt` vazio.
+A árvore: no separador Elements, a árvore de cada página tem exatamente os elementos do ficheiro, pela mesma ordem, sem parágrafos vazios nem elementos mudados de sítio. Isto quer dizer que o browser não teve de corrigir nenhum erro. Na árvore de acessibilidade da página do livro aparecem o cabeçalho (*banner*), a navegação (*navigation*), o conteúdo principal (*main*), a caixa da dica (*complementary*) e o rodapé (*contentinfo*); a capa aparece como imagem com o nome que lhe demos no `alt`, e o logótipo não aparece, porque tem o `alt` vazio.
 
 A página passou as quatro verificações. Está pronta, por agora: no próximo bloco vai ganhar aspeto com CSS, e a verificação volta a fazer-se.
 
-## Prática guiada (100 min)
+## Prática guiada (115 min)
 
 A prática guiada deste bloco faz-se no computador, no [laboratório](02-html-e-semantica-laboratorio.md). Vais construir duas páginas do teu site, a partir do mapa e dos wireframes que fizeste no bloco 01, ligá-las nos dois sentidos, verificá-las com as quatro verificações do passo 14 e, numa segunda parte, provocar de propósito os erros mais comuns para aprenderes a reconhecê-los e a corrigi-los.
 
@@ -994,7 +1005,7 @@ Estes são os erros que mais aparecem nas primeiras páginas. Para cada um tens 
 
 ### Aparece um título onde devia estar texto normal
 
-**Causa:** a barra esquecida numa etiqueta de fecho de um título. `<h2>Livros<h2>` não fecha o primeiro título: abre um segundo. **Correção:** a etiqueta de fecho tem sempre a barra: `</h2>`.
+**Causa:** a barra esquecida numa etiqueta de fecho de um título. Sem a barra, o segundo `<h2>` de `<h2>Livros<h2>` é uma etiqueta de abertura: o browser fecha ali o primeiro título, abre outro, e o que vem a seguir fica dentro desse segundo título. No separador Elements vês os dois `h2`. **Correção:** a etiqueta de fecho tem sempre a barra: `</h2>`.
 
 ### Uma lista dentro de um parágrafo
 
@@ -1071,9 +1082,9 @@ Escreve duas ou três linhas sobre o que te custou mais neste bloco: o aninhamen
 
 ## A seguir
 
-O [laboratório](02-html-e-semantica-laboratorio.md) ocupa os 100 minutos da prática guiada e a [ficha de exercícios](02-html-e-semantica-exercicios.md) os 80 minutos da prática autónoma.
+O [laboratório](02-html-e-semantica-laboratorio.md) ocupa os 115 minutos da prática guiada e a [ficha de exercícios](02-html-e-semantica-exercicios.md) os 80 minutos da prática autónoma.
 
-As tuas páginas têm agora estrutura e significado, mas têm o aspeto por omissão do browser: letra preta, fundo branco, tudo empilhado. No bloco de CSS vais dar-lhes aspeto, com cores, tipos de letra, espaços e menus lado a lado, sem mudar uma única etiqueta do HTML. É aí que se vê o valor da divisão de trabalho: como a estrutura está certa, o CSS só tem de tratar do aspeto. Antes disso, no bloco de Git, vais aprender a guardar versões da pasta do teu site, para que nenhuma alteração se perca.
+As tuas páginas têm agora estrutura e significado, mas têm o aspeto por omissão do browser: letra preta, fundo branco, tudo empilhado. No bloco de CSS vais dar-lhes aspeto, com cores, tipos de letra, espaços e menus lado a lado, sem mudar uma única etiqueta do HTML. É aí que se vê o valor da divisão de trabalho: como a estrutura está certa, o CSS só tem de tratar do aspeto. É no bloco de Git que aprendes a guardar versões da pasta do teu site, para que nenhuma alteração se perca.
 
 ## Referências
 

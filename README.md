@@ -24,7 +24,7 @@ A disciplina tem duas áreas, e cada uma corresponde a uma unidade de competênc
 
 ## Ordem de estudo
 
-As duas áreas estudam-se intercaladas: o Git entra logo depois do primeiro assunto de frontend, para que a pasta do teu site passe a ter versões desde o início. Esta é a ordem prevista dos materiais publicados até agora:
+As duas áreas estudam-se intercaladas: o Git entra logo depois do primeiro assunto de frontend, para que o plano do teu site, e depois as páginas, passem a ter versões desde o início. Esta é a ordem prevista dos primeiros assuntos:
 
 1. Frontend 01: [A Web, os utilizadores e o planeamento](01-frontend/01-web-e-planeamento.md).
 2. Git 01: Git local, ainda por publicar.

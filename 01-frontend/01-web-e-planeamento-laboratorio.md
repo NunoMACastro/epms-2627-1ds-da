@@ -47,7 +47,7 @@ Tem aberta a secção "Cliente e servidor" do guia.
 
 **1.** No browser, carrega em Ctrl+O (Cmd+O no Mac), vai à pasta do repositório da disciplina e abre o ficheiro `exemplos/frontend/estante-digital/index.html`. Também podes fazer duplo clique no ficheiro, no explorador de ficheiros.
 
-**2.** Olha para a barra de endereço. O endereço começa por `file://`, e a seguir vem o caminho do ficheiro no teu disco. Não há servidor nenhum: o browser leu o ficheiro diretamente do disco.
+**2.** Carrega uma vez na barra de endereço, para veres o endereço completo: alguns browsers, como o Chrome, escondem o início até carregares lá. O endereço começa por `file://`, e a seguir vem o caminho do ficheiro no teu disco. Não há servidor nenhum: o browser leu o ficheiro diretamente do disco.
 
 **3.** Carrega na ligação "Sobre" e depois em "Início", no menu. As páginas mudam, e o endereço muda com elas: continua a ser `file://`, e só muda o nome do ficheiro no fim.
 
@@ -83,7 +83,7 @@ Tem aberta a secção "O ficheiro e o DOM" do guia.
 
 **5.** Escreve no caderno, por palavras tuas, o que esta experiência mostrou. A frase deve usar as palavras "ficheiro" e "DOM".
 
-**Confirma:** a tua frase explica que mudaste o DOM, que o ficheiro não mudou, e que ao recarregar o browser construiu um DOM novo a partir do ficheiro. Não estragaste nada: o que mudas nas ferramentas do programador fica só na tua cópia da página, até recarregares.
+**Confirma:** lê a tua frase a um colega. Ele percebe, só com ela, porque é que o título voltou ao original? Não estragaste nada: o que mudas nas ferramentas do programador fica só na tua cópia da página, até recarregares.
 
 ## Parte 4: O primeiro site da história (10 min)
 
@@ -102,22 +102,22 @@ https://info.cern.ch/hypertext/WWW/TheProject.html
 **3.** Carrega em Ctrl+U (Cmd+Option+U no Mac) para ver o código-fonte. Repara em três coisas:
 
 - as etiquetas estão escritas em maiúsculas, como `<TITLE>` e `<H1>`. Nos anos 90 escrevia-se assim; hoje usa-se minúsculas;
-- não há `<!doctype html>` no início, nem etiquetas `<html>` e `<body>`;
+- não há `<!doctype html>` no início;
 - no lugar onde hoje se escreveria `<head>` está uma etiqueta `<HEADER>`.
 
-Fecha o separador do código-fonte.
+Não feches o separador do código-fonte: vais compará-lo com a árvore no passo seguinte.
 
-**4.** Abre as ferramentas do programador no separador Elements e olha para o topo da árvore. Estão lá `html`, `head` e `body`, que o ficheiro não tem. O browser acrescentou-os, porque hoje todas as páginas os têm. Abre o `body` e, lá dentro, o `header`: o `title` da página está ali dentro, e o `head` ficou vazio. O browser não percebeu que o `HEADER` de 1992 queria dizer cabeça da página, e fez o melhor que pôde com um ficheiro escrito com regras antigas.
+**4.** Volta ao separador da página, abre as ferramentas do programador no separador Elements e compara o topo da árvore com o código-fonte. Abre também o `body` e, lá dentro, o `header`, e procura o `title` da página.
 
-**5.** Escreve no caderno três elementos que estão na árvore do DOM desta página e não estão no ficheiro.
+**5.** Escreve no caderno os dois elementos que estão na árvore do DOM desta página e não estão no ficheiro, e dentro de que elemento foi parar o `title`.
 
-**Confirma:** consegues explicar, com esta página, a primeira razão da secção "O ficheiro e o DOM": o browser acrescenta e corrige.
+**Confirma:** consegues explicar, com esta página, as duas primeiras razões da secção "O ficheiro e o DOM": o browser acrescenta à árvore elementos que o ficheiro não tem, porque as regras do HTML os põem sempre lá, e arruma à sua maneira o que não percebe. Aqui, não percebeu que o `HEADER` de 1992 queria dizer a cabeça da página, e fez o melhor que pôde com um ficheiro escrito com regras antigas.
 
 ## Parte 5: Os pedidos no separador Network (10 min)
 
 Tem aberta a secção "O que se diz num pedido e numa resposta" do guia.
 
-**1.** Ainda na página do primeiro site, com as ferramentas abertas, carrega no separador Network (em português, Rede). A lista está vazia, porque as ferramentas só registam os pedidos feitos enquanto estão abertas.
+**1.** Ainda na página do primeiro site, com as ferramentas abertas, carrega no separador Network (em português, Rede). A lista está vazia, porque as ferramentas só registam os pedidos feitos enquanto estão abertas. Na fila de cima do separador, marca a caixa Disable cache (em português, Desativar cache). Assim, ao recarregar, o browser pede a página inteira ao servidor, em vez de usar a cópia que guardou na primeira visita.
 
 **2.** Recarrega a página com F5. Aparece uma linha na lista, com o nome `TheProject.html`. É o pedido que o browser fez ao servidor. Na coluna Status aparece o código de resposta, e na barra de baixo das ferramentas aparece o número total de pedidos. Esta página precisou de um só pedido, porque é só texto: não tem imagens, estilos nem JavaScript.
 
@@ -125,7 +125,7 @@ Tem aberta a secção "O que se diz num pedido e numa resposta" do guia.
 
 **4.** Agora provoca um erro de propósito. Na barra de endereço, muda o fim do endereço de `TheProject.html` para `NaoExiste.html` e carrega em Enter. A página mostra "Not Found", e no separador Network a nova linha tem outro código de resposta. Escreve-o no caderno. É o que acontece quando alguém carrega numa ligação sem destino.
 
-**5.** Para comparar com um site atual, abre num separador novo a página do repositório da disciplina no GitHub, com o separador Network aberto antes de a carregares. Olha para o número de pedidos na barra de baixo das ferramentas. Escreve-o no caderno, ao lado do número de pedidos do primeiro site.
+**5.** Para comparar com um site atual, abre um separador novo. As ferramentas do programador abrem-se em cada separador à parte: carrega em F12, escolhe o separador Network e só depois escreve, na barra de endereço, o endereço da página do repositório da disciplina no GitHub, que o professor te dá. Olha para o número de pedidos na barra de baixo das ferramentas. Escreve-o no caderno, ao lado do número de pedidos do primeiro site.
 
 **Confirma:** tens escritos o método e os dois códigos de resposta, e consegues explicar porque é que uma página moderna faz muitos mais pedidos do que a página de 1992.
 
@@ -139,7 +139,7 @@ Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a com o que ob
 | O elemento que ficou selecionado quando inspecionaste o título grande | |
 | O que aconteceu ao título depois de recarregares a página | |
 | O protocolo, o domínio e o caminho do endereço do primeiro site | |
-| Três elementos que estão no DOM do primeiro site e não estão no ficheiro | |
+| Os dois elementos que estão no DOM do primeiro site e não estão no ficheiro, e onde foi parar o `title` | |
 | O método e o código de resposta do pedido de `TheProject.html` | |
 | O código de resposta de `NaoExiste.html` | |
 | O número de pedidos do primeiro site e o da página do repositório no GitHub | |
@@ -149,9 +149,12 @@ Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a com o que ob
 | O que vês | Porque acontece | O que fazer |
 | --- | --- | --- |
 | F12 não abre nada, ou muda o volume do som | Em alguns portáteis, as teclas F só funcionam com a tecla Fn carregada | Usa Fn+F12, ou Ctrl+Shift+I, ou o botão direito do rato e Inspecionar |
+| No Edge, o F12 abre uma janela a perguntar se queres mesmo abrir as ferramentas do programador | O Edge pede confirmação da primeira vez | Escolhe a opção de abrir as ferramentas |
+| As ferramentas do programador não abrem de maneira nenhuma | Podem estar desativadas nos computadores da escola | Avisa o professor |
 | As ferramentas abriram num sítio incómodo, a tapar a página | Podem ficar à direita, em baixo ou numa janela à parte | No canto superior direito das ferramentas há um botão com três pontos; em Dock side escolhe outra posição |
 | As ferramentas estão em português e os nomes não batem com os deste laboratório | O browser mostra as ferramentas na língua do sistema | Os separadores estão pela mesma ordem; Elementos, Consola e Rede são Elements, Console e Network |
 | O separador Network está vazio | As ferramentas só registam os pedidos feitos com elas abertas | Recarrega a página com as ferramentas abertas |
+| Na coluna Status aparece 304, e não 200 | O browser já tinha guardado uma cópia da página e só perguntou ao servidor se ela tinha mudado. O 304 quer dizer "não mudou, usa a cópia que tens" | Marca a caixa Disable cache, na fila de cima do separador Network, e recarrega |
 | A página do primeiro site não abre | Não há ligação à Internet, ou a rede da escola bloqueia o endereço | Avisa o professor e faz a parte 4 a partir das imagens que ele projetar |
 | O Ctrl+U não mostra nada | Em alguns browsers o atalho é outro | Carrega com o botão direito numa zona vazia da página e escolhe Ver código-fonte da página |
 

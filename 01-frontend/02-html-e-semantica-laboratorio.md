@@ -6,12 +6,12 @@ UC: UC02833, Conceber aplicações para a web na vertente frontend
 
 Bloco: F02
 
-Requisitos: UC02833.R01, UC02833.K03, UC02833.K09, UC02833.A04, UC02833.A05, UC02833.A06, UC02833.A11, UC02833.C01
+Requisitos: UC02833.R01, UC02833.K03, UC02833.K04, UC02833.K09, UC02833.A04, UC02833.A05, UC02833.A06, UC02833.A11, UC02833.C01
 
 | Identificação | Valor |
 | --- | --- |
 | Material | Laboratório do bloco F02, acompanha o [guia](02-html-e-semantica.md) |
-| Duração | 100 minutos dos 300 do bloco, em duas partes. A parte A (partes 1 a 8, 70 minutos) constrói e verifica as duas primeiras páginas do teu site. A parte B (partes 9 e 10, 30 minutos) provoca erros de propósito para os aprenderes a corrigir e acrescenta uma tabela de dados |
+| Duração | 115 minutos dos 300 do bloco, em duas partes. A parte A (partes 1 a 8, 85 minutos) constrói e verifica as duas primeiras páginas do teu site. A parte B (partes 9 e 10, 30 minutos) provoca erros de propósito para os aprenderes a corrigir e acrescenta uma tabela de dados |
 | Ponto de partida | O plano do teu site, feito no bloco 01: o mapa com pelo menos duas páginas e, se já os fizeste, os wireframes |
 | Material de apoio | A [imagem provisória](../laboratorios/frontend/primeiras-paginas/README.md), para quem ainda não tem uma imagem do seu tema |
 | Evidência a guardar | A pasta do teu site com as duas páginas, a tabela de verificação da parte 8 preenchida e a justificação escrita de três elementos |
@@ -56,9 +56,9 @@ O ciclo de trabalho de todo o laboratório é sempre o mesmo: escreves no VS Cod
 
 **1.** Escolhe o nome da pasta a partir do tema do teu site, com as regras da secção "Caminhos relativos" do guia: minúsculas, sem espaços, sem acentos e com hífenes entre as palavras. Por exemplo, `clube-de-xadrez`, `receitas-da-avo` ou `guia-de-sintra`. Um nome como `O Meu Site` ou `receitas_avó` vai dar problemas mais tarde.
 
-**2.** Cria a pasta onde o professor indicar, e dentro dela cria uma pasta chamada `imagens`.
+**2.** Se já criaste a pasta do teu site no fim da prática guiada do guia 01, com as fotografias do plano, usa essa e salta para a criação da pasta `imagens`. Se não, cria a pasta onde o professor indicar. Dentro dela, cria uma pasta chamada `imagens`.
 
-**3.** Abre o VS Code e, no menu File, escolhe Open Folder (com o VS Code em português, Ficheiro e Abrir Pasta). Escolhe a pasta do teu site. Do lado esquerdo aparece o painel Explorer, com o nome da pasta em maiúsculas e a pasta `imagens` lá dentro. Se o VS Code perguntar se confias nos autores dos ficheiros da pasta, responde que sim: a pasta é tua.
+**3.** Abre o VS Code e, no menu File, escolhe Open Folder. Com o VS Code em português, os nomes são Arquivo e Abrir Pasta, porque o único pacote de português do VS Code é o do Brasil. Escolhe a pasta do teu site. Do lado esquerdo aparece o painel Explorer (em português, Explorador), com o nome da pasta em maiúsculas e a pasta `imagens` lá dentro. Se o VS Code perguntar se confias nos autores dos ficheiros da pasta, responde que sim: a pasta é tua.
 
 **Confirma:** o painel Explorer do VS Code mostra a pasta do teu site e a subpasta `imagens`, vazia.
 
@@ -157,15 +157,15 @@ Tem aberto o teu mapa, o wireframe da página inicial se já o fizeste, e as sec
 
 **1.** Por baixo do `main`, ainda dentro do `body`, escreve o `footer`, com um parágrafo de informação final: por exemplo, quem fez o site, a turma e o ano, e um aviso de que o conteúdo é fictício, se for o caso.
 
-**2.** Guarda, recarrega e indenta o ficheiro inteiro com o atalho do VS Code, para confirmares que a indentação mostra a estrutura: `header`, `main` e `footer` à mesma distância da margem, dentro do `body`.
+**2.** Guarda, recarrega e indenta o ficheiro inteiro com o atalho do VS Code, para confirmares que a indentação mostra a estrutura: `header`, `main` e `footer` à mesma distância da margem, dentro do `body`. Por omissão, o VS Code deixa o `head` e o `body` à mesma margem do `html` e acrescenta algumas linhas em branco. É só a forma como o VS Code arruma o ficheiro, e a página fica igual.
 
 **Confirma:** o `body` tem exatamente três filhos diretos, `header`, `main` e `footer`, por esta ordem.
 
-### Parte 6: A segunda página (10 min)
+### Parte 6: A segunda página (20 min)
 
 Tem abertos o passo 8 e o passo 9 do exemplo explicado e a secção "O texto alternativo" do guia.
 
-**1.** Arranja a imagem da segunda página e põe-na na pasta `imagens`. Pode ser uma fotografia ou um desenho teus, ou uma imagem cuja licença permita o uso, como explica a secção "Imagens" do guia. Dá-lhe um nome com as regras dos nomes, como `tabuleiro.jpg`. Se ainda não tens nenhuma, copia para a pasta `imagens` a [imagem provisória](../laboratorios/frontend/primeiras-paginas/README.md) do laboratório e troca-a mais tarde.
+**1.** Arranja a imagem da segunda página e põe-na na pasta `imagens`. Pode ser uma fotografia ou um desenho teus, ou uma imagem cuja licença permita o uso, como explica a secção "Imagens" do guia. Dá-lhe um nome com as regras dos nomes, como `tabuleiro.jpg`. Se for uma fotografia tirada com o telemóvel, reduz-lhe primeiro a largura para 600 a 800 píxeis, como explica a secção "Imagens" do guia: as tuas páginas ainda não têm CSS, e por isso a imagem aparece no ecrã com as medidas que escreveres no `width` e no `height`. Se ainda não tens nenhuma imagem, copia para a pasta `imagens` a [imagem provisória](../laboratorios/frontend/primeiras-paginas/README.md) do laboratório e troca-a mais tarde. Na pasta do repositório da disciplina, o ficheiro está em `laboratorios/frontend/primeiras-paginas/imagem-provisoria.svg`.
 
 **2.** No painel Explorer do VS Code, carrega com o botão direito do rato no `index.html` e escolhe Copy; depois carrega com o botão direito numa zona vazia do painel e escolhe Paste. Aparece uma cópia com um nome como `index copy.html`. Carrega com o botão direito nela, escolhe Rename e dá-lhe o nome exato que puseste na navegação na parte 3, como `torneios.html`. O nome tem de ser igual letra a letra.
 
@@ -186,7 +186,7 @@ Tem abertos o passo 8 e o passo 9 do exemplo explicado e a secção "O texto alt
 
 Para o `alt`, faz a pergunta do telefone: o que dirias a alguém ao telefone, no sítio desta imagem, para a página continuar a fazer sentido? Se usaste a imagem provisória, o `alt` é `Imagem provisória`, e fica anotado que tens de trocar os dois mais tarde.
 
-Para o `width` e o `height`, usa as medidas verdadeiras da imagem. No Windows, vês as medidas nas propriedades do ficheiro, no separador Detalhes; no Mac, na janela Obter informações. A imagem provisória mede 400 por 300.
+Para o `width` e o `height`, usa as medidas verdadeiras da imagem, depois de reduzida. No Windows, vês as medidas nas propriedades do ficheiro, no separador Detalhes; no Mac, na janela Obter informações. A imagem provisória mede 400 por 300.
 
 **6.** No fim do `main`, acrescenta um parágrafo com uma ligação de volta à página inicial, com um texto que diga o destino, como "Voltar à página inicial".
 
@@ -204,7 +204,7 @@ Para o `width` e o `height`, usa as medidas verdadeiras da imagem. No Windows, v
 
 **Confirma:** consegues ir de uma página à outra e voltar, pelos dois caminhos.
 
-### Parte 8: Verificar (10 min)
+### Parte 8: Verificar (15 min)
 
 Tem aberta a secção "Verificar uma página" do guia. Copia esta tabela para o teu caderno, ou para um ficheiro, e preenche-a à medida que fazes cada verificação:
 
@@ -227,6 +227,8 @@ Tem aberta a secção "Verificar uma página" do guia. Copia esta tabela para o 
 **5. Árvore de acessibilidade.** Ainda no separador Elements, carrega no elemento `main` da árvore para o selecionar. No painel do lado, onde está o separador Styles, procura o separador Accessibility (Acessibilidade). Se não o vires, pode estar escondido atrás de um botão com duas setas, `»`. Aí aparece o papel do elemento selecionado, que deve ser *main*. Seleciona agora o `nav`, o `header` e o `footer`, um de cada vez, e confirma que os papéis são *navigation*, *banner* e *contentinfo*. Por fim, seleciona o `img` da segunda página e confirma que o nome que aparece é o texto que escreveste no `alt`.
 
 **6.** Escreve, no fim da tabela, a justificação de três elementos que escolheste nas tuas páginas, uma ou duas frases cada. Por exemplo: "A lista do que trazer é um `ul` porque trocar a ordem dos itens não muda nada" ou "A imagem do tabuleiro está num `figure` porque tem uma legenda que diz de onde vem a fotografia".
+
+**7.** Se já preencheste no bloco 01 o [modelo do brief](../projeto/modelos/brief-e-wireframe.md) do teu site, completa agora os dois campos que ficaram para este bloco: "Relação entre zonas desenhadas e elementos HTML", com o elemento que escolheste para cada zona do teu wireframe, e "Percurso por teclado e foco", com a ordem pela qual o Tab passou pelas ligações na verificação 3. Se ainda não tens o brief, escreve as duas coisas no caderno e passa-as para o brief quando o fizeres.
 
 **Confirma:** as cinco linhas da tabela dizem que passou, ou dizem o que corrigiste até passar.
 
