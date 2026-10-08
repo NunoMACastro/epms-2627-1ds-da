@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <!-- O Faísca, o robô fictício do clube: um corpo quadrado cor de laranja,
+       duas rodas grandes e dois sensores à frente. Desenho feito para este exemplo. -->
+  <rect x="0" y="0" width="240" height="180" fill="#eef3f8"/>
+  <rect x="20" y="160" width="200" height="6" fill="#9aa5b1"/>
+  <rect x="60" y="50" width="120" height="90" rx="10" fill="#e67e22"/>
+  <circle cx="95" cy="85" r="14" fill="#ffffff"/>
+  <circle cx="145" cy="85" r="14" fill="#ffffff"/>
+  <circle cx="95" cy="85" r="6" fill="#2c3e50"/>
+  <circle cx="145" cy="85" r="6" fill="#2c3e50"/>
+  <rect x="100" y="115" width="40" height="6" rx="3" fill="#2c3e50"/>
+  <circle cx="70" cy="140" r="22" fill="#2c3e50"/>
+  <circle cx="170" cy="140" r="22" fill="#2c3e50"/>
+  <circle cx="70" cy="140" r="8" fill="#9aa5b1"/>
+  <circle cx="170" cy="140" r="8" fill="#9aa5b1"/>
+  <line x1="120" y1="50" x2="120" y2="28" stroke="#2c3e50" stroke-width="4"/>
+  <circle cx="120" cy="24" r="6" fill="#f1c40f"/>
+</svg>

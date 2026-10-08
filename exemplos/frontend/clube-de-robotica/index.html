@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Página inicial do Clube de Robótica, um site de exemplo com duas páginas,
+     mais curto do que a Estante Digital. O clube, o robô e os horários são
+     fictícios. A página ainda não tem CSS: o aspeto que vês no browser é o
+     aspeto por omissão. -->
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Início | Clube de Robótica</title>
+  </head>
+  <body>
+    <!-- header: a zona de introdução do topo. Repete-se igual nas duas páginas. -->
+    <header>
+      <p>
+        <!-- Imagem decorativa: o nome do clube está escrito logo a seguir,
+             por isso o alt fica vazio, de propósito. -->
+        <img src="imagens/logotipo.svg" alt="" width="48" height="48">
+        Clube de Robótica
+      </p>
+      <!-- nav: o bloco de ligações que leva às partes principais do site. -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="horario.html">Horário</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main: o conteúdo próprio desta página. Há um só main por página. -->
+    <main>
+      <h1>Bem-vindo ao Clube de Robótica</h1>
+      <p>
+        Construímos e programamos pequenos robôs, na sala de informática.
+        Não é preciso saber nada antes de entrar: aprende-se a fazer.
+      </p>
+      <p>
+        Para saberes quando treinamos, carrega no calendário:
+        <!-- Imagem que é o único conteúdo de uma ligação: o alt diz para
+             onde a ligação leva, e não o que o desenho mostra. -->
+        <a href="horario.html"><img src="imagens/calendario.svg" alt="Horário dos treinos" width="32" height="32"></a>
+      </p>
+
+      <!-- section: uma parte do conteúdo com o seu próprio título. -->
+      <section>
+        <h2>O que fazemos</h2>
+        <ul>
+          <li>Montamos robôs com peças que se desmontam e voltam a usar.</li>
+          <li>Programamos os motores e os sensores.</li>
+          <li>Participamos num torneio entre escolas, no fim do ano.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Notícias</h2>
+        <!-- article: um conteúdo completo, que faria sentido sozinho
+             noutro site, como uma notícia. -->
+        <article>
+          <h3>O Faísca está pronto para o torneio</h3>
+          <p>
+            Depois de seis semanas de trabalho, o robô do clube já anda
+            sozinho e para antes de bater numa parede.
+          </p>
+          <!-- figure: a imagem e a legenda formam uma unidade.
+               O alt diz o que a imagem mostra; a legenda acrescenta o que
+               toda a gente deve saber. Não repetem a mesma coisa. -->
+          <figure>
+            <img src="imagens/faisca.svg"
+                 alt="Robô pequeno e quadrado, cor de laranja, com duas rodas grandes, uma antena e dois sensores redondos à frente, que parecem olhos."
+                 width="240" height="180">
+            <figcaption>O Faísca, o robô construído este ano. Desenho feito para este exemplo.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- aside: conteúdo secundário. Se o saltares, não perdes nada essencial. -->
+      <aside>
+        <h2>Dica</h2>
+        <p>Traz uma pen para guardar os programas que fizeres nos treinos.</p>
+      </aside>
+    </main>
+
+    <!-- footer: a zona de informação final. Também se repete nas duas páginas. -->
+    <footer>
+      <p>Site de exemplo das aulas de Desenvolvimento de Aplicações. O clube, o robô e os horários são fictícios.</p>
+    </footer>
+  </body>
+</html>

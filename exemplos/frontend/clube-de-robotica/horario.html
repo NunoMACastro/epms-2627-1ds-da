@@ -1,0 +1,72 @@
+<!doctype html>
+<!-- Segunda página do Clube de Robótica: o horário dos treinos, numa tabela
+     de dados. O cabeçalho, a navegação e o rodapé são iguais aos da página
+     inicial. -->
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Cada página tem o seu título: primeiro a página, depois o site. -->
+    <title>Horário | Clube de Robótica</title>
+  </head>
+  <body>
+    <header>
+      <p>
+        <img src="imagens/logotipo.svg" alt="" width="48" height="48">
+        Clube de Robótica
+      </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="horario.html">Horário</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Horário dos treinos</h1>
+      <p>Os treinos são na sala de informática. Podes vir só a um dos dias.</p>
+
+      <!-- Uma tabela de dados: cada valor responde a uma pergunta que junta
+           uma linha e uma coluna, como "a que horas acaba o treino de quinta?". -->
+      <table>
+        <!-- caption: o nome da tabela, logo a seguir à etiqueta de abertura. -->
+        <caption>Treinos do primeiro período (fictício)</caption>
+        <thead>
+          <tr>
+            <!-- scope="col": este cabeçalho diz o que é a coluna. -->
+            <th scope="col">Dia</th>
+            <th scope="col">Começa</th>
+            <th scope="col">Acaba</th>
+            <th scope="col">O que se faz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- scope="row": este cabeçalho diz de que dia é a linha. -->
+            <th scope="row">Terça-feira</th>
+            <td>16:30</td>
+            <td>18:00</td>
+            <td>Montagem</td>
+          </tr>
+          <tr>
+            <th scope="row">Quinta-feira</th>
+            <td>16:30</td>
+            <td>18:00</td>
+            <td>Programação</td>
+          </tr>
+          <tr>
+            <th scope="row">Sexta-feira</th>
+            <td>14:00</td>
+            <td>15:00</td>
+            <td>Preparação do torneio</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>Site de exemplo das aulas de Desenvolvimento de Aplicações. O clube, o robô e os horários são fictícios.</p>
+    </footer>
+  </body>
+</html>
