@@ -241,11 +241,11 @@ Todas as páginas HTML começam com a mesma estrutura, a que chamamos o **esquel
 </html>
 ```
 
-São dez linhas, e cada uma está lá por uma razão. Vamos a elas.
+São onze linhas. Uma delas, entre `<!--` e `-->`, é um comentário: só marca o sítio onde vai o conteúdo, e o browser ignora-a. As outras dez estão lá, cada uma, por uma razão. Vamos a elas.
 
-**`<!doctype html>`** não é um elemento. É uma declaração, e diz ao browser que o documento está escrito em HTML moderno. Parece inútil, mas tem uma história. Nos anos 90, cada browser desenhava as páginas à sua maneira, e os sites foram feitos a contar com esses defeitos. Quando os browsers passaram a seguir as regras oficiais, os sites antigos ficariam desarrumados. A solução foi esta: se a página começa com o doctype, o browser segue as regras modernas; se não começa, entra num modo de compatibilidade que imita os browsers antigos, e mais tarde o teu CSS vai comportar-se de maneiras estranhas que nada no teu código explica. Por isso o doctype é sempre a primeira linha do ficheiro, sem nada antes.
+**`<!doctype html>`** não é um elemento. É uma declaração, e diz ao browser que o documento está escrito em HTML moderno. Esta linha existe por causa da história dos browsers. Nos anos 90, cada browser desenhava as páginas à sua maneira, e os sites foram feitos a contar com esses defeitos. Quando os browsers passaram a seguir as regras oficiais, os sites antigos ficariam desarrumados. A solução foi esta: se a página começa com o doctype, o browser segue as regras modernas; se não começa, entra num modo de compatibilidade que imita os browsers antigos, e mais tarde o teu CSS vai comportar-se de maneiras estranhas que nada no teu código explica. Por isso o doctype é sempre a primeira linha do ficheiro, sem nada antes.
 
-**`<html lang="pt-PT">`** é o elemento raiz: contém todos os outros. O atributo `lang` diz em que língua está escrito o conteúdo. `pt-PT` quer dizer português de Portugal; `pt-BR` seria português do Brasil e `en` seria inglês. Parece um pormenor, mas faz muita diferença a quem não vê o ecrã. Um leitor de ecrã é um programa que lê a página em voz alta a pessoas cegas ou com pouca visão. Esse programa usa o `lang` para escolher a voz e a pronúncia. Se a tua página em português disser que está em inglês, o leitor de ecrã lê as palavras portuguesas com pronúncia inglesa, e o texto fica impossível de perceber. O `lang` serve também ao browser para oferecer tradução e ao corretor ortográfico para saber que dicionário usar.
+**`<html lang="pt-PT">`** é o elemento raiz: contém todos os outros. O atributo `lang` diz em que língua está escrito o conteúdo. `pt-PT` quer dizer português de Portugal; `pt-BR` seria português do Brasil e `en` seria inglês. Este atributo faz muita diferença a quem não vê o ecrã. Um leitor de ecrã é um programa que lê a página em voz alta a pessoas cegas ou com pouca visão. Esse programa usa o `lang` para escolher a voz e a pronúncia. Se a tua página em português disser que está em inglês, o leitor de ecrã lê as palavras portuguesas com pronúncia inglesa, e o texto fica impossível de perceber. O `lang` serve também ao browser para oferecer tradução e ao corretor ortográfico para saber que dicionário usar.
 
 **`<head>`** é a cabeça da página: guarda informação sobre a página que não aparece dentro dela. Pensa numa pasta de arquivo. O que está escrito na etiqueta da lombada (o assunto, o ano) não faz parte dos documentos lá dentro, mas é o que permite encontrá-la na estante. O `head` é essa etiqueta.
 
@@ -259,7 +259,7 @@ Neste bloco o `head` leva sempre três elementos. No bloco de CSS vais acrescent
 
 **`<meta name="viewport" content="width=device-width, initial-scale=1">`** é para os telemóveis. Quando apareceram os telemóveis com ecrã tátil e um browser completo, quase todos os sites tinham sido feitos para ecrãs de computador. Para não os estragar, os telemóveis passaram a fingir que tinham um ecrã largo, de cerca de 980 píxeis, e encolhiam a página até caber. Esta linha diz ao telemóvel: não finjas; usa a largura verdadeira do teu ecrã (`width=device-width`) e não encolhas nada (`initial-scale=1`). Sem ela, a tua página aparece minúscula num telemóvel, e a pessoa tem de fazer zoom para ler. No computador não vais notar diferença nenhuma. Num telemóvel nota-se já neste bloco, mesmo com páginas sem CSS. No bloco de responsividade, sem ela, nada do que fizeres para ecrãs pequenos vai funcionar num telemóvel, e por isso pomo-la desde o primeiro dia.
 
-**`<title>`** é o título da página. Não aparece dentro da página: aparece no separador do browser. Mas é muito mais usado do que parece. É o nome que fica gravado quando alguém guarda a página nos favoritos, é o que aparece no histórico, é o título azul do resultado num motor de pesquisa, e é a primeira coisa que um leitor de ecrã diz quando a página abre. Por isso cada página tem de ter um título diferente, que diga o que ela é.
+**`<title>`** é o título da página. Não aparece dentro da página: aparece no separador do browser, e é usado em muitos outros sítios. É o nome que fica gravado quando alguém guarda a página nos favoritos, é o que aparece no histórico, é o título azul do resultado num motor de pesquisa, e é a primeira coisa que um leitor de ecrã diz quando a página abre. Por isso cada página tem de ter um título diferente, que diga o que ela é.
 
 Nos materiais usamos a forma `Página | Site`, como em `Início | Estante Digital` ou `Sobre | Estante Digital`. A parte que muda de página para página vem primeiro, porque quando há muitos separadores abertos o browser corta os títulos compridos, e fica só visível o princípio. Se o título começasse por "Estante Digital", todos os separadores do teu site pareceriam iguais. O traço vertical `|` é só um separador; também se usa muito o hífen.
 
@@ -398,9 +398,9 @@ Vais encontrar ligações com o atributo `target="_blank"`, que as abre num sepa
 
 #### Ligação ou botão
 
-Na Web há duas coisas em que se carrega, e parecem iguais, mas não são. Uma **ligação** leva-te a outro sítio: outra página, outra parte da mesma página, um ficheiro. Um **botão** faz uma ação aqui mesmo, sem sair do sítio: enviar um formulário, abrir um menu, acrescentar um item a uma lista. As ligações são o elemento `a`; os botões são o elemento `button`, que vais usar nos blocos de formulários e de JavaScript.
+Na Web há duas coisas em que se carrega, as ligações e os botões, e no ecrã podem ter o mesmo aspeto. Uma **ligação** leva-te a outro sítio: outra página, outra parte da mesma página, um ficheiro. Um **botão** faz uma ação aqui mesmo, sem sair do sítio: enviar um formulário, abrir um menu, acrescentar um item a uma lista. As ligações são o elemento `a`; os botões são o elemento `button`, que vais usar nos blocos de formulários e de JavaScript.
 
-A diferença não é só de nome. Pelo teclado, uma ligação ativa-se com Enter e um botão com Enter ou com a barra de espaços. Um leitor de ecrã anuncia "ligação" ou "botão", e a pessoa espera coisas diferentes de cada um: de uma ligação espera mudar de sítio, de um botão espera que aconteça alguma coisa. Por isso não se faz uma ligação com ar de botão para executar uma ação, nem um botão para navegar. Neste bloco não há ações, só navegação, e por isso tudo em que se carrega é uma ligação.
+Ligações e botões também se comportam de maneira diferente para quem usa o teclado ou um leitor de ecrã. Pelo teclado, uma ligação ativa-se com Enter e um botão com Enter ou com a barra de espaços. Um leitor de ecrã anuncia "ligação" ou "botão", e a pessoa espera coisas diferentes de cada um: de uma ligação espera mudar de sítio, de um botão espera que aconteça alguma coisa. Por isso não se faz uma ligação com ar de botão para executar uma ação, nem um botão para navegar. Neste bloco não há ações, só navegação, e por isso tudo em que se carrega é uma ligação.
 
 ### Caminhos relativos
 
@@ -466,7 +466,7 @@ Sobre a origem das imagens: usa fotografias e desenhos feitos por ti, ou imagens
 
 ### O texto alternativo
 
-O atributo `alt` guarda o texto que substitui a imagem quando ela não pode ser vista. Isso acontece em mais situações do que parece:
+Há pelo menos três situações em que a imagem não é vista, e em cada uma delas é o `alt` que ocupa o lugar dela:
 
 - a pessoa é cega ou tem pouca visão e usa um leitor de ecrã, que lê o `alt` em voz alta no sítio da imagem;
 - a imagem não carregou, porque a rede está lenta ou porque o caminho está errado, e o browser mostra o `alt` no sítio dela;
@@ -560,7 +560,7 @@ Quando estiveres indeciso, faz as perguntas por esta ordem:
 
 A ordem das perguntas conta. Quase tudo se pode pôr debaixo de um título, e por isso a pergunta da `section` fica para o fim: se viesse antes, uma caixa secundária com título, como a dica da Estante Digital, ficava classificada como secção sem chegar à pergunta do `aside`.
 
-#### Porque é que a semântica importa
+#### Os quatro leitores de uma página
 
 Uma página não é lida só por pessoas que olham para o ecrã. É lida por, pelo menos, quatro tipos de leitores, e a semântica serve a todos.
 
@@ -1061,16 +1061,16 @@ Este pedaço de uma página tem quatro erros. Encontra-os, diz para cada um o qu
 
 ```html
 <main>
-  <h1>Clube de xadrez da escola</h1>
-  <h3>Quando nos encontramos</h3>
-  <p>Às quartas-feiras, na sala 12. Trazemos:
+  <h1>Clube de fotografia da escola</h1>
+  <h3>As saídas deste período</h3>
+  <p>Às terças-feiras à tarde, saímos pela vila com a máquina. Este período vamos fotografar:
     <ul>
-      <li>tabuleiros</li>
-      <li>relógios de xadrez</li>
+      <li>as árvores do jardim municipal</li>
+      <li>as fachadas de azulejo da rua principal</li>
     </ul>
   </p>
-  <img src="imagens/tabuleiro.jpg">
-  <p>Para te inscreveres, <a href="inscricao.html">clica aqui</a>.</p>
+  <img src="imagens/azulejos.jpg">
+  <p>Para veres as fotografias da última saída, <a href="ultima-saida.html">clica aqui</a>.</p>
 </main>
 ```
 

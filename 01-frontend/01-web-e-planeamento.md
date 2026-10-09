@@ -95,7 +95,7 @@ Desta história ficam três ideias que vais reencontrar:
 
 ### Três linguagens, três trabalhos
 
-Uma página web é feita com três linguagens, e cada uma tem o seu trabalho. Vais usar esta divisão em todos os blocos de frontend do ano.
+O HTML, o CSS e o JavaScript repartem entre si o trabalho de fazer uma página web. Vais usar esta divisão em todos os blocos de frontend do ano.
 
 O **HTML** diz o que cada pedaço do conteúdo é: isto é um título, isto é um parágrafo, isto é uma lista, isto é uma imagem, isto é uma ligação para outra página. É a estrutura e o significado.
 
@@ -282,11 +282,11 @@ Início
 
 Um bom mapa cumpre algumas regras, e cada uma evita um problema concreto:
 
-- **todas as páginas se alcançam a partir da página inicial**, seguindo ligações. Uma página a que não se chega por nenhuma ligação é uma página perdida: existe, mas ninguém a encontra;
-- **de todas as páginas se volta à página inicial**, pelo menos pelo menu;
-- **o menu, que se repete em todas as páginas, leva às páginas principais**, que são as do primeiro nível da árvore. As páginas mais específicas alcançam-se a partir delas;
-- **não é preciso carregar em muitas ligações para chegar a qualquer página**. Num site pequeno, duas ou três chegam. Se precisares de mais, a árvore está funda demais;
-- **cada página tem um nome claro**, que diz o que se lá encontra. É o nome que vai aparecer no menu.
+- todas as páginas se alcançam a partir da página inicial, seguindo ligações. Uma página a que não se chega por nenhuma ligação é uma **página perdida**: existe, mas ninguém a encontra;
+- de todas as páginas se volta à página inicial, pelo menos pelo menu;
+- o menu, que se repete em todas as páginas, leva às páginas principais, que são as do primeiro nível da árvore. As páginas mais específicas alcançam-se a partir delas;
+- não é preciso carregar em muitas ligações para chegar a qualquer página. Num site pequeno, duas ou três chegam. Se precisares de mais, a árvore está funda demais;
+- cada página tem um nome claro, que diz o que se lá encontra. É o nome que vai aparecer no menu.
 
 O mapa desenha, para cada página, o caminho principal a partir da página inicial. As ligações do menu e as ligações de regresso, que se repetem em todas as páginas, não se desenham, para o mapa não ficar cheio de linhas. Repara também que o menu mostra só as páginas principais. A página de um recurso, na Estante Digital, não está no menu, porque há muitas: chega-se a ela pela lista de recursos na página inicial.
 
@@ -314,22 +314,22 @@ Ao lado de cada zona do wireframe escreve-se uma **anotação** a dizer o que é
 
 O mapa e os wireframes descrevem o mesmo site por dois lados, e por isso têm de dizer a mesma coisa. Antes de dares o plano por acabado, faz estas verificações:
 
-- **cada ligação desenhada num wireframe tem de levar a uma página que existe no mapa**. Se o wireframe da página inicial tem uma ligação "Contactos", o mapa tem de ter uma página Contactos. Se não tiver, é uma **ligação sem destino**, que no site verdadeiro vai dar o erro 404;
-- **cada linha do mapa tem de aparecer em algum wireframe**, como uma ligação desenhada. Se o mapa diz que da página inicial se vai à página Sobre, o wireframe da página inicial tem de mostrar onde está essa ligação;
-- **os nomes são os mesmos nos dois**. Se no mapa a página se chama "Sobre" e no menu do wireframe se chama "Quem somos", uma pessoa que leia os dois não sabe se são a mesma página;
-- **o menu é igual em todos os wireframes**, com as mesmas opções pela mesma ordem.
+- cada ligação desenhada num wireframe tem de levar a uma página que existe no mapa. Se o wireframe da página inicial tem uma ligação "Contactos", o mapa tem de ter uma página Contactos. Se não tiver, é uma **ligação sem destino**, que no site verdadeiro vai dar o erro 404;
+- cada linha do mapa tem de aparecer em algum wireframe, como uma ligação desenhada. Se o mapa diz que da página inicial se vai à página Sobre, o wireframe da página inicial tem de mostrar onde está essa ligação;
+- os nomes são os mesmos nos dois. Se no mapa a página se chama "Sobre" e no menu do wireframe se chama "Quem somos", uma pessoa que leia os dois não sabe se são a mesma página;
+- o menu é igual em todos os wireframes, com as mesmas opções pela mesma ordem.
 
-Estas verificações parecem burocracia, mas apanham no papel os erros que, depois, só se descobrem quando um utilizador carrega numa ligação e lhe aparece uma página de erro.
+Estas verificações apanham no papel os erros que, no site verdadeiro, só se descobrem quando um utilizador carrega numa ligação e lhe aparece uma página de erro.
 
 ### O tema do teu site
 
 Ao longo deste ano vais construir um site teu, que vai crescendo bloco a bloco: primeiro a estrutura em HTML, depois o aspeto com CSS, depois a adaptação a ecrãs de todos os tamanhos, depois o comportamento com JavaScript, e no fim a publicação. O tema és tu que escolhes. Estes critérios ajudam a escolher bem:
 
-- **escolhe uma coisa de que gostes e que conheças**. Vais trabalhar nela o ano todo, e é mais fácil escrever conteúdo sobre um assunto que conheces;
-- **tem de dar para várias páginas**. Pensa se consegues imaginar pelo menos três páginas diferentes sobre o tema;
-- **ajuda se o tema tiver coleções de coisas parecidas**: receitas, jogos, livros, jogadores, sítios, eventos, animais. Mais à frente no ano vais mostrar listas destas coisas com JavaScript e fazer um formulário, e um tema com coleções dá-te material para isso;
-- **o conteúdo pode ser inventado**, mas sem dados pessoais verdadeiros e sem nada que não pudesses mostrar numa aula;
-- **começa pequeno**. Um site com três páginas bem feitas vale mais do que um site com vinte páginas vazias. Podes sempre acrescentar.
+- escolhe uma coisa de que gostes e que conheças. Vais trabalhar nela o ano todo, e é mais fácil escrever conteúdo sobre um assunto que conheces;
+- tem de dar para várias páginas. Pensa se consegues imaginar pelo menos três páginas diferentes sobre o tema;
+- ajuda se o tema tiver coleções de coisas parecidas: receitas, jogos, livros, jogadores, sítios, eventos, animais. Mais à frente no ano vais mostrar listas destas coisas com JavaScript e fazer um formulário, e um tema com coleções dá-te material para isso;
+- o conteúdo pode ser inventado, mas sem dados pessoais verdadeiros e sem nada que não pudesses mostrar numa aula;
+- começa pequeno. Um site com três páginas bem feitas vale mais do que um site com vinte páginas vazias. Podes sempre acrescentar.
 
 Algumas ideias, só para te pôr a pensar: o clube de xadrez da escola, as receitas da tua família, os trilhos a pé da tua zona, os jogos de que mais gostas, um clube de leitura, uma banda imaginária, um abrigo de animais imaginário, a modalidade desportiva que praticas. Os exemplos dos guias usam a Estante Digital, um site de recursos de estudo, mas o teu site não tem de ser parecido com ela.
 

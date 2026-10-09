@@ -3,7 +3,7 @@
 # {{titulo}}
 
 UC: {{uc}} · Competências: {{competencias}} · Bloco: {{bloco}} · Duração: {{duracao}}
-Pré-requisitos e capability gates: {{prerequisitos}}
+O que tens de saber antes de começar, incluindo o que aprendeste em Fundamentos de Programação: {{prerequisitos}}
 Classificação curricular: {{classificacao}}
 
 ## Problema e âmbito
@@ -36,6 +36,6 @@ Rubrica descritiva: {{rubrica}}
 
 Código, README, plano, registo de testes, histórico e URL quando publicada: {{artefacto}}
 Estado real de publicação, limitações e pendentes: {{estado_entrega}}
-Competências demonstradas, diagnósticos em falta e handoff para o 11.º: {{handoff}}
+O que mostraste saber fazer neste projeto, o que ainda falta confirmar e o que levas para o 11.º ano: {{handoff}}
 
 ![Rodapé](../../imagens/rodape.png)
