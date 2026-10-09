@@ -46,7 +46,7 @@ A matéria está na secção "Elementos, etiquetas e atributos" do guia.
 Estas duas linhas são da página inicial da Banda da Escola:
 
 ```html
-<p>Consulta o <a href="concertos.html">calendário de concertos</a> antes de comprares bilhete.</p>
+<p>Os bilhetes não são reembolsados: <strong>confirma a data no <a href="concertos.html">calendário de concertos</a> antes de comprares bilhete</strong>.</p>
 <img src="imagens/palco.jpg" alt="A banda a tocar no palco do auditório, com o público de pé." width="800" height="500">
 ```
 
@@ -79,7 +79,7 @@ As partes "Sopros" e "Percussão" pertencem a "Instrumentos que procuramos".
 
 **a)** Dá a cada título um nível, de `h1` a `h6`, e escreve o índice da página com a indentação a mostrar os níveis, como no passo 7 do exemplo explicado.
 
-**b)** Um colega pôs o nome do site, "Banda da Escola", num `h1` no cabeçalho, e também "Como entrar na banda" num `h1`. Explica-lhe, numa ou duas frases, o que está mal e como deve ficar.
+**b)** O título principal da página inicial do site é "Bem-vindos à Banda da Escola". Mais abaixo, a página inicial tem uma parte curta com o título "Como entrar na banda", uma frase e uma ligação para a página da alínea a). Que nível dás a este título na página inicial? Justifica numa frase.
 
 ## Exercício 3: Ordenada ou não ordenada (5 min)
 
@@ -93,7 +93,7 @@ Para cada conteúdo, escolhe `ul` ou `ol` e justifica numa frase com o teste da 
 
 **c)** A classificação das três bandas no concurso regional.
 
-**d)** O que cada músico deve levar para um concerto: a partitura, a roupa preta e a garrafa de água.
+**d)** Os nomes dos cinco músicos da banda, escritos por ordem alfabética.
 
 ## Exercício 4: Caminhos relativos (15 min)
 
@@ -117,7 +117,7 @@ Escreve o valor do `href` ou do `src` em cada caso.
 
 **a)** No `index.html`, uma ligação para a página dos concertos.
 
-**b)** No `index.html`, uma ligação para a página da vocalista.
+**b)** No `musicos/baterista.html`, uma ligação para a página da vocalista.
 
 **c)** No `musicos/baterista.html`, uma ligação de volta para a página inicial.
 
@@ -131,7 +131,7 @@ A matéria está nas secções "O texto alternativo" e "Imagem com legenda: figu
 
 Escreve o valor do `alt` de cada imagem. Se achares que deve ficar vazio, escreve `alt=""` e diz porquê.
 
-**a)** No cabeçalho de todas as páginas, o logótipo da banda, uma clave de sol desenhada a dourado, mesmo ao lado do texto "Banda da Escola".
+**a)** No cabeçalho de todas as páginas, o logótipo da banda, uma clave de sol desenhada a dourado, está mesmo ao lado do texto "Banda da Escola" e tem `alt=""`, como o logótipo da Estante Digital. Nas páginas dos músicos, no fim do texto, o mesmo logótipo aparece outra vez, sozinho e sem nenhum texto ao lado, e quem carrega nele volta à página inicial. Que `alt` leva o logótipo neste segundo sítio?
 
 **b)** Na página dos concertos, dentro de um `figure`, uma fotografia da banda a tocar. A legenda, no `figcaption`, diz "Concerto de Natal de 2025, no auditório da escola". A fotografia mostra os cinco músicos no palco, com o vocalista à frente, e o público de pé.
 
@@ -145,8 +145,8 @@ Este é o wireframe da página dos concertos, descrito por palavras, zona a zona
 
 1. Uma faixa no topo, com o logótipo, o nome "Banda da Escola" e o menu com as ligações Início, Concertos e Músicos.
 2. O título "Próximos concertos".
-3. Três blocos iguais, um por concerto, cada um com o nome do concerto, a data, o local e uma frase de descrição. Cada bloco podia ser copiado sozinho para o site da escola e continuava a fazer sentido.
-4. Ao lado dos concertos, uma caixa "Sabias que?", com uma curiosidade sobre a história da banda.
+3. Três blocos iguais, um por concerto, cada um com o nome do concerto, a data, o local e uma frase de descrição.
+4. Um bloco com o título "Como tudo começou" e duas frases: a banda nasceu em 1998, com três alunos do 10.º ano, e tocou pela primeira vez na festa de fim de ano, no pavilhão da escola.
 5. Uma faixa no fundo, com o contacto do professor responsável e o ano letivo.
 
 **a)** Para cada zona, diz que elemento ou elementos usavas: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, ou um título, de `h1` a `h6`. Uma das zonas precisa de dois elementos, um dentro do outro.
@@ -169,17 +169,17 @@ Os bilhetes do concerto de primavera têm estes preços (inventados): um aluno d
 
 Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não tiver chegado. Nenhuma dá a resposta: indicam onde olhar.
 
-**Exercício 1.** Conta as etiquetas de abertura: cada uma começa um elemento. Um atributo tem sempre a forma `nome="valor"` e está dentro da etiqueta de abertura. Para o pai, procura a etiqueta que abriu antes do `<a` e ainda não fechou quando ele aparece.
+**Exercício 1.** Conta as etiquetas de abertura: cada uma começa um elemento. Um atributo tem sempre a forma `nome="valor"` e está dentro da etiqueta de abertura. Para o pai, desenha a árvore da primeira linha, como a da secção "Elementos dentro de elementos".
 
-**Exercício 2.** Começa por perguntar qual é o assunto da página inteira: é esse o `h1`. Depois, para cada título, pergunta se é uma parte nova da página ou uma parte dentro da anterior. Duas partes pertencem a uma terceira, e isso quer dizer que ficam um nível abaixo dela.
+**Exercício 2.** Começa por perguntar qual é o assunto da página inteira: é esse o `h1`. Depois, para cada título, pergunta se é uma parte nova da página ou uma parte dentro da anterior. Duas partes pertencem a uma terceira, e isso quer dizer que ficam um nível abaixo dela. Na alínea b), faz a mesma primeira pergunta, mas sobre a página inicial.
 
 **Exercício 3.** Para cada lista, imagina que trocas o primeiro item com o último. Pergunta se a informação passa a estar errada, e não se passa a ser estranha.
 
-**Exercício 4.** Põe o dedo na pasta onde está o ficheiro que tem a ligação: é daí que o caminho parte. Para descer a uma pasta, escreves o nome dela e uma barra. Para subir à pasta de cima, escreves `../`. Nas alíneas c) e d), o ficheiro com a ligação está dentro da pasta `musicos`.
+**Exercício 4.** Põe o dedo na pasta onde está o ficheiro que tem a ligação: é daí que o caminho parte. Para descer a uma pasta, escreves o nome dela e uma barra. Para subir à pasta de cima, escreves `../`. Nas alíneas b), c) e d), o ficheiro com a ligação está dentro da pasta `musicos`.
 
-**Exercício 5.** Faz a pergunta do telefone para cada imagem. Na alínea a), lê o que está escrito ao lado do logótipo. Na alínea b), lê o que a legenda já diz, para não o repetires. Na alínea c), pensa no que perde quem não vê o mapa, sabendo que o texto da página não o substitui.
+**Exercício 5.** Faz a pergunta do telefone para cada imagem. Na alínea a), a imagem é a mesma do cabeçalho, mas o que está à volta dela não é: procura na secção "O texto alternativo" a situação que corresponde a este segundo sítio. Na alínea b), lê o que a legenda já diz, para não o repetires. Na alínea c), pensa no que perde quem não vê o mapa, sabendo que o texto da página não o substitui.
 
-**Exercício 6.** Segue as perguntas da lista do guia, pela ordem, para cada zona. Na zona 1, repara que há duas coisas: a faixa inteira e o menu dentro dela. Na zona 3, cada bloco é um conteúdo separado, e são três.
+**Exercício 6.** Segue as perguntas da lista do guia, pela ordem, para cada zona. Na zona 1, repara que há duas coisas: a faixa inteira e o menu dentro dela. Nas zonas 3 e 4, faz as perguntas uma de cada vez e para na primeira a que respondes que sim. Na zona 3, faz as perguntas sobre um só bloco, e não sobre os três juntos.
 
 **Exercício 7.** Começa por desenhar a tabela à mão, com os cabeçalhos no topo e à esquerda, antes de escreveres o HTML. Para decidir o que fica nas linhas, desenha as duas arrumações possíveis e vê qual se lê melhor; o que conta é a justificação que dás. Na primeira linha, a do `thead`, a célula do canto também é um `th`.
 
