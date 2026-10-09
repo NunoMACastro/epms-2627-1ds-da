@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Demonstrate and verify a same-line Git conflict in a disposable directory.
+"""Demonstra e verifica um conflito de Git na mesma linha, numa pasta descartável.
 
-Run from any working directory. No files or Git configuration in the teaching
-workspace are modified. ``--keep`` preserves only the newly created lab folder.
+Pode correr a partir de qualquer pasta. Não altera ficheiros nem a configuração
+do Git fora da pasta temporária que cria; ``--keep`` preserva só essa pasta.
 """
 
 import argparse
@@ -14,7 +14,7 @@ import tempfile
 
 
 def execute_lab(folder):
-    """Create two divergent branches, prove conflict, resolve and verify history."""
+    """Cria dois ramos divergentes, provoca o conflito, resolve-o e verifica o histórico."""
     # GIT_DIR e outras opções herdadas não podem redirecionar o exercício.
     environment = {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
     environment.update({
@@ -25,7 +25,7 @@ def execute_lab(folder):
     })
 
     def git(*arguments, expected=0):
-        """Execute a Git command locally and fail if its result differs from intent."""
+        """Executa um comando do Git na pasta do exercício e falha se o resultado não for o esperado."""
         print(f"$ git {' '.join(arguments)}", flush=True)
         result = subprocess.run(["git", *arguments], cwd=folder, env=environment,
                                 capture_output=True, text=True, check=False)
@@ -70,7 +70,7 @@ def execute_lab(folder):
 
 
 def main():
-    """Create isolated workspace and clean only the directory this process owns."""
+    """Cria a pasta isolada e, no fim, apaga só a pasta que este processo criou."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--keep", action="store_true", help="preservar a pasta temporária para inspeção")
     args = parser.parse_args()
