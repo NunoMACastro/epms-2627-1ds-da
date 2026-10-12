@@ -682,7 +682,7 @@ Estes são quatro casos reais, experimentados no browser, com o que o browser fa
 
 | O que escreveste | O que o browser faz no DOM | O que vês na página |
 | --- | --- | --- |
-| Um `strong` que nunca fechaste, a meio de um parágrafo | Fecha-o no fim do parágrafo, e volta a abri-lo no parágrafo seguinte | Tudo o que vem a seguir fica a negrito |
+| Um `strong` que nunca fechaste, a meio de um parágrafo | Fecha-o no fim do parágrafo e abre logo outro a seguir, à volta de tudo o que vem depois | Tudo o que vem a seguir fica a negrito |
 | Uma lista `ul` dentro de um `p` | Fecha o `p` antes da lista e cria um parágrafo vazio a seguir, com o `</p>` que sobrou | A lista aparece, mas o DOM tem um parágrafo vazio a mais |
 | Um `h2` fechado com `</h3>` | Aceita o `</h3>` como fecho do `h2`, porque qualquer etiqueta de fecho de título fecha o título que estiver aberto | Nada de estranho: o erro fica escondido até ao dia em que deixar de dar certo |
 | Uma ligação `a` dentro de outra `a` | Parte-a em duas ligações separadas | Duas ligações seguidas, em vez de uma |
@@ -977,7 +977,7 @@ Estes são os erros que mais aparecem nas primeiras páginas. Para cada um tens 
 
 ### A imagem não aparece
 
-**Sintoma:** no sítio da imagem aparece um pequeno ícone de imagem partida, ou só o texto do `alt`, ou nada. **Causa:** quase sempre, o caminho do `src` não corresponde ao sítio onde a imagem está. As razões mais frequentes são a imagem estar noutra pasta (por exemplo, ainda nas Transferências), o nome ter uma letra diferente (`Foto.jpg` no disco e `foto.jpg` no código), a extensão estar trocada (`.jpeg` no disco e `.jpg` no código) ou faltar a pasta no caminho (`capa.svg` em vez de `imagens/capa.svg`). **Correção:** compara letra a letra o caminho do `src` com a pasta no explorador de ficheiros, a partir da pasta onde está a página.
+**Sintoma:** no sítio da imagem aparece um pequeno ícone de imagem partida, ou só o texto do `alt`, ou nada. **Causa:** quase sempre, o caminho do `src` não corresponde ao sítio onde a imagem está. As razões mais frequentes são a imagem estar noutra pasta (por exemplo, ainda nas Transferências), o nome ter uma letra trocada, a mais ou a menos (`fotografia.jpg` no disco e `fotogafia.jpg` no código), a extensão estar trocada (`.jpeg` no disco e `.jpg` no código) ou faltar a pasta no caminho (`capa.svg` em vez de `imagens/capa.svg`). Uma diferença só de maiúsculas e minúsculas, como `Foto.jpg` no disco e `foto.jpg` no código, não faz falhar a imagem no teu computador, porque o Windows e o macOS tratam os dois nomes como o mesmo ficheiro; faz falhar quando o site for publicado, como explica a secção "Caminhos relativos", e por isso também se corrige. **Correção:** compara letra a letra o caminho do `src` com a pasta no explorador de ficheiros, a partir da pasta onde está a página.
 
 ### A ligação dá "ficheiro não encontrado"
 
@@ -1001,7 +1001,7 @@ Estes são os erros que mais aparecem nas primeiras páginas. Para cada um tens 
 
 ### Tudo fica a negrito a partir de certo ponto
 
-**Causa:** um `strong` sem etiqueta de fecho, ou com a barra esquecida (`<strong>` onde devia estar `</strong>`). Como viste na secção "Como o browser lida com os erros", o browser vai reabrindo o `strong` nos elementos seguintes. **Correção:** procura o último sítio onde o negrito estava certo e confirma que cada `<strong>` tem o seu `</strong>`.
+**Causa:** um `strong` sem etiqueta de fecho, ou com a barra esquecida (`<strong>` onde devia estar `</strong>`). Como viste na secção "Como o browser lida com os erros", o browser fecha o `strong` no fim do parágrafo e abre logo outro, à volta de tudo o que vem a seguir. **Correção:** procura o último sítio onde o negrito estava certo e confirma que cada `<strong>` tem o seu `</strong>`.
 
 ### Aparece um título onde devia estar texto normal
 

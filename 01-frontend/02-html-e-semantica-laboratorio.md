@@ -200,7 +200,7 @@ Para o `width` e o `height`, usa as medidas verdadeiras da imagem, depois de red
 
 **2.** Na segunda página, carrega em "Início" na navegação e depois na ligação de volta, no fim do conteúdo. As duas levam à página inicial.
 
-**3.** Se alguma ligação der "ficheiro não encontrado", compara letra a letra o `href` com o nome do ficheiro no painel Explorer. As diferenças mais comuns são uma letra maiúscula, um acento ou a extensão esquecida.
+**3.** Se alguma ligação der "ficheiro não encontrado", compara letra a letra o `href` com o nome do ficheiro no painel Explorer. As diferenças mais comuns são uma letra trocada, a mais ou a menos, um acento ou a extensão esquecida. Uma diferença só de maiúsculas e minúsculas, como `Torneios.html` no `href` e `torneios.html` no disco, não dá erro no teu computador, porque o Windows e o macOS tratam os dois nomes como o mesmo ficheiro. Só falha quando o site for publicado num servidor, como explica a secção "Caminhos relativos" do guia. Por isso, corrige-a na mesma.
 
 **Confirma:** consegues ir de uma página à outra e voltar, pelos dois caminhos.
 
@@ -244,7 +244,7 @@ Tem aberta a secção "Erros comuns" do guia. Nesta parte vais estragar as tuas 
 
 **9.2 O caminho sem a pasta.** No `src` da imagem, apaga `imagens/`, deixando só o nome do ficheiro. Guarda e recarrega. A imagem desaparece outra vez, porque agora o browser procura o ficheiro na pasta da página, e não na pasta `imagens`. Repõe o caminho.
 
-**9.3 O título que salta um nível.** Numa das tuas secções, muda o `h2` para `h4`, na abertura e no fecho. Guarda e recarrega. Na página, a única coisa que muda é o tamanho da letra, e é isso que torna este erro perigoso: parece só uma questão de aspeto. Escreve o índice dos títulos da página e vê o salto de `h1` para `h4`. Repõe o `h2`.
+**9.3 O título que salta um nível.** Numa das tuas secções, muda o `h2` para `h4`, na abertura e no fecho. Guarda e recarrega. Na página, só muda o aspeto: a letra fica mais pequena e o espaço à volta do título muda. É isso que torna este erro perigoso: parece só uma questão de aspeto. Escreve o índice dos títulos da página e vê o salto de `h1` para `h4`. Repõe o `h2`.
 
 **9.4 A lista dentro de um parágrafo.** Escolhe uma das tuas listas e põe-na dentro de um parágrafo: escreve `<p>` antes do `<ul>` e `</p>` depois do `</ul>`. Guarda e recarrega. Na página quase não se nota nada. Agora abre o separador Elements e procura esse sítio da árvore: o browser fechou o parágrafo antes da lista e criou um parágrafo vazio a seguir. É a diferença entre o teu ficheiro e o DOM de que fala a secção "Como o browser lida com os erros". Repõe a lista como estava.
 
