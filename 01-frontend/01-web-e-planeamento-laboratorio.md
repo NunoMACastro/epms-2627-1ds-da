@@ -120,6 +120,8 @@ Pensa antes de continuares: quais são as três formas de ligar uma parte da pá
 - Carregar com o botão direito numa parte da página e escolher Inspecionar.
 - Carregar no ícone da seta e depois na parte da página.
 
+Agora escolhe: qual das três usavas para descobrir que elemento é o desenho do logótipo, no topo da página? Explica a tua escolha numa frase. A resposta: serve a segunda ou a terceira, porque partem da página. Já vês o logótipo e queres encontrar a sua linha na árvore. A primeira serve para o caminho contrário: tens uma linha da árvore e queres saber que parte da página ela desenha. Se experimentares, a linha do logótipo começa por `<img`, que é como o HTML marca uma imagem.
+
 ## Fase 3: Mudar o DOM sem mudar o ficheiro
 
 O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser construiu a partir dele, em memória. O que mudas nas ferramentas do programador muda só o DOM, e nunca o ficheiro. Quando recarregas a página, o browser deita fora a árvore e volta a construí-la a partir do ficheiro. Para saber mais, lê a secção "O ficheiro e o DOM" do [guia](01-web-e-planeamento.md).
@@ -137,6 +139,8 @@ O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser constr
 ### Paragem 3
 
 Mostraste com uma experiência que mudar o DOM não muda o ficheiro. Escreve na linha 3 da tabela o que aconteceu ao título. O que deve ficar escrito: voltou ao texto original, "Recursos de estudo recomendados pela turma".
+
+Lê a tua frase do passo 5 a um colega. Ele percebe, só com ela, porque é que o título voltou ao original? Se não perceber, falta-lhe uma das três coisas da resposta completa.
 
 Não estragaste nada. O que mudas nas ferramentas do programador fica só na tua cópia da página, até recarregares.
 
@@ -204,7 +208,7 @@ A página de 1992 é um só ficheiro, só com texto. Uma página de hoje precisa
 
    Abres o Network antes de escrever o endereço porque as ferramentas só registam os pedidos feitos enquanto estão abertas.
 
-2. Antes de olhares para a barra de baixo das ferramentas, prevê: esta página vai fazer mais ou menos pedidos do que o primeiro site? Depois olha para o número de pedidos. O que deves ver: muitos pedidos, mais de cem. A 16 de outubro de 2026 foram cerca de 170. O número exato muda de visita para visita, e muda se tiveres uma sessão iniciada no GitHub.
+2. Antes de olhares para a barra de baixo das ferramentas, prevê: esta página vai fazer mais ou menos pedidos do que o primeiro site? Depois olha para o número de pedidos. O que deves ver: muitos pedidos, mais de cem. Em dois ensaios a 16 de outubro de 2026, foram entre 170 e 190. O número exato muda de visita para visita, e muda se tiveres uma sessão iniciada no GitHub.
 
 ### Paragem 6
 
@@ -272,6 +276,7 @@ Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vaz
 
 - [ ] A tabela de registo tem as oito linhas preenchidas.
 - [ ] Escreveste a frase da fase 3, com as palavras "ficheiro" e "DOM".
+- [ ] Explicaste, na paragem 2, a forma que escolheste para encontrar o logótipo na árvore.
 - [ ] Sabes abrir as ferramentas do programador e encontrar na árvore qualquer parte de uma página.
 - [ ] Sabes seguir um pedido no separador Network e ler o método e o código de resposta.
 - [ ] Consegues explicar, por palavras tuas, porque é que o DOM pode ser diferente do ficheiro, e o que quer dizer um 404.

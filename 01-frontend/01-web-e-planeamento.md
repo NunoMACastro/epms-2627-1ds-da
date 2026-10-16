@@ -680,16 +680,16 @@ Para praticar este tema, faz o [laboratório](01-web-e-planeamento-laboratorio.m
 
 ### O plano do teu site
 
-Na aula, fazes o plano do teu site em papel, pelos mesmos passos do exemplo guiado. Preenches também os campos do brief que a tabela diz que se preenchem neste tema. O plano tem:
+Na aula, fazes o plano do teu site em papel, pelos mesmos passos do exemplo guiado. Tem à mão o [modelo do brief](../projeto/modelos/brief-e-wireframe.md). Escreve as respostas nos campos que a tabela da secção "Preencher o modelo do brief" diz que se preenchem neste tema.
 
-1. o tema, escolhido do menu, com um nome provisório para o site;
-2. o utilizador, a tarefa principal e a história de uma visita, em duas ou três frases;
-3. o inventário de conteúdos, com a origem de cada coisa, e os limites do trabalho;
-4. o mapa do site, com pelo menos duas páginas ligadas entre si, e uma frase dentro de cada caixa;
-5. os wireframes estreito e largo da página inicial, com as anotações, e a hierarquia de informação;
-6. a verificação da coerência, feita por ti, a verificação com um colega e os critérios de aceitação.
+1. **Escolhe o tema.** Lê os critérios da secção "O tema do teu site" e escolhe o teu tema do menu do professor. Escreve-o no topo da folha, com um nome provisório para o site. Se estiveres indeciso entre dois, escolhe aquele de que consegues imaginar mais páginas.
+2. **O utilizador e a tarefa principal.** Preenche os campos "Utilizador e necessidade" e "Resultado útil para essa pessoa". Sê concreto: não "toda a gente", mas uma pessoa como a Marta do exemplo guiado. Escreve, em duas ou três frases, a história de uma visita dessa pessoa ao teu site.
+3. **O inventário de conteúdos.** Preenche o campo "Conteúdo necessário e respetiva origem", como no passo 3 do exemplo guiado. Escreve uma linha por conteúdo, com o tipo e a origem. Depois agrupa as coisas parecidas. Preenche também o campo "Limites do trabalho", com o que o teu site não vai ter nesta fase.
+4. **O mapa do site.** Decide as páginas a partir dos grupos do inventário. Desenha o mapa numa folha lisa, com uma caixa por página e linhas para as ligações. Dentro de cada caixa, escreve o nome da página e uma frase a dizer para que serve. Para o laboratório do tema 02 precisas de pelo menos duas páginas ligadas entre si. Se conseguires imaginar três, melhor. Confirma as regras da secção "O mapa do site": consegues chegar a todas as páginas a partir do Início, e voltar de todas?
+5. **Os wireframes.** Desenha o wireframe estreito da tua página inicial, com as anotações ao lado de cada zona. Depois desenha o wireframe largo da mesma página, e confirma que a ordem de leitura é a mesma nos dois. Preenche o campo "Hierarquia de informação" com a ordem das zonas do wireframe estreito, como no passo 6 do exemplo guiado. Se te sobrar tempo, desenha também o wireframe estreito da segunda página. Não gastes tempo em pormenores: caixas, riscos para o texto e um X para as imagens chegam.
+6. **A verificação.** Primeiro, sozinho, verifica se o mapa e os wireframes concordam, como no passo 9 do exemplo guiado, e corrige o que encontrares. Depois troca de plano com um colega. Sem lhe explicares nada, pede-lhe que encontre no teu plano uma informação concreta do teu site, como "onde vejo quando é o próximo torneio?". Ele diz-te, apontando, por onde passou. Se ele se perder, o teu plano tem um problema: pergunta-lhe onde hesitou e corrige. Escreve o que aconteceu no campo "Verificação com um colega antes de implementar". Por fim, preenche o campo "Critérios de aceitação". Escreve duas ou três condições que o teu site tem de cumprir nesta fase, como as do passo 9 do exemplo guiado.
 
-Guarda a folha do mapa e dos wireframes. Fotografa-a e guarda as fotografias, com a cópia do brief, numa pasta com o nome do teu site. O nome vai em minúsculas, sem espaços nem acentos, com hífenes entre as palavras, como `estante-digital`. É essa a pasta do teu site.
+Guarda a folha do mapa e dos wireframes. Fotografa-a e guarda as fotografias, com a cópia do brief, numa pasta com o nome do teu site. O nome vai em minúsculas, sem espaços nem acentos, com hífenes entre as palavras, como `estante-digital`. É essa a pasta do teu site. No laboratório do tema 02, é lá dentro que vais escrever as páginas em HTML.
 
 O plano que fizeste é a planta do teu site. A seguir vem o tema 01 do Git, onde vais aprender a guardar versões da pasta do teu site, começando pelo plano. Assim, nenhuma alteração se perde. Depois, no guia [HTML e semântica](02-html-e-semantica.md), vais transformar o plano em páginas de verdade, escritas em HTML. Cada zona do wireframe vai dar um elemento.
 
