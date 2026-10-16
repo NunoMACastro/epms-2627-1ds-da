@@ -2,45 +2,43 @@
 
 # Ficha de exercícios: A Web, os utilizadores e o planeamento
 
-UC: UC02833, Conceber aplicações para a web na vertente frontend
+Ficha do tema A Web, os utilizadores e o planeamento, do módulo Conceber aplicações para a web na vertente frontend. Praticas os assuntos do tema, um de cada vez. São a Internet e a Web, as três linguagens, os endereços, os códigos de resposta e o plano de um site. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
-Bloco: F01
+## O que precisas de saber
 
-Requisitos: UC02833.K01, UC02833.K02, UC02833.A02, UC02833.A03
+O [guia do tema](01-web-e-planeamento.md) e o [laboratório](01-web-e-planeamento-laboratorio.md). Cada exercício usa uma parte do guia:
 
-| Identificação | Valor |
+- Exercício 1: a secção "A Internet e a Web não são a mesma coisa".
+- Exercício 2: a secção "Três linguagens, três trabalhos".
+- Exercício 3: as secções "O endereço de uma página" e "Cliente e servidor".
+- Exercício 4: a secção "O que se diz num pedido e numa resposta".
+- Exercício 5: a secção "O mapa do site" e os passos 3 a 5 do exemplo guiado.
+- Exercício 6: a secção "O mapa e os wireframes têm de concordar" e o passo 9 do exemplo guiado.
+
+Se encravares, volta a essa parte do guia antes de olhares para o apoio, no fim da ficha.
+
+## Como trabalhar
+
+Resolve os exercícios pela ordem. Cada exercício treina uma só coisa:
+
+| Exercício | O que treina |
 | --- | --- |
-| Material | Ficha do bloco F01, acompanha o [guia](01-web-e-planeamento.md) e o [laboratório](01-web-e-planeamento-laboratorio.md) |
-| Tempo total | 50 minutos dos 240 do bloco, nos exercícios 1 a 6. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 50 minutos |
-| Entrega | As respostas escritas dos exercícios 1 a 6, com o mapa do exercício 5 desenhado à mão; o desafio e o exercício de "Para ires mais longe", se os fizeres |
+| 1 | Distinguir a Internet da Web |
+| 2 | Atribuir cada trabalho à linguagem certa |
+| 3 | Partir um endereço nas suas partes |
+| 4 | Ler os códigos de resposta |
+| 5 | Desenhar o mapa de um site a partir do seu conteúdo |
+| 6 | Confirmar que um mapa e um wireframe concordam |
+| Desafio opcional | Passar um wireframe estreito a largo |
+| Para ires mais longe | Ler um endereço com parâmetros |
 
-## Objetivos e conceitos necessários
+Os exercícios 1 a 6 são obrigatórios. O desafio e a secção "Para ires mais longe" são opcionais.
 
-Vais praticar, um de cada vez, os assuntos do bloco: a diferença entre a Internet e a Web, o trabalho de cada uma das três linguagens, as partes de um endereço, os códigos de resposta, o desenho de um mapa do site e a verificação da coerência entre um mapa e um wireframe.
-
-Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](01-web-e-planeamento.md). Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio, no fim da ficha.
+Entregas as respostas escritas dos exercícios 1 a 6, com o mapa do exercício 5 desenhado à mão. Se fizeres o desafio e o exercício de "Para ires mais longe", entregas também esses.
 
 Os sites desta ficha são inventados, e não são o teu site nem a Estante Digital.
 
-## Como está organizada a ficha
-
-Resolve os exercícios pela ordem. Cada exercício treina uma só coisa.
-
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Distinguir a Internet da Web | 5 min |
-| 2 | Atribuir cada trabalho à linguagem certa | 5 min |
-| 3 | Partir um endereço nas suas partes | 10 min |
-| 4 | Ler os códigos de resposta | 5 min |
-| 5 | Desenhar o mapa de um site a partir do seu conteúdo | 10 min |
-| 6 | Encontrar ligações sem destino entre um mapa e um wireframe | 15 min |
-| Total da parte obrigatória | Exercícios 1 a 6 | 50 min |
-| Desafio opcional | Passar um wireframe estreito a largo | 20 min |
-| Para ires mais longe | Opcional: um endereço com parâmetros | fora dos 50 min |
-
-## Exercício 1: Internet ou Web? (5 min)
-
-A matéria está na secção "A Internet e a Web não são a mesma coisa" do guia.
+## Exercício 1: Distinguir a Internet da Web
 
 Para cada situação, diz se a pessoa está a usar a Web, ou se está a usar a Internet mas não a Web. Justifica cada resposta numa frase curta.
 
@@ -52,9 +50,7 @@ Para cada situação, diz se a pessoa está a usar a Web, ou se está a usar a I
 
 **d)** O Duarte lê, no browser do telemóvel, uma página de um site de notícias.
 
-## Exercício 2: Que linguagem faz este trabalho? (5 min)
-
-A matéria está na secção "Três linguagens, três trabalhos" do guia.
+## Exercício 2: A linguagem de cada trabalho
 
 Para cada mudança pedida num site, diz se é trabalho do HTML, do CSS ou do JavaScript. Justifica cada resposta numa frase curta.
 
@@ -70,9 +66,7 @@ Para cada mudança pedida num site, diz se é trabalho do HTML, do CSS ou do Jav
 nav { background: #1f4e8c; }
 ```
 
-## Exercício 3: Partir um endereço (10 min)
-
-A matéria está na secção "O endereço de uma página" do guia.
+## Exercício 3: Partir um endereço
 
 **a)** Parte este endereço em protocolo, domínio, caminho e fragmento:
 
@@ -86,13 +80,11 @@ https://www.example.com/clube/torneios/outono.html#inscricoes
 file:///C:/Users/aluno/Documents/clube-de-xadrez/index.html
 ```
 
-**c)** Se enviares o endereço da alínea b) a um colega, por mensagem, e ele o abrir no computador dele, vê a tua página? Explica numa frase.
+**c)** Envias o endereço da alínea b) a um colega, por mensagem, e ele abre-o no computador dele. Vê a tua página? Explica numa frase.
 
-## Exercício 4: Códigos de resposta (5 min)
+## Exercício 4: Os códigos de resposta
 
-A matéria está na secção "O que se diz num pedido e numa resposta" do guia.
-
-Diz que código de resposta recebe o browser em cada situação e a família a que pertence. Justifica cada resposta numa frase curta.
+Diz que código de resposta recebe o browser em cada situação, e a família a que pertence. Justifica cada resposta numa frase curta.
 
 **a)** A página pedida existe, e o servidor envia-a sem problemas.
 
@@ -100,9 +92,7 @@ Diz que código de resposta recebe o browser em cada situação e a família a q
 
 **c)** O servidor avariou enquanto preparava a página pedida.
 
-## Exercício 5: Desenhar o mapa de um site (10 min)
-
-A matéria está na secção "O mapa do site" do guia e nos passos 3 a 5 do exemplo explicado.
+## Exercício 5: Desenhar o mapa de um site
 
 A Carolina quer fazer o site "Receitas da Avó", com este conteúdo, já agrupado:
 
@@ -110,13 +100,11 @@ A Carolina quer fazer o site "Receitas da Avó", com este conteúdo, já agrupad
 - 36 receitas, cada uma com os ingredientes e os passos: 12 sopas, 14 pratos principais e 10 doces;
 - uma página com a história do caderno de receitas da família, sem dados pessoais.
 
-**a)** Desenha o mapa do site, com uma caixa por página e linhas para as ligações. Há mais do que um mapa certo; escolhe um e segue as regras do guia. Justifica numa frase onde puseste a lista das receitas.
+**a)** Desenha o mapa do site, com uma caixa por página e linhas para as ligações. Há mais do que um mapa certo: escolhe um e segue as regras do guia. Justifica numa frase onde puseste a lista das receitas.
 
-**b)** Diz que páginas vão para o menu, que se repete em todas as páginas, e justifica numa frase porque é que as outras ficam de fora.
+**b)** Diz que páginas vão para o menu, que se repete em todas as páginas. Justifica numa frase porque é que as outras ficam de fora.
 
-## Exercício 6: O mapa e o wireframe concordam? (15 min)
-
-A matéria está na secção "O mapa e os wireframes têm de concordar" do guia e no passo 9 do exemplo explicado.
+## Exercício 6: Confirmar que o mapa e o wireframe concordam
 
 O Rafael fez o plano do site do clube de teatro da escola. Este é o mapa dele:
 
@@ -125,6 +113,7 @@ Início
 ├── Peças
 │   ├── A Ilha dos Relógios
 │   └── O Último Autocarro
+├── Galeria
 └── Inscrições
 ```
 
@@ -143,43 +132,44 @@ E este é o wireframe estreito da página inicial, com as anotações dele à di
 │ - A Ilha dos Relógios          │   ligação
 │ - O Último Autocarro           │   ligação
 │                                │
-│ Galeria de fotografias         │   ligação
+│ [X] [X] [X]                    │   fotografias do último
+│                                │   espetáculo, sem ligação
 ├────────────────────────────────┤
-│ Contactos                      │   rodapé: ligação
+│ Clube de Teatro da escola      │   rodapé, sem ligações
 └────────────────────────────────┘
 ```
 
-**a)** Faz a tabela de verificação, como no passo 9 do exemplo, com uma linha por ligação desenhada no wireframe: a ligação, o destino que tem no mapa, e se existe ou não.
+**a)** Completa a tabela de verificação, como a do passo 9 do exemplo guiado. Tem uma linha por ligação desenhada no wireframe, com o destino que essa ligação tem no mapa. As duas primeiras linhas já estão preenchidas. Acrescenta as que faltam.
 
-**b)** Há três problemas no plano do Rafael. Diz quais são.
+| Ligação desenhada | Onde está | Destino no mapa | Resultado |
+| --- | --- | --- | --- |
+| Início | Menu | Início | Existe |
+| Peças | Menu | Peças | Existe |
+
+**b)** Há dois problemas no plano do Rafael. Diz quais são.
 
 **c)** Para cada problema, propõe uma correção. Pode haver mais do que uma correção certa: diz qual escolhias e porquê.
 
 ## Apoio
 
-Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não tiver chegado. Nenhuma dá a resposta: indicam onde olhar.
+Usa estas pistas só depois de tentares sozinho. Nenhuma dá a resposta: indicam onde olhar.
 
-**Exercício 1.** Pergunta, em cada caso, se a pessoa está a ler páginas num browser. Se sim, é a Web. Se está a usar outra aplicação que comunica pela rede, é a Internet sem ser a Web.
+- Exercício 1: em cada caso, pergunta-te o que a pessoa tem aberto. São páginas lidas num browser, ou outra aplicação que comunica pela rede?
+- Exercício 2: em cada caso, pergunta-te sobre o que é a mudança. É sobre o que a coisa é, sobre como aparece, ou sobre o que acontece quando alguém faz alguma coisa? Na alínea d), compara a forma da linha com as três formas do botão "Gostar", no guia.
+- Exercício 3: o protocolo acaba antes de `://`. O domínio é o nome do servidor, e vai até à barra seguinte. O fragmento começa no cardinal. O resto é o caminho. Na alínea c), pensa no sítio onde o ficheiro está guardado.
+- Exercício 4: relê a tabela das quatro famílias de códigos. O primeiro algarismo diz de quem é o problema, se houver problema.
+- Exercício 5: começa pela página inicial, no topo. Depois decide que páginas fazem falta para as receitas, e onde fica a lista delas. Para o menu, relê a nota sobre as páginas dos recursos da Estante Digital, no fim da secção "O mapa do site".
+- Exercício 6: na alínea a), faz uma linha por cada ligação que as anotações marcam, em todas as zonas do wireframe. Para cada uma, procura no mapa a caixa que lhe corresponde. Na alínea b), relê as quatro verificações da secção "O mapa e os wireframes têm de concordar" e aplica-as uma a uma.
 
-**Exercício 2.** Pergunta, em cada caso, se a mudança é sobre o que a coisa é, sobre como aparece, ou sobre o que acontece quando alguém faz alguma coisa. Na alínea d), repara na forma do código: há chavetas e um valor depois de dois pontos?
+## Desafio opcional
 
-**Exercício 3.** O protocolo acaba antes de `://`. O domínio vai até à primeira barra a seguir. O fragmento começa no cardinal. O resto é o caminho. Na alínea c), relê o fim da secção "Cliente e servidor".
-
-**Exercício 4.** Relê a tabela das quatro famílias de códigos. O primeiro algarismo diz de quem é o problema, se houver problema.
-
-**Exercício 5.** Começa pela página inicial, no topo. Depois pergunta se cada receita merece uma página só dela, ou se todas cabem numa página. Para a lista, relê o fim do passo 4 do exemplo explicado: a Estante Digital tem seis recursos, e aqui há muitos mais. Para o menu, relê a nota sobre as páginas dos recursos da Estante Digital, no fim da secção "O mapa do site".
-
-**Exercício 6.** Faz uma linha por cada palavra marcada como ligação nas anotações, incluindo as do menu e a do rodapé. Para cada uma, procura no mapa uma caixa com o mesmo nome. Compara também os nomes, letra a letra, e não só se a página existe.
-
-## Desafio opcional (20 min)
-
-Desenha o wireframe largo da página inicial do clube de teatro do exercício 6, já com os três problemas corrigidos, para o ecrã de um computador. Põe lado a lado o que achares que ganha em ficar lado a lado. Depois confirma, lendo da esquerda para a direita e de cima para baixo, que a ordem de leitura é a mesma do wireframe estreito. Se não for, explica o que mudavas.
+Desenha o wireframe largo da página inicial do clube de teatro do exercício 6, para o ecrã de um computador. Desenha-o já com os dois problemas corrigidos. Põe lado a lado o que achares que ganha em ficar lado a lado. Depois lê-o da esquerda para a direita e de cima para baixo, e confirma que a ordem de leitura é a mesma do wireframe estreito. Se não for, explica o que mudavas.
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 50 minutos da ficha.
+Esta secção é opcional.
 
-### Mais longe 1: Um endereço com parâmetros (10 min)
+### Mais longe 1: Um endereço com parâmetros
 
 Num site de receitas, escreveste "sopa" na caixa de pesquisa e carregaste em Pesquisar. A barra de endereço passou a mostrar isto:
 
@@ -196,15 +186,15 @@ https://receitas.example.com/pesquisa.html?termo=sopa&pagina=2
 ## Critérios de conclusão
 
 - [ ] Nos exercícios 1, 2 e 4, justifiquei cada resposta numa frase, e não por palpite.
-- [ ] No exercício 3, separei as partes do endereço e expliquei porque é que um endereço `file://` não funciona noutro computador.
+- [ ] No exercício 3, separei as partes dos endereços e expliquei porque é que um endereço `file://` não funciona noutro computador.
 - [ ] No exercício 4, escrevi o código e a família de cada situação.
-- [ ] No exercício 5, o meu mapa tem a página inicial no topo, todas as páginas ligadas a ela, a lista das receitas num sítio justificado, e um menu justificado.
-- [ ] No exercício 6, verifiquei todas as ligações do wireframe, encontrei os três problemas e propus uma correção para cada um.
+- [ ] No exercício 5, o meu mapa tem a página inicial no topo e todas as páginas ligadas a ela.
+- [ ] No exercício 5, justifiquei onde ficou a lista das receitas e que páginas vão para o menu.
+- [ ] No exercício 6, completei a tabela, encontrei os dois problemas e propus uma correção para cada um.
 
-## Autoavaliação breve
+## Autoavaliação
 
-O que já consigo fazer sozinho:
-
-Uma dificuldade que tive e o que fiz para a resolver:
+1. O que já consegues fazer sozinho?
+2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
 ![Rodapé](../imagens/rodape.png)
