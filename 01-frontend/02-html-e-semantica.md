@@ -56,11 +56,12 @@ No fim deste guia, consegues:
 - A diferença entre abrir um ficheiro do teu computador e abrir uma página que veio de um servidor. O endereço do primeiro começa por `file://`, e o do segundo por `https://`. Guia [01](01-web-e-planeamento.md), secções "Cliente e servidor" e "O endereço de uma página".
 - Ler um mapa do site e um wireframe. Guia [01](01-web-e-planeamento.md), secções "O mapa do site" e "O wireframe".
 - O plano do teu site, com o mapa de pelo menos duas páginas e, se já os fizeste, os wireframes. Fizeste-o no tema 01, e é o ponto de partida do laboratório deste tema.
+- O VS Code, o editor onde escreves o HTML. Se ainda não o usaste, o [laboratório deste tema](02-html-e-semantica-laboratorio.md) ensina o que precisas: abrir a pasta do site, criar um ficheiro e guardá-lo.
 - Abrir as ferramentas do programador e usar o separador Elements. Guia [01](01-web-e-planeamento.md), secção "As ferramentas do programador", e o [laboratório do tema 01](01-web-e-planeamento-laboratorio.md). Se ainda não fizeste esse laboratório, o laboratório deste tema explica o mínimo no momento em que for preciso.
 
 ## O que é o HTML
 
-HTML são as iniciais de *HyperText Markup Language*, que em português quer dizer linguagem de marcação de hipertexto. Vale a pena perceber as duas palavras difíceis, porque dizem o que o HTML faz.
+HTML são as iniciais de *HyperText Markup Language*, que em português quer dizer linguagem de marcação de hipertexto. As duas palavras difíceis dizem o que o HTML faz.
 
 **Hipertexto** é texto que tem ligações para outros textos. Um livro normal lê-se de uma ponta à outra. Um hipertexto lê-se saltando. Estás a ler uma página, encontras uma palavra sublinhada, carregas nela e passas para outra página, que por sua vez tem ligações para outras. A Web inteira é um enorme hipertexto. Foi para isso que o HTML foi inventado, como viste na história curta da Web no guia 01.
 
@@ -160,7 +161,7 @@ Um elemento pode ter outros elementos dentro do seu conteúdo. A isto chama-se *
 
 O elemento `strong` está dentro do elemento `p`. Diz-se que o `p` é o **pai** do `strong`, e que o `strong` é **filho** do `p`. Dois elementos com o mesmo pai são **irmãos**. Este vocabulário de família vai servir-te durante o ano inteiro, no CSS e no JavaScript.
 
-A regra de ouro do aninhamento é esta: fecha-se primeiro o que se abriu por último. Pensa em caixas dentro de caixas. Se puseres uma caixa pequena dentro de uma grande, tens de fechar a pequena antes de fechar a grande. É a mesma regra dos parênteses em Matemática: em `[ ( 2 + 3 ) × 4 ]`, o parêntese curvo abre depois do reto e fecha antes dele.
+A regra do aninhamento é esta. Fecha-se primeiro o que se abriu por último. Pensa em caixas dentro de caixas. Se puseres uma caixa pequena dentro de uma grande, tens de fechar a pequena antes de fechar a grande. É a mesma regra dos parênteses em Matemática: em `[ ( 2 + 3 ) × 4 ]`, o parêntese curvo abre depois do reto e fecha antes dele.
 
 No exemplo seguinte, as linhas entre `<!--` e `-->` são comentários: notas para quem lê o código, que o browser ignora. A secção "Comentários", mais à frente, explica-os melhor.
 
@@ -277,12 +278,12 @@ O HTML tem seis níveis de título: `h1`, `h2`, `h3`, `h4`, `h5` e `h6`, do mais
 
 Os títulos de uma página formam o seu **índice**. São como os capítulos e as secções de um livro, ou as partes de um relatório que entregas na escola. Um trabalho tem um título geral, está dividido em capítulos, e cada capítulo pode ter secções. Numa página é igual:
 
-- o `h1` é o título da página inteira, o assunto do conteúdo principal. Há um só `h1` por página;
+- o `h1` é o título da página inteira, o assunto do conteúdo principal. Nas nossas páginas há um só `h1`: o HTML aceita mais, mas um só dá o índice mais claro;
 - cada `h2` é o título de uma grande parte da página;
 - cada `h3` é o título de uma parte dentro de um `h2`;
 - e assim por diante, embora numa página pequena raramente se passe do `h3`.
 
-A regra que mais importa é esta: a descer, não se saltam níveis. Depois de um `h2`, o título seguinte pode ser outro `h2`, uma parte nova ao mesmo nível, ou um `h3`, uma parte dentro desta. Não pode ser um `h4`, porque um `h4` a seguir a um `h2` quer dizer "uma subsecção de uma subsecção que não existe". A subir já se pode saltar. Depois de um `h4`, podes voltar a um `h2`, porque isso só quer dizer que a parte anterior acabou e começa uma parte nova.
+A regra que mais importa é esta. A descer, não se saltam níveis. Depois de um `h2`, o título seguinte pode ser outro `h2`, uma parte nova ao mesmo nível, ou um `h3`, uma parte dentro desta. Não pode ser um `h4`, porque um `h4` a seguir a um `h2` quer dizer "uma subsecção de uma subsecção que não existe". A subir já se pode saltar. Depois de um `h4`, podes voltar a um `h2`, porque isso só quer dizer que a parte anterior acabou e começa uma parte nova.
 
 Vê o índice da página de um recurso da Estante Digital, desenhado com a indentação a mostrar os níveis:
 
@@ -403,7 +404,7 @@ O valor do `href` pode ter várias formas, conforme o sítio para onde queres ir
 | Uma parte da mesma página | `#horario` | Para saltar para um elemento da página que tenha o atributo `id="horario"` |
 | Um endereço de correio eletrónico | `mailto:biblioteca@escola.example` | Para abrir o programa de correio com o destinatário preenchido |
 
-Num endereço absoluto, o `https://` é obrigatório. Se escreveres `href="developer.mozilla.org"`, sem ele, o browser pensa que é o nome de um ficheiro na pasta do teu site. Procura-o, não o encontra, e a ligação dá erro. É um dos enganos mais frequentes, e reconhece-se assim. Carregas numa ligação para outro site e aparece "ficheiro não encontrado". Na barra do browser, o endereço mostra que ele foi procurar um ficheiro dentro da pasta do teu site. Para corrigir, abre a página de destino, copia o endereço completo da barra do browser e cola-o no `href`.
+Num endereço absoluto, o `https://` é obrigatório. Se escreveres `href="developer.mozilla.org"`, sem ele, o browser pensa que é o nome de um ficheiro na pasta do teu site. Procura-o, não o encontra, e a ligação dá erro. É um dos enganos mais frequentes, e reconhece-se assim. Carregas numa ligação para outro site e aparece uma página de erro. No Chrome em português, diz "Não foi possível aceder ao seu ficheiro", com o código `ERR_FILE_NOT_FOUND`. Na barra do browser, o endereço mostra que ele foi procurar um ficheiro dentro da pasta do teu site. Para corrigir, abre a página de destino, copia o endereço completo da barra do browser e cola-o no `href`.
 
 Numa ligação para uma parte da mesma página, o elemento de destino precisa de um atributo `id` com um nome. A ligação usa esse nome com um cardinal à frente:
 
@@ -486,7 +487,7 @@ Os formatos de imagem mais usados na Web são quatro. O **JPG** serve para fotog
 
 Cuidado com o tamanho dos ficheiros. Uma fotografia tirada com um telemóvel pode ter 4000 píxeis de largura e vários megabytes. Numa página, isso quer dizer uma espera longa para quem tem dados móveis. Antes de usares uma fotografia, reduz-lhe o tamanho para a largura de que precisas, com qualquer programa de edição de imagem. No tema da responsividade vais voltar a este assunto.
 
-Sobre a origem das imagens: usa fotografias e desenhos feitos por ti, ou imagens cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Quando uma imagem não é tua, guarda de onde veio e qual é a licença. No README do teu site vais dizer a origem e a licença de cada imagem que não fizeste. E não publiques fotografias de outras pessoas sem autorização delas.
+Sobre a origem das imagens: usa fotografias e desenhos feitos por ti, ou imagens cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Quando uma imagem não é tua, guarda de onde veio e qual é a licença. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre. Diz o que é o site, como se abre e de onde vêm os recursos. O modelo dele está na pasta do projeto, em [readme-do-projeto](../projeto/modelos/readme-do-projeto.md). No README do teu site vais dizer a origem e a licença de cada imagem que não fizeste, no campo "Fontes e licenças de recursos". E não publiques fotografias de outras pessoas sem autorização delas.
 
 ## O texto alternativo
 
@@ -506,7 +507,15 @@ Há três situações, e cada uma pede uma resposta diferente.
 
 Atenção: `alt` vazio não é o mesmo que não ter `alt`. Um `alt=""` diz "esta imagem não tem nada a acrescentar, podes saltá-la". Uma imagem sem atributo `alt` não diz nada. Na dúvida, muitos leitores de ecrã leem o nome do ficheiro, como "logotipo ponto svg", o que é pior do que tudo. Toda a imagem tem o atributo `alt`: às vezes com texto, às vezes vazio, nunca ausente.
 
-**A imagem é o único conteúdo de uma ligação.** Quando uma imagem sozinha serve de ligação, o `alt` é o texto dessa ligação. Deve dizer para onde ela leva, e não o que a imagem mostra. Vais precisar disto mais tarde; por agora, basta saberes que existe.
+**A imagem é o único conteúdo de uma ligação.** Quando uma imagem sozinha serve de ligação, o `alt` é o texto dessa ligação. Deve dizer para onde ela leva, e não o que a imagem mostra. Imagina, na página inicial da Estante Digital, a capa do livro em pequenino, sozinha dentro de uma ligação para a página dele. Antes de leres a explicação, tenta prever: o que diz um leitor de ecrã quando chega a esta ligação?
+
+```html
+<a href="primeiros-passos-na-web.html"><img src="imagens/capa-primeiros-passos-na-web.svg" alt="Página do livro Primeiros passos na Web" width="60" height="80"></a>
+```
+
+Diz que é uma ligação e lê o `alt` como o nome dela: "Página do livro Primeiros passos na Web".
+
+Leitura guiada: o `img` está dentro do `a`, e é o único conteúdo dele. Não há texto nenhum em que carregar além da imagem, e por isso o `alt` faz de texto da ligação. Se descrevesse a capa, a pessoa ouvia as cores e o globo, e não ficava a saber para onde a ligação leva. Se ficasse vazio, a ligação não tinha nome nenhum. As medidas, 60 por 80, mantêm a proporção da capa, que mede 240 por 320. O Clube de Robótica, nos exemplos da disciplina, tem uma ligação assim: o desenho de um calendário que leva ao horário dos treinos.
 
 Repara que a mesma imagem pode precisar de textos alternativos diferentes em sítios diferentes. A capa do livro, na página do livro, tem um `alt` descritivo. Imagina a mesma capa pequenina numa lista de livros, ao lado do título escrito. Aí o `alt` podia ficar vazio, porque o título já está ali. O `alt` depende do contexto, e não só da imagem.
 
@@ -578,7 +587,7 @@ E quando nenhum destes elementos serve? Existe o elemento `div`, que é uma caix
 
 Quando estiveres indeciso, faz as perguntas por esta ordem:
 
-1. É o conteúdo principal desta página, o que não se repete nas outras? Então é o `main`.
+1. É a zona que junta todo o conteúdo próprio desta página, entre o cabeçalho e o rodapé? Então é o `main`. Uma parte de dentro dela passa à pergunta seguinte.
 2. É o bloco de ligações que leva às partes principais do site? Então é um `nav`.
 3. É a zona de introdução do topo, ou a zona de informação final do fundo? Então é o `header` ou o `footer`.
 4. É secundário, e pode saltar-se sem perder nada? Então é um `aside`.
@@ -706,7 +715,7 @@ Aparece por cima. Sem CSS, cada zona ocupa a largura toda e fica debaixo da ante
 
 Leitura guiada: o `nav` diz que as ligações são a navegação, e a lista diz que são opções do mesmo tipo. O `main` diz onde está o conteúdo principal, que começa pelo seu `h1`. Nenhuma linha fala de colunas nem de posições.
 
-A regra é simples: uma tabela é para dados em linhas e colunas, e nunca para pôr coisas lado a lado. Se não há dados em linhas e colunas, não é uma tabela. Usa os elementos semânticos e deixa a arrumação para o CSS.
+A regra é simples. Uma tabela é para dados em linhas e colunas, e nunca para pôr coisas lado a lado. Se não há dados em linhas e colunas, não é uma tabela. Usa os elementos semânticos e deixa a arrumação para o CSS.
 
 ## Como o browser lida com os erros
 
@@ -716,7 +725,7 @@ Estes são quatro casos reais, experimentados no browser, com o que o browser fa
 
 | O que escreveste | O que o browser faz no DOM | O que vês na página |
 | --- | --- | --- |
-| Um `strong` que nunca fechaste, a meio de um parágrafo | Fecha-o no fim do parágrafo e abre logo outro a seguir, à volta de tudo o que vem depois | Tudo o que vem a seguir fica a negrito |
+| Um `strong` que nunca fechaste, a meio de um parágrafo que está logo dentro do `main` | Fecha-o no fim do parágrafo e abre outro em cada zona seguinte: um à volta do resto do `main` e mais um à volta do rodapé | Tudo o que vem a seguir fica a negrito, até ao fim da página. No Elements vês três `strong`, e só escreveste um |
 | Uma lista `ul` dentro de um `p` | Fecha o `p` antes da lista e cria um parágrafo vazio a seguir, com o `</p>` que sobrou | A lista aparece, mas o DOM tem um parágrafo vazio a mais |
 | Um `h2` fechado com `</h3>` | Aceita o `</h3>` como fecho do `h2`, porque qualquer etiqueta de fecho de título fecha o título que estiver aberto | Nada de estranho: o erro fica escondido até ao dia em que deixar de dar certo |
 | Uma ligação `a` dentro de outra `a` | Fecha a primeira ligação logo antes de abrir a segunda. O texto que vinha depois da segunda já não pertence a nenhuma ligação | Duas ligações seguidas, em vez de uma, e o fim do texto sem ligação |
@@ -735,11 +744,11 @@ Existe também um serviço público do W3C, a organização que escreve muitas d
 
 Uma página só está pronta depois de verificada. Neste tema, verificar quer dizer quatro coisas, que vais fazer no laboratório.
 
-**Seguir todas as ligações.** Abre a página no browser e carrega em cada ligação, uma de cada vez. Cada uma tem de levar ao sítio certo, e cada página de destino tem de ter uma forma de voltar. Uma ligação que dá "ficheiro não encontrado" é uma ligação sem destino, o erro que aprendeste a procurar no mapa do site, no guia 01.
+**Seguir todas as ligações.** Abre a página no browser e carrega em cada ligação, uma de cada vez. Cada uma tem de levar ao sítio certo, e cada página de destino tem de ter uma forma de voltar. Uma ligação que dá a página de erro "Não foi possível aceder ao seu ficheiro" é uma ligação sem destino. É o erro que aprendeste a procurar no mapa do site, no guia 01.
 
 **Ler a página pela ordem do HTML.** Uma página sem CSS mostra o conteúdo pela ordem em que está escrito no ficheiro. Tem o aspeto por omissão do browser. As tuas páginas ainda não têm CSS, por isso o que vês é já essa leitura. Lê de cima a baixo e pergunta: a ordem faz sentido? O mais importante vem primeiro? Os títulos dizem de que trata cada parte? É assim que um leitor de ecrã percorre a página. É essa ordem que tem de continuar a fazer sentido quando, nos próximos temas, o CSS mudar o aspeto e a posição das coisas.
 
-**Percorrer a página só com o teclado.** Carrega na tecla Tab, várias vezes. O **foco**, a moldura que mostra onde estás, salta de ligação em ligação, pela ordem do HTML. Com Shift+Tab andas para trás, e com Enter segues a ligação onde estás. Há pessoas que não podem usar o rato e navegam sempre assim. Se consegues chegar a todas as ligações e perceber onde estás, a página passa este teste.
+**Percorrer a página só com o teclado.** Usa o Chrome ou o Edge. No Safari, o Tab não para nas ligações sem mudar uma opção do browser. Carrega na tecla Tab, várias vezes. O **foco**, a moldura que mostra onde estás, salta de ligação em ligação, pela ordem do HTML. Com Shift+Tab andas para trás, e com Enter segues a ligação onde estás. Há pessoas que não podem usar o rato e navegam sempre assim. Se consegues chegar a todas as ligações e perceber onde estás, a página passa este teste.
 
 **Ver a estrutura com as ferramentas do programador.** No separador Elements, confirma que a árvore é igual ao teu ficheiro. Depois abre a árvore de acessibilidade e confirma três coisas:
 
@@ -1029,9 +1038,9 @@ Porque acontece: quase sempre, o caminho do `src` não corresponde ao sítio ond
 
 Como se corrige: compara letra a letra o caminho do `src` com o que vês no explorador de ficheiros. Começa na pasta onde está a página.
 
-### A ligação dá "ficheiro não encontrado"
+### A ligação dá "Não foi possível aceder ao seu ficheiro"
 
-O que se vê: carregas na ligação e o browser mostra uma página de erro a dizer que o ficheiro não existe.
+O que se vê: carregas na ligação e o browser mostra uma página de erro. No Chrome em português, diz "Não foi possível aceder ao seu ficheiro", com o código `ERR_FILE_NOT_FOUND`.
 
 Porque acontece: a mesma razão dos caminhos das imagens, ou uma ligação para uma página que ainda não escreveste.
 

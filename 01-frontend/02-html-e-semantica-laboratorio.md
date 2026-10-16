@@ -113,11 +113,13 @@ O teu site vive numa pasta. Os nomes das pastas e dos ficheiros de um site segue
 
 1. Escolhe o nome da pasta, a partir do tema do teu site, com as três regras. Por exemplo: `clube-de-xadrez`, `receitas-da-avo` ou `guia-de-sintra`. Um nome como `O Meu Site` ou `receitas_avó` vai dar problemas mais tarde.
 
-2. Cria a pasta onde o professor indicar. Se já criaste a pasta do teu site no tema 01, com as fotografias do plano, usa essa. No Windows, carrega com o botão direito do rato num sítio vazio, escolhe Novo e depois Pasta, e escreve o nome. No Mac, no Finder, carrega com o botão direito num sítio vazio, escolhe Nova pasta e escreve o nome.
+2. Cria a pasta onde o professor indicar. Se já criaste a pasta do teu site no tema 01, com as fotografias do plano, usa essa. Para criar pastas, abre o programa que mostra as pastas do computador. No Windows, é o Explorador de Ficheiros, que se abre com as teclas Windows+E. No Mac, é o Finder, o ícone com uma cara sorridente na barra de baixo do ecrã. Vai até ao sítio onde a pasta deve ficar.
 
-3. Dentro da pasta do teu site, cria da mesma maneira uma pasta chamada `imagens`. É lá que vão ficar as imagens do site.
+   No Windows, carrega com o botão direito do rato num sítio vazio, escolhe Novo e depois Pasta, e escreve o nome. No Mac, carrega com o botão direito num sítio vazio, escolhe Nova pasta e escreve o nome. No trackpad de um Mac, o botão direito é um clique com dois dedos, ou um clique com a tecla Ctrl carregada.
 
-4. Abre a pasta no VS Code. No menu File, escolhe Open Folder... e depois a pasta do teu site. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026. Com o VS Code em português, os nomes são Arquivo e Abrir Pasta. É o português do Brasil, porque é o único pacote de português do VS Code. O VS Code pode perguntar se confias nos autores dos ficheiros da pasta: "Do you trust the authors of the files in this folder?". Responde que sim, porque a pasta é tua.
+3. Entra na pasta do teu site, com um duplo clique nela. Lá dentro, cria da mesma maneira uma pasta chamada `imagens`. É lá que vão ficar as imagens do site.
+
+4. Abre a pasta no VS Code. No menu File, escolhe Open Folder... e depois a pasta do teu site. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026. Com o VS Code em português, os nomes são Arquivo e Abrir Pasta. É o português do Brasil, porque é o único pacote de português do VS Code. O VS Code pode perguntar se confias nos autores dos ficheiros da pasta: "Do you trust the authors of the files in this folder?". Carrega no botão "Yes, I trust the authors", que quer dizer "sim, confio nos autores", porque a pasta é tua.
 
    O que deves ver: do lado esquerdo, o painel Explorer, em português Explorador. Mostra o nome da pasta do teu site em maiúsculas e a pasta `imagens` lá dentro, vazia. As maiúsculas são só a forma como o VS Code mostra o nome da pasta aberta: o nome verdadeiro continua em minúsculas.
 
@@ -125,11 +127,11 @@ O teu site vive numa pasta. Os nomes das pastas e dos ficheiros de um site segue
 
 Todas as páginas começam com a mesma estrutura, a que se chama o esqueleto. Cada linha do esqueleto está lá por uma razão, e quase nenhuma aparece na janela do browser. Nesta fase, escreves o esqueleto da página inicial, à mão, e confirmas que o browser o lê. Para saber mais, lê a secção "O esqueleto de uma página" do [guia](02-html-e-semantica.md).
 
-1. Cria o ficheiro da página inicial. No painel Explorer, passa o rato por cima do nome da pasta e carrega no ícone de ficheiro novo, New File.... Escreve o nome `index.html` e carrega em Enter. O ficheiro abre-se, vazio, no meio da janela.
+1. Cria o ficheiro da página inicial. Antes, carrega numa zona vazia do painel Explorer, para o ficheiro novo ficar na pasta do site, e não dentro da pasta `imagens`. Depois, passa o rato por cima do nome da pasta e carrega no ícone de ficheiro novo, New File.... Escreve o nome `index.html` e carrega em Enter. O ficheiro abre-se, vazio, no meio da janela.
 
    O nome `index.html` não é uma escolha tua. Quando alguém escreve o endereço de um site sem dizer a página, a maior parte dos servidores procura um ficheiro com este nome e envia-o. Chamar `index.html` à tua página inicial garante que ela aparece quando o site for publicado.
 
-2. Escreve o esqueleto à mão, linha a linha. Não copies e não uses atalhos do editor que o escrevam por ti. O atalho mais conhecido, escrever `!` e carregar em Enter, põe a página em inglês, com `lang="en"`. Escrever o esqueleto é também a melhor forma de o saberes de cor. Cria `index.html` com este conteúdo. Põe o nome do teu site no lugar de "Clube de Xadrez", e o teu comentário no lugar do do exemplo:
+2. Escreve o esqueleto à mão, linha a linha. Não copies e não uses atalhos do editor que o escrevam por ti. O atalho mais conhecido, escrever `!` e carregar em Enter, põe a página em inglês, com `lang="en"`. Escrever o esqueleto é também a melhor forma de o saberes de cor. Escreve no `index.html` este conteúdo. Põe o nome do teu site no lugar de "Clube de Xadrez", e o teu comentário no lugar do do exemplo:
 
    ```html
    <!doctype html>
@@ -151,7 +153,7 @@ Todas as páginas começam com a mesma estrutura, a que se chama o esqueleto. Ca
 
 3. Guarda o ficheiro, com Ctrl+S, ou Cmd+S no Mac.
 
-4. Abre a página no browser. Há três formas. Podes fazer duplo clique no `index.html`, no explorador de ficheiros do teu computador. Podes arrastar o ficheiro para uma janela do browser. Ou podes carregar em Ctrl+O no browser, Cmd+O no Mac, e escolher o ficheiro. Deixa a página aberta num separador, porque vais recarregá-la muitas vezes.
+4. Abre a página no browser. No painel Explorer do VS Code, carrega com o botão direito no `index.html`. Escolhe Reveal in File Explorer, que quer dizer "mostrar no Explorador de Ficheiros". No Mac, a opção chama-se Reveal in Finder, "mostrar no Finder". Abre-se a pasta do teu site: faz duplo clique no `index.html`. Se a página abrir noutro browser, abre o Chrome ou o Edge, carrega em Ctrl+O, ou Cmd+O no Mac, e escolhe o ficheiro. Deixa a página aberta num separador, porque vais recarregá-la muitas vezes.
 
    Antes de olhares, prevê: o que aparece na janela, e o que aparece no separador?
 
@@ -161,7 +163,7 @@ Todas as páginas começam com a mesma estrutura, a que se chama o esqueleto. Ca
 
 A página abre em branco, e o separador do browser mostra o título que escreveste.
 
-Pensa antes de continuares: escreveste dez linhas, e nenhuma aparece na janela. Porquê? A resposta: o `body`, onde fica o que se vê, ainda está vazio. Tudo o resto é informação sobre a página, no `head`, e o comentário, que o browser não mostra. O `title` também está no `head`, e por isso aparece no separador, e não na janela.
+Pensa antes de continuares: escreveste onze linhas, e nenhuma aparece na janela. Porquê? A resposta: o `body`, onde fica o que se vê, ainda está vazio. Tudo o resto é informação sobre a página, no `head`, e o comentário, que o browser não mostra. O `title` também está no `head`, e por isso aparece no separador, e não na janela.
 
 ## Fase 2: O cabeçalho e a navegação
 
@@ -197,7 +199,7 @@ Uma ligação é o elemento `a`. O texto entre `<a>` e `</a>` é o que aparece n
 
 A página mostra o nome do site e o menu com duas ligações.
 
-Pensa antes de continuares: se carregares agora na segunda ligação do menu, o que acontece? A resposta: o browser mostra uma página de erro, a dizer que o ficheiro não foi encontrado. O `href` aponta para um ficheiro que ainda não existe na pasta. É normal, e deixa de acontecer na fase 5, quando criares essa página.
+Pensa antes de continuares: se carregares agora na segunda ligação do menu, o que acontece? A resposta: o browser mostra uma página de erro. No Chrome em português, diz "Não foi possível aceder ao seu ficheiro", com o código `ERR_FILE_NOT_FOUND`. O `href` aponta para um ficheiro que ainda não existe na pasta. É normal, e deixa de acontecer na fase 5, quando criares essa página.
 
 ## Fase 3: O conteúdo principal, com títulos, secções e uma lista
 
@@ -269,7 +271,7 @@ A última zona da página é o rodapé, o elemento `footer`. Tem a informação 
 
 2. Guarda e recarrega. O que deves ver: no fundo da página, o parágrafo do rodapé.
 
-3. Indenta o ficheiro inteiro com o comando do VS Code, Format Document: Shift+Alt+F no Windows, Shift+Option+F no Mac. O VS Code acerta os espaços do início de cada linha, sem mudar mais nada.
+3. Indenta o ficheiro inteiro com o comando do VS Code Format Document, que quer dizer "formatar o documento": Shift+Alt+F no Windows, Shift+Option+F no Mac. O VS Code muda só os espaços, as linhas em branco e as linhas muito compridas, e não mexe nas etiquetas nem no texto.
 
    O que deves ver: o `header`, o `main` e o `footer` à mesma distância da margem, dentro do `body`. Por omissão, o VS Code deixa o `head` e o `body` à mesma margem do `html` e acrescenta algumas linhas em branco. É só a forma como o VS Code arruma o ficheiro. A página fica igual, porque o browser ignora os espaços do início das linhas. Se uma etiqueta de fecho ficar desalinhada da sua etiqueta de abertura, há um erro de aninhamento perto dela.
 
@@ -330,13 +332,13 @@ Uma imagem é o elemento `img`, que é vazio, como o `meta`. O atributo `src` di
 
 O atributo `alt` é o texto alternativo: ocupa o lugar da imagem quando ela não pode ser vista. Um leitor de ecrã lê-o em voz alta, e o browser mostra-o se a imagem não carregar. Para o escrever, faz a pergunta do telefone. Se estivesses ao telefone a descrever esta página a alguém, o que dirias no sítio da imagem? Se a imagem só repete o texto que está ao lado, o `alt` fica vazio, `alt=""`, e o leitor de ecrã salta-a. O atributo nunca falta. Para saber mais, lê as secções "Imagens" e "O texto alternativo" do [guia](02-html-e-semantica.md).
 
-1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota de onde veio e qual é a licença, porque mais tarde vais dizê-lo no README do teu site. Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
+1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota de onde veio e qual é a licença, porque mais tarde vais dizê-lo no README do teu site. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre; o modelo está em [readme-do-projeto](../projeto/modelos/readme-do-projeto.md). Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
 
-   Se for uma fotografia tirada com o telemóvel, reduz-lhe primeiro a largura para 600 a 800 píxeis, com um programa de edição de imagem. As tuas páginas ainda não têm CSS, e por isso a imagem aparece com as medidas que escreveres. Uma fotografia de 4000 píxeis aparecia enorme, e demorava a carregar.
+   Se for uma fotografia tirada com o telemóvel, reduz-lhe primeiro a largura para 600 a 800 píxeis. Usa um programa de edição de imagem, como o Paint no Windows ou a Pré-visualização no Mac. As tuas páginas ainda não têm CSS, e por isso a imagem aparece com as medidas que escreveres. Uma fotografia de 4000 píxeis aparecia enorme, e demorava a carregar.
 
-   Se ainda não tens nenhuma imagem, usa a imagem provisória. Na pasta do repositório da disciplina, o ficheiro está em `laboratorios/frontend/primeiras-paginas/imagem-provisoria.svg`. Copia-o para a pasta `imagens` do teu site, sem lhe mudar o nome, e troca-o mais tarde.
+   Se ainda não tens nenhuma imagem, usa a imagem provisória. Na pasta do repositório da disciplina, o ficheiro está em `laboratorios/frontend/primeiras-paginas/imagem-provisoria.svg`. Copia-o para a pasta `imagens` do teu site, sem lhe mudar o nome, e troca-o mais tarde. Se não tens o repositório no computador, pede a imagem ao professor, ou descarrega-a do repositório da turma no GitHub, onde está na mesma pasta.
 
-2. Cria a segunda página a partir da primeira. No painel Explorer do VS Code, carrega com o botão direito do rato no `index.html` e escolhe Copy. Depois, carrega com o botão direito numa zona vazia do painel e escolhe Paste. Aparece uma cópia, com um nome como `index copy.html`. Carrega com o botão direito nela, escolhe Rename... e dá-lhe o nome que escreveste no mapa, como `torneios.html`. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026. O nome tem de ser igual, letra a letra, ao do `href` do menu.
+2. Cria a segunda página a partir da primeira. No painel Explorer do VS Code, carrega com o botão direito do rato no `index.html` e escolhe Copy, que quer dizer copiar. Depois, carrega com o botão direito numa zona vazia do painel e escolhe Paste, colar. Aparece uma cópia, com um nome como `index copy.html`. Carrega com o botão direito nela, escolhe Rename..., mudar o nome, e dá-lhe o nome que escreveste no mapa, como `torneios.html`. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026. O nome tem de ser igual, letra a letra, ao do `href` do menu.
 
 3. Na cópia, muda o comentário do topo para dizer o que esta página é. Muda também o `title`, para o nome desta página e o nome do site, como `Torneios | Clube de Xadrez`.
 
@@ -440,7 +442,7 @@ Uma ligação só funciona se o `href` for igual, letra a letra, ao nome do fich
 
 2. Na segunda página, carrega em "Início", no menu, e depois volta e carrega na ligação de volta, no fim do conteúdo. O que deves ver: as duas levam à página inicial.
 
-3. Se alguma ligação der "ficheiro não encontrado", lê o endereço na barra do browser. Compara-o letra a letra com o nome do ficheiro no painel Explorer. As diferenças mais comuns são uma letra trocada, a mais ou a menos, um acento ou a extensão esquecida. Corrige o `href`, guarda e recarrega.
+3. Se alguma ligação der a página de erro "Não foi possível aceder ao seu ficheiro", lê o endereço na barra do browser. Compara-o letra a letra com o nome do ficheiro no painel Explorer. As diferenças mais comuns são uma letra trocada, a mais ou a menos, um acento ou a extensão esquecida. Corrige o `href`, guarda e recarrega.
 
    Uma diferença só de maiúsculas e minúsculas, como `Torneios.html` no `href` e `torneios.html` no disco, não dá erro no teu computador. O Windows e o macOS tratam os dois nomes como o mesmo ficheiro. Só falha quando o site for publicado num servidor. Por isso, corrige-a na mesma.
 
@@ -448,7 +450,7 @@ Uma ligação só funciona se o `href` for igual, letra a letra, ao nome do fich
 
 Consegues ir de uma página à outra e voltar, pelo menu e pela ligação de volta.
 
-Pensa antes de continuares: porque é que um `href` com `Torneios.html`, para o ficheiro `torneios.html`, se corrige, se no teu computador funciona? A resposta: os servidores onde os sites se publicam usam quase sempre Linux, que distingue maiúsculas de minúsculas. Lá, `Torneios.html` e `torneios.html` são dois ficheiros diferentes, e a ligação dava "ficheiro não encontrado" no site publicado.
+Pensa antes de continuares: porque é que um `href` com `Torneios.html`, para o ficheiro `torneios.html`, se corrige, se no teu computador funciona? A resposta: os servidores onde os sites se publicam usam quase sempre Linux, que distingue maiúsculas de minúsculas. Lá, `Torneios.html` e `torneios.html` são dois ficheiros diferentes, e a ligação dava erro no site publicado, com uma página a dizer que não a encontrou.
 
 ## Fase 7: Verificar as duas páginas
 
@@ -512,11 +514,11 @@ Depois de cada erro, escreve no caderno o que viste, numa linha, e desfaz a alte
 
    O que deves ver: na página quase não se nota nada. Abre agora o separador Elements e procura esse sítio da árvore. O parágrafo que abriste fecha logo antes da lista e fica vazio. Depois da lista aparece outro parágrafo, também vazio, que não escreveste. Um parágrafo não pode conter uma lista, e por isso o browser fechou-o antes dela. O `</p>` que sobrou depois da lista virou um parágrafo novo. É a diferença entre o teu ficheiro e o DOM. Repõe a lista como estava.
 
-5. O negrito que ficou aberto. Num parágrafo da página inicial, marca uma palavra com `<strong>`, que é o elemento do texto importante. Não escrevas o `</strong>`. Guarda e recarrega.
+5. O negrito que ficou aberto. Vais usar o parágrafo de apresentação da página inicial, o que está logo a seguir ao `h1`. Marca uma palavra dele com `<strong>`, que é o elemento do texto importante. Não escrevas o `</strong>`. Guarda e recarrega.
 
    Antes de olhares, prevê: até onde vai o negrito?
 
-   O que deves ver: o negrito começa na palavra marcada e vai até ao fim da página, com o rodapé incluído. Abre o separador Elements. O browser fechou o `strong` no fim do parágrafo e abriu logo outro a seguir, à volta de tudo o que vem depois. Escreve agora o `</strong>` no sítio certo, guarda e recarrega.
+   O que deves ver: o negrito começa na palavra marcada e vai até ao fim da página, com o rodapé incluído. Abre o separador Elements: vês três `strong`, e só escreveste um. O browser fechou o `strong` no fim do parágrafo e abriu outro em cada zona seguinte. Abriu um à volta do resto do `main` e mais um à volta do rodapé. Escreve agora o `</strong>` no sítio certo, guarda e recarrega.
 
 6. Depois de desfazeres os cinco erros, faz outra vez, rapidamente, a verificação das ligações e da árvore do DOM da fase 7.
 
@@ -655,13 +657,13 @@ O `title` tem um erro, ou não está dentro do `head`. Confirma que abre com `<t
 
 ### As letras acentuadas aparecem trocadas por símbolos estranhos
 
-Aparece, por exemplo, `Ã§` no lugar de `ç`. Confirma que `<meta charset="utf-8">` é a primeira linha dentro do `head`. Olha também para a barra de baixo do VS Code, que deve dizer UTF-8. Se disser outra coisa, carrega nela, escolhe Save with Encoding e depois UTF-8.
+Aparece, por exemplo, `Ã§` no lugar de `ç`. Confirma que `<meta charset="utf-8">` é a primeira linha dentro do `head`. Olha também para a barra de baixo do VS Code, que deve dizer UTF-8. Se disser outra coisa, carrega nela, escolhe Save with Encoding, que quer dizer "guardar com a codificação", e depois UTF-8. A codificação é a tabela que transforma os bytes do ficheiro em letras.
 
 ### O esqueleto tem `lang="en"`
 
 O esqueleto foi escrito pelo atalho `!` do VS Code, que põe a página em inglês. No ecrã não muda nada, mas um leitor de ecrã lê o teu português com pronúncia inglesa. Muda para `lang="pt-PT"`.
 
-### Uma ligação dá "ficheiro não encontrado"
+### Uma ligação dá "Não foi possível aceder ao seu ficheiro"
 
 O `href` não é igual ao nome do ficheiro de destino, ou a página ainda não existe. Lê o endereço na barra do browser e compara-o, letra a letra, com o nome do ficheiro no painel Explorer. Corrige o `href`.
 
@@ -675,7 +677,7 @@ A Console só mostra o que acontece enquanto está aberta. Com ela aberta, recar
 
 ### A imagem aparece enorme
 
-A fotografia tem as medidas originais, com milhares de píxeis de largura, e as tuas páginas ainda não têm CSS para a encolher. Reduz a largura da fotografia para 600 a 800 píxeis, com um programa de edição de imagem. Depois, escreve as medidas novas no `width` e no `height`.
+A fotografia tem as medidas originais, com milhares de píxeis de largura, e as tuas páginas ainda não têm CSS para a encolher. Reduz a largura da fotografia para 600 a 800 píxeis. Usa um programa de edição de imagem, como o Paint no Windows ou a Pré-visualização no Mac. Depois, escreve as medidas novas no `width` e no `height`.
 
 ### A página aparece em texto simples, com as etiquetas à mostra
 
@@ -692,6 +694,10 @@ O VS Code não sabe que o ficheiro é HTML. Olha para o canto inferior direito, 
 ### A cópia da página ficou com o nome `index copy.html`
 
 Faltou mudar-lhe o nome. No painel Explorer, carrega com o botão direito na cópia, escolhe Rename... e dá-lhe o nome que está no `href` do menu.
+
+### O F12 não abre as ferramentas do programador
+
+Em muitos portáteis, as teclas de cima fazem outras coisas, como mudar o volume. Experimenta Fn+F12, ou Ctrl+Shift+I. No Mac, usa Cmd+Option+I. Também podes carregar com o botão direito do rato na página e escolher Inspecionar.
 
 ### Não encontro o separador Accessibility
 

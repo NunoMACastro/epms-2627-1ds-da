@@ -140,7 +140,7 @@ Este é o wireframe da página dos concertos, descrito por palavras, zona a zona
 4. Um bloco com o título "Como tudo começou" e duas frases. A banda nasceu em 1998, com três alunos do 10.º ano. Tocou pela primeira vez na festa de fim de ano, no pavilhão da escola.
 5. Uma faixa no fundo, com o contacto do professor responsável e o ano letivo.
 
-**a)** Para cada zona, diz que elemento ou elementos usavas: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, ou um título, de `h1` a `h6`. Uma das zonas precisa de dois elementos, um dentro do outro.
+**a)** Para cada zona, diz que elemento ou elementos usavas: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, ou um título, de `h1` a `h6`. Quando uma zona precisa de mais do que um elemento, escreve-os todos e diz qual fica dentro de qual.
 
 **b)** Diz quais das cinco zonas ficam dentro do `main`.
 
@@ -169,7 +169,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 - Exercício 3: para cada lista, imagina que trocas o primeiro item com o último. Pergunta se a informação passa a estar errada, e não se passa a ser estranha.
 - Exercício 4: põe o dedo na pasta onde está o ficheiro que tem a ligação, porque é daí que o caminho parte. Para descer a uma pasta, escreves o nome dela e uma barra. Para subir à pasta de cima, escreves `../`. Nas alíneas b), c) e d), o ficheiro com a ligação está dentro da pasta `musicos`.
 - Exercício 5: faz a pergunta do telefone para cada imagem. Na alínea a), a imagem é a mesma do cabeçalho, mas o que está à volta dela não é. Procura na secção "O texto alternativo" a situação deste segundo sítio. Na alínea b), lê o que a legenda já diz, para não o repetires. Na alínea c), pensa no que perde quem não vê o mapa, sabendo que o texto da página não o substitui.
-- Exercício 6: segue as perguntas da lista do guia, pela ordem, para cada zona. Na zona 1, repara que há duas coisas: a faixa inteira e o menu dentro dela. Nas zonas 3 e 4, faz as perguntas uma de cada vez, e para na primeira a que respondes que sim. Na zona 3, faz as perguntas sobre um só bloco, e não sobre os três juntos.
+- Exercício 6: segue as perguntas da lista do guia, pela ordem, para cada zona. A primeira pergunta é sobre a zona que junta todo o conteúdo próprio da página, entre o cabeçalho e o rodapé. Uma parte de dentro dela passa à pergunta seguinte. Na zona 1, repara que há duas coisas: a faixa inteira e o menu dentro dela. Nas zonas 3 e 4, faz as perguntas uma de cada vez, e para na primeira a que respondes que sim. Na zona 3, faz as perguntas sobre um só bloco, e não sobre os três juntos.
 - Exercício 7: começa por desenhar a tabela à mão, com os cabeçalhos no topo e à esquerda, antes de escreveres o HTML. Para decidir o que fica nas linhas, desenha as duas arrumações possíveis e vê qual se lê melhor. O que conta é a justificação que dás. Na primeira linha, a do `thead`, a célula do canto também é um `th`.
 
 ## Desafio opcional
@@ -211,14 +211,13 @@ Esta é a página dos músicos da Banda da Escola, `musicos.html`. Abre no brows
     </header>
     <main>
       <h1>Os músicos</h1>
-      <p>A banda tem cinco músicos, todos alunos da escola.</p>
+      <p>A banda tem cinco músicos, todos alunos da escola. Vê os <a href="ensaios">dias de ensaio</a>, mais abaixo.</p>
       <figure>
         <img src="imagens/ensaio.jpg" alt=Os cinco músicos a ensaiar com os seus instrumentos width="600" height="400">
       </figure>
       <figcaption>Ensaio de outubro, na sala de música.</figcaption>
-      <h2>Ensaios</h2>
+      <h2 id="ensaios">Ensaios</h2>
       <p>Ensaiamos à quinta-feira. Vê o <a>horário das salas</a href="horarios.html">.</p>
-      <p>Para ouvires as nossas músicas, vai ao <a href="https://www.escola.example/radio" target="_blank">programa da rádio da escola</a>.</p>
     </main>
     <footer>
       <p>Banda da Escola, ano letivo 2026/2027. Conteúdo fictício.</p>
