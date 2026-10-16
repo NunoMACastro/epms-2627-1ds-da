@@ -80,7 +80,7 @@ https://www.example.com/clube/torneios/outono.html#inscricoes
 file:///C:/Users/aluno/Documents/clube-de-xadrez/index.html
 ```
 
-**c)** Envias o endereço da alínea b) a um colega, por mensagem, e ele abre-o no computador dele. Vê a tua página? Explica numa frase.
+**c)** Envias o endereço da alínea b) a um colega, por mensagem. O colega tem os mesmos ficheiros, tirados do mesmo ZIP, mas guardou-os noutra pasta do computador dele. Abre-lhe a página? E se ele o tivesse guardado exatamente no mesmo caminho? Explica cada resposta numa frase.
 
 ## Exercício 4: Os códigos de resposta
 
@@ -90,7 +90,9 @@ Diz que código de resposta recebe o browser em cada situação, e a família a 
 
 **b)** Uma ligação aponta para uma página que foi apagada do site.
 
-**c)** O servidor avariou enquanto preparava a página pedida.
+**c)** A página existe, mas o programa que a monta no servidor tem um erro e para a meio.
+
+**d)** Escreveste o endereço antigo de uma página que mudou de endereço, e o browser levou-te sozinho ao novo.
 
 ## Exercício 5: Desenhar o mapa de um site
 
@@ -186,7 +188,7 @@ https://receitas.example.com/pesquisa.html?termo=sopa&pagina=2
 ## Critérios de conclusão
 
 - [ ] Nos exercícios 1, 2 e 4, justifiquei cada resposta numa frase, e não por palpite.
-- [ ] No exercício 3, separei as partes dos endereços e expliquei porque é que um endereço `file://` não funciona noutro computador.
+- [ ] No exercício 3, separei as partes dos endereços e expliquei quando é que um endereço `file://` abre noutro computador.
 - [ ] No exercício 4, escrevi o código e a família de cada situação.
 - [ ] No exercício 5, o meu mapa tem a página inicial no topo e todas as páginas ligadas a ela.
 - [ ] No exercício 5, justifiquei onde ficou a lista das receitas e que páginas vão para o menu.

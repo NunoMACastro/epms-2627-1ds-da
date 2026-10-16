@@ -2,8 +2,6 @@
 
 # {{titulo}}
 
-UC: {{uc}} · Competências: {{competencias}} · Bloco: {{bloco}} · Duração: {{duracao}}
-
 ## Problema antes do editor
 
 Utilizador e necessidade: {{contexto}}

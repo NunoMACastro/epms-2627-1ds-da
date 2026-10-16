@@ -68,7 +68,7 @@ Nesta disciplina vais fazer páginas para a Web. Como a Internet as transporta �
 
 A Web é mais nova do que muitos dos teus professores. Conhecer a sua história ajuda a perceber porque é que as páginas são feitas da forma que vais aprender.
 
-Em 1989, Tim Berners-Lee era investigador no CERN, um grande laboratório europeu de física perto de Genebra. Nesse ano, propôs uma forma de os cientistas partilharem documentos entre computadores diferentes, com ligações de uns documentos para os outros. Em 1990 pôs a ideia a funcionar, com o primeiro browser e o primeiro servidor. Para isso, inventou três coisas que ainda hoje usamos:
+Em 1989, Tim Berners-Lee era investigador no CERN, um grande laboratório europeu de física perto de Genebra. Nesse ano, propôs uma forma de os cientistas partilharem documentos entre computadores diferentes, com ligações de uns documentos para os outros. Em 1990 pôs a ideia a funcionar, com o primeiro browser, o programa que mostra as páginas, e o primeiro servidor. Um servidor é um computador sempre ligado, que guarda as páginas e as envia a quem as pede. Para isso, inventou três coisas que ainda hoje usamos:
 
 - uma linguagem para escrever os documentos, o **HTML**;
 - umas regras para um computador pedir um documento a outro e o receber, o **HTTP**;
@@ -137,7 +137,7 @@ O resultado é um botão azul, com a palavra "Gostar" a branco e os cantos redon
 
 Leitura guiada: começa pelo HTML, que cria as duas coisas que se veem, o botão e o parágrafo. Dá a cada uma um nome, `gostar` e `contador`. O CSS usa o nome `gostar` para dizer a que elemento se aplica a cor e a forma. O JavaScript usa os dois nomes. Encontra o botão e fica à espera dos cliques. A cada clique, soma um ao total e escreve-o no parágrafo.
 
-Repara que cada linguagem tem uma forma própria, e que já as consegues reconhecer pela forma. O HTML tem etiquetas entre `<` e `>`. O CSS tem nomes de propriedades seguidos de dois pontos e de um valor, dentro de chavetas. O JavaScript tem instruções que acabam em ponto e vírgula, com parênteses e palavras como `let` e `function`.
+Repara que cada linguagem tem uma forma própria, e que já as consegues reconhecer pela forma. O HTML tem **etiquetas**, os nomes entre `<` e `>`, como `<p>`. A etiqueta `<p>` marca onde começa um parágrafo, e `</p>`, com uma barra, marca onde acaba. A cada pedaço marcado assim, do princípio ao fim, chama-se **elemento**: o botão é um elemento, e o parágrafo é outro. O CSS tem um nome e, dentro de chavetas, propriedades seguidas de dois pontos, de um valor e de ponto e vírgula. O JavaScript tem instruções que acabam em ponto e vírgula, com parênteses e palavras como `let` e `function`.
 
 Porque é que se separam os três trabalhos? Porque cada um muda por razões diferentes, e separados mudam-se sem estragar os outros. Um site pode mudar de cores sem tocar no conteúdo. Uma pessoa cega usa um **leitor de ecrã**, um programa que lê a página em voz alta. Recebe o conteúdo e a estrutura do HTML, sem precisar do aspeto. E numa equipa, uma pessoa pode tratar do aspeto enquanto outra trata do comportamento.
 
@@ -179,7 +179,7 @@ O DOM pode ser diferente do ficheiro por três razões:
 - **O browser acrescenta o que falta.** Há elementos que o browser põe na árvore mesmo que não estejam no ficheiro. No laboratório vais ver uma página de 1992 a que faltam o `html` e o `head` do esqueleto de hoje. O browser acrescenta-os sozinho.
 - **O JavaScript muda a árvore.** Quando carregas no botão "Gostar", o JavaScript muda o texto do contador no DOM. O ficheiro continua a dizer "Gostos: 0".
 
-Se recarregares a página, o browser deita fora a árvore antiga e volta a construí-la a partir do ficheiro. Tudo o que tinha sido mudado no DOM desaparece. No laboratório vais experimentar isto. Mudas o texto de um título nas ferramentas do programador, e a página muda. Quando recarregas, volta tudo ao que estava.
+Se recarregares a página, o browser deita fora a árvore antiga e volta a construí-la a partir do ficheiro. Tudo o que tinha sido mudado no DOM desaparece. No laboratório vais experimentar isto. Mudas o texto de um título nas ferramentas do programador, umas ferramentas escondidas do browser que mostram a página por dentro, e a página muda. Quando recarregas, volta tudo ao que estava.
 
 ### Browsers diferentes
 
@@ -191,9 +191,9 @@ Quando abres uma página na Internet, há dois computadores a conversar. O teu b
 
 A conversa é parecida com o que acontece num restaurante. O cliente escolhe na ementa e faz um **pedido** ao empregado. O empregado leva o pedido à cozinha, que prepara o prato. Depois traz a **resposta**: o prato, ou a notícia de que esse prato não existe. O cliente não entra na cozinha nem sabe como o prato foi feito. Só faz pedidos e recebe respostas.
 
-Uma página raramente se faz com um só pedido. O browser pede primeiro o ficheiro HTML. Quando o lê, descobre que a página também precisa de imagens, de uma folha de estilos e de um ficheiro de JavaScript. Faz um pedido novo para cada um. Uma página de um site grande pode fazer dezenas de pedidos. No laboratório vais ver esses pedidos, um a um, no separador Network das ferramentas do programador.
+Uma página raramente se faz com um só pedido. O browser pede primeiro o ficheiro HTML. Quando o lê, descobre que a página também precisa de imagens, de um ficheiro de JavaScript e de uma **folha de estilos**. A folha de estilos é o ficheiro com o CSS. Faz um pedido novo para cada um. Uma página de um site grande pode fazer dezenas de pedidos. No laboratório vais ver esses pedidos, um a um, no separador Network das ferramentas do programador.
 
-Nos primeiros temas deste ano não vais usar servidor nenhum. Vais abrir as tuas páginas diretamente a partir do disco do teu computador. Nesse caso, o browser lê os ficheiros sem pedir nada a ninguém. Percebes a diferença pelo endereço. Uma página que veio de um servidor começa por `https://`, e um ficheiro aberto do teu disco começa por `file://`. Alguns browsers, como o Chrome, escondem este início até carregares na barra de endereço. Carrega uma vez nela para veres o endereço completo.
+Nos primeiros temas deste ano não vais usar servidor nenhum. Vais abrir as tuas páginas diretamente a partir do disco do teu computador. Nesse caso, o browser lê os ficheiros sem pedir nada a ninguém. Percebes a diferença pelo endereço. Uma página que veio de um servidor começa por `https://` (ou `http://`), e um ficheiro aberto do teu disco começa por `file://`. Alguns browsers, como o Chrome, escondem este início até carregares na barra de endereço. Carrega uma vez nela para veres o endereço completo.
 
 Isto tem uma consequência importante: um endereço `file://` só funciona no teu computador, porque é lá que o ficheiro está. Se o enviares a um colega, não funciona. Para outras pessoas verem o teu site, ele tem de estar num servidor. É esse o assunto do tema da publicação, no fim do ano.
 
@@ -236,11 +236,11 @@ A segunda é o **código de resposta**, um número de três algarismos que o ser
 | Família | Quer dizer | Exemplo que vais encontrar |
 | --- | --- | --- |
 | 2xx | Correu bem | **200**: aqui está o que pediste |
-| 3xx | Está noutro sítio | **301**: esta página mudou de endereço para sempre, e o browser vai buscá-la ao endereço novo |
+| 3xx | Vai a outro endereço, ou usa a cópia que já tens | **301**: esta página mudou de endereço para sempre, e o browser vai buscá-la ao endereço novo. **304**: a página não mudou desde a última visita, e o browser usa a cópia que guardou |
 | 4xx | O pedido tem um problema | **404**: o que pediste não existe neste servidor |
 | 5xx | O servidor teve um problema | **500**: o servidor avariou ao preparar a resposta |
 
-O 404 é o mais famoso. Aparece sempre que, num site publicado, uma ligação aponta para uma página que não existe. Nas páginas que abres do teu disco não há servidor, e por isso não há 404. O browser mostra uma mensagem a dizer que não encontrou o ficheiro. O 404 é o sintoma de uma **ligação sem destino**, uma ligação que leva a uma página que não existe. Vais aprender a evitá-la no mapa do site. No laboratório vais provocar um 404 de propósito e vê-lo no separador Network.
+O 404 é o mais famoso. É o que o servidor costuma responder quando, num site publicado, uma ligação aponta para uma página que não existe. Nas páginas que abres do teu disco não há servidor, e por isso não há 404. O browser mostra uma mensagem a dizer que não encontrou o ficheiro. O 404 é o sintoma de uma **ligação sem destino**, uma ligação que leva a uma página que não existe. Vais aprender a evitá-la no mapa do site. No laboratório vais provocar um 404 de propósito e vê-lo no separador Network.
 
 ## As ferramentas do programador
 
@@ -251,7 +251,7 @@ As ferramentas estão organizadas em separadores. Neste tema vais usar dois:
 - o separador **Elements** (em português pode aparecer como Elementos) mostra o DOM, a árvore que o browser construiu. Permite ver que parte da página corresponde a cada ramo;
 - o separador **Network** (Rede) mostra todos os pedidos que a página fez, com o endereço, o método e o código de resposta de cada um.
 
-Mais tarde vais usar o separador **Console** (Consola), onde aparecem os erros e onde se experimenta JavaScript. O laboratório deste tema ensina a usar as ferramentas passo a passo. Não tenhas receio de mexer nelas. Tudo o que mudas nas ferramentas do programador muda só o DOM da tua cópia da página. Desaparece quando recarregas, e não estraga nada no site verdadeiro.
+Mais tarde vais usar o separador **Console** (Consola), onde aparecem os erros e onde se experimenta JavaScript. O laboratório deste tema ensina a usar as ferramentas passo a passo. Não tenhas receio de mexer nelas. Tudo o que mudas no separador Elements muda só o DOM da tua cópia da página. Desaparece quando recarregas, e não estraga nada no site verdadeiro.
 
 ## Antes do editor: planear
 
@@ -296,7 +296,9 @@ Com o inventário feito, agrupam-se as coisas parecidas. Os grupos que aparecem 
 
 O **mapa do site** (em inglês, *sitemap*) é um desenho de todas as páginas de um site e das ligações que levam a cada uma. Cada página é uma caixa, com o nome da página e uma frase a dizer para que serve. As ligações são linhas entre as caixas. A página inicial fica no topo, e as páginas que se abrem a partir dela ficam por baixo, como numa árvore genealógica.
 
-No papel, desenha-se com caixas e linhas. Escrito, pode fazer-se assim, com a indentação a mostrar o que se abre a partir de quê:
+O exemplo desta secção é a Estante Digital, o site que os guias vão construir ao longo do ano. É um site onde uma turma reúne os recursos de estudo que recomenda, como livros, vídeos e sítios, com uma página para cada recurso.
+
+No papel, o mapa desenha-se com caixas e linhas. Escrito, pode fazer-se assim, com a indentação a mostrar o que se abre a partir de quê:
 
 ```text
 Início
@@ -340,7 +342,7 @@ Ao lado de cada zona do wireframe escreve-se uma **anotação** a dizer o que é
 
 O mapa e os wireframes descrevem o mesmo site por dois lados, e por isso têm de dizer a mesma coisa. Antes de dares o plano por acabado, faz estas quatro verificações:
 
-- Cada ligação desenhada num wireframe tem de levar a uma página que existe no mapa. Se o wireframe da página inicial tem uma ligação "Contactos", o mapa tem de ter uma página Contactos. Se não tiver, é uma ligação sem destino, que no site verdadeiro vai dar o erro 404.
+- Cada ligação desenhada num wireframe tem de levar a uma página que existe no mapa. Se o wireframe da página inicial tem uma ligação "Contactos", o mapa tem de ter uma página Contactos. Se não tiver, é uma ligação sem destino, que no site verdadeiro costuma dar o erro 404.
 - Cada linha do mapa tem de aparecer em algum wireframe, como uma ligação desenhada. Se o mapa diz que da página inicial se vai à página Sobre, o wireframe da página inicial tem de mostrar onde está essa ligação.
 - Os nomes são os mesmos nos dois. Imagina que no mapa a página se chama "Sobre" e no menu do wireframe se chama "Quem somos". Uma pessoa que leia os dois não sabe se são a mesma página.
 - O menu é igual em todos os wireframes, com as mesmas opções pela mesma ordem.
@@ -351,7 +353,7 @@ Estas verificações apanham no papel os erros que, no site verdadeiro, só se d
 
 Ao longo deste ano vais construir um site teu, que vai crescendo tema a tema. Primeiro vem a estrutura em HTML, e depois o aspeto com CSS. Segue-se a adaptação a ecrãs de todos os tamanhos, depois o comportamento com JavaScript, e no fim a publicação.
 
-O tema do teu site escolhes do menu de temas que o professor te dá. Todos os temas do menu têm uma pequena coleção de coisas parecidas, como receitas, jogos, livros ou jogadores. Mais à frente no ano, vais mostrar essas coisas em cartões, filtrá-las e acrescentar uma nova por um formulário, com JavaScript. Um tema com uma coleção dá-te material para isso. Se tiveres uma ideia tua, fala com o professor: entra se também tiver uma coleção destas.
+O tema do teu site escolhes do menu de temas que o professor te dá na aula. Todos os temas do menu têm uma pequena coleção de coisas parecidas, como receitas, jogos, livros ou jogadores. Mais à frente no ano, vais mostrar essas coisas em cartões, filtrá-las e acrescentar uma nova por um formulário, com JavaScript. Um tema com uma coleção dá-te material para isso. Se tiveres uma ideia tua, fala com o professor: entra se também tiver uma coleção destas.
 
 Estes critérios ajudam a escolher bem dentro do menu:
 
@@ -587,7 +589,7 @@ O que se vê: o campo "Utilizador e necessidade" do brief diz "toda a gente". De
 
 ### Um tema grande demais
 
-O que se vê: o mapa não para de crescer, e nenhuma página fica feita. "Um site sobre futebol" dá para mil páginas. "O site da equipa de futebol da escola, com os jogos da época e os jogadores" dá para três páginas bem feitas. Corrige-se começando pequeno, e acrescentando depois.
+O que se vê: o mapa não para de crescer, e nenhuma página fica feita. "Um site sobre futebol" dá para mil páginas. "O site de uma equipa de futebol inventada, com os jogos da época e os jogadores" dá para três páginas bem feitas. Corrige-se começando pequeno, e acrescentando depois.
 
 ### Páginas soltas no mapa
 
@@ -599,7 +601,7 @@ O que se vê: os wireframes de duas páginas têm menus com opções diferentes,
 
 ### Ligações para páginas que não estão no mapa
 
-O que se vê: um wireframe com uma ligação cujo destino não aparece no mapa. É o erro que o passo 9 do exemplo guiado apanhou. No site verdadeiro, essa ligação sem destino dá o erro 404. Corrige-se acrescentando a página ao mapa, ou tirando a ligação do wireframe.
+O que se vê: um wireframe com uma ligação cujo destino não aparece no mapa. É o erro que o passo 9 do exemplo guiado apanhou. No site verdadeiro, essa ligação sem destino costuma dar o erro 404. Corrige-se acrescentando a página ao mapa, ou tirando a ligação do wireframe.
 
 ### Um wireframe com cores, tipos de letra e desenhos bonitos
 
@@ -624,6 +626,8 @@ O que se vê: o colega abre o endereço e o browser diz que não encontra o fich
 - HTML: a linguagem que diz o que cada pedaço do conteúdo é; dá a estrutura e o significado.
 - CSS: a linguagem que diz como cada pedaço se apresenta; dá o aspeto.
 - JavaScript: a linguagem que diz como a página se comporta quando alguém faz alguma coisa.
+- Etiqueta: o nome entre `<` e `>`, como `<p>`, que marca onde começa um elemento; com uma barra, como `</p>`, marca onde ele acaba.
+- Elemento: cada pedaço do conteúdo que o HTML marca, do princípio ao fim, como um título, um parágrafo ou um botão.
 - Leitor de ecrã: um programa que lê a página em voz alta, usado por pessoas cegas.
 - Browser (navegador): o programa que pede as páginas, lê os ficheiros e desenha a página no ecrã.
 - Ambiente de execução: o sítio onde um programa funciona; o da Web é o browser.
@@ -636,6 +640,7 @@ O que se vê: o colega abre o endereço e o browser diz que não encontra o fich
 - Resposta: o que o servidor devolve, com o código de resposta e o conteúdo.
 - URL: o endereço de um recurso na Web.
 - Recurso: qualquer coisa que se pode pedir a um servidor, como uma página, uma imagem ou uma folha de estilos.
+- Folha de estilos: o ficheiro com o CSS de uma página.
 - Protocolo: as regras da conversa entre o browser e o servidor, como o `https`; é a primeira parte do URL.
 - Domínio: o nome do servidor, como `www.example.com`.
 - Caminho: a pasta e o ficheiro dentro do servidor, como `/cursos/informatica.html`.
@@ -644,7 +649,7 @@ O que se vê: o colega abre o endereço e o browser diz que não encontra o fich
 - HTTP: as regras da conversa entre o browser e o servidor; o `https` é o HTTP cifrado.
 - Método: a parte do pedido que diz o que o browser quer; o mais comum é o GET, "dá-me este recurso".
 - Código de resposta: o número de três algarismos que diz como correu o pedido, como 200 ou 404.
-- Ligação sem destino: uma ligação para uma página que não existe; num site publicado, dá o erro 404.
+- Ligação sem destino: uma ligação para uma página que não existe; num site publicado, costuma dar o erro 404.
 - Ferramentas do programador: as ferramentas do browser para ver e experimentar uma página por dentro.
 - Tarefa principal: o que o utilizador quer fazer no site.
 - Inventário de conteúdos: a lista de todo o conteúdo de um site, com a origem de cada coisa.
@@ -682,14 +687,16 @@ Para praticar este tema, faz o [laboratório](01-web-e-planeamento-laboratorio.m
 
 Na aula, fazes o plano do teu site em papel, pelos mesmos passos do exemplo guiado. Tem à mão o [modelo do brief](../projeto/modelos/brief-e-wireframe.md). Escreve as respostas nos campos que a tabela da secção "Preencher o modelo do brief" diz que se preenchem neste tema.
 
-1. **Escolhe o tema.** Lê os critérios da secção "O tema do teu site" e escolhe o teu tema do menu do professor. Escreve-o no topo da folha, com um nome provisório para o site. Se estiveres indeciso entre dois, escolhe aquele de que consegues imaginar mais páginas.
+1. **Escolhe o tema.** Lê os critérios da secção "O tema do teu site". Depois escolhe o teu tema do menu de temas que o professor te dá na aula. Escreve-o no topo da folha, com um nome provisório para o site. Se estiveres indeciso entre dois, escolhe aquele de que consegues imaginar mais páginas.
 2. **O utilizador e a tarefa principal.** Preenche os campos "Utilizador e necessidade" e "Resultado útil para essa pessoa". Sê concreto: não "toda a gente", mas uma pessoa como a Marta do exemplo guiado. Escreve, em duas ou três frases, a história de uma visita dessa pessoa ao teu site.
 3. **O inventário de conteúdos.** Preenche o campo "Conteúdo necessário e respetiva origem", como no passo 3 do exemplo guiado. Escreve uma linha por conteúdo, com o tipo e a origem. Depois agrupa as coisas parecidas. Preenche também o campo "Limites do trabalho", com o que o teu site não vai ter nesta fase.
 4. **O mapa do site.** Decide as páginas a partir dos grupos do inventário. Desenha o mapa numa folha lisa, com uma caixa por página e linhas para as ligações. Dentro de cada caixa, escreve o nome da página e uma frase a dizer para que serve. Para o laboratório do tema 02 precisas de pelo menos duas páginas ligadas entre si. Se conseguires imaginar três, melhor. Confirma as regras da secção "O mapa do site": consegues chegar a todas as páginas a partir do Início, e voltar de todas?
 5. **Os wireframes.** Desenha o wireframe estreito da tua página inicial, com as anotações ao lado de cada zona. Depois desenha o wireframe largo da mesma página, e confirma que a ordem de leitura é a mesma nos dois. Preenche o campo "Hierarquia de informação" com a ordem das zonas do wireframe estreito, como no passo 6 do exemplo guiado. Se te sobrar tempo, desenha também o wireframe estreito da segunda página. Não gastes tempo em pormenores: caixas, riscos para o texto e um X para as imagens chegam.
 6. **A verificação.** Primeiro, sozinho, verifica se o mapa e os wireframes concordam, como no passo 9 do exemplo guiado, e corrige o que encontrares. Depois troca de plano com um colega. Sem lhe explicares nada, pede-lhe que encontre no teu plano uma informação concreta do teu site, como "onde vejo quando é o próximo torneio?". Ele diz-te, apontando, por onde passou. Se ele se perder, o teu plano tem um problema: pergunta-lhe onde hesitou e corrige. Escreve o que aconteceu no campo "Verificação com um colega antes de implementar". Por fim, preenche o campo "Critérios de aceitação". Escreve duas ou três condições que o teu site tem de cumprir nesta fase, como as do passo 9 do exemplo guiado.
 
-Guarda a folha do mapa e dos wireframes. Fotografa-a e guarda as fotografias, com a cópia do brief, numa pasta com o nome do teu site. O nome vai em minúsculas, sem espaços nem acentos, com hífenes entre as palavras, como `estante-digital`. É essa a pasta do teu site. No laboratório do tema 02, é lá dentro que vais escrever as páginas em HTML.
+Guarda a folha do mapa e dos wireframes. Fotografa-a e guarda as fotografias, com a cópia do brief, numa pasta com o nome do teu site. Se não puderes fotografar, guarda as folhas, e o professor diz como as passas para a pasta. O nome da pasta vai em minúsculas, sem espaços nem acentos, com hífenes entre as palavras, como `estante-digital`. É essa a pasta do teu site. No laboratório do tema 02, é lá dentro que vais escrever as páginas em HTML.
+
+Cria a pasta onde o professor indicar. No Windows, carrega com o botão direito num sítio vazio da janela dessa pasta e escolhe Novo e depois Pasta. No Mac, carrega com o botão direito num sítio vazio e escolhe Nova pasta. Depois escreve o nome e carrega em Enter.
 
 O plano que fizeste é a planta do teu site. A seguir vem o tema 01 do Git, onde vais aprender a guardar versões da pasta do teu site, começando pelo plano. Assim, nenhuma alteração se perde. Depois, no guia [HTML e semântica](02-html-e-semantica.md), vais transformar o plano em páginas de verdade, escritas em HTML. Cada zona do wireframe vai dar um elemento.
 
