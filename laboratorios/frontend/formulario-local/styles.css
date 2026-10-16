@@ -1,4 +1,6 @@
-/* A grelha adapta-se ao conteúdo; foco e contraste fazem parte do exemplo. */
+/* styles.css: a apresentação do Plano de estudo local.
+   Num ecrã estreito, as duas secções ficam uma por baixo da outra; num ecrã
+   largo, ficam lado a lado. O foco visível e o contraste fazem parte do exemplo. */
 :root {
   font-family: system-ui, sans-serif;
   color: #17243b;
@@ -6,25 +8,37 @@
   line-height: 1.5;
 }
 
+/* A largura de cada caixa passa a incluir o espaço interior e a borda,
+   e um campo com width: 100% não sai da secção. */
 * { box-sizing: border-box; }
 
 body { max-width: 68rem; margin: 0 auto; padding: 1.5rem; }
 main { display: grid; gap: 1.5rem; }
+/* O min-width: 0 deixa a secção encolher na grelha. Sem ele, uma palavra
+   muito comprida alargava a coluna para fora do ecrã. */
 section { background: #fff; padding: 1.5rem; border: 1px solid #8a98ab; border-radius: 0.5rem; min-width: 0; }
+/* O clamp() faz o título crescer com a largura do ecrã, entre um mínimo e um máximo. */
 h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
 form { display: grid; gap: 0.75rem; }
 label { font-weight: 700; }
+/* Os campos e os botões não herdam a letra da página sem o font: inherit.
+   A altura mínima deixa-os fáceis de acertar com o dedo. */
 input, select, button { font: inherit; min-height: 2.75rem; border-radius: 0.25rem; }
 input, select { width: 100%; padding: 0.5rem; border: 1px solid #59697e; }
 button { background: #174ea6; color: #fff; border: 2px solid #174ea6; padding: 0.5rem 0.75rem; cursor: pointer; }
 button:hover { background: #103971; }
 button:disabled { background: #dee4ec; border-color: #59697e; color: #374359; cursor: default; }
+/* O contorno do foco aparece quando se navega com o teclado, e mostra onde se está. */
 :focus-visible { outline: 3px solid #8a3600; outline-offset: 3px; }
+/* O mesmo atributo que avisa o leitor de ecrã desenha a borda do campo com erro. */
 [aria-invalid="true"] { border: 2px solid #a21c28; }
-.error { color: #a21c28; font-weight: 700; }
+.erro { color: #a21c28; font-weight: 700; }
 form p { margin: 0; }
+/* Uma tarefa com uma palavra muito comprida, sem espaços, parte a linha
+   em vez de sair da página para o lado. */
 li { overflow-wrap: anywhere; margin-block: 0.5rem; }
 
+/* As duas colunas só aparecem quando há espaço para elas. */
 @media (min-width: 48rem) {
   main { grid-template-columns: 1fr 1fr; }
 }

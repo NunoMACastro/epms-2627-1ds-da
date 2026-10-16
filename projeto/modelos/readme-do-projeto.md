@@ -2,34 +2,43 @@
 
 # {{titulo}}
 
-Problema, público e utilidade: {{contexto}}
+Para quem é o site, que problema resolve e para que serve: {{contexto}}
 
-## Executar
+## Como abrir
 
 {{execucao}}
-Tecnologias usadas e organização dos ficheiros: {{recursos}}
 
-## Funcionalidades e decisões
+- Tecnologias usadas e organização dos ficheiros: {{recursos}}
+
+## Funcionalidades
 
 {{requisitos}}
-Planeamento e relação com a implementação: {{planeamento}}
-Semântica, layout e acessibilidade: {{qualidade_interface}}
-DOM, eventos e estado: {{javascript}}
+
+- Onde está o plano do site: {{planeamento}}
+- Semântica, arrumação e acessibilidade: {{qualidade_interface}}
+- O que o JavaScript faz na página: {{javascript}}
 
 ## Testes realizados
 
 {{testes}}
-Erros corrigidos com DevTools: {{debugging}}
+
+- Erros corrigidos com as ferramentas do programador: {{debugging}}
 
 ## Git e publicação
 
-Workflow, colaboração e versão entregue: {{git_workflow}}
-Endereço e estado real de publicação: {{publicacao}}
+- Como guardaste as versões e qual é a versão entregue: {{git_workflow}}
+- Endereço e estado real da publicação: {{publicacao}}
 
 ## Limitações e continuidade
 
 {{estado_entrega}}
-Competências demonstradas e próxima etapa: {{handoff}}
-Fontes e licenças de recursos: {{fontes}}
+
+- O que mostraste saber fazer e o que fica para depois: {{handoff}}
+
+## Imagens e tipos de letra de outros
+
+Para cada imagem e cada tipo de letra que não fizeste tu, diz de onde veio e que licença tem. Se tudo o que usaste é teu, escreve isso.
+
+{{fontes}}
 
 ![Rodapé](../../imagens/rodape.png)

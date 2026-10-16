@@ -2,13 +2,9 @@
 
 # Exemplos
 
-Código completo e comentado, para ler, abrir no browser e comparar com o que os guias explicam. Ao contrário do código dos laboratórios, que está incompleto de propósito, estes exemplos estão acabados.
+Sites completos e comentados, para abrir no browser e ler no editor. Cada exemplo tem um README que diz o que mostra e como se abre.
 
-- [Estante Digital](frontend/estante-digital/index.html): site de três páginas em HTML semântico, sem CSS, com cabeçalho, navegação, listas, uma imagem com legenda e uma tabela de dados. É o exemplo dos guias [A Web, os utilizadores e o planeamento](../01-frontend/01-web-e-planeamento.md) e [HTML e semântica](../01-frontend/02-html-e-semantica.md). O conteúdo é todo fictício.
-- [Clube de Robótica](frontend/clube-de-robotica/index.html): site de duas páginas em HTML semântico, sem CSS, mais curto do que a Estante Digital. A página inicial tem cabeçalho, navegação, secções, uma notícia com uma imagem e legenda, uma dica e as três situações do texto alternativo; a página do horário tem uma tabela de dados. É o exemplo da aula sobre os elementos semânticos, as imagens e as tabelas do guia [HTML e semântica](../01-frontend/02-html-e-semantica.md). O conteúdo é todo fictício.
-
-Para abrir um exemplo, abre o ficheiro `index.html` da pasta no browser, com duplo clique ou com Ctrl+O (Cmd+O no Mac). Não precisas de servidor nem de instalar nada. Para ver o código, abre a pasta no Visual Studio Code.
-
-[Voltar ao índice](../README.md)
+- [Estante Digital](frontend/estante-digital/README.md): um site de recursos de estudo, com três páginas. É o exemplo dos guias de frontend.
+- [Clube de Robótica](frontend/clube-de-robotica/README.md): um site de duas páginas, mais curto, com uma notícia e uma tabela de dados.
 
 ![Rodapé](../imagens/rodape.png)

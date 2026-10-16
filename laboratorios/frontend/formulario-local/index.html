@@ -1,29 +1,43 @@
 <!doctype html>
+<!-- index.html: a página do Plano de estudo local, o código de partida do
+     laboratório dos formulários. Tem o formulário onde se escreve uma tarefa
+     e a lista das tarefas, que começa vazia. O comportamento está no app.js,
+     e a apresentação no styles.css. -->
 <html lang="pt-PT">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plano de estudo local</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- O defer faz o script correr só depois de o browser ler a página toda.
+         Sem ele, o app.js procurava o formulário antes de ele existir. -->
     <script src="app.js" defer></script>
   </head>
   <body>
     <header>
-      <p>Desenvolvimento de Aplicações · Laboratório frontend</p>
+      <p>Desenvolvimento de Aplicações · Laboratório de frontend</p>
       <h1>Plano de estudo local</h1>
       <p>Acrescenta uma tarefa. Os dados ficam apenas em memória até atualizares a página.</p>
     </header>
     <main>
-      <section aria-labelledby="form-heading">
-        <h2 id="form-heading">Nova tarefa</h2>
-        <form id="task-form">
-          <label for="task-title">O que vais praticar?</label>
-          <input id="task-title" name="title" type="text" required maxlength="80"
-                 aria-describedby="title-help title-error">
-          <p id="title-help">Escreve uma ação concreta, até 80 caracteres.</p>
-          <p id="title-error" class="error" aria-live="polite"></p>
-          <label for="task-area">Área</label>
-          <select id="task-area" name="area">
+      <!-- O aria-labelledby dá à secção o nome do seu título, para o leitor de ecrã. -->
+      <section aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Nova tarefa</h2>
+        <form id="formulario-tarefa">
+          <!-- O for do rótulo é o id do campo. Carregar no rótulo põe o foco no campo,
+               e o leitor de ecrã lê o rótulo quando o campo recebe o foco. -->
+          <label for="titulo-tarefa">O que vais praticar?</label>
+          <!-- required: o browser não deixa enviar o campo vazio.
+               maxlength: não deixa escrever mais de 80 caracteres.
+               aria-describedby: o leitor de ecrã lê também a ajuda e o erro. -->
+          <input id="titulo-tarefa" name="titulo" type="text" required maxlength="80"
+                 aria-describedby="ajuda-titulo erro-titulo">
+          <p id="ajuda-titulo">Escreve uma ação concreta, até 80 caracteres.</p>
+          <!-- Começa vazio: é o app.js que escreve aqui a mensagem de erro.
+               O aria-live faz o leitor de ecrã ler a mensagem quando ela aparece. -->
+          <p id="erro-titulo" class="erro" aria-live="polite"></p>
+          <label for="area-tarefa">Área</label>
+          <select id="area-tarefa" name="area">
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
             <option value="JavaScript">JavaScript</option>
@@ -31,15 +45,19 @@
           </select>
           <button type="submit">Adicionar tarefa</button>
         </form>
+        <!-- O noscript só aparece quando o JavaScript está desligado no browser. -->
         <noscript>Este exercício necessita de JavaScript para adicionar tarefas localmente.</noscript>
       </section>
-      <section aria-labelledby="list-heading">
-        <h2 id="list-heading">Tarefas planeadas</h2>
-        <p id="summary" role="status">Ainda não adicionaste tarefas.</p>
-        <ul id="task-list"></ul>
-        <button id="clear-tasks" type="button" disabled>Limpar tarefas</button>
+      <section aria-labelledby="titulo-lista">
+        <h2 id="titulo-lista">Tarefas planeadas</h2>
+        <!-- O role="status" faz o leitor de ecrã anunciar o resumo sempre que ele muda. -->
+        <p id="resumo" role="status">Ainda não adicionaste tarefas.</p>
+        <!-- A lista começa vazia: os itens são criados pelo app.js. -->
+        <ul id="lista-tarefas"></ul>
+        <!-- Começa desativado, porque com a lista vazia não há nada para limpar. -->
+        <button id="limpar-tarefas" type="button" disabled>Limpar tarefas</button>
       </section>
     </main>
-    <footer><p>Exemplo pedagógico: HTML + CSS + JavaScript nativo.</p></footer>
+    <footer><p>Código de partida de um laboratório: só HTML, CSS e JavaScript, sem bibliotecas.</p></footer>
   </body>
 </html>

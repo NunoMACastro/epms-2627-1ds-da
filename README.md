@@ -1,33 +1,33 @@
 ![Cabeçalho](imagens/cabecalho.png)
 
-# Desenvolvimento de Aplicações: materiais para alunos
+# Desenvolvimento de Aplicações · 10.º DS
 
-Este repositório reúne materiais disponibilizados para a disciplina de Desenvolvimento de Aplicações do 10.º ano.
+Materiais de Desenvolvimento de Aplicações do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Cada material é publicado quando fica pronto, e podes lê-lo antes de ser dado na aula.
 
-## Encontrar materiais
+## Por onde começar
 
-- [Frontend](01-frontend/README.md): guias, laboratórios e fichas sobre a Web, HTML, CSS e JavaScript.
-- [Exemplos](exemplos/README.md): código completo e comentado, usado nos guias.
-- [Laboratórios](laboratorios/README.md): código de partida e material de apoio dos laboratórios, de frontend e de Git.
-- [Projeto](projeto/README.md): modelos para planear e documentar um projeto frontend.
+Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem da planificação e diz por onde a turma começou. Cada tema tem três tipos de documento:
 
-Cada material indica como o usar. Não são necessárias dependências, ficheiros ou instruções fora deste repositório.
+- o guia, para ler e estudar;
+- o laboratório, para seguir passo a passo no computador, sem precisares de abrir o guia;
+- a ficha de exercícios, para praticares sozinho.
 
-## Áreas e unidades de competência
+## As áreas
 
-A disciplina tem duas áreas, e cada uma corresponde a uma unidade de competência do referencial do curso. Os códigos aparecem no início de cada material.
+| Área | Módulo |
+| --- | --- |
+| [Frontend](01-frontend/README.md) | Conceber aplicações para a web na vertente frontend |
 
-| Área | Pasta | Unidade de competência | Horas |
-| --- | --- | --- | ---: |
-| Frontend | [01-frontend](01-frontend/README.md) | UC02833, Conceber aplicações para a web na vertente frontend | 50 |
-| Git e GitHub | ainda sem materiais publicados | UC00617, Utilizar serviços Git e GitHub | 20 |
+## Como estudar
 
-## Ordem de estudo
+Lê o guia antes de escreveres código: primeiro a explicação, depois o exemplo guiado. Antes de abrires uma página no browser, tenta prever o que vais ver. É aí que percebes se a ideia ficou entendida. As resoluções dos exercícios não estão aqui, porque se trabalham na aula.
 
-As duas áreas estudam-se intercaladas: o Git entra logo depois do primeiro assunto de frontend, para que o plano do teu site, e depois as páginas, passem a ter versões desde o início. Esta é a ordem prevista dos primeiros assuntos:
+Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num material, avisa o professor.
 
-1. Frontend 01: [A Web, os utilizadores e o planeamento](01-frontend/01-web-e-planeamento.md).
-2. Git 01: Git local, ainda por publicar.
-3. Frontend 02: [HTML e semântica](01-frontend/02-html-e-semantica.md).
+## Outras pastas
+
+- [Exemplos](exemplos/README.md): sites de exemplo, para abrir no browser e ler no editor.
+- [Laboratórios](laboratorios/README.md): o material de apoio de alguns laboratórios.
+- [Projeto](projeto/README.md): os modelos para planear e documentar o teu site.
 
 ![Rodapé](imagens/rodape.png)
