@@ -16,7 +16,9 @@ Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem da p
 
 | Área | Módulo |
 | --- | --- |
-| [Frontend](01-frontend/README.md) | Conceber aplicações para a web na vertente frontend |
+| [Frontend](01-frontend/README.md) | UC02833, Conceber aplicações para a web na vertente frontend |
+
+A disciplina tem também a UC00617, Utilizar serviços Git e GitHub, dada intercalada; a área aparece aqui com o primeiro tema.
 
 ## Como estudar
 

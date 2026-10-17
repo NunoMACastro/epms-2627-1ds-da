@@ -2,7 +2,7 @@
 
 # Frontend
 
-Nesta área constróis o teu próprio site, do plano em papel até à publicação. Usas as três linguagens que o browser entende: o HTML dá a estrutura, o CSS dá o aspeto e o JavaScript dá o comportamento. Corresponde ao módulo Conceber aplicações para a web na vertente frontend.
+Frontend é a parte de uma aplicação que corre no browser: o que o utilizador vê e usa. Nesta área constróis o teu próprio site, do plano em papel até à publicação. Usas as três linguagens que o browser entende: o HTML dá a estrutura, o CSS dá o aspeto e o JavaScript dá o comportamento. Corresponde ao módulo Conceber aplicações para a web na vertente frontend.
 
 | Tema | Guia | Laboratório | Ficha | Exemplos |
 | --- | --- | --- | --- | --- |

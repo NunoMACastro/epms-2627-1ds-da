@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 import shlex
 import shutil
+import stat
 import subprocess
 import tempfile
 
@@ -54,10 +55,16 @@ def executar_laboratorio(pasta):
         # O shlex.join põe aspas onde são precisas, e o comando mostrado pode
         # escrever-se tal e qual num terminal.
         print(f"$ {shlex.join(['git', *argumentos])}", flush=True)
+        # O encoding="utf-8" lê os acentos da resposta do Git da mesma maneira em
+        # todos os sistemas. Sem ele, no Windows, o "í" de "título" podia sair trocado.
         resultado = subprocess.run(["git", *argumentos], cwd=pasta, env=ambiente,
-                                   capture_output=True, text=True, check=False)
+                                   capture_output=True, text=True, encoding="utf-8", check=False)
         if resultado.stdout.strip():
             print(resultado.stdout.strip())
+        # Algumas respostas do Git, como a do git switch, vêm pela saída de erro,
+        # mesmo quando o comando correu bem. Sem estas linhas, não apareciam.
+        if resultado.stderr.strip():
+            print(resultado.stderr.strip())
         if resultado.returncode != esperado:
             raise RuntimeError(f"O Git devolveu {resultado.returncode}, e esperava-se {esperado}: {resultado.stderr}")
         return resultado.stdout
@@ -109,6 +116,21 @@ def executar_laboratorio(pasta):
     print("Tudo certo: o conflito apareceu e foi resolvido, a junção tem dois pais e a pasta de trabalho está limpa.")
 
 
+def tornar_gravavel_e_repetir(funcao, caminho, _erro):
+    """Tira a proteção contra escrita de um ficheiro que não se apagou e tenta outra vez.
+
+    Não devolve nada. O shutil.rmtree chama esta função quando não consegue
+    apagar um ficheiro. No Windows, o Git guarda alguns ficheiros só de leitura
+    dentro da pasta .git, e o Windows não os deixa apagar sem isto.
+
+    funcao: a função que falhou, como os.remove, que se volta a chamar.
+    caminho: o caminho do ficheiro que não se apagou.
+    _erro: o erro que aconteceu; não se usa, mas o shutil.rmtree passa-o sempre.
+    """
+    os.chmod(caminho, stat.S_IWRITE)
+    funcao(caminho)
+
+
 def main():
     """Cria a pasta temporária, corre a demonstração nela e, no fim, apaga só essa pasta.
 
@@ -131,7 +153,8 @@ def main():
         if opcoes.manter:
             print(f"Pasta mantida: {pasta}")
         else:
-            shutil.rmtree(pasta)
+            # O onerror diz que função chamar quando um ficheiro não se deixa apagar.
+            shutil.rmtree(pasta, onerror=tornar_gravavel_e_repetir)
 
 
 if __name__ == "__main__":

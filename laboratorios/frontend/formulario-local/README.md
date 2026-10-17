@@ -2,7 +2,7 @@
 
 # Formulário local: material de apoio
 
-Código de partida do laboratório do tema 08 de frontend, sobre os formulários, a validação e os módulos. O laboratório ainda não está publicado.
+Código de partida do laboratório do tema 08 de frontend, sobre os formulários, a validação e os ficheiros de JavaScript separados. O laboratório ainda não está publicado.
 
 Esta pasta tem uma pequena aplicação para o browser, feita só com HTML, CSS e JavaScript. Chama-se "Plano de estudo local". Tem um formulário onde escreves uma tarefa que queres praticar e escolhes a área: HTML, CSS, JavaScript ou Git. Depois de adicionada, a tarefa aparece numa lista, e um botão limpa a lista.
 

@@ -5,8 +5,9 @@
  * desaparecem quando a página se recarrega.
  */
 
-// Modo estrito: o browser passa a dar erro em vez de aceitar alguns enganos
-// em silêncio, como usar uma variável que nunca foi declarada.
+// Modo estrito: o browser passa a dar erro em alguns enganos que antes aceitava,
+// como dar um valor a uma variável que nunca foi declarada. Sem o modo estrito,
+// o browser criava essa variável em silêncio.
 "use strict";
 
 // Os elementos da página que o código usa, encontrados uma só vez pelo id.

@@ -28,8 +28,9 @@ input, select { width: 100%; padding: 0.5rem; border: 1px solid #59697e; }
 button { background: #174ea6; color: #fff; border: 2px solid #174ea6; padding: 0.5rem 0.75rem; cursor: pointer; }
 button:hover { background: #103971; }
 button:disabled { background: #dee4ec; border-color: #59697e; color: #374359; cursor: default; }
-/* O contorno do foco aparece quando se navega com o teclado, e mostra onde se está. */
-:focus-visible { outline: 3px solid #8a3600; outline-offset: 3px; }
+/* O contorno do foco mostra onde se está. Aparece quando se navega com o teclado,
+   e também quando se clica num campo de texto, porque é aí que se vai escrever. */
+:focus-visible { outline: 3px solid #0b2a5c; outline-offset: 3px; }
 /* O mesmo atributo que avisa o leitor de ecrã desenha a borda do campo com erro. */
 [aria-invalid="true"] { border: 2px solid #a21c28; }
 .erro { color: #a21c28; font-weight: 700; }

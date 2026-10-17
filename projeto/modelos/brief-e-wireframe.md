@@ -2,11 +2,12 @@
 
 # {{titulo}}
 
-## Problema antes do editor
+## Primeiro o problema, depois o código
 
 - Utilizador e necessidade: {{contexto}}
 - Resultado útil para essa pessoa: {{objetivo}}
 - Conteúdo necessário e respetiva origem: {{conteudo}}
+  Aqui, basta dizer se cada coisa é inventada, tua ou de outros. A licença do que é de outros vai para o README do site.
 - Limites do trabalho: {{limites}}
 
 ## Estrutura e navegação

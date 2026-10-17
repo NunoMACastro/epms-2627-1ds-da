@@ -22,18 +22,18 @@ Para quem é o site, que problema resolve e para que serve: {{contexto}}
 
 {{testes}}
 
-- Erros corrigidos com as ferramentas do programador: {{debugging}}
+- Erros corrigidos com as ferramentas do programador: {{depuracao}}
 
 ## Git e publicação
 
-- Como guardaste as versões e qual é a versão entregue: {{git_workflow}}
+- Como guardaste as versões e qual é a versão entregue: {{historico_git}}
 - Endereço e estado real da publicação: {{publicacao}}
 
 ## Limitações e continuidade
 
 {{estado_entrega}}
 
-- O que mostraste saber fazer e o que fica para depois: {{handoff}}
+- O que mostraste saber fazer e o que fica para depois: {{o_que_levas}}
 
 ## Imagens e tipos de letra de outros
 

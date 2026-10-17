@@ -375,7 +375,7 @@ Alguns campos usam palavras que ainda não conheces, porque o mesmo modelo serve
 | O título, no topo | O nome provisório do teu site | Neste tema |
 | Utilizador e necessidade | Para quem é o site e o que essa pessoa precisa | Neste tema |
 | Resultado útil para essa pessoa | O que a pessoa consegue fazer depois de usar o site: a tarefa principal | Neste tema |
-| Conteúdo necessário e respetiva origem | O inventário de conteúdos, com a origem de cada coisa | Neste tema |
+| Conteúdo necessário e respetiva origem | O inventário de conteúdos, com a origem de cada coisa. Aqui, basta dizer se é inventado, teu ou de outros. A licença do que é de outros vai para o README do site | Neste tema |
 | Limites do trabalho | O que o teu site não vai ter, para caber no tempo. Por exemplo: "não tem contas de utilizador" ou "tem só três páginas nesta fase" | Neste tema |
 | Páginas e ligações entre páginas (sitemap) | O mapa do site | Neste tema |
 | Hierarquia de informação | O que é mais importante em cada página, por ordem | Neste tema |
