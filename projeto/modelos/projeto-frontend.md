@@ -14,14 +14,12 @@ O que já sabes e vais usar, também de Fundamentos de Programação: {{prerequi
 
 ## Marcos e evidências
 
-1. Planeamento: {{planeamento}}
-2. HTML semântico e navegação: {{html}}
-3. CSS, arrumação e adaptação ao ecrã: {{css}}
-4. DOM, eventos e estado simples: {{javascript}}
-5. Formulário acessível, com validação no browser: {{formularios}}
-6. Testes, depuração e correções: {{testes}}
-7. Histórico do Git, colaboração e entrega: {{historico_git}}
-8. Publicação e verificação do endereço: {{publicacao}}
+1. Enquadramento: o problema, o público, o conteúdo, o mapa das páginas e o esboço. {{planeamento}}
+2. Estrutura: o HTML com o conteúdo, a navegação e o formulário. {{html}}
+3. Interface: o CSS e a arrumação, que funcionam em larguras diferentes e com o teclado. {{css}}
+4. Comportamento: o JavaScript com os eventos, os dados e a validação do formulário. {{javascript}}
+5. Integração: os testes, as correções, o histórico do Git e o README. {{testes}}
+6. Entrega: a versão final, a publicação, o endereço testado e a tua demonstração. {{publicacao}}
 
 - Critérios de acessibilidade desde o primeiro marco: {{acessibilidade}}
 
