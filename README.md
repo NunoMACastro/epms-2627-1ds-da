@@ -2,11 +2,11 @@
 
 # Desenvolvimento de Aplicações · 10.º DS
 
-Materiais de Desenvolvimento de Aplicações do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Cada material é publicado quando fica pronto, e podes lê-lo antes de ser dado na aula.
+Materiais de Desenvolvimento de Aplicações do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Podes estudar estes materiais antes de a matéria ser dada na aula.
 
 ## Por onde começar
 
-Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem da planificação e diz por onde a turma começou. Cada tema tem três tipos de documento:
+Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem de estudo e diz por onde a turma começou. Cada tema tem três tipos de documento:
 
 - o guia, para ler e estudar;
 - o laboratório, para seguir passo a passo no computador, sem precisares de abrir o guia;
@@ -18,7 +18,7 @@ Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem da p
 | --- | --- |
 | [Frontend](01-frontend/README.md) | UC02833, Conceber aplicações para a web na vertente frontend |
 
-A disciplina tem também a UC00617, Utilizar serviços Git e GitHub, dada intercalada; a área aparece aqui com o primeiro tema.
+A disciplina tem também a UC00617, Utilizar serviços Git e GitHub, dada intercalada.
 
 ## Como estudar
 

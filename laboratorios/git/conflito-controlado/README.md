@@ -2,7 +2,7 @@
 
 # Conflito em Git: material de apoio
 
-Material de apoio ao laboratório do tema 04 de Git, sobre a colaboração e os conflitos. O laboratório ainda não está publicado.
+Material de apoio ao laboratório do tema 04 de Git, sobre a colaboração e os conflitos.
 
 No Git, cada pessoa pode trabalhar no seu ramo (em inglês, branch), uma linha de trabalho separada das outras. Mais tarde, junta-se o trabalho dos dois ramos (em inglês, faz-se um merge). Se as duas pessoas mudaram a mesma linha do mesmo ficheiro, cada uma à sua maneira, o Git não sabe que versão deve ficar. A isto chama-se um conflito. Quem o resolve é uma pessoa, que lê as duas versões e decide o que o ficheiro deve dizer.
 
@@ -33,6 +33,6 @@ No Windows, o comando pode ser `python` ou `py`, em vez de `python3`.
 
 O que deves ver: os comandos do Git, um a um, cada um com a resposta. A meio, o ficheiro com os três marcadores do conflito, `<<<<<<<`, `=======` e `>>>>>>>`, entre as duas versões da linha. No fim, o histórico, com os dois ramos desenhados a juntarem-se num só, e a frase que começa por "Tudo certo".
 
-O laboratório completo, com os comandos explicados um a um, sai com o tema 04 de Git. Antes dele vem o tema 03, que explica os ramos e o que acontece quando se juntam dois.
+O tema 03 explica os ramos e o que acontece quando se juntam dois. É a base para compreenderes os conflitos deste exemplo.
 
 ![Rodapé](../../../imagens/rodape.png)
