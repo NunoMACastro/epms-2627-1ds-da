@@ -2,7 +2,7 @@
 
 # HTML e semântica
 
-Módulo Conceber aplicações para a web na vertente frontend. Neste guia aprendes a escrever páginas web com HTML, escolhendo cada elemento pelo que o conteúdo é, e não pelo aspeto que tem. Vês as páginas da Estante Digital construídas passo a passo e aprendes a verificar uma página. Lê-se ao teu ritmo, de preferência em mais do que uma vez. A teoria é longa, e não precisas de a decorar: vais voltar a ela muitas vezes, sempre que te surgir uma dúvida. Para praticar, há o [laboratório](02-html-e-semantica-laboratorio.md) e a [ficha de exercícios](02-html-e-semantica-exercicios.md) deste tema.
+Módulo Conceber aplicações para a web na vertente frontend. Neste guia aprendes a escrever páginas web com HTML, escolhendo cada elemento pelo que o conteúdo é, e não pelo aspeto que tem. Vês as páginas da Estante Digital construídas passo a passo e aprendes a verificar uma página. Lê-se ao teu ritmo, de preferência em mais do que uma vez. A teoria é longa, e não precisas de a decorar: vais voltar a ela muitas vezes, sempre que te surgir uma dúvida. Para praticar, há o [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) e a [ficha de exercícios](exercicios/02-html-e-semantica-exercicios.md) deste tema.
 
 Este guia continua o guia [A Web, os utilizadores e o planeamento](01-web-e-planeamento.md), o primeiro desta área. Se já tiveste as primeiras aulas sobre HTML, vais reconhecer as primeiras secções. O guia retoma tudo desde o princípio, porque o vocabulário tem de ficar muito seguro antes de avançar. Depois acrescenta o que ainda falta. Falta o esqueleto completo, os títulos com hierarquia e as imagens com texto alternativo. Faltam também os elementos semânticos, as tabelas e a verificação de uma página. As páginas deste tema ainda não têm CSS, e por isso têm o aspeto que o browser lhes dá por omissão. Este tema também não usa Git. Se já fizeste o primeiro tema de Git, guarda uma versão da pasta do teu site depois de cada página. Se ainda não, é esta a pasta que vais pôr sob controlo de versões nesse tema. A partir daí, cada página nova fica registada no histórico.
 
@@ -56,8 +56,8 @@ No fim deste guia, consegues:
 - A diferença entre abrir um ficheiro do teu computador e abrir uma página que veio de um servidor. O endereço do primeiro começa por `file://`, e o do segundo por `https://`. Guia [01](01-web-e-planeamento.md), secções "Cliente e servidor" e "O endereço de uma página".
 - Ler um mapa do site e um wireframe. Guia [01](01-web-e-planeamento.md), secções "O mapa do site" e "O wireframe".
 - O plano do teu site, com o mapa de pelo menos duas páginas e, se já os fizeste, os wireframes. Fizeste-o no tema 01, e é o ponto de partida do laboratório deste tema.
-- O VS Code, o editor onde escreves o HTML. Se ainda não o usaste, o [laboratório deste tema](02-html-e-semantica-laboratorio.md) ensina o que precisas: abrir a pasta do site, criar um ficheiro e guardá-lo.
-- Abrir as ferramentas do programador e usar o separador Elements. Guia [01](01-web-e-planeamento.md), secção "As ferramentas do programador", e o [laboratório do tema 01](01-web-e-planeamento-laboratorio.md). Se ainda não fizeste esse laboratório, o laboratório deste tema explica o mínimo no momento em que for preciso.
+- O VS Code, o editor onde escreves o HTML. Se ainda não o usaste, o [laboratório deste tema](laboratorios/02-html-e-semantica-laboratorio.md) ensina o que precisas: abrir a pasta do site, criar um ficheiro e guardá-lo.
+- Abrir as ferramentas do programador e usar o separador Elements. Guia [01](01-web-e-planeamento.md), secção "As ferramentas do programador", e o [laboratório do tema 01](laboratorios/01-web-e-planeamento-laboratorio.md). Se ainda não fizeste esse laboratório, o laboratório deste tema explica o mínimo no momento em que for preciso.
 
 ## O que é o HTML
 
@@ -1181,7 +1181,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](02-html-e-semantica-laboratorio.md) e depois a [ficha de exercícios](02-html-e-semantica-exercicios.md). No laboratório vais construir no computador duas páginas do teu site, a partir do mapa e dos wireframes que fizeste no tema 01. Vais ligá-las nos dois sentidos e verificá-las com as quatro verificações do passo 14. Depois vais provocar de propósito os erros mais comuns, para aprenderes a reconhecê-los e a corrigi-los. A ficha treina as mesmas ideias, uma de cada vez, num site que não é o teu.
+Para praticar este tema, faz o [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) e depois a [ficha de exercícios](exercicios/02-html-e-semantica-exercicios.md). No laboratório vais construir no computador duas páginas do teu site, a partir do mapa e dos wireframes que fizeste no tema 01. Vais ligá-las nos dois sentidos e verificá-las com as quatro verificações do passo 14. Depois vais provocar de propósito os erros mais comuns, para aprenderes a reconhecê-los e a corrigi-los. A ficha treina as mesmas ideias, uma de cada vez, num site que não é o teu.
 
 O tema seguinte é CSS explicado e Flexbox. As tuas páginas têm agora estrutura e significado, mas têm o aspeto por omissão do browser: letra preta, fundo branco, tudo empilhado. No tema do CSS vais dar-lhes aspeto, com cores, tipos de letra, espaços e menus lado a lado, sem mudar uma única etiqueta do HTML. É aí que se vê o valor da divisão de trabalho: como a estrutura está certa, o CSS só tem de tratar do aspeto. No tema do Git aprendes a guardar versões da pasta do teu site, para que nenhuma alteração se perca.
 

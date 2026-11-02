@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: HTML e semântica
 
@@ -6,7 +6,7 @@ Ficha do tema HTML e semântica, do módulo Conceber aplicações para a web na 
 
 ## O que precisas de saber
 
-O [guia do tema](02-html-e-semantica.md), com o exemplo guiado, e as fases 1 a 7 do [laboratório](02-html-e-semantica-laboratorio.md). Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio, no fim da ficha.
+O [guia do tema](../02-html-e-semantica.md), com o exemplo guiado, e as fases 1 a 7 do [laboratório](../laboratorios/02-html-e-semantica-laboratorio.md). Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio, no fim da ficha.
 
 ## Como trabalhar
 
@@ -253,4 +253,4 @@ Um colega fez a página dos concertos com uma tabela de uma linha e duas colunas
 2. Em que exercício voltaste ao guia, e o que foste lá procurar?
 3. Que regra do HTML deste tema ainda confundes, e com que outra?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

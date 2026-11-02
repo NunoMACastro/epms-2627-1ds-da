@@ -6,8 +6,10 @@ Frontend é a parte de uma aplicação que corre no browser: o que o utilizador 
 
 | Tema | Guia | Laboratório | Ficha | Exemplos |
 | --- | --- | --- | --- | --- |
-| 01 A Web, os utilizadores e o planeamento | [guia](01-web-e-planeamento.md) | [laboratório](01-web-e-planeamento-laboratorio.md) | [ficha](01-web-e-planeamento-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md) |
-| 02 HTML e semântica | [guia](02-html-e-semantica.md) | [laboratório](02-html-e-semantica-laboratorio.md) | [ficha](02-html-e-semantica-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md); [Clube de Robótica](../exemplos/frontend/clube-de-robotica/README.md) |
+| 01 A Web, os utilizadores e o planeamento | [guia](01-web-e-planeamento.md) | [laboratório](laboratorios/01-web-e-planeamento-laboratorio.md) | [ficha](exercicios/01-web-e-planeamento-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md) |
+| 02 HTML e semântica | [guia](02-html-e-semantica.md) | [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) | [ficha](exercicios/02-html-e-semantica-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md); [Clube de Robótica](../exemplos/frontend/clube-de-robotica/README.md) |
+
+Os guias, com a matéria de cada tema, estão nesta pasta. Os laboratórios estão em [laboratorios](laboratorios/README.md), e as fichas de exercícios, em [exercicios](exercicios/README.md).
 
 A turma começou pelo tema 02, antes do tema 01. O plano do teu site faz-se no tema 01. Se chegares ao laboratório 02 sem o plano, o laboratório tem uma versão curta para começares.
 

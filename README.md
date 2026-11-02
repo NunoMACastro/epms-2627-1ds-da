@@ -12,6 +12,8 @@ Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem de e
 - o laboratório, para seguir passo a passo no computador, sem precisares de abrir o guia;
 - a ficha de exercícios, para praticares sozinho.
 
+Em cada área, os guias estão na pasta da área. Os laboratórios estão na pasta `laboratorios` e as fichas na pasta `exercicios`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento. Se tinhas guardado a ligação para um laboratório ou uma ficha, procura o documento nessas pastas.
+
 ## As áreas
 
 | Área | Módulo |
@@ -29,7 +31,6 @@ Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num mat
 ## Outras pastas
 
 - [Exemplos](exemplos/README.md): sites de exemplo, para abrir no browser e ler no editor.
-- [Laboratórios](laboratorios/README.md): o material de apoio de alguns laboratórios.
 - [Projeto](projeto/README.md): os modelos para planear e documentar o teu site.
 
 ![Rodapé](imagens/rodape.png)

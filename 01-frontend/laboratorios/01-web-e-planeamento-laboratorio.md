@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: A Web, os utilizadores e o planeamento
 
-Laboratório do tema A Web, os utilizadores e o planeamento, do módulo Conceber aplicações para a web na vertente frontend. Vais abrir as ferramentas do programador pela primeira vez e usá-las para ver por dentro como uma página chega ao teu ecrã. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](01-web-e-planeamento.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema A Web, os utilizadores e o planeamento, do módulo Conceber aplicações para a web na vertente frontend. Vais abrir as ferramentas do programador pela primeira vez e usá-las para ver por dentro como uma página chega ao teu ecrã. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](../01-web-e-planeamento.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -21,21 +21,21 @@ No fim, sabes abrir as ferramentas do programador e encontrar na árvore de uma 
 
 ## Palavras que vais usar
 
-- Browser: o programa que pede as páginas, lê os ficheiros e desenha a página no ecrã. Neste laboratório usas o Chrome ou o Edge. Para saber mais, vê a secção "O browser" do [guia](01-web-e-planeamento.md).
+- Browser: o programa que pede as páginas, lê os ficheiros e desenha a página no ecrã. Neste laboratório usas o Chrome ou o Edge. Para saber mais, vê a secção "O browser" do [guia](../01-web-e-planeamento.md).
 - HTML, CSS e JavaScript: as três linguagens de uma página. O HTML diz o que cada pedaço do conteúdo é, o CSS diz como se apresenta, e o JavaScript diz como se comporta.
 - Ficheiro: o texto de uma página, guardado no disco, tal como alguém o escreveu num editor.
-- DOM: a árvore que o browser constrói em memória a partir do ficheiro, com um ramo para cada parte da página. É a partir dela que a página é desenhada. Para saber mais, vê a secção "O ficheiro e o DOM" do [guia](01-web-e-planeamento.md).
+- DOM: a árvore que o browser constrói em memória a partir do ficheiro, com um ramo para cada parte da página. É a partir dela que a página é desenhada. Para saber mais, vê a secção "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
 - Elemento: cada parte de uma página, com um nome curto. O `h1` é o título principal, o `p` é um parágrafo e o `main` é o conteúdo principal. Na árvore, cada elemento é um ramo.
 - Etiqueta: o nome de um elemento entre `<` e `>`, como `<h1>`, que marca onde ele começa; `</h1>` marca onde acaba.
 - Esqueleto da página: as partes por que começam as páginas de hoje. O `html` embrulha tudo. Lá dentro, o `head` é a cabeça da página, que não aparece no meio dela. Tem o `title`, o título que se vê no separador. O `body` é o corpo, com tudo o que se vê.
 - `header`: o cabeçalho que se vê no topo de uma página, com o nome do site e o menu. Tem um nome parecido com o `head`, mas é outra coisa: o `head` não aparece, e o `header` aparece.
 - Código-fonte: o texto do ficheiro tal como chegou ao browser, antes de o browser construir a árvore.
 - Ferramentas do programador: ferramentas escondidas do browser para ver uma página por dentro. Estão arrumadas em separadores. O separador Elements mostra a árvore do DOM, e o separador Network mostra os pedidos.
-- Cliente e servidor: o cliente é quem pede, o teu browser. O servidor é um computador sempre ligado, que guarda os ficheiros de um site e os envia a quem os pede. Para saber mais, vê a secção "Cliente e servidor" do [guia](01-web-e-planeamento.md).
+- Cliente e servidor: o cliente é quem pede, o teu browser. O servidor é um computador sempre ligado, que guarda os ficheiros de um site e os envia a quem os pede. Para saber mais, vê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
 - Pedido e resposta: o browser faz um pedido ao servidor para cada ficheiro de que precisa, e o servidor devolve uma resposta.
-- Endereço: o endereço de uma página, a que também se chama URL. Tem três partes principais: o protocolo, o domínio e o caminho. Para saber mais, vê a secção "O endereço de uma página" do [guia](01-web-e-planeamento.md).
+- Endereço: o endereço de uma página, a que também se chama URL. Tem três partes principais: o protocolo, o domínio e o caminho. Para saber mais, vê a secção "O endereço de uma página" do [guia](../01-web-e-planeamento.md).
 - Método: a parte do pedido que diz o que o browser quer. O GET quer dizer "dá-me este ficheiro".
-- Código de resposta: o número de três algarismos com que o servidor diz como correu o pedido. O 200 quer dizer que correu bem, e o 404 que o que se pediu não existe. Para saber mais, vê a secção "O que se diz num pedido e numa resposta" do [guia](01-web-e-planeamento.md).
+- Código de resposta: o número de três algarismos com que o servidor diz como correu o pedido. O 200 quer dizer que correu bem, e o 404 que o que se pediu não existe. Para saber mais, vê a secção "O que se diz num pedido e numa resposta" do [guia](../01-web-e-planeamento.md).
 - Cache: a cópia que o browser guarda de uma página já visitada, para não ter de a pedir toda outra vez.
 
 ## O que precisas
@@ -84,7 +84,7 @@ Se o problema for outro, procura-o em [problemas frequentes](#problemas-frequent
 
 ## Fase 1: Uma página aberta do teu disco
 
-Quando abres uma página de um site, o teu browser pede o ficheiro a um servidor, noutro computador. Quando abres um ficheiro que está no teu disco, não há servidor nenhum: o browser lê o ficheiro diretamente. O endereço mostra a diferença. Uma página que veio de um servidor começa por `https://` (ou `http://`), e um ficheiro do teu disco começa por `file://`. Para saber mais, lê a secção "Cliente e servidor" do [guia](01-web-e-planeamento.md).
+Quando abres uma página de um site, o teu browser pede o ficheiro a um servidor, noutro computador. Quando abres um ficheiro que está no teu disco, não há servidor nenhum: o browser lê o ficheiro diretamente. O endereço mostra a diferença. Uma página que veio de um servidor começa por `https://` (ou `http://`), e um ficheiro do teu disco começa por `file://`. Para saber mais, lê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
 
 1. Abre a página inicial da Estante Digital. No browser, carrega em Ctrl+O (Cmd+O no Mac), vai à pasta do repositório e abre o ficheiro `exemplos/frontend/estante-digital/index.html`. Também podes fazer duplo clique no ficheiro, no explorador de ficheiros. O que deves ver: uma página com o título "Recursos de estudo recomendados pela turma" e listas de livros, vídeos e sítios. A página ainda não tem estilos: é texto preto em fundo branco, com as ligações a azul e sublinhadas.
 
@@ -100,7 +100,7 @@ Pensa antes de continuares: se enviasses este endereço a um colega, por mensage
 
 ## Fase 2: A árvore do DOM no separador Elements
 
-Quando o browser abre um ficheiro HTML, lê o texto de cima a baixo. Depois constrói em memória uma árvore, com um ramo para cada parte da página. A essa árvore chama-se DOM. É a partir dela, e não do ficheiro, que a página é desenhada. O separador Elements das ferramentas do programador mostra essa árvore. Para saber mais, lê a secção "O browser" do [guia](01-web-e-planeamento.md).
+Quando o browser abre um ficheiro HTML, lê o texto de cima a baixo. Depois constrói em memória uma árvore, com um ramo para cada parte da página. A essa árvore chama-se DOM. É a partir dela, e não do ficheiro, que a página é desenhada. O separador Elements das ferramentas do programador mostra essa árvore. Para saber mais, lê a secção "O browser" do [guia](../01-web-e-planeamento.md).
 
 1. Abre as ferramentas do programador. Com a página inicial da Estante Digital aberta, carrega em F12 (Cmd+Option+I no Mac). O que deves ver: as ferramentas abrem-se, normalmente do lado direito ou em baixo da janela. Se se abrirem noutro separador que não o Elements, carrega em Elements, na fila de separadores do topo das ferramentas. Em português pode aparecer como Elementos.
 
@@ -126,7 +126,7 @@ Agora escolhe: qual das três usavas para descobrir que elemento é o desenho do
 
 ## Fase 3: Mudar o DOM sem mudar o ficheiro
 
-O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser construiu a partir dele, em memória. O que mudas no separador Elements muda só o DOM, e nunca o ficheiro. Quando recarregas a página, o browser deita fora a árvore e volta a construí-la a partir do ficheiro. Para saber mais, lê a secção "O ficheiro e o DOM" do [guia](01-web-e-planeamento.md).
+O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser construiu a partir dele, em memória. O que mudas no separador Elements muda só o DOM, e nunca o ficheiro. Quando recarregas a página, o browser deita fora a árvore e volta a construí-la a partir do ficheiro. Para saber mais, lê a secção "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
 
 1. Na árvore, seleciona outra vez a linha do `h1`. Faz duplo clique no texto do título, que está entre `<h1>` e `</h1>`. O que deves ver: o texto passa a poder ser editado, como numa caixa de texto.
 
@@ -150,7 +150,7 @@ Pensa antes de continuares: se o professor mudasse o título da Estante Digital 
 
 ## Fase 4: O browser acrescenta o que falta no ficheiro
 
-As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` e o `body` lá dentro. Uma página escrita em 1992 não seguia estas regras. Quando o browser de hoje a abre, constrói a árvore pelas regras de hoje e acrescenta o que falta no ficheiro. Para saber mais, lê as secções "Uma história curta da Web" e "O ficheiro e o DOM" do [guia](01-web-e-planeamento.md).
+As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` e o `body` lá dentro. Uma página escrita em 1992 não seguia estas regras. Quando o browser de hoje a abre, constrói a árvore pelas regras de hoje e acrescenta o que falta no ficheiro. Para saber mais, lê as secções "Uma história curta da Web" e "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
 
 1. Num separador novo, escreve este endereço e carrega em Enter:
 
@@ -182,7 +182,7 @@ Pensa antes de continuares: porque é que o `title` foi parar dentro de um `head
 
 ## Fase 5: Um pedido e a sua resposta no separador Network
 
-Para te mostrar o primeiro site, o browser fez um pedido ao servidor do CERN, e o servidor enviou uma resposta. Cada pedido tem um método, que diz o que o browser quer, e cada resposta tem um código, que diz como correu. O separador Network mostra cada pedido numa linha. Para saber mais, lê a secção "O que se diz num pedido e numa resposta" do [guia](01-web-e-planeamento.md).
+Para te mostrar o primeiro site, o browser fez um pedido ao servidor do CERN, e o servidor enviou uma resposta. Cada pedido tem um método, que diz o que o browser quer, e cada resposta tem um código, que diz como correu. O separador Network mostra cada pedido numa linha. Para saber mais, lê a secção "O que se diz num pedido e numa resposta" do [guia](../01-web-e-planeamento.md).
 
 1. Ainda na página do primeiro site, com as ferramentas abertas, carrega no separador Network (em português, Rede). O que deves ver: a lista está vazia, porque as ferramentas só registam os pedidos feitos enquanto estão abertas. Na fila de cima do separador, marca a caixa Disable cache (em português, Desativar cache). Fazes isto porque o browser guardou uma cópia da página na primeira visita, a cache. Sem a caixa marcada, ao recarregar, o browser podia usar essa cópia em vez de pedir a página inteira ao servidor.
 
@@ -200,7 +200,7 @@ Pensa antes de continuares: o 404 começa por 4, e o 500, que quer dizer que o s
 
 ## Fase 6: Uma página de hoje faz muitos pedidos
 
-A página de 1992 é um só ficheiro, só com texto. Uma página de hoje precisa também de imagens, ícones, folhas de estilos (os ficheiros com o CSS), ficheiros de JavaScript e tipos de letra. O browser faz um pedido à parte para cada um. Para saber mais, lê a secção "Cliente e servidor" do [guia](01-web-e-planeamento.md).
+A página de 1992 é um só ficheiro, só com texto. Uma página de hoje precisa também de imagens, ícones, folhas de estilos (os ficheiros com o CSS), ficheiros de JavaScript e tipos de letra. O browser faz um pedido à parte para cada um. Para saber mais, lê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
 
 1. Abre um separador novo. As ferramentas do programador abrem-se em cada separador à parte. Por isso, carrega em F12 neste separador novo e escolhe o separador Network. Só depois escreve, na barra de endereço, o endereço da página do repositório da disciplina no GitHub, e carrega em Enter:
 
@@ -287,4 +287,4 @@ Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vaz
 - [ ] Sabes seguir um pedido no separador Network e ler o método e o código de resposta.
 - [ ] Consegues explicar, por palavras tuas, porque é que o DOM pode ser diferente do ficheiro, e o que quer dizer um 404.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

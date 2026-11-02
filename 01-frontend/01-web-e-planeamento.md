@@ -2,7 +2,7 @@
 
 # A Web, os utilizadores e o planeamento
 
-Módulo Conceber aplicações para a web na vertente frontend. Este guia explica como funciona a Web e como se planeia um site antes de o escrever. Lês ao teu ritmo, e não precisas de o ler de uma vez. Para praticar, há o [laboratório](01-web-e-planeamento-laboratorio.md) e a [ficha de exercícios](01-web-e-planeamento-exercicios.md) deste tema.
+Módulo Conceber aplicações para a web na vertente frontend. Este guia explica como funciona a Web e como se planeia um site antes de o escrever. Lês ao teu ritmo, e não precisas de o ler de uma vez. Para praticar, há o [laboratório](laboratorios/01-web-e-planeamento-laboratorio.md) e a [ficha de exercícios](exercicios/01-web-e-planeamento-exercicios.md) deste tema.
 
 É o primeiro guia da disciplina, e não precisas de saber programar. O guia tem duas metades. A primeira explica o que acontece entre escreveres um endereço e veres uma página. É a base de tudo o que vais fazer este ano. A segunda explica como se planeia um site antes de o escrever. É a que vais usar logo a seguir, no plano do teu site. Na aula, o professor apresenta as ideias principais, e cada secção fica aqui para a releres. Neste tema ainda não escreves código: isso começa no tema 02, HTML e semântica.
 
@@ -681,7 +681,7 @@ O que se vê: o colega abre o endereço e o browser diz que não encontra o fich
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](01-web-e-planeamento-laboratorio.md) e depois a [ficha de exercícios](01-web-e-planeamento-exercicios.md). No laboratório, abres as ferramentas do programador pela primeira vez. Vês o DOM de uma página, mudas o DOM e confirmas que o ficheiro não muda. Visitas o primeiro site da história e vês o que o browser acrescenta ao seu código. E segues os pedidos, os endereços e os códigos de resposta, incluindo um 404 provocado de propósito.
+Para praticar este tema, faz o [laboratório](laboratorios/01-web-e-planeamento-laboratorio.md) e depois a [ficha de exercícios](exercicios/01-web-e-planeamento-exercicios.md). No laboratório, abres as ferramentas do programador pela primeira vez. Vês o DOM de uma página, mudas o DOM e confirmas que o ficheiro não muda. Visitas o primeiro site da história e vês o que o browser acrescenta ao seu código. E segues os pedidos, os endereços e os códigos de resposta, incluindo um 404 provocado de propósito.
 
 ### O plano do teu site
 

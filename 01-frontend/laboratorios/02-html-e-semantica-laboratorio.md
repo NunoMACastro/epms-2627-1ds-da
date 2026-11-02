@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: HTML e semântica
 
-Laboratório do tema HTML e semântica, do módulo Conceber aplicações para a web na vertente frontend. Vais escrever as duas primeiras páginas do teu site, ligá-las uma à outra e verificá-las. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](02-html-e-semantica.md) tem a teoria completa, para quem quiser saber mais. A lista "Palavras que vais usar" é para consultar quando precisares, e não para ler de seguida antes de começar.
+Laboratório do tema HTML e semântica, do módulo Conceber aplicações para a web na vertente frontend. Vais escrever as duas primeiras páginas do teu site, ligá-las uma à outra e verificá-las. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](../02-html-e-semantica.md) tem a teoria completa, para quem quiser saber mais. A lista "Palavras que vais usar" é para consultar quando precisares, e não para ler de seguida antes de começar.
 
 ## O que vais construir
 
@@ -36,39 +36,39 @@ clube-de-xadrez/
 
 Consulta esta lista quando um passo usar uma palavra que não conheces.
 
-- HTML: a linguagem que diz ao browser o que cada pedaço de conteúdo de uma página é. Para saber mais, vê a secção "O que é o HTML" do [guia](02-html-e-semantica.md).
+- HTML: a linguagem que diz ao browser o que cada pedaço de conteúdo de uma página é. Para saber mais, vê a secção "O que é o HTML" do [guia](../02-html-e-semantica.md).
 - Etiqueta: uma palavra entre `<` e `>`, como `<h1>`. A etiqueta de fecho leva uma barra antes do nome, como `</h1>`.
 - Elemento: a etiqueta de abertura, o conteúdo e a etiqueta de fecho, juntos. É o que representa uma coisa na página.
 - Atributo: uma informação extra sobre um elemento, escrita na etiqueta de abertura com a forma `nome="valor"`, como `href="torneios.html"`.
 - Elemento vazio: um elemento sem conteúdo e sem etiqueta de fecho, como `img` e `meta`.
 - Comentário: um texto entre `<!--` e `-->`, para quem lê o código. O browser não o mostra.
-- Esqueleto: a estrutura com que todas as páginas começam, do `<!doctype html>` ao `body`. Para saber mais, vê a secção "O esqueleto de uma página" do [guia](02-html-e-semantica.md).
+- Esqueleto: a estrutura com que todas as páginas começam, do `<!doctype html>` ao `body`. Para saber mais, vê a secção "O esqueleto de uma página" do [guia](../02-html-e-semantica.md).
 - Leitor de ecrã: um programa que lê a página em voz alta a pessoas cegas ou com pouca visão.
 - Cabeçalho, `header`: a zona de introdução do topo da página, com o nome do site e o menu. Repete-se em todas as páginas.
 - Navegação, `nav`: o bloco de ligações que leva às partes principais do site, o menu.
 - Conteúdo principal, `main`: o que é próprio de cada página e não se repete nas outras. Há um só por página.
 - Secção, `section`: uma parte do conteúdo com o seu próprio título.
 - Rodapé, `footer`: a zona de informação final, no fundo da página. Também se repete em todas as páginas.
-- Título, de `h1` a `h6`: os seis níveis de título, do mais importante para o menos importante. O `h1` é o assunto da página. Para saber mais, vê a secção "Títulos: de h1 a h6" do [guia](02-html-e-semantica.md).
+- Título, de `h1` a `h6`: os seis níveis de título, do mais importante para o menos importante. O `h1` é o assunto da página. Para saber mais, vê a secção "Títulos: de h1 a h6" do [guia](../02-html-e-semantica.md).
 - Índice da página: a lista dos títulos de uma página, com a indentação a mostrar os níveis.
 - Lista não ordenada, `ul`, e lista ordenada, `ol`: listas em que a ordem dos itens não importa, ou importa. Cada item é um `li`.
 - Ligação, `a`: o elemento que leva a outro sítio. O destino fica no atributo `href`.
-- Caminho relativo: o caminho de um ficheiro a partir do ficheiro onde estás, como `torneios.html` ou `imagens/imagem-provisoria.svg`. Para saber mais, vê a secção "Caminhos relativos" do [guia](02-html-e-semantica.md).
-- Texto alternativo: o valor do atributo `alt` de uma imagem, que ocupa o lugar dela quando ela não pode ser vista. Para saber mais, vê a secção "O texto alternativo" do [guia](02-html-e-semantica.md).
+- Caminho relativo: o caminho de um ficheiro a partir do ficheiro onde estás, como `torneios.html` ou `imagens/imagem-provisoria.svg`. Para saber mais, vê a secção "Caminhos relativos" do [guia](../02-html-e-semantica.md).
+- Texto alternativo: o valor do atributo `alt` de uma imagem, que ocupa o lugar dela quando ela não pode ser vista. Para saber mais, vê a secção "O texto alternativo" do [guia](../02-html-e-semantica.md).
 - `figure` e `figcaption`: uma imagem com a sua legenda, e a legenda.
 - Indentação: os espaços no início das linhas, que mostram quem está dentro de quem. O browser ignora-os.
 - DOM: a árvore que o browser constrói em memória a partir do teu ficheiro, e a partir da qual desenha a página.
 - Ferramentas do programador: o painel do browser que mostra a página por dentro. O separador Elements mostra o DOM, e o separador Console mostra as mensagens de erro.
 - Árvore de acessibilidade: uma segunda árvore, construída a partir do DOM, que os leitores de ecrã recebem. Cada coisa aparece nela com um papel, o que ela é, e um nome, o texto que a identifica.
 - Foco: a moldura que mostra em que ligação estás quando percorres a página com o teclado.
-- Tabela de dados: uma tabela em que cada valor responde a uma pergunta que junta uma linha e uma coluna. Para saber mais, vê a secção "Tabelas de dados" do [guia](02-html-e-semantica.md).
+- Tabela de dados: uma tabela em que cada valor responde a uma pergunta que junta uma linha e uma coluna. Para saber mais, vê a secção "Tabelas de dados" do [guia](../02-html-e-semantica.md).
 
 ## O que precisas
 
 - Um computador com o VS Code, o editor de código que usamos na escola. Mostra cada parte do HTML com uma cor diferente, o que ajuda a encontrar erros, e guarda os ficheiros no formato certo. Para confirmar que o tens, abre-o: deve aparecer a janela do editor, com uma coluna de ícones do lado esquerdo.
 - O Chrome ou o Edge, para abrir as páginas. Os passos são iguais nos dois. No Firefox as ideias são as mesmas, mas alguns nomes mudam. Para confirmar, abre o browser: deve aparecer uma janela com a barra de endereço no topo.
 - O plano do teu site, feito no tema 01: o mapa com pelo menos duas páginas e as ligações entre elas. Os wireframes ajudam, mas não são obrigatórios para começar. Se ainda não tens o plano, faz primeiro a secção "Se ainda não tens o plano do teu site", mais abaixo.
-- Uma imagem para a segunda página, sobre o tema do teu site. Se ainda não tens nenhuma, usas a [imagem provisória](../laboratorios/frontend/primeiras-paginas/README.md), que está no repositório da disciplina.
+- Uma imagem para a segunda página, sobre o tema do teu site. Se ainda não tens nenhuma, usas a [imagem provisória](02-html-e-semantica-laboratorio/README.md), que está no repositório da disciplina.
 - Um caderno, ou um ficheiro de texto, para o índice dos títulos, a tabela de verificação e as notas dos erros.
 
 Vais precisar destes atalhos de teclado:
@@ -105,7 +105,7 @@ O laboratório parte do mapa do teu site. Se o tema 01 ainda não foi dado, ou s
 3. Dentro de cada caixa, escreve numa frase o que essa página mostra.
 4. Desenha uma seta da página inicial para a segunda página, e outra da segunda para a página inicial. Cada seta é uma ligação.
 
-O que deves ver: no caderno, um mapa com duas caixas e duas setas, uma em cada sentido. É este o plano de que as fases seguintes partem. A secção "O plano do teu site" do [guia do tema 01](01-web-e-planeamento.md) explica o plano completo.
+O que deves ver: no caderno, um mapa com duas caixas e duas setas, uma em cada sentido. É este o plano de que as fases seguintes partem. A secção "O plano do teu site" do [guia do tema 01](../01-web-e-planeamento.md) explica o plano completo.
 
 ## Preparar o projeto
 
@@ -125,7 +125,7 @@ O teu site vive numa pasta. Os nomes das pastas e dos ficheiros de um site segue
 
 ## Fase 1: O esqueleto da primeira página
 
-Todas as páginas começam com a mesma estrutura, a que se chama o esqueleto. Cada linha do esqueleto está lá por uma razão, e quase nenhuma aparece na janela do browser. Nesta fase, escreves o esqueleto da página inicial, à mão, e confirmas que o browser o lê. Para saber mais, lê a secção "O esqueleto de uma página" do [guia](02-html-e-semantica.md).
+Todas as páginas começam com a mesma estrutura, a que se chama o esqueleto. Cada linha do esqueleto está lá por uma razão, e quase nenhuma aparece na janela do browser. Nesta fase, escreves o esqueleto da página inicial, à mão, e confirmas que o browser o lê. Para saber mais, lê a secção "O esqueleto de uma página" do [guia](../02-html-e-semantica.md).
 
 1. Cria o ficheiro da página inicial. Antes, carrega numa zona vazia do painel Explorer, para o ficheiro novo ficar na pasta do site, e não dentro da pasta `imagens`. Depois, passa o rato por cima do nome da pasta e carrega no ícone de ficheiro novo, New File.... Escreve o nome `index.html` e carrega em Enter. O ficheiro abre-se, vazio, no meio da janela.
 
@@ -167,7 +167,7 @@ Pensa antes de continuares: escreveste onze linhas, e nenhuma aparece na janela.
 
 ## Fase 2: O cabeçalho e a navegação
 
-Uma página divide-se em zonas, como as que desenhaste no wireframe. O HTML tem um elemento para cada zona, que diz o que ela é. Nesta fase escreves a primeira zona, o cabeçalho, com o nome do site e o menu. Para saber mais, lê a secção "Os elementos semânticos" do [guia](02-html-e-semantica.md).
+Uma página divide-se em zonas, como as que desenhaste no wireframe. O HTML tem um elemento para cada zona, que diz o que ela é. Nesta fase escreves a primeira zona, o cabeçalho, com o nome do site e o menu. Para saber mais, lê a secção "Os elementos semânticos" do [guia](../02-html-e-semantica.md).
 
 O cabeçalho é o elemento `header`. Repete-se igual em todas as páginas, para quem muda de página encontrar o menu sempre no mesmo sítio. O menu é o elemento `nav`, o bloco de ligações que leva às partes principais do site. Lá dentro, as ligações ficam numa lista, porque são várias opções do mesmo tipo. Um leitor de ecrã anuncia quantas são antes de as ler.
 
@@ -203,7 +203,7 @@ Pensa antes de continuares: se carregares agora na segunda ligação do menu, o 
 
 ## Fase 3: O conteúdo principal, com títulos, secções e uma lista
 
-Depois do cabeçalho vem o conteúdo principal, o elemento `main`. É o que é próprio desta página e não se repete nas outras. Há um só `main` em cada página. Para saber mais, lê as secções "Títulos: de h1 a h6" e "Listas" do [guia](02-html-e-semantica.md).
+Depois do cabeçalho vem o conteúdo principal, o elemento `main`. É o que é próprio desta página e não se repete nas outras. Há um só `main` em cada página. Para saber mais, lê as secções "Títulos: de h1 a h6" e "Listas" do [guia](../02-html-e-semantica.md).
 
 Os títulos de uma página formam o seu índice, como os capítulos de um livro. O `h1` é o assunto da página inteira, e há um só. Cada `h2` é o título de uma parte da página, e um `h3` seria o de uma parte dentro de um `h2`. A regra que mais importa: a descer, não se saltam níveis. Depois de um `h1` vem um `h2`, e não um `h3`. O nível de um título escolhe-se pelo lugar que ele ocupa no índice, e nunca pelo tamanho da letra.
 
@@ -257,7 +257,7 @@ Pensa antes de continuares: o clube quer acrescentar os passos para alguém se i
 
 ## Fase 4: O rodapé e as três zonas da página
 
-A última zona da página é o rodapé, o elemento `footer`. Tem a informação final: quem fez o site, a turma, o ano, ou um aviso. Como o cabeçalho, repete-se igual em todas as páginas. Com ele, o `body` fica com três filhos, pela ordem em que aparecem no wireframe: `header`, `main` e `footer`. Para saber mais, lê a secção "Elementos dentro de elementos" do [guia](02-html-e-semantica.md).
+A última zona da página é o rodapé, o elemento `footer`. Tem a informação final: quem fez o site, a turma, o ano, ou um aviso. Como o cabeçalho, repete-se igual em todas as páginas. Com ele, o `body` fica com três filhos, pela ordem em que aparecem no wireframe: `header`, `main` e `footer`. Para saber mais, lê a secção "Elementos dentro de elementos" do [guia](../02-html-e-semantica.md).
 
 1. Por baixo do `</main>`, ainda dentro do `body`, escreve o rodapé, com um parágrafo de informação final:
 
@@ -330,13 +330,13 @@ A segunda página tem o mesmo esqueleto, o mesmo cabeçalho e o mesmo rodapé da
 
 Uma imagem é o elemento `img`, que é vazio, como o `meta`. O atributo `src` diz onde está o ficheiro da imagem, com um caminho relativo. A imagem vai estar na pasta `imagens`, e por isso o caminho é o nome da pasta, uma barra e o nome do ficheiro. Os atributos `width` e `height` dizem a largura e a altura, em píxeis, sem escrever a unidade.
 
-O atributo `alt` é o texto alternativo: ocupa o lugar da imagem quando ela não pode ser vista. Um leitor de ecrã lê-o em voz alta, e o browser mostra-o se a imagem não carregar. Para o escrever, faz a pergunta do telefone. Se estivesses ao telefone a descrever esta página a alguém, o que dirias no sítio da imagem? Se a imagem só repete o texto que está ao lado, o `alt` fica vazio, `alt=""`, e o leitor de ecrã salta-a. O atributo nunca falta. Para saber mais, lê as secções "Imagens" e "O texto alternativo" do [guia](02-html-e-semantica.md).
+O atributo `alt` é o texto alternativo: ocupa o lugar da imagem quando ela não pode ser vista. Um leitor de ecrã lê-o em voz alta, e o browser mostra-o se a imagem não carregar. Para o escrever, faz a pergunta do telefone. Se estivesses ao telefone a descrever esta página a alguém, o que dirias no sítio da imagem? Se a imagem só repete o texto que está ao lado, o `alt` fica vazio, `alt=""`, e o leitor de ecrã salta-a. O atributo nunca falta. Para saber mais, lê as secções "Imagens" e "O texto alternativo" do [guia](../02-html-e-semantica.md).
 
-1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota de onde veio e qual é a licença, porque mais tarde vais dizê-lo no README do teu site. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre; o modelo está em [readme-do-projeto](../projeto/modelos/readme-do-projeto.md). Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
+1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota de onde veio e qual é a licença, porque mais tarde vais dizê-lo no README do teu site. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre; o modelo está em [readme-do-projeto](../../projeto/modelos/readme-do-projeto.md). Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
 
    Se for uma fotografia tirada com o telemóvel, reduz-lhe primeiro a largura para 600 a 800 píxeis. Usa um programa de edição de imagem, como o Paint no Windows ou a Pré-visualização no Mac. As tuas páginas ainda não têm CSS, e por isso a imagem aparece com as medidas que escreveres. Uma fotografia de 4000 píxeis aparecia enorme, e demorava a carregar.
 
-   Se ainda não tens nenhuma imagem, usa a imagem provisória. Na pasta do repositório da disciplina, o ficheiro está em `laboratorios/frontend/primeiras-paginas/imagem-provisoria.svg`. Copia-o para a pasta `imagens` do teu site, sem lhe mudar o nome, e troca-o mais tarde. Se não tens o repositório no computador, pede a imagem ao professor, ou descarrega-a do repositório da turma no GitHub, onde está na mesma pasta.
+   Se ainda não tens nenhuma imagem, usa a imagem provisória. Na pasta do repositório da disciplina, o ficheiro está em `01-frontend/laboratorios/02-html-e-semantica-laboratorio/imagem-provisoria.svg`. Copia-o para a pasta `imagens` do teu site, sem lhe mudar o nome, e troca-o mais tarde. Se não tens o repositório no computador, pede a imagem ao professor, ou descarrega-a do repositório da turma no GitHub, onde está na mesma pasta.
 
 2. Cria a segunda página a partir da primeira. No painel Explorer do VS Code, carrega com o botão direito do rato no `index.html` e escolhe Copy, que quer dizer copiar. Depois, carrega com o botão direito numa zona vazia do painel e escolhe Paste, colar. Aparece uma cópia, com um nome como `index copy.html`. Carrega com o botão direito nela, escolhe Rename..., mudar o nome, e dá-lhe o nome que escreveste no mapa, como `torneios.html`. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026. O nome tem de ser igual, letra a letra, ao do `href` do menu.
 
@@ -454,7 +454,7 @@ Pensa antes de continuares: porque é que um `href` com `Torneios.html`, para o 
 
 ## Fase 7: Verificar as duas páginas
 
-Uma página só está pronta depois de verificada. Verificar quer dizer seguir as ligações e ler a página pela ordem do HTML. Quer dizer também percorrê-la só com o teclado e ver a estrutura nas ferramentas do programador. Há pessoas que não veem o ecrã e usam um leitor de ecrã. Há também quem não use o rato e navegue sempre com o teclado. As verificações confirmam que a página serve a toda a gente. Para saber mais, lê a secção "Verificar uma página" do [guia](02-html-e-semantica.md).
+Uma página só está pronta depois de verificada. Verificar quer dizer seguir as ligações e ler a página pela ordem do HTML. Quer dizer também percorrê-la só com o teclado e ver a estrutura nas ferramentas do programador. Há pessoas que não veem o ecrã e usam um leitor de ecrã. Há também quem não use o rato e navegue sempre com o teclado. As verificações confirmam que a página serve a toda a gente. Para saber mais, lê a secção "Verificar uma página" do [guia](../02-html-e-semantica.md).
 
 Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a à medida que fazes cada verificação:
 
@@ -484,7 +484,7 @@ Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a à medida qu
 
 6. Escreve, no fim da tabela, a justificação de três elementos que escolheste nas tuas páginas, numa ou duas frases cada. Cada justificação diz o que o conteúdo é, e não o aspeto que tem. Por exemplo: "A lista do que trazer é um `ul`, porque trocar a ordem dos itens não muda nada". Outro exemplo: "O nome do clube está num `p`, e não num `h1`, porque o assunto da página inicial é aprender xadrez no clube".
 
-7. Se já preencheste no tema 01 o [modelo do brief](../projeto/modelos/brief-e-wireframe.md) do teu site, completa agora os dois campos que ficaram para este tema. Em "Relação entre zonas desenhadas e elementos HTML", escreve o elemento que escolheste para cada zona do teu wireframe. Em "Percurso por teclado e foco", escreve a ordem pela qual o Tab passou pelas ligações no ponto 3. Se ainda não tens o brief, escreve as duas coisas no caderno, para as passares para o brief quando o fizeres.
+7. Se já preencheste no tema 01 o [modelo do brief](../../projeto/modelos/brief-e-wireframe.md) do teu site, completa agora os dois campos que ficaram para este tema. Em "Relação entre zonas desenhadas e elementos HTML", escreve o elemento que escolheste para cada zona do teu wireframe. Em "Percurso por teclado e foco", escreve a ordem pela qual o Tab passou pelas ligações no ponto 3. Se ainda não tens o brief, escreve as duas coisas no caderno, para as passares para o brief quando o fizeres.
 
 ### Paragem 7
 
@@ -494,7 +494,7 @@ Pensa antes de continuares: porque é que o foco do Tab segue a ordem em que esc
 
 ## Fase 8: Provocar erros e corrigi-los
 
-O HTML não dá mensagens de erro. Quando o browser encontra uma coisa mal escrita, tenta adivinhar o que querias dizer. Corrige a árvore à sua maneira e desenha a página na mesma. Por isso, um erro pode passar despercebido. Nesta fase vais estragar as tuas páginas de propósito, um erro de cada vez, para aprenderes a reconhecer cada um pelo que ele faz. Para saber mais, lê a secção "Como o browser lida com os erros" do [guia](02-html-e-semantica.md).
+O HTML não dá mensagens de erro. Quando o browser encontra uma coisa mal escrita, tenta adivinhar o que querias dizer. Corrige a árvore à sua maneira e desenha a página na mesma. Por isso, um erro pode passar despercebido. Nesta fase vais estragar as tuas páginas de propósito, um erro de cada vez, para aprenderes a reconhecer cada um pelo que ele faz. Para saber mais, lê a secção "Como o browser lida com os erros" do [guia](../02-html-e-semantica.md).
 
 Depois de cada erro, escreve no caderno o que viste, numa linha, e desfaz a alteração antes de passares ao seguinte. No VS Code, Ctrl+Z, ou Cmd+Z no Mac, desfaz a última alteração. Guarda e recarrega depois de desfazeres.
 
@@ -530,7 +530,7 @@ Pensa antes de continuares: qual dos cinco erros quase não mudou nada na págin
 
 ## Fase 9: Uma tabela de dados, se o teu site a tiver
 
-Uma tabela serve para dados que se leem em linhas e colunas, como um horário, uma tabela de preços ou uma classificação. O teste é este: cada valor responde a uma pergunta que junta uma linha e uma coluna? Num horário, "a que horas fecha à quarta-feira?" responde-se cruzando a linha da quarta-feira com a coluna "Fecha". Uma tabela nunca serve para pôr coisas lado a lado: isso é trabalho do CSS. Para saber mais, lê a secção "Tabelas de dados" do [guia](02-html-e-semantica.md).
+Uma tabela serve para dados que se leem em linhas e colunas, como um horário, uma tabela de preços ou uma classificação. O teste é este: cada valor responde a uma pergunta que junta uma linha e uma coluna? Num horário, "a que horas fecha à quarta-feira?" responde-se cruzando a linha da quarta-feira com a coluna "Fecha". Uma tabela nunca serve para pôr coisas lado a lado: isso é trabalho do CSS. Para saber mais, lê a secção "Tabelas de dados" do [guia](../02-html-e-semantica.md).
 
 Uma tabela usa vários elementos, uns dentro dos outros. O `table` é a tabela inteira, e o `caption` é a legenda, o nome da tabela, logo a seguir à abertura do `table`. O `thead` agrupa a linha de cabeçalhos do topo, e o `tbody` as linhas de dados. Cada linha é um `tr`. Uma célula de cabeçalho é um `th`, e uma célula de dados é um `td`. O atributo `scope` diz a que se aplica cada cabeçalho: `scope="col"` à coluna, e `scope="row"` à linha. É por ele que um leitor de ecrã diz, em cada célula, a que linha e a que coluna ela pertence.
 
@@ -568,7 +568,7 @@ Uma tabela usa vários elementos, uns dentro dos outros. O `table` é a tabela i
 
    Leitura guiada: lê a tabela linha a linha. A linha do `thead` só tem cabeçalhos, que dizem o que é cada coluna. Em cada linha do `tbody`, a primeira célula é o nome do torneio, num `th` de linha, e as outras duas são dados, em `td`. A legenda diz de que trata a tabela, e "(datas fictícias)" avisa que as datas foram inventadas.
 
-3. Se o teu site não tiver dados em linhas e colunas, não inventes uma tabela só para ter uma. Escreve no caderno, numa frase, porque é que o teu site não precisa de tabela. A tabela treina-se no exercício 7 da [ficha](02-html-e-semantica-exercicios.md).
+3. Se o teu site não tiver dados em linhas e colunas, não inventes uma tabela só para ter uma. Escreve no caderno, numa frase, porque é que o teu site não precisa de tabela. A tabela treina-se no exercício 7 da [ficha](../exercicios/02-html-e-semantica-exercicios.md).
 
 4. Guarda e recarrega.
 
@@ -723,4 +723,4 @@ O painel ao lado da árvore do DOM está estreito, e o separador ficou escondido
 - [ ] Entregaste a pasta do teu site da forma que o professor indicar.
 - [ ] Consegues explicar, por palavras tuas, porque escolheste o elemento de cada zona pelo que o conteúdo é, e não pelo aspeto.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

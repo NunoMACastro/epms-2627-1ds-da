@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: A Web, os utilizadores e o planeamento
 
@@ -6,7 +6,7 @@ Ficha do tema A Web, os utilizadores e o planeamento, do módulo Conceber aplica
 
 ## O que precisas de saber
 
-O [guia do tema](01-web-e-planeamento.md) e o [laboratório](01-web-e-planeamento-laboratorio.md). Cada exercício usa uma parte do guia:
+O [guia do tema](../01-web-e-planeamento.md) e o [laboratório](../laboratorios/01-web-e-planeamento-laboratorio.md). Cada exercício usa uma parte do guia:
 
 - Exercício 1: a secção "A Internet e a Web não são a mesma coisa".
 - Exercício 2: a secção "Três linguagens, três trabalhos".
@@ -199,4 +199,4 @@ https://receitas.example.com/pesquisa.html?termo=sopa&pagina=2
 1. O que já consegues fazer sozinho?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)
