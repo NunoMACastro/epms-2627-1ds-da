@@ -34,7 +34,7 @@ Resolve os exercícios pela ordem. Cada exercício treina uma só coisa:
 
 Os exercícios 1 a 6 são obrigatórios. O desafio e a secção "Para ires mais longe" são opcionais.
 
-Entregas as respostas escritas dos exercícios 1 a 6, com o mapa do exercício 5 desenhado à mão. Se fizeres o desafio e o exercício de "Para ires mais longe", entregas também esses.
+Escreve as respostas no VS Code, num ficheiro de texto chamado `respostas.md`. Antes de cada resposta, põe o número do exercício e a letra da alínea. Guarda o ficheiro onde o professor indicar. O mapa do exercício 5 e o wireframe do desafio desenham-se à mão, em papel. Entregas o ficheiro e os desenhos. Se fizeres o desafio e o exercício de "Para ires mais longe", entregas também esses.
 
 Os sites desta ficha são inventados, e não são o teu site nem a Estante Digital.
 
@@ -148,9 +148,7 @@ E este é o wireframe estreito da página inicial, com as anotações dele à di
 | Início | Menu | Início | Existe |
 | Peças | Menu | Peças | Existe |
 
-**b)** Há dois problemas no plano do Rafael. Diz quais são.
-
-**c)** Para cada problema, propõe uma correção. Pode haver mais do que uma correção certa: diz qual escolhias e porquê.
+**b)** Há dois problemas no plano do Rafael. Diz quais são e propõe uma correção para cada um. Pode haver mais do que uma correção certa: diz qual escolhias e porquê.
 
 ## Apoio
 
@@ -165,7 +163,7 @@ Usa estas pistas só depois de tentares sozinho. Nenhuma dá a resposta: indicam
 
 ## Desafio opcional
 
-Desenha o wireframe largo da página inicial do clube de teatro do exercício 6, para o ecrã de um computador. Desenha-o já com os dois problemas corrigidos. Põe lado a lado o que achares que ganha em ficar lado a lado. Depois lê-o da esquerda para a direita e de cima para baixo, e confirma que a ordem de leitura é a mesma do wireframe estreito. Se não for, explica o que mudavas.
+Desenha o wireframe largo da página inicial do clube de teatro do exercício 6, para o ecrã de um computador. Desenha-o já com os dois problemas corrigidos. Põe lado a lado o que achares que ganha em ficar lado a lado. Lido da esquerda para a direita e de cima para baixo, o wireframe largo tem de ter a mesma ordem de leitura do estreito.
 
 ## Para ires mais longe
 

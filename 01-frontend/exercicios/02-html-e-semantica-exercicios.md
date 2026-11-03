@@ -24,7 +24,7 @@ Resolve os exercícios 1 a 7 pela ordem. São a parte obrigatória. Cada um trei
 
 O desafio e a secção "Para ires mais longe" são opcionais. São para quem acabou a parte obrigatória e quer mais prática.
 
-Entregas as respostas escritas dos sete exercícios, no caderno ou num ficheiro. O HTML do exercício 7 pode ser escrito à mão ou num ficheiro `.html`. Se fizeres o desafio ou os exercícios de "Para ires mais longe", entrega-os também.
+Escreve as respostas no VS Code, num ficheiro de texto chamado `respostas.md`. Antes de cada resposta, põe o número do exercício e a letra da alínea. A tabela do exercício 7 escreve-se numa página própria, `bilhetes.html`, como o exercício explica. Guarda os dois ficheiros numa pasta para esta ficha, onde o professor indicar, e não na pasta do teu site. Se fizeres o desafio ou os exercícios de "Para ires mais longe", entrega-os também.
 
 ## O cenário
 
@@ -68,7 +68,7 @@ Como é a audição
 
 As partes "Sopros" e "Percussão" pertencem a "Instrumentos que procuramos".
 
-**a)** Dá a cada título um nível, de `h1` a `h6`. Depois, escreve o índice da página com a indentação a mostrar os níveis, como no passo 7 do exemplo guiado.
+**a)** Escreve o índice da página, com o nível de cada título, de `h1` a `h6`. A indentação mostra os níveis, como no passo 7 do exemplo guiado.
 
 **b)** O título principal da página inicial do site é "Bem-vindos à Banda da Escola". Mais abaixo, a página inicial tem uma parte curta com o título "Como entrar na banda". Essa parte tem uma frase e uma ligação para a página da alínea a). Que nível dás a este título na página inicial? Justifica numa frase.
 
@@ -156,7 +156,7 @@ Os bilhetes do concerto de primavera têm estes preços, inventados:
 - um adulto paga 5 euros antes e 7 euros no dia;
 - uma criança até aos 12 anos não paga, nem antes nem no dia.
 
-**a)** Escreve o HTML de uma tabela com estes preços, com uma legenda. Decide o que fica nas linhas e o que fica nas colunas, e justifica a escolha numa frase. Usa `caption`, `thead`, `tbody`, `th` com `scope` e `td`.
+**a)** Escreve uma tabela com estes preços, com uma legenda, numa página `bilhetes.html`. Decide o que fica nas linhas e o que fica nas colunas, e justifica a escolha numa frase, num comentário logo antes da tabela. Usa `caption`, `thead`, `tbody`, `th` com `scope` e `td`.
 
 **b)** Um leitor de ecrã chega à célula com o preço do adulto no dia. Que duas informações é que os teus cabeçalhos lhe permitem anunciar, além do preço?
 
@@ -176,11 +176,11 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 Acrescenta ao teu site uma terceira página do teu mapa, com o mesmo esqueleto, o mesmo cabeçalho e o mesmo rodapé das outras duas.
 
-**a)** Antes de escreveres, decide onde entra a nova página na navegação. Depois, altera o `nav` das três páginas, para todas terem o mesmo menu. Explica numa frase porque é que o menu tem de ser igual nas três.
+**a)** Põe a nova página na navegação, com o mesmo menu nas três páginas. Explica numa frase, num comentário no `nav` da página nova, porque é que o menu tem de ser igual nas três.
 
-**b)** Na nova página, usa um elemento que ainda não tenhas usado no teu site, como um `article` ou um `aside`. Usa-o só se o conteúdo o justificar. Justifica a escolha com o teste da secção do guia. Se nenhum se justificar, não o inventes: explica numa frase porquê.
+**b)** Na nova página, usa um elemento que ainda não tenhas usado no teu site, como um `article` ou um `aside`. Usa-o só se o conteúdo o justificar. Justifica a escolha com o teste da secção do guia, num comentário logo antes do elemento. Se nenhum se justificar, não o inventes: explica porquê numa frase, num comentário na página nova.
 
-**c)** Refaz a verificação da fase 7 do laboratório para as três páginas: as ligações, a ordem de leitura, o teclado e as duas árvores.
+**c)** Refaz a verificação da fase 7 do laboratório para as três páginas: as ligações, a ordem de leitura, o teclado e as duas árvores. Regista-a no `registo.md` do teu site.
 
 ## Para ires mais longe
 
@@ -190,7 +190,7 @@ Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a 
 
 A matéria está nas secções "Elementos, etiquetas e atributos", "Listas", "Ligações" e "Imagem com legenda: figure e figcaption" do guia.
 
-Esta é a página dos músicos da Banda da Escola, `musicos.html`. Abre no browser sem nenhum aviso, e parece quase normal. Tem cinco erros. Encontra-os e diz, para cada um, quem é prejudicado e como. Depois, escreve a página corrigida.
+Esta é a página dos músicos da Banda da Escola, `musicos.html`. Abre no browser sem nenhum aviso, e parece quase normal. Tem cinco erros. Escreve a página corrigida num ficheiro `musicos.html`. Junto de cada correção, põe um comentário a dizer quem era prejudicado pelo erro, e como.
 
 ```html
 <!doctype html>
@@ -240,11 +240,11 @@ Um colega fez a página dos concertos com uma tabela de uma linha e duas colunas
 
 ## Critérios de conclusão
 
-- Respondeste aos exercícios 1 a 7, com as justificações que cada um pede.
+- Respondeste aos exercícios 1 a 7, no `respostas.md` e no `bilhetes.html`, com as justificações que cada um pede.
 - No exercício 2, o índice tem um só `h1` e nenhum salto de nível a descer.
 - No exercício 4, cada caminho chega ao ficheiro a partir da pasta do ficheiro que tem a ligação.
 - No exercício 5, nenhuma imagem ficou sem `alt`, e nenhum `alt` repete a legenda ou o texto ao lado.
-- No exercício 7, a tabela tem legenda, cabeçalhos com `scope` e os preços em células de dados.
+- No exercício 7, a tabela do `bilhetes.html` tem legenda, cabeçalhos com `scope` e os preços em células de dados.
 - Comparaste as tuas respostas com a correção feita na aula, e corrigiste o que estava errado.
 
 ## Autoavaliação

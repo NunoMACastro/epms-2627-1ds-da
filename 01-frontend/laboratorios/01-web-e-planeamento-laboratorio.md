@@ -6,7 +6,7 @@ Laboratório do tema A Web, os utilizadores e o planeamento, do módulo Conceber
 
 ## O que vais construir
 
-Neste laboratório não vais escrever código. Vais observar páginas por dentro e fazer experiências com elas. O que constróis é uma tabela de registo, no caderno, com oito observações. Cada observação é a prova de uma ideia sobre a Web.
+Neste laboratório não vais escrever código. Vais observar páginas por dentro e fazer experiências com elas. O que constróis é um ficheiro de registo, o `registo.md`, com oito observações escritas por ti. Cada observação é a prova de uma ideia sobre a Web.
 
 No fim, sabes abrir as ferramentas do programador e encontrar na árvore de uma página qualquer parte dela. Sabes também mostrar que mudar essa árvore não muda o ficheiro, e ver os pedidos que uma página faz.
 
@@ -43,12 +43,13 @@ No fim, sabes abrir as ferramentas do programador e encontrar na árvore de uma 
 - Um computador com o Chrome ou o Edge. Para confirmar, abre o browser: deve aparecer uma janela com a barra de endereço no topo. Os passos são iguais nos dois. No Firefox, as ferramentas existem e funcionam da mesma maneira, mas alguns nomes mudam. O separador Elements, por exemplo, chama-se Inspetor.
 - A pasta do repositório da disciplina no teu computador, com a pasta `exemplos`. Vais usar a Estante Digital, o site de exemplo dos guias, que está em `exemplos/frontend/estante-digital/`. Se ainda não tens a pasta, a secção "Preparar o projeto" diz como a obter.
 - Ligação à Internet, para as fases 4, 5 e 6. Para confirmar, abre um site qualquer.
-- Um caderno, ou um ficheiro de texto, para a tabela de registo.
+- O VS Code, o editor de código das aulas, para escreveres o ficheiro de registo. Para confirmar que o tens, abre-o: deve aparecer a janela do editor, com uma coluna de ícones do lado esquerdo.
 
 Vais precisar destes atalhos de teclado:
 
 | O que fazer | Windows | Mac |
 | --- | --- | --- |
+| Guardar o ficheiro no VS Code | Ctrl+S | Cmd+S |
 | Abrir e fechar as ferramentas do programador | F12 ou Ctrl+Shift+I | Cmd+Option+I |
 | Ver o código-fonte da página, tal como chegou do ficheiro | Ctrl+U | Cmd+Option+U |
 | Recarregar a página | F5 | Cmd+R |
@@ -69,18 +70,26 @@ Se o problema for outro, procura-o em [problemas frequentes](#problemas-frequent
 
 2. Descompacta o ficheiro ZIP numa pasta tua, antes de abrires qualquer página lá de dentro. No Windows, carrega com o botão direito no ficheiro e escolhe a opção de extrair. No Mac, faz duplo clique no ficheiro. Descompacta-se primeiro porque, dentro do ZIP, as ligações entre as páginas e as imagens podem falhar. O que deves ver: uma pasta chamada `epms-2627-1ds-da-main`, com as pastas `01-frontend`, `exemplos`, `imagens`, `laboratorios` e `projeto` lá dentro. No Windows, pode aparecer uma pasta com o mesmo nome dentro da primeira: abre-a até veres `01-frontend`.
 
-3. Copia esta tabela para o caderno, ou para um ficheiro, com a segunda coluna vazia. Vais preenchê-la linha a linha, no fim de cada fase.
+3. Cria o teu ficheiro de registo, onde vais escrever o que observas no fim de cada fase. É um ficheiro de texto chamado `registo.md`. Fica na pasta `epms-2627-1ds-da-main`, a que tem lá dentro `01-frontend` e `exemplos`, a não ser que o professor te indique outro sítio.
 
-   | Observação | O que viste |
-   | --- | --- |
-   | 1. O início do endereço da Estante Digital aberta do teu disco | |
-   | 2. O elemento que ficou selecionado quando inspecionaste o título grande | |
-   | 3. O que aconteceu ao título depois de recarregares a página | |
-   | 4. O protocolo, o domínio e o caminho do endereço do primeiro site | |
-   | 5. Os dois elementos que estão no DOM do primeiro site e não estão no ficheiro, e onde foi parar o `title` | |
-   | 6. O método e o código de resposta do pedido de `TheProject.html` | |
-   | 7. O código de resposta de `NaoExiste.html` | |
-   | 8. O número de pedidos do primeiro site e o da página do repositório no GitHub | |
+   Abre essa pasta no VS Code: no menu File, escolhe Open Folder... e depois a pasta. O VS Code pode perguntar se confias nos autores dos ficheiros da pasta. Carrega em "Yes, I trust the authors", que quer dizer "sim, confio nos autores". São os ficheiros do repositório da disciplina.
+
+   No painel Explorer, do lado esquerdo, carrega primeiro numa zona vazia, para o ficheiro não ficar dentro de outra pasta. Depois, passa o rato por cima do nome da pasta e carrega no ícone de ficheiro novo, New File.... Escreve `registo.md` e carrega em Enter. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026.
+
+   O que deves ver: o `registo.md` no painel Explorer, ao lado das pastas, e aberto, vazio, no meio da janela. Sempre que escreveres nele, guarda com Ctrl+S, ou Cmd+S no Mac.
+
+   Vais registar estas oito observações, uma em cada paragem, com o número de cada uma e o que viste:
+
+   | O que vais registar |
+   | --- |
+   | 1. O início do endereço da Estante Digital aberta do teu disco |
+   | 2. O elemento que ficou selecionado quando inspecionaste o título grande |
+   | 3. O que aconteceu ao título depois de recarregares a página |
+   | 4. O protocolo, o domínio e o caminho do endereço do primeiro site |
+   | 5. Os dois elementos que estão no DOM do primeiro site e não estão no ficheiro, e onde foi parar o `title` |
+   | 6. O método e o código de resposta do pedido de `TheProject.html` |
+   | 7. O código de resposta de `NaoExiste.html` |
+   | 8. O número de pedidos do primeiro site e o da página do repositório no GitHub |
 
 ## Fase 1: Uma página aberta do teu disco
 
@@ -94,7 +103,7 @@ Quando abres uma página de um site, o teu browser pede o ficheiro a um servidor
 
 ### Paragem 1
 
-Tens a Estante Digital aberta a partir do teu disco, e sabes, pela barra de endereço, que não veio de um servidor. Escreve na linha 1 da tabela o início do endereço. O que deve ficar escrito: `file:///`, seguido do caminho da tua pasta.
+Tens a Estante Digital aberta a partir do teu disco, e sabes, pela barra de endereço, que não veio de um servidor. Escreve no `registo.md` a observação 1, o início do endereço. O que deve ficar escrito: `file:///`, seguido do caminho da tua pasta.
 
 Pensa antes de continuares: se enviasses este endereço a um colega, por mensagem, ele via a página no computador dele? A resposta: não. O endereço aponta para um ficheiro no teu disco, e no computador do colega esse ficheiro não existe nesse sítio. Para ele ver o site, tinhas de lhe dar os ficheiros, ou o site tinha de estar num servidor.
 
@@ -114,7 +123,7 @@ Quando o browser abre um ficheiro HTML, lê o texto de cima a baixo. Depois cons
 
 ### Paragem 2
 
-Encontras na árvore a linha de qualquer parte da página, e na página a parte de qualquer linha da árvore. Escreve na linha 2 da tabela o elemento do título grande. O que deve ficar escrito: `h1`.
+Encontras na árvore a linha de qualquer parte da página, e na página a parte de qualquer linha da árvore. Escreve no `registo.md` a observação 2, o elemento do título grande. O que deve ficar escrito: `h1`.
 
 Pensa antes de continuares: quais são as três formas de ligar uma parte da página à sua linha na árvore? A resposta: há três formas.
 
@@ -122,7 +131,7 @@ Pensa antes de continuares: quais são as três formas de ligar uma parte da pá
 - Carregar com o botão direito numa parte da página e escolher Inspecionar.
 - Carregar no ícone da seta e depois na parte da página.
 
-Agora escolhe: qual das três usavas para descobrir que elemento é o desenho do logótipo, no topo da página? Explica a tua escolha numa frase. A resposta: serve a segunda ou a terceira, porque partem da página. Já vês o logótipo e queres encontrar a sua linha na árvore. A primeira serve para o caminho contrário: tens uma linha da árvore e queres saber que parte da página ela desenha. Se experimentares, a linha do logótipo começa por `<img`, que é como o HTML marca uma imagem.
+Agora escolhe: qual das três usavas para descobrir que elemento é o desenho do logótipo, no topo da página, e porquê? A resposta: serve a segunda ou a terceira, porque partem da página. Já vês o logótipo e queres encontrar a sua linha na árvore. A primeira serve para o caminho contrário: tens uma linha da árvore e queres saber que parte da página ela desenha. Se experimentares, a linha do logótipo começa por `<img`, que é como o HTML marca uma imagem.
 
 ## Fase 3: Mudar o DOM sem mudar o ficheiro
 
@@ -136,13 +145,13 @@ O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser constr
 
 4. Volta à página e recarrega-a com F5 (Cmd+R no Mac). O que deves ver: o título volta a ser "Recursos de estudo recomendados pela turma". O browser construiu um DOM novo a partir do ficheiro, e a tua mudança desapareceu.
 
-5. Escreve no caderno, por palavras tuas, o que esta experiência mostrou, em duas ou três frases, com as palavras "ficheiro" e "DOM". Uma resposta completa diz três coisas. Por exemplo: "Mudei o DOM, a árvore que o browser tem em memória, e por isso a página mudou. O ficheiro no disco não mudou. Quando recarreguei, o browser construiu um DOM novo a partir do ficheiro, e a mudança desapareceu." Uma frase como "mudei a página e depois voltou" não chega, porque não diz o que mudou e o que ficou igual.
+5. Escreve no `registo.md`, por palavras tuas, o que esta experiência mostrou, em duas ou três frases, com as palavras "ficheiro" e "DOM". Uma resposta completa diz três coisas. Por exemplo: "Mudei o DOM, a árvore que o browser tem em memória, e por isso a página mudou. O ficheiro no disco não mudou. Quando recarreguei, o browser construiu um DOM novo a partir do ficheiro, e a mudança desapareceu." Uma frase como "mudei a página e depois voltou" não chega, porque não diz o que mudou e o que ficou igual.
 
 ### Paragem 3
 
-Mostraste com uma experiência que mudar o DOM não muda o ficheiro. Escreve na linha 3 da tabela o que aconteceu ao título. O que deve ficar escrito: voltou ao texto original, "Recursos de estudo recomendados pela turma".
+Mostraste com uma experiência que mudar o DOM não muda o ficheiro. Escreve no `registo.md` a observação 3, o que aconteceu ao título. O que deve ficar escrito: voltou ao texto original, "Recursos de estudo recomendados pela turma".
 
-Lê o que escreveste no passo 5 a um colega. Ele percebe, só com isso, porque é que o título voltou ao original? Se não perceber, falta-lhe uma das três coisas da resposta completa.
+Relê as frases que escreveste no passo 5 e compara-as com a resposta completa desse passo. Dizem as três coisas: o que mudou, o que ficou igual e porque é que a mudança desapareceu? Se faltar uma, acrescenta-a.
 
 Não estragaste nada. O que mudas no separador Elements fica só na tua cópia da página, até recarregares.
 
@@ -160,7 +169,7 @@ As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` 
 
    O que deves ver: uma página em inglês, com o título "World Wide Web". Tem só texto e ligações a azul e sublinhadas, sem imagens nem cores. É uma das primeiras páginas da Web, guardada pelo CERN tal como era. O ficheiro foi alterado pela última vez em 1992.
 
-2. Parte o endereço nas suas partes e escreve-as no caderno. O protocolo é o que vem antes de `://`, e diz as regras da conversa com o servidor. O domínio é o nome do servidor, e vai até à primeira barra a seguir. O caminho é o resto: a pasta e o ficheiro dentro do servidor. O que deve ficar escrito: o protocolo é `https`, o domínio é `info.cern.ch` e o caminho é `/hypertext/WWW/TheProject.html`.
+2. Parte o endereço nas suas partes. O protocolo é o que vem antes de `://`, e diz as regras da conversa com o servidor. O domínio é o nome do servidor, e vai até à primeira barra a seguir. O caminho é o resto: a pasta e o ficheiro dentro do servidor. A resposta: o protocolo é `https`, o domínio é `info.cern.ch` e o caminho é `/hypertext/WWW/TheProject.html`.
 
 3. Carrega em Ctrl+U (Cmd+Option+U no Mac) para ver o código-fonte. O que deves ver, em três pormenores:
 
@@ -172,11 +181,11 @@ As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` 
 
 4. Antes de abrires a árvore, prevê: vais encontrar lá elementos que o ficheiro não tem? Depois volta ao separador da página, abre as ferramentas do programador no separador Elements e compara o topo da árvore com o código-fonte. Abre também o `body` e, lá dentro, o `header`, e procura o `title` da página. O que deves ver: a árvore começa por `html`, com um `head` vazio e um `body`. Dentro do `body` está um `header`, e é dentro desse `header` que está o `title`. Ao lado do `title` está um elemento `nextid`, com `n="55"`. É uma etiqueta de 1992 que hoje já não quer dizer nada: o browser guarda-a na árvore, mas não faz nada com ela.
 
-5. Escreve no caderno os dois elementos que estão na árvore do DOM e não estão no ficheiro. Escreve também dentro de que elemento foi parar o `title`. O que deve ficar escrito: o `html` e o `head`; o `title` foi parar dentro do `header`, que está no `body`. O `body` não conta, porque o ficheiro tem `<BODY>` na linha 5.
+5. Descobre os dois elementos que estão na árvore do DOM e não estão no ficheiro, e dentro de que elemento foi parar o `title`. A resposta: o `html` e o `head`; o `title` foi parar dentro do `header`, que está no `body`. O `body` não conta, porque o ficheiro tem `<BODY>` na linha 5.
 
 ### Paragem 4
 
-Viste numa página verdadeira que o DOM tem elementos que o ficheiro não tem. Escreve na linha 4 da tabela o protocolo, o domínio e o caminho do passo 2. Escreve na linha 5 o que encontraste no passo 5.
+Viste numa página verdadeira que o DOM tem elementos que o ficheiro não tem. Escreve no `registo.md` a observação 4, o protocolo, o domínio e o caminho do passo 2. Escreve também a observação 5, o que encontraste no passo 5.
 
 Pensa antes de continuares: porque é que o `title` foi parar dentro de um `header`, no `body`? A resposta: o browser acrescentou o `html` e o `head`, porque as regras de hoje os põem sempre na árvore. Mas não percebeu que o `HEADER` de 1992 queria dizer a cabeça da página. Para as regras de hoje, um `header` é um cabeçalho que se vê, e fica no `body`. O browser pô-lo lá, com o `title` dentro, e deixou o `head` vazio. Fez o melhor que pôde com um ficheiro escrito com regras antigas.
 
@@ -188,13 +197,13 @@ Para te mostrar o primeiro site, o browser fez um pedido ao servidor do CERN, e 
 
 2. Recarrega a página com F5 (Cmd+R no Mac). O que deves ver: aparece uma linha na lista, com o nome `TheProject.html`. É o pedido que o browser fez ao servidor. Na coluna Status aparece o código de resposta, 200. Na barra de baixo das ferramentas aparece o número total de pedidos: 1. Esta página precisou de um só pedido, porque é só texto, sem imagens, estilos nem JavaScript.
 
-3. Carrega na linha `TheProject.html`. Abre-se um painel com vários separadores. No separador Headers, procura três informações e escreve-as no caderno. São o endereço do pedido (Request URL), o método (Request Method) e o código de resposta (Status Code). O que deves ver: o endereço é `https://info.cern.ch/hypertext/WWW/TheProject.html`, o mesmo da barra de endereço. O método é `GET` e o código é `200 OK`. Com as ferramentas em português, os nomes mudam: procura o endereço, o método e o código.
+3. Carrega na linha `TheProject.html`. Abre-se um painel com vários separadores. No separador Headers, procura três informações: o endereço do pedido (Request URL), o método (Request Method) e o código de resposta (Status Code). O que deves ver: o endereço é `https://info.cern.ch/hypertext/WWW/TheProject.html`, o mesmo da barra de endereço. O método é `GET` e o código é `200 OK`. Com as ferramentas em português, os nomes mudam: procura o endereço, o método e o código.
 
 4. Agora provoca um erro de propósito. Antes de o fazeres, prevê: que código de resposta vai dar uma página que não existe? Na barra de endereço, muda o fim do endereço de `TheProject.html` para `NaoExiste.html` e carrega em Enter. O que deves ver: a página mostra "Not Found". No separador Network, a lista passa a ter só a linha `NaoExiste.html`, com o código 404. O servidor respondeu, mas a dizer que o que pediste não existe. É o que acontece quando alguém carrega numa ligação sem destino.
 
 ### Paragem 5
 
-Seguiste um pedido do princípio ao fim, com o método, o endereço e o código da resposta. Depois viste o código de um pedido que falhou. Escreve na linha 6 da tabela o método e o código de `TheProject.html`. O que deve ficar escrito: GET e 200. Escreve na linha 7 o código de `NaoExiste.html`. O que deve ficar escrito: 404.
+Seguiste um pedido do princípio ao fim, com o método, o endereço e o código da resposta. Depois viste o código de um pedido que falhou. Escreve no `registo.md` a observação 6, o método e o código de `TheProject.html`. O que deve ficar escrito: GET e 200. Escreve também a observação 7, o código de `NaoExiste.html`. O que deve ficar escrito: 404.
 
 Pensa antes de continuares: o 404 começa por 4, e o 500, que quer dizer que o servidor avariou, começa por 5. O que diz o primeiro algarismo? A resposta: diz a família do código. Um código começado por 4 quer dizer que o pedido tem um problema, aqui uma página que não existe. Um código começado por 5 quer dizer que o problema é do servidor.
 
@@ -214,11 +223,11 @@ A página de 1992 é um só ficheiro, só com texto. Uma página de hoje precisa
 
 ### Paragem 6
 
-Escreve na linha 8 da tabela o número de pedidos do primeiro site e o da página do GitHub. O que deve ficar escrito: 1 no primeiro site, e o número que viste no GitHub, mais de cem.
+Escreve no `registo.md` a observação 8, o número de pedidos do primeiro site e o da página do GitHub. O que deve ficar escrito: 1 no primeiro site, e o número que viste no GitHub, mais de cem.
 
 Pensa antes de terminares: porque é que a página do GitHub faz tantos mais pedidos do que a página de 1992? A resposta: a página de 1992 é um só ficheiro, só com texto, e o browser recebe-a com um único pedido. A página do GitHub precisa também de imagens, ícones, folhas de estilos, ficheiros de JavaScript e tipos de letra. Cada um desses ficheiros é um pedido à parte.
 
-A tua tabela de registo está completa. É a evidência deste laboratório.
+O teu `registo.md` tem as oito observações. É a evidência deste laboratório.
 
 ## Problemas frequentes
 
@@ -272,6 +281,8 @@ Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vaz
 
 ## Desafios
 
+Escreve as explicações dos desafios no fim do teu `registo.md`.
+
 1. Na Estante Digital, muda no DOM o texto da ligação "Sobre", do menu, para "Quem somos", e depois carrega nela. Antes de carregares, prevê: a ligação leva à mesma página que antes? E, na página a que chegas, o menu diz "Sobre" ou "Quem somos"? Explica o que viste com as palavras "ficheiro" e "DOM". Pista: pensa no que o browser faz sempre que abre uma página.
 
 2. Na Estante Digital, antes de abrires o separador Elements, prevê: o browser vai acrescentar à árvore algum elemento, como fez com o primeiro site? Confirma, comparando o código-fonte com o topo da árvore, e explica o que viste. Pista: procura no código-fonte da Estante Digital as partes do esqueleto que faltavam ao ficheiro de 1992.
@@ -280,9 +291,9 @@ Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vaz
 
 ## Antes de terminares
 
-- [ ] A tabela de registo tem as oito linhas preenchidas.
-- [ ] Escreveste na fase 3, em duas ou três frases, o que a experiência mostrou, com as palavras "ficheiro" e "DOM".
-- [ ] Explicaste, na paragem 2, a forma que escolheste para encontrar o logótipo na árvore.
+- [ ] O teu `registo.md` tem as oito observações, e está guardado.
+- [ ] O `registo.md` tem também as frases da fase 3, com as palavras "ficheiro" e "DOM" e as três coisas da resposta completa.
+- [ ] Escolheste, na paragem 2, a forma de encontrar o logótipo na árvore, e sabes porquê.
 - [ ] Sabes abrir as ferramentas do programador e encontrar na árvore qualquer parte de uma página.
 - [ ] Sabes seguir um pedido no separador Network e ler o método e o código de resposta.
 - [ ] Consegues explicar, por palavras tuas, porque é que o DOM pode ser diferente do ficheiro, e o que quer dizer um 404.

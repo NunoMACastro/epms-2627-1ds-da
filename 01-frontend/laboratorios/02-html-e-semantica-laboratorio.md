@@ -6,11 +6,11 @@ Laboratório do tema HTML e semântica, do módulo Conceber aplicações para a 
 
 ## O que vais construir
 
-Vais transformar o plano do teu site em páginas de verdade, escritas em HTML. No fim, tens uma pasta com o nome do teu site, com duas páginas e uma pasta de imagens. As duas páginas têm o mesmo cabeçalho, a mesma navegação e o mesmo rodapé, e cada uma tem o seu conteúdo principal. Estão ligadas nos dois sentidos, e a segunda tem uma imagem com o texto alternativo certo.
+Vais transformar o plano do teu site em páginas de verdade, escritas em HTML. No fim, tens uma pasta com o nome do teu site, com duas páginas, uma pasta de imagens e um ficheiro de registo. As duas páginas têm o mesmo cabeçalho, a mesma navegação e o mesmo rodapé, e cada uma tem o seu conteúdo principal. Estão ligadas nos dois sentidos, e a segunda tem uma imagem com o texto alternativo certo.
 
 Pelo caminho, ficas a saber escrever o esqueleto de uma página de memória e escolher cada elemento pelo que o conteúdo é. Ficas também a saber verificar uma página, e a reconhecer os erros mais comuns pelo que eles fazem.
 
-O tema é o do teu site. Os exemplos deste laboratório usam o site de um clube de xadrez da escola, inventado, só para mostrar a forma. Não copies os textos do exemplo: escreve os teus. No fim, a pasta do exemplo fica assim:
+O tema é o do teu site. Os exemplos deste laboratório usam o site de um clube de xadrez da escola, inventado, só para mostrar a forma. Não copies os textos do exemplo: escreve os teus. No fim, as páginas e as imagens do exemplo ficam assim:
 
 ```text
 clube-de-xadrez/
@@ -20,16 +20,18 @@ clube-de-xadrez/
     └── imagem-provisoria.svg
 ```
 
+Na pasta do teu site fica também o `registo.md`, o ficheiro de texto onde registas o que verificas, a partir da fase 3.
+
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
 | 1 | O ficheiro `index.html`, com o esqueleto | A página abre em branco, com o título no separador do browser |
 | 2 | O cabeçalho e a navegação, no `index.html` | O nome do site e o menu com duas ligações |
-| 3 | O conteúdo principal, no `index.html` | O título da página, as secções e uma lista |
+| 3 | O conteúdo principal, no `index.html`, e o `registo.md`, com o índice dos títulos | O título da página, as secções e uma lista |
 | 4 | O rodapé, no `index.html` | A primeira página completa, com as três zonas |
 | 5 | O ficheiro `torneios.html` e a imagem | A segunda página, com a imagem e a ligação de volta |
 | 6 | Nada: experimentas as ligações | Vais de uma página à outra e voltas |
-| 7 | Nada: verificas as duas páginas | A tabela de verificação preenchida, com três justificações |
-| 8 | Erros provocados de propósito, um de cada vez, e desfeitos | Reconheces cada erro pelo que ele faz |
+| 7 | O `registo.md`, com as verificações, e três comentários nas páginas | As duas páginas verificadas, com três justificações |
+| 8 | Erros provocados de propósito, um de cada vez, e desfeitos; uma linha por erro no `registo.md` | Reconheces cada erro pelo que ele faz |
 | 9 | Uma tabela de dados, se o teu site tiver dados em linhas e colunas | A tabela, com legenda e cabeçalhos |
 
 ## Palavras que vais usar
@@ -69,7 +71,7 @@ Consulta esta lista quando um passo usar uma palavra que não conheces.
 - O Chrome ou o Edge, para abrir as páginas. Os passos são iguais nos dois. No Firefox as ideias são as mesmas, mas alguns nomes mudam. Para confirmar, abre o browser: deve aparecer uma janela com a barra de endereço no topo.
 - O plano do teu site, feito no tema 01: o mapa com pelo menos duas páginas e as ligações entre elas. Os wireframes ajudam, mas não são obrigatórios para começar. Se ainda não tens o plano, faz primeiro a secção "Se ainda não tens o plano do teu site", mais abaixo.
 - Uma imagem para a segunda página, sobre o tema do teu site. Se ainda não tens nenhuma, usas a [imagem provisória](02-html-e-semantica-laboratorio/README.md), que está no repositório da disciplina.
-- Um caderno, ou um ficheiro de texto, para o índice dos títulos, a tabela de verificação e as notas dos erros.
+- O caderno, só para desenhar o mapa do site, se ainda não o tens. O índice dos títulos, as verificações e as notas dos erros vão para um ficheiro de texto, o `registo.md`, que crias na fase 3.
 
 Vais precisar destes atalhos de teclado:
 
@@ -105,7 +107,7 @@ O laboratório parte do mapa do teu site. Se o tema 01 ainda não foi dado, ou s
 3. Dentro de cada caixa, escreve numa frase o que essa página mostra.
 4. Desenha uma seta da página inicial para a segunda página, e outra da segunda para a página inicial. Cada seta é uma ligação.
 
-O que deves ver: no caderno, um mapa com duas caixas e duas setas, uma em cada sentido. É este o plano de que as fases seguintes partem. A secção "O plano do teu site" do [guia do tema 01](../01-web-e-planeamento.md) explica o plano completo.
+O que deves ver: desenhado no caderno, um mapa com duas caixas e duas setas, uma em cada sentido. É este o plano de que as fases seguintes partem. A secção "O plano do teu site" do [guia do tema 01](../01-web-e-planeamento.md) explica o plano completo.
 
 ## Preparar o projeto
 
@@ -241,7 +243,9 @@ Cada parte do conteúdo com o seu próprio título é uma secção, o elemento `
 
    O que deves ver: por baixo do menu, o título da página, em letra grande e a negrito, e o parágrafo. A seguir, os dois títulos das secções, um pouco mais pequenos, cada um com o seu conteúdo. A lista do que trazer tem uma bolinha à frente de cada item.
 
-5. No caderno, escreve o índice dos títulos da página, com a indentação a mostrar os níveis. No exemplo, fica assim:
+5. Cria o teu ficheiro de registo. Na pasta do teu site, cria um ficheiro chamado `registo.md`, da mesma maneira que criaste o `index.html` na fase 1. É um ficheiro de texto simples, e não uma página do site. Serve para registares o que verificas nas tuas páginas, até ao fim do laboratório.
+
+   Escreve no `registo.md` o índice dos títulos da página, com a indentação a mostrar os níveis, e guarda. No exemplo, fica assim:
 
    ```text
    h1  Aprende a jogar xadrez connosco
@@ -251,7 +255,7 @@ Cada parte do conteúdo com o seu próprio título é uma secção, o elemento `
 
 ### Paragem 3
 
-O índice da tua página tem um só `h1`, e os `h2` vêm a seguir, sem saltos. Se tiveres um `h3`, está dentro de uma parte com `h2`.
+O índice da tua página, no `registo.md`, tem um só `h1`, e os `h2` vêm a seguir, sem saltos. Se tiveres um `h3`, está dentro de uma parte com `h2`.
 
 Pensa antes de continuares: o clube quer acrescentar os passos para alguém se inscrever. Primeiro fala com o professor responsável, depois preenche a ficha de inscrição e por fim vem ao primeiro treino. É uma lista `ul` ou `ol`? A resposta: `ol`. Se trocares o primeiro passo com o último, a informação fica errada, porque ninguém vem ao primeiro treino antes de se inscrever.
 
@@ -332,7 +336,7 @@ Uma imagem é o elemento `img`, que é vazio, como o `meta`. O atributo `src` di
 
 O atributo `alt` é o texto alternativo: ocupa o lugar da imagem quando ela não pode ser vista. Um leitor de ecrã lê-o em voz alta, e o browser mostra-o se a imagem não carregar. Para o escrever, faz a pergunta do telefone. Se estivesses ao telefone a descrever esta página a alguém, o que dirias no sítio da imagem? Se a imagem só repete o texto que está ao lado, o `alt` fica vazio, `alt=""`, e o leitor de ecrã salta-a. O atributo nunca falta. Para saber mais, lê as secções "Imagens" e "O texto alternativo" do [guia](../02-html-e-semantica.md).
 
-1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota de onde veio e qual é a licença, porque mais tarde vais dizê-lo no README do teu site. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre; o modelo está em [readme-do-projeto](../../projeto/modelos/readme-do-projeto.md). Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
+1. Arranja a imagem e põe-na na pasta `imagens` do teu site. Pode ser uma fotografia ou um desenho teus. Pode também ser uma imagem de outra pessoa cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Se a imagem não for tua, anota no `registo.md` de onde veio e qual é a licença. Mais tarde, vais dizê-lo no README do teu site. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre; o modelo está em [readme-do-projeto](../../projeto/modelos/readme-do-projeto.md). Dá-lhe um nome com as três regras dos nomes, como `tabuleiro.jpg`.
 
    Se for uma fotografia tirada com o telemóvel, reduz-lhe primeiro a largura para 600 a 800 píxeis. Usa um programa de edição de imagem, como o Paint no Windows ou a Pré-visualização no Mac. As tuas páginas ainda não têm CSS, e por isso a imagem aparece com as medidas que escreveres. Uma fotografia de 4000 píxeis aparecia enorme, e demorava a carregar.
 
@@ -456,7 +460,7 @@ Pensa antes de continuares: porque é que um `href` com `Torneios.html`, para o 
 
 Uma página só está pronta depois de verificada. Verificar quer dizer seguir as ligações e ler a página pela ordem do HTML. Quer dizer também percorrê-la só com o teclado e ver a estrutura nas ferramentas do programador. Há pessoas que não veem o ecrã e usam um leitor de ecrã. Há também quem não use o rato e navegue sempre com o teclado. As verificações confirmam que a página serve a toda a gente. Para saber mais, lê a secção "Verificar uma página" do [guia](../02-html-e-semantica.md).
 
-Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a à medida que fazes cada verificação:
+Regista cada verificação no teu `registo.md`, à medida que a fazes. Se ainda não o tens, cria-o agora na pasta do teu site, como diz o passo 5 da fase 3. Para cada verificação, escreve as quatro coisas desta tabela: a verificação, o que fizeste, se passou e, se não passou, o que corrigiste.
 
 | Verificação | O que fiz | Passou? | Se não passou, o que corrigi |
 | --- | --- | --- | --- |
@@ -468,7 +472,7 @@ Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a à medida qu
 
 1. Ligações. Carrega em cada ligação das duas páginas, uma de cada vez, e volta atrás depois de cada uma. O que deves ver: cada ligação leva ao sítio certo.
 
-2. Ordem de leitura. As tuas páginas não têm CSS. Por isso, o que vês é a página com o aspeto que o browser lhe dá por omissão. Aparece pela ordem em que o HTML está escrito. É também por essa ordem que um leitor de ecrã a lê. Lê cada página de cima a baixo como se fosses outra pessoa, e pergunta: a ordem faz sentido? Os títulos dizem de que trata cada parte? O assunto da página aparece logo a seguir ao menu? Escreve o índice dos títulos da segunda página, como fizeste na fase 3.
+2. Ordem de leitura. As tuas páginas não têm CSS. Por isso, o que vês é a página com o aspeto que o browser lhe dá por omissão. Aparece pela ordem em que o HTML está escrito. É também por essa ordem que um leitor de ecrã a lê. Lê cada página de cima a baixo como se fosses outra pessoa, e pergunta: a ordem faz sentido? Os títulos dizem de que trata cada parte? O assunto da página aparece logo a seguir ao menu? Escreve no `registo.md` o índice dos títulos da segunda página, como fizeste na fase 3.
 
 3. Teclado. Carrega uma vez no nome do site, no topo da página, fora das ligações. A partir daí, não toques no rato. O Tab começa a seguir ao sítio onde carregaste, e por isso carregas no topo. Carrega em Tab várias vezes. Uma moldura, a que se chama foco, salta de ligação em ligação. Com Shift+Tab, o foco anda para trás, e com Enter segues a ligação onde ele está.
 
@@ -482,13 +486,13 @@ Copia esta tabela para o caderno, ou para um ficheiro, e preenche-a à medida qu
 
    O que deves ver: o papel do elemento selecionado, que é *main*. Seleciona agora o `nav`, o `header` e o `footer`, um de cada vez. Os papéis são *navigation*, *banner* e *contentinfo*, os nomes em inglês do menu, do cabeçalho e do rodapé. Por fim, seleciona o `img` da segunda página: o nome que aparece é o texto que escreveste no `alt`.
 
-6. Escreve, no fim da tabela, a justificação de três elementos que escolheste nas tuas páginas, numa ou duas frases cada. Cada justificação diz o que o conteúdo é, e não o aspeto que tem. Por exemplo: "A lista do que trazer é um `ul`, porque trocar a ordem dos itens não muda nada". Outro exemplo: "O nome do clube está num `p`, e não num `h1`, porque o assunto da página inicial é aprender xadrez no clube".
+6. Justifica três elementos que escolheste nas tuas páginas, numa ou duas frases cada. Escreve cada justificação num comentário, entre `<!--` e `-->`, na linha logo antes do elemento. Cada justificação diz o que o conteúdo é, e não o aspeto que tem. Por exemplo: "A lista do que trazer é um `ul`, porque trocar a ordem dos itens não muda nada". Outro exemplo: "O nome do clube está num `p`, e não num `h1`, porque o assunto da página inicial é aprender xadrez no clube".
 
-7. Se já preencheste no tema 01 o [modelo do brief](../../projeto/modelos/brief-e-wireframe.md) do teu site, completa agora os dois campos que ficaram para este tema. Em "Relação entre zonas desenhadas e elementos HTML", escreve o elemento que escolheste para cada zona do teu wireframe. Em "Percurso por teclado e foco", escreve a ordem pela qual o Tab passou pelas ligações no ponto 3. Se ainda não tens o brief, escreve as duas coisas no caderno, para as passares para o brief quando o fizeres.
+7. Se já preencheste no tema 01 o [modelo do brief](../../projeto/modelos/brief-e-wireframe.md) do teu site, completa agora os dois campos que ficaram para este tema. Em "Relação entre zonas desenhadas e elementos HTML", escreve o elemento que escolheste para cada zona do teu wireframe. Em "Percurso por teclado e foco", escreve a ordem pela qual o Tab passou pelas ligações no ponto 3. Se ainda não tens o brief, escreve as duas coisas no `registo.md`, para as passares para o brief quando o fizeres.
 
 ### Paragem 7
 
-As cinco linhas da tabela dizem que passou, ou dizem o que corrigiste até passar. No fim da tabela estão as três justificações.
+No `registo.md`, as cinco verificações dizem que passou, ou dizem o que corrigiste até passar. As tuas páginas têm os três comentários com as justificações.
 
 Pensa antes de continuares: porque é que o foco do Tab segue a ordem em que escreveste as ligações no ficheiro? A resposta: o foco segue a ordem do HTML, que é também a ordem em que um leitor de ecrã lê a página. Nos próximos temas, o CSS vai mudar o aspeto e a posição das coisas, mas esta ordem fica. É por isso que a ordem do HTML tem de fazer sentido sozinha.
 
@@ -496,7 +500,7 @@ Pensa antes de continuares: porque é que o foco do Tab segue a ordem em que esc
 
 O HTML não dá mensagens de erro. Quando o browser encontra uma coisa mal escrita, tenta adivinhar o que querias dizer. Corrige a árvore à sua maneira e desenha a página na mesma. Por isso, um erro pode passar despercebido. Nesta fase vais estragar as tuas páginas de propósito, um erro de cada vez, para aprenderes a reconhecer cada um pelo que ele faz. Para saber mais, lê a secção "Como o browser lida com os erros" do [guia](../02-html-e-semantica.md).
 
-Depois de cada erro, escreve no caderno o que viste, numa linha, e desfaz a alteração antes de passares ao seguinte. No VS Code, Ctrl+Z, ou Cmd+Z no Mac, desfaz a última alteração. Guarda e recarrega depois de desfazeres.
+Em cada erro, desfaz a alteração e só então escreve no `registo.md` o que viste, numa linha, antes de passares ao seguinte. No VS Code, Ctrl+Z, ou Cmd+Z no Mac, desfaz a última alteração do ficheiro que tens à frente. Por isso, desfaz antes de passares para o `registo.md`. Guarda e recarrega depois de desfazeres.
 
 1. A imagem que falta. No painel Explorer, muda o nome da tua imagem, acrescentando uma letra no fim do nome, antes da extensão. Recarrega a segunda página.
 
@@ -508,7 +512,7 @@ Depois de cada erro, escreve no caderno o que viste, numa linha, e desfaz a alte
 
 3. O título que salta um nível. Numa das tuas secções, muda o `h2` para `h4`, na abertura e no fecho. Guarda e recarrega.
 
-   O que deves ver: só muda o aspeto. A letra do título fica mais pequena, e o espaço à volta dele muda um pouco. É isso que torna este erro perigoso: parece só uma questão de aspeto. Escreve o índice dos títulos da página e vês o salto de `h1` para `h4`, com um nível vazio pelo meio. Repõe o `h2`.
+   O que deves ver: só muda o aspeto. A letra do título fica mais pequena, e o espaço à volta dele muda um pouco. É isso que torna este erro perigoso: parece só uma questão de aspeto. No índice dos títulos da página, vês o salto de `h1` para `h4`, com um nível vazio pelo meio. Repõe o `h2`.
 
 4. A lista dentro de um parágrafo. Escolhe uma das tuas listas e põe-na dentro de um parágrafo: escreve `<p>` antes do `<ul>` e `</p>` depois do `</ul>`. Guarda e recarrega.
 
@@ -524,7 +528,7 @@ Depois de cada erro, escreve no caderno o que viste, numa linha, e desfaz a alte
 
 ### Paragem 8
 
-Tens no caderno cinco linhas, uma por erro, com o que viste. As páginas voltaram a passar as verificações da fase 7.
+O `registo.md` tem cinco linhas novas, uma por erro, com o que viste. As páginas voltaram a passar as verificações da fase 7.
 
 Pensa antes de continuares: qual dos cinco erros quase não mudou nada na página, e onde o descobriste? A resposta: a lista dentro do parágrafo. Na página quase não se nota nada, e o erro só aparece no separador Elements, nos parágrafos vazios. O título que salta um nível também parece só uma mudança de aspeto, e descobre-se no índice dos títulos.
 
@@ -568,7 +572,7 @@ Uma tabela usa vários elementos, uns dentro dos outros. O `table` é a tabela i
 
    Leitura guiada: lê a tabela linha a linha. A linha do `thead` só tem cabeçalhos, que dizem o que é cada coluna. Em cada linha do `tbody`, a primeira célula é o nome do torneio, num `th` de linha, e as outras duas são dados, em `td`. A legenda diz de que trata a tabela, e "(datas fictícias)" avisa que as datas foram inventadas.
 
-3. Se o teu site não tiver dados em linhas e colunas, não inventes uma tabela só para ter uma. Escreve no caderno, numa frase, porque é que o teu site não precisa de tabela. A tabela treina-se no exercício 7 da [ficha](../exercicios/02-html-e-semantica-exercicios.md).
+3. Se o teu site não tiver dados em linhas e colunas, não inventes uma tabela só para ter uma. Escreve, numa frase, porque é que o teu site não precisa de tabela, num comentário no `index.html`, logo antes do `</main>`. A tabela treina-se no exercício 7 da [ficha](../exercicios/02-html-e-semantica-exercicios.md).
 
 4. Guarda e recarrega.
 
@@ -576,7 +580,7 @@ Uma tabela usa vários elementos, uns dentro dos outros. O `table` é a tabela i
 
 ### Paragem 9
 
-A tabela tem legenda, cabeçalhos com `scope`, e só mostra dados. Ou tens no caderno a frase que explica porque é que o teu site não precisa de tabela. O ficheiro `torneios.html` do exemplo, completo:
+A tabela tem legenda, cabeçalhos com `scope`, e só mostra dados. Ou o teu `index.html` tem o comentário que explica porque é que o teu site não precisa de tabela. O ficheiro `torneios.html` do exemplo, completo:
 
 ```html
 <!doctype html>
@@ -706,20 +710,20 @@ O painel ao lado da árvore do DOM está estreito, e o separador ficou escondido
 ## Desafios
 
 1. Na página inicial, acrescenta uma ligação, logo a seguir ao parágrafo de apresentação, que salte para uma das secções da mesma página. Pista: o elemento de destino precisa de um nome que nenhum outro elemento da página tenha.
-2. O teu site pode ter um logótipo, ou um pequeno desenho que o represente. Põe-no no cabeçalho das duas páginas, ao lado do nome do site. Decide o `alt` e justifica-o numa frase. Pista: faz a pergunta do telefone, sabendo o que está escrito logo ao lado.
+2. O teu site pode ter um logótipo, ou um pequeno desenho que o represente. Põe-no no cabeçalho das duas páginas, ao lado do nome do site. Decide o `alt` e justifica-o numa frase, num comentário logo antes do `img`. Pista: faz a pergunta do telefone, sabendo o que está escrito logo ao lado.
 3. Numa das tuas páginas, acrescenta uma ligação para outro site, onde a pessoa encontre mais informação sobre o teu tema. Pista: o destino não está na pasta do teu site, e o texto da ligação tem de dizer o que a pessoa lá encontra.
 
 ## Antes de terminares
 
-- [ ] A pasta do teu site tem as duas páginas e a pasta `imagens`, com nomes em minúsculas, sem espaços e sem acentos.
+- [ ] A pasta do teu site tem as duas páginas, a pasta `imagens` e o `registo.md`, com nomes em minúsculas, sem espaços e sem acentos.
 - [ ] As duas páginas têm o esqueleto completo, com `lang="pt-PT"` e um `title` diferente em cada uma.
 - [ ] O cabeçalho, a navegação e o rodapé são iguais nas duas páginas.
 - [ ] Cada página tem um só `h1`, e os títulos não saltam níveis a descer.
 - [ ] A imagem tem o atributo `alt`, escrito com a pergunta do telefone.
 - [ ] As ligações funcionam nos dois sentidos, também só com o teclado.
-- [ ] A tabela de verificação da fase 7 está preenchida, com as três justificações no fim.
-- [ ] Tens no caderno as cinco linhas da fase 8, uma por erro.
-- [ ] Tens a tabela da fase 9, ou a frase que explica porque é que o teu site não precisa de tabela.
+- [ ] O `registo.md` tem as cinco verificações da fase 7, e as tuas páginas têm os três comentários com as justificações.
+- [ ] O `registo.md` tem as cinco linhas da fase 8, uma por erro.
+- [ ] Tens a tabela da fase 9, ou o comentário que explica porque é que o teu site não precisa de tabela.
 - [ ] Entregaste a pasta do teu site da forma que o professor indicar.
 - [ ] Consegues explicar, por palavras tuas, porque escolheste o elemento de cada zona pelo que o conteúdo é, e não pelo aspeto.
 
