@@ -6,11 +6,11 @@ Laboratório do tema HTML e semântica, do módulo Conceber aplicações para a 
 
 ## O que vais construir
 
-Vais transformar o plano do teu site em páginas de verdade, escritas em HTML. No fim, tens uma pasta com o nome do teu site, com duas páginas, uma pasta de imagens e um ficheiro de registo. As duas páginas têm o mesmo cabeçalho, a mesma navegação e o mesmo rodapé, e cada uma tem o seu conteúdo principal. Estão ligadas nos dois sentidos, e a segunda tem uma imagem com o texto alternativo certo.
+Vais transformar o plano do teu site em páginas de verdade, escritas em HTML. No fim, tens uma pasta com o nome do teu site, com duas páginas e uma pasta de imagens. Ao lado dela, tens um ficheiro de registo. As duas páginas têm o mesmo cabeçalho, a mesma navegação e o mesmo rodapé, e cada uma tem o seu conteúdo principal. Estão ligadas nos dois sentidos, e a segunda tem uma imagem com o texto alternativo certo.
 
 Pelo caminho, ficas a saber escrever o esqueleto de uma página de memória e escolher cada elemento pelo que o conteúdo é. Ficas também a saber verificar uma página, e a reconhecer os erros mais comuns pelo que eles fazem.
 
-O tema é o do teu site. Os exemplos deste laboratório usam o site de um clube de xadrez da escola, inventado, só para mostrar a forma. Não copies os textos do exemplo: escreve os teus. No fim, as páginas e as imagens do exemplo ficam assim:
+O tema é o do teu site. Os exemplos deste laboratório usam o site de um clube de xadrez da escola, inventado, só para mostrar a forma. Não copies os textos do exemplo: escreve os teus. No fim, as páginas e as imagens do exemplo, e o ficheiro de registo ao lado delas, ficam assim:
 
 ```text
 clube-de-xadrez/
@@ -18,9 +18,10 @@ clube-de-xadrez/
 ├── torneios.html
 └── imagens/
     └── imagem-provisoria.svg
+registo.md
 ```
 
-Na pasta do teu site fica também o `registo.md`, o ficheiro de texto onde registas o que verificas, a partir da fase 3.
+O `registo.md` é o ficheiro de texto onde registas o que verificas, a partir da fase 3. Fica ao lado da pasta do teu site, na pasta onde a criaste, e não dentro dela, porque não é uma página do site. Assim, quando guardares as versões do site com o Git e o publicares, o registo fica de fora.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -115,7 +116,7 @@ O teu site vive numa pasta. Os nomes das pastas e dos ficheiros de um site segue
 
 1. Escolhe o nome da pasta, a partir do tema do teu site, com as três regras. Por exemplo: `clube-de-xadrez`, `receitas-da-avo` ou `guia-de-sintra`. Um nome como `O Meu Site` ou `receitas_avó` vai dar problemas mais tarde.
 
-2. Cria a pasta onde o professor indicar. Se já criaste a pasta do teu site no tema 01, com as fotografias do plano, usa essa. Para criar pastas, abre o programa que mostra as pastas do computador. No Windows, é o Explorador de Ficheiros, que se abre com as teclas Windows+E. No Mac, é o Finder, o ícone com uma cara sorridente na barra de baixo do ecrã. Vai até ao sítio onde a pasta deve ficar.
+2. Cria a pasta onde o professor indicar. Se já criaste a pasta do teu site no tema 01, com as fotografias do plano, usa essa. Lembra-te de onde ela fica: na fase 3, vais pôr ao lado dela o teu ficheiro de registo. Para criar pastas, abre o programa que mostra as pastas do computador. No Windows, é o Explorador de Ficheiros, que se abre com as teclas Windows+E. No Mac, é o Finder, o ícone com uma cara sorridente na barra de baixo do ecrã. Vai até ao sítio onde a pasta deve ficar.
 
    No Windows, carrega com o botão direito do rato num sítio vazio, escolhe Novo e depois Pasta, e escreve o nome. No Mac, carrega com o botão direito num sítio vazio, escolhe Nova pasta e escreve o nome. No trackpad de um Mac, o botão direito é um clique com dois dedos, ou um clique com a tecla Ctrl carregada.
 
@@ -243,7 +244,11 @@ Cada parte do conteúdo com o seu próprio título é uma secção, o elemento `
 
    O que deves ver: por baixo do menu, o título da página, em letra grande e a negrito, e o parágrafo. A seguir, os dois títulos das secções, um pouco mais pequenos, cada um com o seu conteúdo. A lista do que trazer tem uma bolinha à frente de cada item.
 
-5. Cria o teu ficheiro de registo. Na pasta do teu site, cria um ficheiro chamado `registo.md`, da mesma maneira que criaste o `index.html` na fase 1. É um ficheiro de texto simples, e não uma página do site. Serve para registares o que verificas nas tuas páginas, até ao fim do laboratório.
+5. Cria o teu ficheiro de registo, o `registo.md`. É um ficheiro de texto simples, e não uma página do site. Serve para registares o que verificas nas tuas páginas, até ao fim do laboratório. Por isso não fica na pasta do site, mas ao lado dela, na pasta onde a criaste em "Preparar o projeto".
+
+   O painel Explorer só cria ficheiros dentro da pasta do site, e por isso este ficheiro cria-se de outra maneira. No VS Code, no menu File, escolhe New Text File, que quer dizer "ficheiro de texto novo". Abre-se um separador vazio, ainda sem nome. Guarda-o logo, com Ctrl+S, ou Cmd+S no Mac. Abre-se uma janela para escolheres onde o guardar, em geral dentro da pasta do teu site. O registo fica na pasta de cima, a que tem a pasta do teu site lá dentro. No Windows, para subir, carrega no nome dessa pasta na barra de endereço, no topo da janela. No Mac, escolhe-a na lista Onde, ou Where, que mostra a pasta onde estás e as pastas de cima. Escreve o nome `registo.md` e carrega em Guardar, ou Save.
+
+   O que deves ver: o separador passa a chamar-se `registo.md`, e o ficheiro não aparece no painel Explorer, porque está fora da pasta do site. Para o voltares a abrir noutra aula, no menu File, escolhe Open Recent, que quer dizer "abrir um recente", e depois o `registo.md`.
 
    Escreve no `registo.md` o índice dos títulos da página, com a indentação a mostrar os níveis, e guarda. No exemplo, fica assim:
 
@@ -460,7 +465,7 @@ Pensa antes de continuares: porque é que um `href` com `Torneios.html`, para o 
 
 Uma página só está pronta depois de verificada. Verificar quer dizer seguir as ligações e ler a página pela ordem do HTML. Quer dizer também percorrê-la só com o teclado e ver a estrutura nas ferramentas do programador. Há pessoas que não veem o ecrã e usam um leitor de ecrã. Há também quem não use o rato e navegue sempre com o teclado. As verificações confirmam que a página serve a toda a gente. Para saber mais, lê a secção "Verificar uma página" do [guia](../02-html-e-semantica.md).
 
-Regista cada verificação no teu `registo.md`, à medida que a fazes. Se ainda não o tens, cria-o agora na pasta do teu site, como diz o passo 5 da fase 3. Para cada verificação, escreve as quatro coisas desta tabela: a verificação, o que fizeste, se passou e, se não passou, o que corrigiste.
+Regista cada verificação no teu `registo.md`, à medida que a fazes. Se ainda não o tens, cria-o agora ao lado da pasta do teu site, como diz o passo 5 da fase 3. Para cada verificação, escreve as quatro coisas desta tabela: a verificação, o que fizeste, se passou e, se não passou, o que corrigiste.
 
 | Verificação | O que fiz | Passou? | Se não passou, o que corrigi |
 | --- | --- | --- | --- |
@@ -699,6 +704,14 @@ O VS Code não sabe que o ficheiro é HTML. Olha para o canto inferior direito, 
 
 Faltou mudar-lhe o nome. No painel Explorer, carrega com o botão direito na cópia, escolhe Rename... e dá-lhe o nome que está no `href` do menu.
 
+### O `registo.md` aparece no painel Explorer
+
+Ficou guardado dentro da pasta do site, e não ao lado dela. Com o `registo.md` aberto, no menu File, escolhe Save As..., que quer dizer "guardar como". Guarda-o na pasta de cima, com o mesmo nome, como no passo 5 da fase 3. Depois, apaga o que ficou dentro da pasta do site. No painel Explorer, carrega com o botão direito nele, escolhe Delete, que quer dizer apagar, e confirma. A partir daí, escreve só no que está ao lado da pasta do site.
+
+### Não encontras o `registo.md` no VS Code
+
+O painel Explorer só mostra o que está dentro da pasta do site, e o `registo.md` está ao lado dela. No menu File, escolhe Open Recent e depois o `registo.md`. Se ele não estiver na lista, escolhe no menu File a opção Open File..., ou Open... no Mac. Depois, vai buscá-lo à pasta onde está a pasta do teu site.
+
 ### O F12 não abre as ferramentas do programador
 
 Em muitos portáteis, as teclas de cima fazem outras coisas, como mudar o volume. Experimenta Fn+F12, ou Ctrl+Shift+I. No Mac, usa Cmd+Option+I. Também podes carregar com o botão direito do rato na página e escolher Inspecionar.
@@ -715,7 +728,8 @@ O painel ao lado da árvore do DOM está estreito, e o separador ficou escondido
 
 ## Antes de terminares
 
-- [ ] A pasta do teu site tem as duas páginas, a pasta `imagens` e o `registo.md`, com nomes em minúsculas, sem espaços e sem acentos.
+- [ ] A pasta do teu site tem as duas páginas e a pasta `imagens`, com nomes em minúsculas, sem espaços e sem acentos.
+- [ ] O `registo.md` está ao lado da pasta do teu site, e não dentro dela.
 - [ ] As duas páginas têm o esqueleto completo, com `lang="pt-PT"` e um `title` diferente em cada uma.
 - [ ] O cabeçalho, a navegação e o rodapé são iguais nas duas páginas.
 - [ ] Cada página tem um só `h1`, e os títulos não saltam níveis a descer.
@@ -724,7 +738,7 @@ O painel ao lado da árvore do DOM está estreito, e o separador ficou escondido
 - [ ] O `registo.md` tem as cinco verificações da fase 7, e as tuas páginas têm os três comentários com as justificações.
 - [ ] O `registo.md` tem as cinco linhas da fase 8, uma por erro.
 - [ ] Tens a tabela da fase 9, ou o comentário que explica porque é que o teu site não precisa de tabela.
-- [ ] Entregaste a pasta do teu site da forma que o professor indicar.
+- [ ] Entregaste a pasta do teu site e o `registo.md` da forma que o professor indicar.
 - [ ] Consegues explicar, por palavras tuas, porque escolheste o elemento de cada zona pelo que o conteúdo é, e não pelo aspeto.
 
 ![Rodapé](../../imagens/rodape.png)

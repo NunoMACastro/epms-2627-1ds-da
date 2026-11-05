@@ -180,7 +180,7 @@ Acrescenta ao teu site uma terceira página do teu mapa, com o mesmo esqueleto, 
 
 **b)** Na nova página, usa um elemento que ainda não tenhas usado no teu site, como um `article` ou um `aside`. Usa-o só se o conteúdo o justificar. Justifica a escolha com o teste da secção do guia, num comentário logo antes do elemento. Se nenhum se justificar, não o inventes: explica porquê numa frase, num comentário na página nova.
 
-**c)** Refaz a verificação da fase 7 do laboratório para as três páginas: as ligações, a ordem de leitura, o teclado e as duas árvores. Regista-a no `registo.md` do teu site.
+**c)** Refaz a verificação da fase 7 do laboratório para as três páginas: as ligações, a ordem de leitura, o teclado e as duas árvores. Regista-a no `registo.md` do laboratório, o que está ao lado da pasta do teu site.
 
 ## Para ires mais longe
 
