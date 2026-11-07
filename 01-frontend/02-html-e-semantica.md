@@ -2,97 +2,48 @@
 
 # HTML e semântica
 
-Módulo Conceber aplicações para a web na vertente frontend. Neste guia aprendes a escrever páginas web com HTML, escolhendo cada elemento pelo que o conteúdo é, e não pelo aspeto que tem. Vês as páginas da Estante Digital construídas passo a passo e aprendes a verificar uma página. Lê-se ao teu ritmo, de preferência em mais do que uma vez. A teoria é longa, e não precisas de a decorar: vais voltar a ela muitas vezes, sempre que te surgir uma dúvida. Para praticar, há o [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) e a [ficha de exercícios](exercicios/02-html-e-semantica-exercicios.md) deste tema.
+Neste guia aprendes a escrever páginas com HTML, escolhendo cada elemento pelo que o conteúdo é, e não pelo aspeto que tem. Vês o esqueleto completo, os títulos, as listas, as ligações, as imagens, as zonas de uma página e as tabelas. No fim, aprendes a verificar uma página. O exemplo é a Estante Digital, com as páginas construídas passo a passo.
 
-Este guia continua o guia [A Web, os utilizadores e o planeamento](01-web-e-planeamento.md), o primeiro desta área. Se já tiveste as primeiras aulas sobre HTML, vais reconhecer as primeiras secções. O guia retoma tudo desde o princípio, porque o vocabulário tem de ficar muito seguro antes de avançar. Depois acrescenta o que ainda falta. Falta o esqueleto completo, os títulos com hierarquia e as imagens com texto alternativo. Faltam também os elementos semânticos, as tabelas e a verificação de uma página. As páginas deste tema ainda não têm CSS, e por isso têm o aspeto que o browser lhes dá por omissão. Este tema também não usa Git. Se já fizeste o primeiro tema de Git, guarda uma versão da pasta do teu site depois de cada página. Se ainda não, é esta a pasta que vais pôr sob controlo de versões nesse tema. A partir daí, cada página nova fica registada no histórico.
+Usa o que viste no guia 01. Rever: [O browser constrói uma árvore, o DOM](01-web-e-planeamento.md#o-browser-constrói-uma-árvore-o-dom), [O esqueleto de uma página](01-web-e-planeamento.md#o-esqueleto-de-uma-página) e [O wireframe](01-web-e-planeamento.md#o-wireframe). Para praticar: [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) e [ficha de exercícios](exercicios/02-html-e-semantica-exercicios.md).
 
 ## Neste guia
 
-1. O que vais aprender
-2. O que já sabes e vais usar
-3. O que é o HTML
-4. Elementos, etiquetas e atributos
-5. Elementos dentro de elementos
-6. Espaços e mudanças de linha
-7. O esqueleto de uma página
-8. O que vai no head
-9. Títulos: de h1 a h6
-10. Parágrafos e texto com significado
-11. Listas
-12. Ligações
-13. Caminhos relativos
-14. Imagens
-15. O texto alternativo
-16. Imagem com legenda: figure e figcaption
-17. Comentários
-18. Os elementos semânticos
-19. Tabelas de dados
-20. Como o browser lida com os erros
-21. Verificar uma página
-22. Exemplo guiado: as páginas da Estante Digital
-23. Erros frequentes
-24. Palavras novas deste guia
-25. Verificar o que aprendeste
-26. O que vem a seguir
-27. Para saber mais
+1. [Parte 1: Escrever HTML](#parte-1-escrever-html)
+2. [Parte 2: A página e o texto](#parte-2-a-página-e-o-texto)
+3. [Parte 3: Ligações e imagens](#parte-3-ligações-e-imagens)
+4. [Parte 4: As zonas da página](#parte-4-as-zonas-da-página)
+5. [Parte 5: Tabelas](#parte-5-tabelas)
+6. [Parte 6: Erros e verificação](#parte-6-erros-e-verificação)
+7. [Exemplo guiado: as páginas da Estante Digital](#exemplo-guiado-as-páginas-da-estante-digital)
 
-## O que vais aprender
+## Parte 1: Escrever HTML
 
-No fim deste guia, consegues:
+### O que é o HTML
 
-- explicar o que é um elemento, uma etiqueta e um atributo, e apontar cada um deles num pedaço de HTML;
-- escrever de memória o esqueleto completo de uma página, do `<!doctype html>` ao `body`, com a língua, o `charset`, o `viewport` e o `title`;
-- organizar o texto de uma página com parágrafos, listas e títulos de `h1` a `h6` que formam uma hierarquia coerente;
-- ligar as páginas do teu site com caminhos relativos, e ligar a outros sites com endereços completos;
-- pôr imagens numa página com o texto alternativo certo para o sítio onde estão, e usar `figure` e `figcaption` quando a imagem tem legenda;
-- dividir uma página nas zonas `header`, `nav`, `main`, `section`, `article`, `aside` e `footer`, e justificar cada escolha pelo significado do conteúdo;
-- construir uma tabela de dados com legenda e cabeçalhos, e explicar porque é que uma tabela não serve para arrumar uma página;
-- verificar uma página: seguir as ligações, lê-la pela ordem do HTML, percorrê-la com o teclado e comparar a árvore do browser com o ficheiro.
-
-## O que já sabes e vais usar
-
-- A divisão de trabalho entre as três linguagens da Web. O HTML diz o que cada pedaço de conteúdo é, o CSS diz como se apresenta e o JavaScript diz como se comporta. Este guia é todo sobre a primeira. Está no guia [01 A Web, os utilizadores e o planeamento](01-web-e-planeamento.md), secção "Três linguagens, três trabalhos".
-- O que faz o browser com um ficheiro HTML. Lê o texto, constrói uma árvore em memória chamada DOM e desenha a página a partir dessa árvore. Guia [01](01-web-e-planeamento.md), secção "O browser".
-- A diferença entre abrir um ficheiro do teu computador e abrir uma página que veio de um servidor. O endereço do primeiro começa por `file://`, e o do segundo por `https://`. Guia [01](01-web-e-planeamento.md), secções "Cliente e servidor" e "O endereço de uma página".
-- Ler um mapa do site e um wireframe. Guia [01](01-web-e-planeamento.md), secções "O mapa do site" e "O wireframe".
-- O plano do teu site, com o mapa de pelo menos duas páginas e, se já os fizeste, os wireframes. Fizeste-o no tema 01, e é o ponto de partida do laboratório deste tema.
-- O VS Code, o editor onde escreves o HTML. Se ainda não o usaste, o [laboratório deste tema](laboratorios/02-html-e-semantica-laboratorio.md) ensina o que precisas: abrir a pasta do site, criar um ficheiro e guardá-lo.
-- Abrir as ferramentas do programador e usar o separador Elements. Guia [01](01-web-e-planeamento.md), secção "As ferramentas do programador", e o [laboratório do tema 01](laboratorios/01-web-e-planeamento-laboratorio.md). Se ainda não fizeste esse laboratório, o laboratório deste tema explica o mínimo no momento em que for preciso.
-
-## O que é o HTML
-
-HTML são as iniciais de *HyperText Markup Language*, que em português quer dizer linguagem de marcação de hipertexto. As duas palavras difíceis dizem o que o HTML faz.
-
-**Hipertexto** é texto que tem ligações para outros textos. Um livro normal lê-se de uma ponta à outra. Um hipertexto lê-se saltando. Estás a ler uma página, encontras uma palavra sublinhada, carregas nela e passas para outra página, que por sua vez tem ligações para outras. A Web inteira é um enorme hipertexto. Foi para isso que o HTML foi inventado, como viste na história curta da Web no guia 01.
-
-**Marcação** é o ato de pôr marcas num texto para dizer o que cada pedaço é. Imagina que o professor te dá um texto impresso e três marcadores de cores diferentes. Pede-te para pintar de amarelo os títulos, de verde as listas e de azul os nomes de livros. Depois de marcado, o texto não mudou uma única palavra, mas agora qualquer pessoa sabe o papel de cada pedaço. O HTML faz o mesmo, só que em vez de cores usa etiquetas escritas no próprio texto.
-
-Vê a diferença com um exemplo. Este é um pedaço de texto sem marcação nenhuma:
+Olha para estas quatro linhas. Percebes logo que a primeira é o título de uma página e que "Livros" é o título de uma parte. E percebes que as duas últimas linhas são uma lista:
 
 ```text
-Estante Digital
 Recursos de estudo recomendados pela turma
 Livros
 Primeiros passos na Web
 Pequeno dicionário de HTML
 ```
 
-Tu percebes que "Estante Digital" é o nome de um site e que "Livros" é o título de uma parte. Percebes também que as duas últimas linhas são uma lista. Percebes porque és uma pessoa e adivinhas pela experiência. O browser não adivinha.
+Percebes porque és uma pessoa e adivinhas pela experiência. O browser não adivinha. Antes de continuares, prevê: se pusesses este texto, tal como está, num ficheiro `.html` e o abrisses no browser, aparecia em quatro linhas?
 
-Antes de continuares, tenta prever: se pusesses este texto, tal como está, num ficheiro `.html` e o abrisses no browser, aparecia em cinco linhas?
-
-Não aparece. O browser junta tudo seguido, como se fosse uma só frase, com um espaço no sítio de cada mudança de linha. Aparece assim:
+Não aparece. O browser junta tudo seguido, como se fosse uma só frase, com um espaço no sítio de cada mudança de linha:
 
 ```text
-Estante Digital Recursos de estudo recomendados pela turma Livros Primeiros passos na Web Pequeno dicionário de HTML
+Recursos de estudo recomendados pela turma Livros Primeiros passos na Web Pequeno dicionário de HTML
 ```
 
-Ninguém lhe disse que eram coisas diferentes. A secção "Espaços e mudanças de linha", mais à frente, explica porquê.
+Ninguém lhe disse que eram coisas diferentes. Para isso serve o HTML, a *HyperText Markup Language*, linguagem de marcação de hipertexto. As duas palavras difíceis dizem o que ele faz.
 
-Com marcação, o mesmo texto fica assim:
+**Hipertexto** é texto com ligações para outros textos. Um livro lê-se de uma ponta à outra, e um hipertexto lê-se saltando: carregas numa palavra sublinhada e passas para outra página. A Web inteira é um enorme hipertexto.
+
+**Marcação** é pôr marcas num texto para dizer o que cada pedaço é. É como pintar com marcadores os títulos e as listas de um texto impresso. As palavras não mudam, mas fica-se a saber o papel de cada pedaço. O HTML faz o mesmo com marcas escritas no próprio texto:
 
 ```html
-<p>Estante Digital</p>
 <h1>Recursos de estudo recomendados pela turma</h1>
 <h2>Livros</h2>
 <ul>
@@ -101,19 +52,15 @@ Com marcação, o mesmo texto fica assim:
 </ul>
 ```
 
-Agora o browser mostra um parágrafo, um título grande e um título um pouco mais pequeno. Por baixo, mostra uma lista com dois itens, cada um com uma bolinha à frente. As palavras são as mesmas. O que mudou foi que cada pedaço passou a dizer o que é.
+Agora o browser mostra um título grande (`h1`) e um título um pouco mais pequeno (`h2`). Por baixo, mostra uma lista (`ul`) com dois itens (`li`), cada um com uma bolinha à frente. As palavras são as mesmas. O que mudou foi que cada pedaço passou a dizer o que é.
 
-Leitura guiada: lê o código linha a linha, de cima para baixo. Cada linha começa com uma marca entre `<` e `>`, que diz o que vem a seguir. O `p` é um parágrafo, o `h1` e o `h2` são títulos, o `ul` é uma lista e cada `li` é um item dela. A marca com a barra, como `</p>`, diz onde esse pedaço acaba. As duas linhas dos `li` estão mais à direita porque estão dentro da lista. A secção seguinte dá o nome a cada uma destas peças.
+O HTML não é uma linguagem de programação. Não dá ordens ao computador nem toma decisões: descreve o conteúdo, e o browser mostra-o.
 
-O HTML não é uma linguagem de programação. Uma linguagem de programação, como as que estás a aprender em Fundamentos de Programação, dá ordens ao computador. Faz esta conta, se isto acontecer faz aquilo, repete dez vezes. O HTML não dá ordens nem toma decisões. Descreve o conteúdo, e o browser lê essa descrição e mostra-a. Isto tem uma consequência prática que vais encontrar muitas vezes: quando te enganas a escrever HTML, não aparece nenhuma mensagem de erro. O browser tenta adivinhar o que querias dizer e continua. A secção "Como o browser lida com os erros", mais à frente, explica o que isso quer dizer e como se descobrem esses erros escondidos.
+### Etiquetas e elementos
 
-## Elementos, etiquetas e atributos
+Cada marca do HTML é uma **etiqueta** (em inglês, *tag*): uma palavra entre os sinais `<` e `>`. Há etiquetas de abertura, como `<h1>`, e etiquetas de fecho, iguais mas com uma barra antes do nome, como `</h1>`. A de abertura diz "começa aqui um título", e a de fecho diz "acaba aqui o título".
 
-Estes três nomes vão aparecer em todas as aulas de HTML, e convém não os confundir.
-
-Uma **etiqueta** (em inglês, *tag*) é uma palavra entre os sinais `<` e `>`. Há etiquetas de abertura, como `<h1>`, e etiquetas de fecho, que são iguais mas levam uma barra antes do nome, como `</h1>`. A etiqueta de abertura diz "começa aqui um título". A de fecho diz "acaba aqui o título".
-
-Um **elemento** é o conjunto formado pela etiqueta de abertura, pelo conteúdo e pela etiqueta de fecho. É o elemento, e não a etiqueta, que representa uma coisa na página.
+Já sabes que cada ramo do DOM é um elemento. No ficheiro, um elemento escreve-se com a etiqueta de abertura, o conteúdo e a etiqueta de fecho, juntos:
 
 ```html
 <h1>Recursos de estudo recomendados pela turma</h1>
@@ -123,47 +70,67 @@ Um **elemento** é o conjunto formado pela etiqueta de abertura, pelo conteúdo 
 | --- | --- | --- |
 | Etiqueta de abertura | `<h1>` | Marca o início do elemento |
 | Conteúdo | `Recursos de estudo recomendados pela turma` | O texto que o elemento marca |
-| Etiqueta de fecho | `</h1>` | Marca o fim do elemento; tem a barra antes do nome |
-| Elemento | tudo junto, do `<h1>` ao `</h1>` | Um título de primeiro nível |
+| Etiqueta de fecho | `</h1>` | Marca o fim do elemento, com a barra antes do nome |
+| Elemento | Tudo junto, do `<h1>` ao `</h1>` | Um título de primeiro nível |
 
-Uma forma de fixar a diferença: a etiqueta é a marca que escreves, e o elemento é a coisa marcada. Quando dizes "esta página tem três parágrafos", estás a contar elementos `p`. Quando dizes "esqueci-me de fechar a etiqueta", estás a falar da marca que falta escrever.
+A etiqueta é a marca que escreves, e o elemento é a coisa marcada. Quando dizes "esta página tem três parágrafos", contas elementos. Quando dizes "esqueci-me de fechar a etiqueta", falas da marca que falta escrever.
 
-Um **atributo** é uma informação extra sobre um elemento. Escreve-se dentro da etiqueta de abertura, com a forma `nome="valor"`. Os atributos dizem coisas que não fazem parte do conteúdo visível. Numa ligação, por exemplo, o texto em que o utilizador carrega é o conteúdo, mas o destino da ligação é um atributo:
+<details>
+<summary>Para ires mais longe: outras formas de escrever etiquetas</summary>
+
+O HTML não distingue maiúsculas de minúsculas nos nomes das etiquetas: `<H1>` e `<h1>` são a mesma coisa. Nos anos 90 escrevia-se em maiúsculas, e hoje a convenção é escrever tudo em minúsculas.
+
+Em código de outras pessoas vais encontrar às vezes `<img ... />`, com uma barra antes do `>`. O HTML aceita essa barra, mas ela não faz nada, e nos materiais da disciplina não a usamos.
+
+</details>
+
+### Atributos
+
+Numa ligação, o texto em que se carrega é o conteúdo, mas o destino não aparece na página. O destino é um **atributo**: uma informação extra sobre um elemento, escrita dentro da etiqueta de abertura, com a forma `nome="valor"`.
 
 ```html
 <a href="sobre.html">Sobre</a>
 ```
 
-Aqui, `a` é o nome do elemento (uma ligação) e `href` é o nome do atributo (o destino). `"sobre.html"` é o valor do atributo, e `Sobre` é o conteúdo, o texto que aparece na página. Quatro regras sobre atributos:
+Aqui, `a` é o nome do elemento, uma ligação, e `href` é o nome do atributo, o destino. `"sobre.html"` é o valor do atributo, e `Sobre` é o conteúdo, o texto que aparece na página.
 
-- escrevem-se sempre na etiqueta de abertura, nunca na de fecho;
-- se houver mais do que um, separam-se com espaços, como em `<img src="imagens/logotipo.svg" alt="" width="48" height="48">`, que tem quatro atributos;
-- o valor escreve-se entre aspas. Há casos em que o browser aceita sem aspas, mas basta um espaço dentro do valor para deixar de funcionar. Por isso, nas aulas usamos sempre aspas duplas;
-- cada elemento aceita os seus atributos. `href` faz sentido numa ligação e não faz sentido num título.
-
-Há elementos que não têm conteúdo e por isso não têm etiqueta de fecho. Chamam-se **elementos vazios**. O exemplo mais comum é a imagem. Uma imagem não tem texto lá dentro, e toda a informação de que precisa (o ficheiro, a descrição, o tamanho) está nos atributos.
+Uma imagem, o elemento `img`, também se escreve com atributos: o `src` diz qual é o ficheiro da imagem, e o `alt` descreve-a.
 
 ```html
 <img src="imagens/logotipo.svg" alt="" width="48" height="48">
 ```
 
-Não existe `</img>`. Os elementos vazios que vais usar neste tema são `img`, `meta` e `br`. Em código escrito por outras pessoas vais encontrar às vezes `<img ... />`, com uma barra antes do `>`. O HTML aceita essa barra, mas ela não faz nada, e nos materiais da disciplina não a usamos.
+Os atributos seguem quatro regras:
 
-Por último, o HTML não distingue maiúsculas de minúsculas nos nomes das etiquetas: `<H1>` e `<h1>` são a mesma coisa. A convenção de hoje é escrever tudo em minúsculas, e é essa que seguimos.
+- escrevem-se na etiqueta de abertura, e nunca na de fecho;
+- se houver mais do que um, separam-se com espaços, como os quatro desta imagem;
+- o valor escreve-se entre aspas duplas, porque basta um espaço dentro do valor para deixar de funcionar sem elas;
+- cada elemento aceita os seus atributos: `href` faz sentido numa ligação, e não num título.
 
-## Elementos dentro de elementos
+A imagem não tem texto lá dentro: toda a informação de que precisa está nos atributos. Por isso não tem conteúdo nem etiqueta de fecho, e não existe `</img>`. Um elemento assim chama-se **elemento vazio**, e a imagem é o mais comum.
 
-Um elemento pode ter outros elementos dentro do seu conteúdo. A isto chama-se **aninhar** (ou encaixar) elementos:
+### Comentários
+
+Às vezes queres deixar no ficheiro uma nota para quem lê o código, sem que ela apareça na página. Escreves um **comentário**, entre `<!--` e `-->`, que o browser ignora:
+
+```html
+<!-- Este parágrafo apresenta o site a quem chega pela primeira vez. -->
+<p>A Estante Digital reúne livros, vídeos e sítios.</p>
+```
+
+Os comentários explicam decisões que o código sozinho não explica. Os ficheiros da Estante Digital têm muitos, para os poderes ler e perceber. Os comentários não aparecem na página, mas qualquer pessoa os lê, abrindo o código da página no browser. Nunca escrevas num comentário o que não escreverias na própria página.
+
+### Elementos dentro de elementos
+
+Para pôr uma palavra importante a meio de um parágrafo, escreves um elemento dentro do outro. A isto chama-se **aninhar** elementos:
 
 ```html
 <p>Entrega o trabalho <strong>até sexta-feira</strong>, na sala 12.</p>
 ```
 
-O elemento `strong` está dentro do elemento `p`. Diz-se que o `p` é o **pai** do `strong`, e que o `strong` é **filho** do `p`. Dois elementos com o mesmo pai são **irmãos**. Este vocabulário de família vai servir-te durante o ano inteiro, no CSS e no JavaScript.
+O elemento `strong`, que marca o que é importante, está dentro do elemento `p`, o parágrafo. Diz-se que o `p` é o **pai** do `strong`, e que o `strong` é **filho** do `p`.
 
-A regra do aninhamento é esta. Fecha-se primeiro o que se abriu por último. Pensa em caixas dentro de caixas. Se puseres uma caixa pequena dentro de uma grande, tens de fechar a pequena antes de fechar a grande. É a mesma regra dos parênteses em Matemática: em `[ ( 2 + 3 ) × 4 ]`, o parêntese curvo abre depois do reto e fecha antes dele.
-
-No exemplo seguinte, as linhas entre `<!--` e `-->` são comentários: notas para quem lê o código, que o browser ignora. A secção "Comentários", mais à frente, explica-os melhor.
+A regra do aninhamento é esta: fecha-se primeiro o que se abriu por último. Pensa em caixas dentro de caixas, ou nos parênteses em Matemática: em `[ ( 2 + 3 ) × 4 ]`, o parêntese curvo abre depois do reto e fecha antes dele.
 
 ```html
 <!-- Certo: o strong abriu dentro do p e fecha dentro do p. -->
@@ -173,34 +140,17 @@ No exemplo seguinte, as linhas entre `<!--` e `-->` são comentários: notas par
 <p>Isto é <strong>muito importante.</p></strong>
 ```
 
-Uma página inteira é uma grande estrutura de elementos dentro de elementos. No topo está o elemento `html`, que tem dois filhos, `head` e `body`. Cada um tem os seus filhos, e assim por diante. Esta estrutura desenha-se como uma árvore virada ao contrário, com a raiz em cima:
+Uma página inteira é uma grande estrutura de elementos dentro de elementos, que o browser transforma na árvore do DOM. Rever: [O browser constrói uma árvore, o DOM](01-web-e-planeamento.md#o-browser-constrói-uma-árvore-o-dom).
 
-```text
-html
-├── head
-│   ├── meta
-│   └── title
-└── body
-    ├── header
-    ├── main
-    │   ├── h1
-    │   └── p
-    └── footer
-```
+### A indentação mostra o que está dentro de quê
 
-É esta árvore que o browser constrói em memória quando lê o teu ficheiro. É a ela que se chama DOM, como viste no guia 01. No separador Elements das ferramentas do programador, a árvore aparece com pequenos triângulos, que abrem e fecham cada ramo.
+Nos exemplos deste guia, cada elemento que está dentro de outro começa um pouco mais à direita. Esses espaços no início das linhas chamam-se **indentação**. O browser ignora-os, e a página fica igual com ou sem eles. Servem para as pessoas verem de relance quem está dentro de quem. Nos materiais usamos dois espaços por nível.
 
-### A indentação
+Sem indentação, um ficheiro de cinquenta linhas fica quase impossível de ler, e um erro de aninhamento fica escondido. Com indentação, uma etiqueta de fecho fora do sítio salta à vista, porque fica desalinhada da sua etiqueta de abertura. O VS Code, o editor das aulas, indenta o ficheiro inteiro com o comando Format Document: Shift+Alt+F no Windows e Shift+Option+F no Mac.
 
-Repara que, nos exemplos deste guia, cada elemento que está dentro de outro começa um pouco mais à direita. Esses espaços no início das linhas chamam-se **indentação**. O browser ignora-os por completo: a página fica igual com ou sem eles. Servem para as pessoas, porque mostram de relance quem está dentro de quem. Nos materiais usamos dois espaços por nível.
+### Espaços e mudanças de linha
 
-Sem indentação, um ficheiro de cinquenta linhas torna-se quase impossível de ler, e um erro de aninhamento fica escondido. Com indentação, uma etiqueta de fecho fora do sítio salta à vista, porque fica desalinhada da sua etiqueta de abertura. O VS Code tem um comando que indenta o ficheiro inteiro sozinho, chamado Format Document. O atalho é Shift+Alt+F no Windows e Shift+Option+F no Mac. Mesmo assim, habitua-te a indentar à medida que escreves.
-
-## Espaços e mudanças de linha
-
-O browser trata todos os espaços seguidos, tabulações e mudanças de linha como se fossem um único espaço.
-
-Antes de continuares, tenta prever: estas duas versões dão o mesmo resultado no ecrã?
+O browser trata todos os espaços seguidos, tabulações e mudanças de linha como um só espaço, também dentro de um elemento. Estas duas versões dão o mesmo resultado no ecrã:
 
 ```html
 <p>A Estante Digital reúne livros, vídeos e sítios.</p>
@@ -211,13 +161,11 @@ Antes de continuares, tenta prever: estas duas versões dão o mesmo resultado n
 </p>
 ```
 
-Dão. As duas mostram o mesmo parágrafo, "A Estante Digital reúne livros, vídeos e sítios.", com um só espaço entre cada palavra.
+As duas mostram "A Estante Digital reúne livros, vídeos e sítios.", com um só espaço entre cada palavra. O browser troca cada grupo de espaços e de mudanças de linha por um só espaço, e tira os do início e do fim.
 
-Leitura guiada: o primeiro `p` tem o texto numa linha. O segundo tem o mesmo texto partido por três linhas, com espaços a mais no princípio e entre "livros," e "vídeos". O browser troca cada grupo de espaços e de mudanças de linha por um só espaço. Os que ficam no início e no fim do parágrafo, tira-os.
+Por isso, podes partir um parágrafo comprido por várias linhas no ficheiro, para se ler melhor. Mas carregar em Enter no ficheiro não muda de linha na página, e carregar várias vezes na barra de espaços não afasta palavras. Para um parágrafo novo, precisas de um elemento `p` novo.
 
-Há duas consequências. A primeira é boa: podes partir um parágrafo comprido por várias linhas no ficheiro, para ser mais fácil de ler, e o browser junta-as. A segunda apanha muitos principiantes. Carregar em Enter no ficheiro não muda de linha na página, e carregar várias vezes na barra de espaços não afasta palavras. Se queres um parágrafo novo, precisas de um elemento `p` novo.
-
-Existe um elemento para mudar de linha dentro do mesmo parágrafo, o `br` (de *break*, quebra). É um elemento vazio. Usa-se quando a mudança de linha faz parte do próprio conteúdo, como nas linhas de uma morada ou nos versos de um poema:
+Para mudar de linha dentro do mesmo parágrafo há o `br`, outro elemento vazio. Usa-se quando a mudança de linha faz parte do conteúdo, como nas linhas de uma morada:
 
 ```html
 <p>
@@ -226,13 +174,15 @@ Existe um elemento para mudar de linha dentro do mesmo parágrafo, o `br` (de *b
 </p>
 ```
 
-O browser mostra este parágrafo em duas linhas: "Biblioteca da escola" numa e "Piso 1, junto ao pavilhão B" na de baixo. A mudança de linha vem do `br`, e não do Enter que está no ficheiro depois dele.
+O browser mostra o parágrafo em duas linhas, e a mudança vem do `br`, e não do Enter que está no ficheiro.
 
-O `br` nunca se usa para afastar blocos de texto, nem se empilham vários `br` para criar espaço. Afastar coisas é trabalho do CSS, no próximo tema. Se usares `br` para fazer espaço, estás a pôr aspeto no HTML. É isso que a divisão de trabalho entre as três linguagens tenta evitar.
+O `br` nunca se usa para afastar blocos de texto, nem se empilham vários para criar espaço. Afastar coisas é aspeto, e o aspeto é trabalho do CSS.
 
-## O esqueleto de uma página
+## Parte 2: A página e o texto
 
-Todas as páginas HTML começam com a mesma estrutura, a que chamamos o **esqueleto**. É isto:
+### O esqueleto completo de uma página
+
+O esqueleto que viste no guia 01 tinha só as partes principais. Rever: [O esqueleto de uma página](01-web-e-planeamento.md#o-esqueleto-de-uma-página). O esqueleto completo, com que começam todas as páginas das aulas, é este:
 
 ```html
 <!doctype html>
@@ -248,44 +198,49 @@ Todas as páginas HTML começam com a mesma estrutura, a que chamamos o **esquel
 </html>
 ```
 
-São onze linhas. Uma delas, entre `<!--` e `-->`, é um comentário: só marca o sítio onde vai o conteúdo, e o browser ignora-a. As outras dez estão lá, cada uma, por uma razão.
+O `<!doctype html>` vai sempre na primeira linha, sem nada antes. Sem ele, o browser imita os browsers antigos e desenha algumas coisas de maneira estranha.
 
-**`<!doctype html>`** não é um elemento. É uma declaração, e diz ao browser que o documento está escrito em HTML moderno. Esta linha existe por causa da história dos browsers. Nos anos 90, cada browser desenhava as páginas à sua maneira, e os sites foram feitos a contar com esses defeitos. Quando os browsers passaram a seguir as regras oficiais, os sites antigos ficariam desarrumados. A solução foi esta: se a página começa com o doctype, o browser segue as regras modernas. Se não começa, entra num **modo de compatibilidade** que imita os browsers antigos. Mais tarde, o teu CSS vai comportar-se nesse modo de maneiras estranhas, que nada no teu código explica. Por isso o doctype é sempre a primeira linha do ficheiro, sem nada antes.
+O atributo `lang` do `html` diz em que língua está o conteúdo. O `pt-PT` é português de Portugal, o `pt-BR` é português do Brasil e o `en` é inglês. Um leitor de ecrã, o programa que lê a página a quem não a vê, usa-o para escolher a voz e a pronúncia. Numa página em português marcada como inglesa, lê as palavras com pronúncia inglesa, e o texto fica impossível de perceber.
 
-**`<html lang="pt-PT">`** é o **elemento raiz**: contém todos os outros. O atributo `lang` diz em que língua está escrito o conteúdo. `pt-PT` quer dizer português de Portugal; `pt-BR` seria português do Brasil e `en` seria inglês. Este atributo faz muita diferença a quem não vê o ecrã. Um **leitor de ecrã** é um programa que lê a página em voz alta a pessoas cegas ou com pouca visão. Esse programa usa o `lang` para escolher a voz e a pronúncia. Se a tua página em português disser que está em inglês, o leitor de ecrã lê as palavras portuguesas com pronúncia inglesa. O texto fica impossível de perceber. O `lang` serve também ao browser para oferecer tradução e ao corretor ortográfico para saber que dicionário usar.
+<details>
+<summary>Para ires mais longe: porque existe o doctype</summary>
 
-**`<head>`** é a cabeça da página: guarda informação sobre a página que não aparece dentro dela. Pensa numa pasta de arquivo. O que está escrito na etiqueta da lombada, como o assunto e o ano, não faz parte dos documentos lá dentro. Mas é o que permite encontrá-la na estante. O `head` é essa etiqueta.
+Nos anos 90, cada browser desenhava as páginas à sua maneira, e os sites foram feitos a contar com esses defeitos. Quando os browsers passaram a seguir as regras oficiais, os sites antigos ficariam desarrumados. A solução foi esta: se a página começa com o doctype, o browser segue as regras modernas. Se não começa, entra num modo de compatibilidade, que imita os browsers antigos.
 
-**`<body>`** é o corpo da página: tudo o que aparece na janela do browser está dentro do `body`. Títulos, parágrafos, imagens, ligações, tabelas: tudo aqui.
+</details>
 
-## O que vai no head
+### O que vai no head
 
-Neste tema, o `head` leva sempre três elementos. No tema do CSS vais acrescentar um quarto, a ligação à folha de estilos.
+Neste tema, o `head` leva sempre três elementos, por esta ordem.
 
-**`<meta charset="utf-8">`** diz ao browser como transformar os bytes do ficheiro em letras. Um computador não guarda letras: guarda números, e usa uma tabela para saber que número corresponde a que letra. Houve muitas tabelas diferentes ao longo da história, e a maioria não tinha as letras portuguesas. A **UTF-8** é a tabela usada hoje em quase toda a Web. Tem as letras de todas as línguas, incluindo o ç, o ã e o é. Se o browser ler o teu ficheiro com a tabela errada, as letras acentuadas aparecem trocadas por símbolos estranhos, como `Ã§` no lugar de `ç`.
+O `<meta charset="utf-8">` diz ao browser como transformar em letras os números guardados no ficheiro. Um computador só guarda números, e usa uma tabela para saber que número corresponde a que letra. A **UTF-8** é a tabela usada em quase toda a Web. Tem as letras de todas as línguas, incluindo o ç, o ã e o é. Se o browser ler o ficheiro com outra tabela, as letras acentuadas aparecem trocadas, como `Ã§` no lugar de `ç`. Esta linha vai em primeiro lugar no `head`, porque o browser precisa da tabela antes de ler o resto. O ficheiro tem de estar guardado em UTF-8, que é o que o VS Code faz e mostra na barra de baixo.
 
-Esta linha vai sempre em primeiro lugar dentro do `head`. O browser precisa de saber a tabela antes de ler o texto, incluindo o título, e só procura esta linha no princípio do ficheiro. Se ela ficar mais abaixo, pode já não a encontrar a tempo. Há uma segunda condição: o ficheiro tem de estar mesmo guardado em UTF-8. O VS Code guarda assim por omissão, e mostra `UTF-8` na barra de baixo da janela.
+O `<meta name="viewport" content="width=device-width, initial-scale=1">` é para os telemóveis. Diz ao telemóvel que use a largura verdadeira do ecrã e que não encolha a página. Sem ela, a página aparece encolhida num telemóvel, e é preciso fazer zoom para ler. No computador não se nota diferença. Por isso pomo-la desde a primeira página.
 
-**`<meta name="viewport" content="width=device-width, initial-scale=1">`** é para os telemóveis. Quando apareceram os telemóveis com ecrã tátil e um browser completo, quase todos os sites tinham sido feitos para ecrãs de computador. Para não os estragar, os telemóveis passaram a fingir que tinham um ecrã largo, de cerca de 980 píxeis, e encolhiam a página até caber. Esta linha diz ao telemóvel: não finjas; usa a largura verdadeira do teu ecrã (`width=device-width`) e não encolhas nada (`initial-scale=1`). Sem ela, a tua página aparece encolhida num telemóvel, e a pessoa pode ter de fazer zoom para ler. No computador não vais notar diferença nenhuma. Num telemóvel, nota-se já neste tema, mesmo com páginas sem CSS. No tema da responsividade, sem ela, nada do que fizeres para ecrãs pequenos vai funcionar num telemóvel. Por isso pomo-la desde o primeiro dia.
+O `<title>` é o título da página. Não aparece dentro dela: aparece no separador do browser, nos favoritos, no histórico e nos resultados de um motor de pesquisa. É também a primeira coisa que um leitor de ecrã diz quando a página abre. Por isso cada página tem um título diferente, que diz o que ela é.
 
-**`<title>`** é o título da página. Não aparece dentro da página: aparece no separador do browser, e é usado em muitos outros sítios. É o nome que fica gravado quando alguém guarda a página nos favoritos, e é o que aparece no histórico. É o título azul do resultado num motor de pesquisa, e é a primeira coisa que um leitor de ecrã diz quando a página abre. Por isso cada página tem de ter um título diferente, que diga o que ela é.
+Nos materiais, o título tem a forma `Página | Site`, como `Início | Estante Digital` ou `Sobre | Estante Digital`. A parte que muda vem primeiro, porque, com muitos separadores abertos, o browser corta os títulos e só se vê o princípio.
 
-Nos materiais usamos a forma `Página | Site`, como em `Início | Estante Digital` ou `Sobre | Estante Digital`. A parte que muda de página para página vem primeiro. Quando há muitos separadores abertos, o browser corta os títulos compridos, e fica só visível o princípio. Se o título começasse por "Estante Digital", todos os separadores do teu site pareceriam iguais. O traço vertical `|` é só um separador; também se usa muito o hífen.
+<details>
+<summary>Para ires mais longe: porque os telemóveis encolhem as páginas</summary>
 
-## Títulos: de h1 a h6
+Quando apareceram os telemóveis com um browser completo, quase todos os sites tinham sido feitos para ecrãs de computador. Para não os estragar, os telemóveis passaram a fingir que tinham um ecrã de cerca de 980 píxeis, e encolhiam a página até caber. A linha do `viewport` diz ao telemóvel que deixe de fingir.
 
-O HTML tem seis níveis de título: `h1`, `h2`, `h3`, `h4`, `h5` e `h6`, do mais importante para o menos importante. O `h` vem de *heading*, título em inglês.
+</details>
 
-Os títulos de uma página formam o seu **índice**. São como os capítulos e as secções de um livro, ou as partes de um relatório que entregas na escola. Um trabalho tem um título geral, está dividido em capítulos, e cada capítulo pode ter secções. Numa página é igual:
+### Títulos: de h1 a h6
 
-- o `h1` é o título da página inteira, o assunto do conteúdo principal. Nas nossas páginas há um só `h1`: o HTML aceita mais, mas um só dá o índice mais claro;
+Num trabalho escolar, o título geral, os capítulos e as secções mostram logo como o trabalho está organizado. Numa página, isso faz-se com os títulos. O HTML tem seis níveis, do `h1`, o mais importante, ao `h6`, o menos importante. O `h` vem de *heading*, título em inglês.
+
+Os títulos de uma página formam o seu **índice**:
+
+- o `h1` é o título da página inteira, o assunto do conteúdo principal, e nas nossas páginas há um só;
 - cada `h2` é o título de uma grande parte da página;
-- cada `h3` é o título de uma parte dentro de um `h2`;
-- e assim por diante, embora numa página pequena raramente se passe do `h3`.
+- cada `h3` é o título de uma parte dentro de um `h2`, e assim por diante.
 
-A regra que mais importa é esta. A descer, não se saltam níveis. Depois de um `h2`, o título seguinte pode ser outro `h2`, uma parte nova ao mesmo nível, ou um `h3`, uma parte dentro desta. Não pode ser um `h4`, porque um `h4` a seguir a um `h2` quer dizer "uma subsecção de uma subsecção que não existe". A subir já se pode saltar. Depois de um `h4`, podes voltar a um `h2`, porque isso só quer dizer que a parte anterior acabou e começa uma parte nova.
+A regra que mais importa é esta: a descer, não se saltam níveis. Depois de um `h2`, o título seguinte pode ser outro `h2`, uma parte nova ao mesmo nível, ou um `h3`, uma parte desta. Não pode ser um `h4`, que seria a parte de uma parte que não existe. A subir pode saltar-se: depois de um `h4`, podes voltar a um `h2`, porque começa uma parte nova.
 
-Vê o índice da página de um recurso da Estante Digital, desenhado com a indentação a mostrar os níveis:
+Este é o índice da página de um recurso da Estante Digital, com a indentação a mostrar os níveis:
 
 ```text
 h1  Primeiros passos na Web
@@ -296,7 +251,7 @@ h1  Primeiros passos na Web
     h2  Dica de quem já o leu
 ```
 
-E agora um índice com dois problemas:
+E este é um índice com dois problemas:
 
 ```text
 h1  Estante Digital
@@ -305,42 +260,39 @@ h1  Primeiros passos na Web
     h3  O que vais aprender
 ```
 
-O primeiro problema é haver dois `h1`: a página parece ter dois assuntos principais. O nome do site não é o assunto desta página; o assunto é o livro. O segundo problema é o salto de `h1` para `h3`, que deixa um nível vazio pelo meio.
+Há dois `h1`, e a página parece ter dois assuntos, quando o assunto é o livro e não o nome do site. E há um salto de `h1` para `h3`, que deixa um nível vazio pelo meio.
 
-Porque é que isto importa tanto? Pensa em como tu lês uma página nova. Antes de ler, passas os olhos pelos títulos grandes para ver se a página tem o que procuras. Uma pessoa que usa um leitor de ecrã não pode passar os olhos, mas faz uma coisa equivalente. Pede ao programa a lista dos títulos da página, ou salta de título em título com uma tecla. Para essa pessoa, os títulos são o mapa da página. Se a hierarquia estiver errada, o mapa está errado. Os motores de pesquisa também usam os títulos para perceber de que trata a página. E tu próprio, quando voltares ao teu código daqui a três meses, vais agradecer ter uma estrutura clara.
+Isto importa porque quem usa um leitor de ecrã não passa os olhos pela página. Pede a lista dos títulos, ou salta de título em título com uma tecla. Para essa pessoa, os títulos são o mapa da página, e se a hierarquia estiver errada, o mapa está errado.
 
-Há um erro muito comum, que é escolher o título pelo tamanho da letra. O browser mostra o `h1` com letra grande e o `h4` com letra pequena. Há quem use um `h4` só porque "fica com o tamanho certo". Esse tamanho é só o aspeto por omissão do browser, e no tema do CSS vais aprender a mudá-lo como quiseres. O nível de um título escolhe-se pelo lugar que o título ocupa na estrutura, nunca pelo tamanho com que aparece. O erro ao contrário também existe: pôr um texto a negrito para parecer um título. Fica com ar de título para quem vê. Para o leitor de ecrã e para o motor de pesquisa, é só um texto a negrito.
+O erro típico é escolher o título pelo tamanho da letra, como um `h4` "porque fica do tamanho certo". O tamanho é só o aspeto que o browser dá por omissão, e o CSS muda-o. O nível escolhe-se pelo lugar do título na estrutura. Para apanhar os erros, faz o índice da página, com a indentação a mostrar os níveis: tem de fazer sentido sozinho.
 
-Os erros dos títulos reconhecem-se no índice da página. Há um `h1` seguido de um `h3`, há dois `h1`, ou há um título escolhido "porque fica mais pequeno". Para os apanhar, escreve o índice da página à mão, com a indentação a mostrar os níveis, como os índices acima. O índice tem de fazer sentido sozinho. O tamanho resolve-se no CSS.
+### Parágrafos e texto com significado
 
-## Parágrafos e texto com significado
+Num aviso da biblioteca, há uma frase que ninguém pode deixar escapar: o prazo de entrega. O texto corrido vai em parágrafos, com o elemento `p`, e dentro de um parágrafo há dois elementos que dão significado a palavras soltas:
 
-O elemento `p` marca um **parágrafo**: um bloco de texto corrido, com uma ideia. O browser deixa um espaço antes e depois de cada parágrafo. É o elemento que mais vais escrever.
-
-Dentro de um parágrafo, há dois elementos que dão significado a palavras soltas:
-
-- `strong` marca texto de importância forte, algo que o leitor não pode deixar escapar, como um prazo ou um aviso. O browser mostra-o a negrito;
-- `em` marca ênfase: a palavra onde se põe a força quando se diz a frase em voz alta. Por vezes, essa força muda o sentido da frase. O browser mostra o `em` em itálico.
+- o `strong` marca texto de importância forte, como um prazo ou um aviso, e o browser mostra-o a negrito;
+- o `em` marca ênfase, a palavra que tem a força da frase, e o browser mostra-o em itálico.
 
 ```html
 <p>A requisição é por uma semana. <strong>Livros entregues com atraso bloqueiam novas requisições.</strong></p>
 <p>Não disse que o livro era difícil. Disse que era <em>comprido</em>.</p>
 ```
 
-No browser, a segunda frase do primeiro parágrafo aparece a negrito, e a palavra "comprido" aparece em itálico. Experimenta dizer a segunda frase em voz alta com a força em "comprido": é isso que o `em` marca.
+No browser, a segunda frase do primeiro parágrafo aparece a negrito, e a palavra "comprido" aparece em itálico. O `em` diz que a frase fala do tamanho do livro, e não da dificuldade.
 
-Existem também os elementos `b` e `i`, que põem o texto a negrito e em itálico com um significado muito fraco. O `b` só chama a atenção para umas palavras, e o `i` marca um tom diferente do resto do texto, como uma palavra estrangeira. Não os vamos usar. Se queres importância, usa `strong`; se queres ênfase, usa `em`; se só queres mudar o aspeto, isso é trabalho do CSS.
+<details>
+<summary>Para ires mais longe: os elementos b e i</summary>
 
-## Listas
+Existem também os elementos `b` e `i`, que põem o texto a negrito e em itálico com um significado muito fraco. O `b` só chama a atenção para umas palavras, e o `i` marca um tom diferente, como uma palavra estrangeira. Nas aulas usamos o `strong` para a importância e o `em` para a ênfase. Para mudar só o aspeto, usa-se o CSS.
 
-Há dois tipos de lista em HTML:
+</details>
+
+### Listas
+
+Os passos de uma receita e a lista dos ingredientes são listas diferentes: nos passos, a ordem conta, e nos ingredientes não. Por isso o HTML tem dois tipos de lista, e cada item, nos dois, é um elemento `li` (de *list item*):
 
 - a **lista não ordenada**, `ul` (de *unordered list*), para itens cuja ordem não importa;
 - a **lista ordenada**, `ol` (de *ordered list*), para itens cuja ordem importa.
-
-Nos dois casos, cada item é um elemento `li` (de *list item*).
-
-Antes de continuares, tenta prever: o que é que o browser põe à frente de cada item de cada uma destas listas?
 
 ```html
 <ul>
@@ -354,13 +306,11 @@ Antes de continuares, tenta prever: o que é que o browser põe à frente de cad
 </ol>
 ```
 
-Na lista `ul`, o browser põe uma bolinha antes de cada item. Na lista `ol`, numera os itens sozinho: 1. e 2. Nas duas, os itens aparecem um pouco afastados da margem esquerda.
+Na `ul`, o browser põe uma bolinha antes de cada item. Na `ol`, numera os itens, 1. e 2., e os números não estão no ficheiro: é o browser que os põe, pela ordem dos `li`.
 
-Leitura guiada: cada lista abre e fecha com a sua etiqueta, `ul` ou `ol`, e lá dentro só há elementos `li`, um por item. Os números da `ol` não estão escritos no ficheiro: é o browser que os põe, pela ordem dos `li`.
+Para escolher, faz o teste da troca: se trocares dois itens de lugar, a informação fica errada? Nos passos de uma receita, trocar "bater os ovos" com "pôr no forno" estraga o bolo, e é uma lista ordenada. Nos ingredientes, a ordem é indiferente, e é uma lista não ordenada.
 
-Para decidir entre as duas, faz este teste: se trocar dois itens de lugar, a informação fica errada? Nos passos de uma receita, trocar "bater os ovos" com "pôr no forno" estraga o bolo: é uma lista ordenada. Na lista dos ingredientes, a ordem é indiferente: é uma lista não ordenada. Um top 10 também é ordenado, porque a posição é a própria informação.
-
-Há duas regras de aninhamento que o browser não te avisa se falhares. Dentro de um `ul` ou de um `ol` só podem estar elementos `li`. E um `li` só pode estar dentro de um `ul` ou de um `ol`. Se precisares de uma lista dentro de outra, a lista de dentro vai dentro de um `li`, e não entre dois `li`:
+Dentro de um `ul` ou de um `ol` só podem estar elementos `li`, e o browser não avisa se falhares. Uma lista dentro de outra vai dentro de um `li`, e não entre dois `li`:
 
 ```html
 <ul>
@@ -375,63 +325,29 @@ Há duas regras de aninhamento que o browser não te avisa se falhares. Dentro d
 </ul>
 ```
 
-No browser, os dois livros aparecem por baixo de "Livros", mais afastados da margem, e com uma bolinha vazia em vez de cheia. É assim que o browser mostra uma lista dentro de outra.
+Os dois livros aparecem por baixo de "Livros", mais afastados da margem e com uma bolinha vazia.
 
-Porquê usar uma lista em vez de escrever os itens em parágrafos com um hífen ou um número à frente? Porque o browser passa a saber que é uma lista. Um leitor de ecrã anuncia "lista, 4 itens" antes de ler, e a pessoa fica logo a saber quanto vai ouvir. No CSS vais poder mudar o aspeto de todas as listas de uma vez. E se acrescentares um passo a meio de uma lista ordenada, o browser renumera tudo sozinho.
+Uma lista, e não parágrafos com um hífen à frente, faz o browser saber que é uma lista. Um leitor de ecrã anuncia "lista, 2 itens" antes de a ler, e a pessoa fica a saber quanto vai ouvir.
 
-É também por isto que os menus de navegação dos sites são escritos como listas de ligações, como vais ver no exemplo guiado.
+## Parte 3: Ligações e imagens
 
-## Ligações
+### Uma ligação leva a outro sítio
 
-Uma **ligação** (em inglês, *link*) escreve-se com o elemento `a` (de *anchor*, âncora) e o atributo `href` (de *hypertext reference*), que diz o destino:
+Para ir da página inicial da Estante Digital para a página Sobre, carrega-se numa palavra sublinhada. É uma **ligação** (em inglês, *link*), que se escreve com o elemento `a` e o atributo `href`, que diz o destino:
 
 ```html
 <a href="sobre.html">Sobre a Estante Digital</a>
 ```
 
-No browser aparece "Sobre a Estante Digital", sublinhado e de outra cor, normalmente azul, que é o aspeto por omissão de uma ligação. O `sobre.html` não aparece: diz só para onde a ligação leva.
+No browser aparece "Sobre a Estante Digital", sublinhado e azul, e o `sobre.html` não aparece.
 
-O conteúdo do `a` é o **texto da ligação**: o que aparece na página, sublinhado, e em que o utilizador carrega. Esse texto tem de dizer para onde a ligação leva. Evita "clica aqui", "aqui" ou "ver mais". Há duas razões. A primeira é que muita gente não lê a página toda. Passa os olhos e procura o sítio onde carregar, e um "clica aqui" obriga a ler a frase à volta para perceber para onde vai. A segunda é que os leitores de ecrã conseguem mostrar a lista de todas as ligações da página, fora do texto à volta. Uma lista com dez "clica aqui" não serve para nada. Uma lista com "Horário da biblioteca", "Primeiros passos na Web" e "Sobre a Estante Digital" diz tudo.
+O conteúdo do `a` é o **texto da ligação**: o que aparece sublinhado e em que se carrega. Esse texto diz para onde a ligação leva. Evita "clica aqui", "aqui" ou "ver mais", por duas razões. Muita gente passa os olhos pela página à procura do sítio onde carregar, e um "clica aqui" obriga a ler a frase à volta. E um leitor de ecrã pode mostrar a lista das ligações da página, fora do texto: dez "clica aqui" não dizem nada.
 
-Para corrigir um "clica aqui", põe a ligação nas palavras que dizem o destino. Em vez de "Para ver o horário, clica aqui", escreve "Consulta o horário da biblioteca", com a ligação em "horário da biblioteca".
+Para corrigir, põe a ligação nas palavras que dizem o destino. Em vez de "Para ver o horário, clica aqui", escreve "Consulta o horário da biblioteca", com a ligação em "horário da biblioteca".
 
-O valor do `href` pode ter várias formas, conforme o sítio para onde queres ir:
+### Caminhos relativos
 
-| Destino | Exemplo de `href` | Quando se usa |
-| --- | --- | --- |
-| Outra página do teu site | `sobre.html` | Para navegar entre as tuas páginas. É um **caminho relativo**, explicado na secção seguinte |
-| Uma página de outro site | `https://developer.mozilla.org/pt-BR/docs/Web/HTML/Reference/Elements` | Para levar a pessoa para fora do teu site. É um **endereço absoluto**: tem de começar por `https://` |
-| Uma parte da mesma página | `#horario` | Para saltar para um elemento da página que tenha o atributo `id="horario"` |
-| Um endereço de correio eletrónico | `mailto:biblioteca@escola.example` | Para abrir o programa de correio com o destinatário preenchido |
-
-Num endereço absoluto, o `https://` é obrigatório. Se escreveres `href="developer.mozilla.org"`, sem ele, o browser pensa que é o nome de um ficheiro na pasta do teu site. Procura-o, não o encontra, e a ligação dá erro. É um dos enganos mais frequentes, e reconhece-se assim. Carregas numa ligação para outro site e aparece uma página de erro. No Chrome em português, diz "Não foi possível aceder ao seu ficheiro", com o código `ERR_FILE_NOT_FOUND`. Na barra do browser, o endereço mostra que ele foi procurar um ficheiro dentro da pasta do teu site. Para corrigir, abre a página de destino, copia o endereço completo da barra do browser e cola-o no `href`.
-
-Numa ligação para uma parte da mesma página, o elemento de destino precisa de um atributo `id` com um nome. A ligação usa esse nome com um cardinal à frente:
-
-```html
-<a href="#horario">Ver o horário da biblioteca</a>
-...
-<section id="horario">
-  <h2>Onde o encontrar</h2>
-  ...
-</section>
-```
-
-O valor de um `id` tem de ser único na página: não pode haver dois elementos com o mesmo `id`. Segue também as regras dos nomes de ficheiros que vais ver já a seguir: minúsculas, sem espaços e sem acentos.
-
-Vais encontrar ligações com o atributo `target="_blank"`, que as abre num separador novo. Não o uses por hábito. Quem decide se quer um separador novo é quem está a ler, e pode fazê-lo sozinho, com o botão do meio do rato, por exemplo. Um separador novo aberto sem aviso desorienta quem usa leitor de ecrã, e faz com que o botão de voltar atrás deixe de funcionar. Se um dia tiveres uma razão forte para o usar, diz no próprio texto da ligação que ela abre noutro separador.
-
-### Ligação ou botão
-
-Na Web há duas coisas em que se carrega, as ligações e os botões, e no ecrã podem ter o mesmo aspeto. Uma ligação leva-te a outro sítio: outra página, outra parte da mesma página, um ficheiro. Um **botão** faz uma ação aqui mesmo, sem sair do sítio: enviar um formulário, abrir um menu, acrescentar um item a uma lista. As ligações são o elemento `a`. Os botões são o elemento `button`, que vais usar nos temas dos formulários e do JavaScript.
-
-Ligações e botões também se comportam de maneira diferente para quem usa o teclado ou um leitor de ecrã. Pelo teclado, uma ligação ativa-se com Enter, e um botão com Enter ou com a barra de espaços. Um leitor de ecrã anuncia "ligação" ou "botão", e a pessoa espera coisas diferentes de cada um. De uma ligação espera mudar de sítio, e de um botão espera que aconteça alguma coisa. Por isso não se faz uma ligação com ar de botão para executar uma ação, nem um botão para navegar. Neste tema não há ações, só navegação, e por isso tudo em que se carrega é uma ligação.
-
-## Caminhos relativos
-
-Um **caminho relativo** diz onde está um ficheiro a partir do ficheiro onde estás. É como dar direções a partir de onde a pessoa está: "segue em frente e é a segunda porta". Não se dá a morada completa.
-
-Considera a pasta da Estante Digital:
+Para ligar ao `sobre.html` ou para mostrar uma imagem do teu site, não se dá a morada completa do ficheiro. Dá-se um **caminho relativo**: onde está o ficheiro a partir do ficheiro onde estás, como quem diz "segue em frente e é a segunda porta".
 
 ```text
 estante-digital/
@@ -443,33 +359,49 @@ estante-digital/
     └── logotipo.svg
 ```
 
-A partir do `index.html`:
+A partir do `index.html`, o `sobre.html` está na mesma pasta, e basta o nome: `href="sobre.html"`. O logótipo está dentro da pasta `imagens`, e escreve-se o nome da pasta, uma barra e o nome do ficheiro: `src="imagens/logotipo.svg"`.
 
-- para ligar ao `sobre.html`, que está na mesma pasta, basta o nome: `href="sobre.html"`;
-- para mostrar o logótipo, que está dentro da pasta `imagens`, escreve-se o nome da pasta, uma barra e o nome do ficheiro: `src="imagens/logotipo.svg"`.
+Quando o ficheiro está na pasta de cima, sobe-se com dois pontos seguidos, `..`, que querem dizer "a pasta de cima". Se a página do livro estivesse numa pasta `recursos`, para voltar ao `index.html` escrevia-se `href="../index.html"`. Para o logótipo, subia-se uma pasta e descia-se para `imagens`: `src="../imagens/logotipo.svg"`. Cada `../` sobe um nível.
 
-E se um ficheiro estiver numa pasta de cima? Imagina que o site tivesse uma pasta `recursos`, com as páginas dos recursos lá dentro:
+Três regras evitam quase todos os problemas com caminhos:
 
-```text
-estante-digital/
-├── index.html
-├── imagens/
-│   └── logotipo.svg
-└── recursos/
-    └── primeiros-passos-na-web.html
-```
+- nunca uses o caminho completo do teu disco, como `C:\Users\Ana\Desktop\site\foto.jpg` ou um endereço `file:///`, porque só funciona no teu computador;
+- nos caminhos da Web usa-se a barra `/`, mesmo no Windows, onde o explorador de ficheiros mostra `\`;
+- os nomes dos ficheiros e das pastas vão em minúsculas, sem espaços e sem acentos, com hífenes entre as palavras, como `primeiros-passos-na-web.html`.
 
-A partir de `recursos/primeiros-passos-na-web.html`, para voltar ao `index.html` é preciso subir uma pasta primeiro. Isso escreve-se com dois pontos seguidos, `..`, que querem dizer "a pasta de cima": `href="../index.html"`. Para chegar ao logótipo, sobe-se uma pasta e desce-se para `imagens`: `src="../imagens/logotipo.svg"`. Cada `../` sobe um nível. Neste tema, as tuas páginas vão ficar todas na mesma pasta, e só vais precisar de nomes simples e de `imagens/`. Mas convém perceberes o `../` desde já, porque o vais encontrar.
+A última regra tem uma razão escondida. No Windows, `Foto.JPG` e `foto.jpg` são o mesmo ficheiro, mas num servidor, que quase sempre usa Linux, são dois ficheiros diferentes. Uma página que funciona na escola pode deixar de mostrar a imagem quando é publicada.
 
-Três regras evitam quase todos os problemas com caminhos.
+### O destino de uma ligação
 
-- Nunca uses o caminho completo do teu disco, como `C:\Users\Ana\Desktop\site\imagens\foto.jpg` ou um endereço começado por `file:///`. Pode funcionar no teu computador, porque o ficheiro está lá. Mas deixa de funcionar em qualquer outro computador e no servidor, quando publicares o site. Acontece muitas vezes quando se arrasta um ficheiro para o editor. Reconhece-se assim: a página funciona no teu computador e não funciona no do colega. A correção é trocar o caminho do disco por um caminho relativo, a partir da pasta da página.
-- Nos caminhos da Web usa-se a barra `/`, mesmo no Windows, onde o explorador de ficheiros mostra a barra ao contrário, `\`.
-- Os nomes dos ficheiros e das pastas escrevem-se em minúsculas, sem espaços e sem acentos, com hífenes entre as palavras, como `primeiros-passos-na-web.html`. No teu computador com Windows, `Foto.JPG` e `foto.jpg` são o mesmo ficheiro. Num servidor, que quase sempre usa Linux, são dois ficheiros diferentes. Uma página que funciona na escola deixa de mostrar a imagem quando é publicada, e ninguém percebe porquê. Os espaços e os acentos causam problemas parecidos. São as mesmas regras que os ficheiros dos materiais da disciplina seguem, como deves ter reparado nos nomes dos guias.
+O `href` escreve-se de maneira diferente conforme o destino está no teu site ou noutro:
 
-## Imagens
+| Destino | Exemplo de `href` | Quando se usa |
+| --- | --- | --- |
+| Outra página do teu site | `sobre.html` | Para navegar entre as tuas páginas, com um caminho relativo |
+| Uma página de outro site | `https://developer.mozilla.org/pt-BR/docs/Web/HTML/Reference/Elements` | Para levar a pessoa para fora do teu site |
 
-Uma imagem põe-se na página com o elemento `img`, que é vazio:
+O destino noutro site é um **endereço absoluto**: o endereço completo, que começa por `https://`. Se escreveres `href="developer.mozilla.org"`, sem ele, o browser pensa que é um ficheiro da pasta do teu site, procura-o e não o encontra. No Chrome em português aparece "Não foi possível aceder ao seu ficheiro". A barra de endereço mostra que o browser foi procurar dentro da tua pasta. Para corrigir, copia o endereço completo da barra do browser, na página de destino, e cola-o no `href`.
+
+<details>
+<summary>Para ires mais longe: outros destinos de uma ligação</summary>
+
+Um `href` como `#horario` salta para o elemento da mesma página que tem o atributo `id="horario"`. O valor de um `id` é único na página. Nas aulas, segue as regras dos nomes de ficheiros: minúsculas, sem espaços e sem acentos.
+
+Um `href` como `mailto:biblioteca@escola.example` abre o programa de correio com o destinatário preenchido.
+
+O atributo `target="_blank"` abre a ligação num separador novo. Não o uses por hábito: quem lê é que decide se quer um separador novo. E um separador aberto sem aviso desorienta quem usa um leitor de ecrã.
+
+</details>
+
+### Ligação ou botão
+
+Na Web, carrega-se em duas coisas diferentes, que no ecrã podem ter o mesmo aspeto. Uma ligação leva-te a outro sítio: outra página, outra parte da mesma página, um ficheiro. Um **botão** faz uma ação aqui mesmo, sem sair do sítio, como enviar um formulário ou abrir um menu. As ligações são o elemento `a`, e os botões são o elemento `button`.
+
+Para quem usa o teclado ou um leitor de ecrã, comportam-se de maneira diferente. Uma ligação ativa-se com Enter, e um botão com Enter ou com a barra de espaços. O leitor de ecrã anuncia "ligação" ou "botão", e a pessoa espera mudar de sítio, ou que aconteça alguma coisa. Por isso, uma ação nunca se faz com uma ligação, nem a navegação com um botão. Neste tema só há navegação, e por isso tudo em que se carrega é uma ligação.
+
+### Imagens
+
+A página do livro, na Estante Digital, mostra a capa, para a pessoa a reconhecer na estante da biblioteca. Uma imagem põe-se na página com o elemento `img`, que é vazio:
 
 ```html
 <img src="imagens/capa-primeiros-passos-na-web.svg"
@@ -477,55 +409,48 @@ Uma imagem põe-se na página com o elemento `img`, que é vazio:
      width="240" height="320">
 ```
 
-Quando uma etiqueta tem muitos atributos, podes parti-la por várias linhas, como aqui, para se ler melhor. Os atributos são:
+Quando uma etiqueta tem muitos atributos, podes parti-la por várias linhas, para se ler melhor. Os atributos são:
 
-- `src` (de *source*, origem): o caminho para o ficheiro da imagem, com as regras da secção anterior;
-- `alt` (de *alternative*, alternativo): o texto que substitui a imagem quando ela não pode ser vista. Tem uma secção só para ele, a seguir;
-- `width` e `height`: a largura e a altura da imagem, em píxeis, sem escrever a unidade. Não são obrigatórios, mas ajudam. O browser fica a saber o espaço que a imagem vai ocupar antes de a descarregar, e a página não "salta" quando ela chega. Usa as medidas verdadeiras da imagem, ou medidas com a mesma proporção.
+- `src` (de *source*, origem): o caminho para o ficheiro da imagem;
+- `alt` (de *alternative*, alternativo): o texto que substitui a imagem quando ela não pode ser vista;
+- `width` e `height`: a largura e a altura, em píxeis, sem a unidade. Com eles, o browser reserva o espaço da imagem antes de a descarregar, e a página não salta quando ela chega.
 
-Os formatos de imagem mais usados na Web são quatro. O **JPG** serve para fotografias. O **PNG** serve para desenhos, capturas de ecrã e imagens com fundo transparente. O **SVG** serve para desenhos feitos de formas geométricas, como logótipos e ícones, e pode ser aumentado sem perder qualidade. As imagens da Estante Digital são SVG. O **WebP** é um formato mais recente, que faz ficheiros mais pequenos com a mesma qualidade.
+| Formato | Para quê |
+| --- | --- |
+| JPG | Fotografias |
+| PNG | Desenhos, capturas de ecrã e imagens com fundo transparente |
+| SVG | Desenhos feitos de formas, como logótipos e ícones, que se podem aumentar sem perder qualidade |
+| WebP | O mesmo que o JPG e o PNG, com ficheiros mais pequenos |
 
-Cuidado com o tamanho dos ficheiros. Uma fotografia tirada com um telemóvel pode ter 4000 píxeis de largura e vários megabytes. Numa página, isso quer dizer uma espera longa para quem tem dados móveis. Antes de usares uma fotografia, reduz-lhe o tamanho para a largura de que precisas, com qualquer programa de edição de imagem. No tema da responsividade vais voltar a este assunto.
+As imagens da Estante Digital são SVG. Uma fotografia tirada com um telemóvel pode ter 4000 píxeis de largura e vários megabytes, e demora a chegar a quem tem dados móveis. Antes de a usares, reduz-lhe o tamanho para a largura de que precisas, num programa de edição de imagem.
 
-Sobre a origem das imagens: usa fotografias e desenhos feitos por ti, ou imagens cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Quando uma imagem não é tua, guarda de onde veio e qual é a licença. O README é um ficheiro que fica na pasta do site e o apresenta a quem o abre. Diz o que é o site, como se abre e de onde vêm os recursos. O modelo dele está na pasta do projeto, em [readme-do-projeto](../projeto/modelos/readme-do-projeto.md). No README do teu site vais dizer a origem e a licença de cada imagem que não fizeste. É a secção "Imagens e tipos de letra de outros". E não publiques fotografias de outras pessoas sem autorização delas.
+Usa imagens feitas por ti, ou imagens cuja licença permita o uso. Uma imagem encontrada numa pesquisa não é livre só por estar na Internet. Quando uma imagem não é tua, diz de onde veio e qual é a licença. Escreve-o no README do teu site, o ficheiro que o apresenta a quem abre a pasta, na secção "Imagens e tipos de letra de outros". O modelo do README está na pasta do projeto, em [readme-do-projeto](../projeto/modelos/readme-do-projeto.md). E não publiques fotografias de outras pessoas sem autorização delas.
 
-## O texto alternativo
+### O texto alternativo
 
-Há pelo menos três situações em que a imagem não é vista, e em cada uma delas é o `alt` que ocupa o lugar dela:
+Uma imagem nem sempre é vista. Uma pessoa cega usa um leitor de ecrã, que lê o `alt` no sítio da imagem. Uma imagem que não carregou, por a rede estar lenta ou o caminho errado, dá lugar ao `alt`. E um motor de pesquisa lê o `alt` para saber o que a imagem mostra. Em todos estes casos, o **texto alternativo**, o valor do `alt`, ocupa o lugar da imagem.
 
-- a pessoa é cega ou tem pouca visão e usa um leitor de ecrã, que lê o `alt` em voz alta no sítio da imagem;
-- a imagem não carregou, porque a rede está lenta ou porque o caminho está errado, e o browser mostra o `alt` no sítio dela;
-- um motor de pesquisa quer saber o que a imagem mostra, e lê o `alt`.
+Para o escrever, faz esta pergunta: se estivesses ao telefone a descrever a página a alguém, o que dirias no sítio da imagem? A página tem de continuar a fazer sentido. Não é uma descrição de todos os pormenores, mas o que a imagem transmite naquele sítio. Não comeces por "Imagem de", porque o leitor de ecrã já anuncia que é uma imagem, e escreve uma frase curta.
 
-Para escrever um bom **texto alternativo**, faz esta pergunta. Se eu estivesse ao telefone a descrever esta página a alguém, o que diria no sítio da imagem? A página tem de continuar a fazer sentido. A resposta é o `alt`. Não é uma descrição de todos os pormenores. É o que a imagem transmite naquele sítio da página. Há duas regras práticas. Não comeces por "Imagem de" ou "Fotografia de", porque o leitor de ecrã já anuncia que é uma imagem. E escreve uma frase curta, raramente mais do que uma.
+A resposta depende do sítio da imagem:
 
-Há três situações, e cada uma pede uma resposta diferente.
-
-**A imagem transmite informação.** O `alt` descreve essa informação. Na página do livro, a capa mostra a cara do livro que a pessoa vai procurar na biblioteca. O `alt` descreve o que se vê: `alt="Capa azul com o título Primeiros passos na Web em letras brancas e o desenho de um globo terrestre."`. Quem não vê a capa fica a saber como a reconhecer na estante.
-
-**A imagem é decorativa ou repete o que já está escrito.** O `alt` fica vazio: `alt=""`. É o caso do logótipo da Estante Digital, que está mesmo ao lado do texto "Estante Digital". Se lhe puséssemos `alt="Logótipo da Estante Digital"`, quem usa leitor de ecrã ouviria "Logótipo da Estante Digital, Estante Digital", com o nome repetido. Com o `alt` vazio, o leitor de ecrã salta a imagem, e a pessoa ouve o nome uma só vez.
-
-Atenção: `alt` vazio não é o mesmo que não ter `alt`. Um `alt=""` diz "esta imagem não tem nada a acrescentar, podes saltá-la". Uma imagem sem atributo `alt` não diz nada. Na dúvida, muitos leitores de ecrã leem o nome do ficheiro, como "logotipo ponto svg", o que é pior do que tudo. Toda a imagem tem o atributo `alt`: às vezes com texto, às vezes vazio, nunca ausente.
-
-**A imagem é o único conteúdo de uma ligação.** Quando uma imagem sozinha serve de ligação, o `alt` é o texto dessa ligação. Deve dizer para onde ela leva, e não o que a imagem mostra. Imagina, na página inicial da Estante Digital, a capa do livro em pequenino, sozinha dentro de uma ligação para a página dele. Antes de leres a explicação, tenta prever: o que diz um leitor de ecrã quando chega a esta ligação?
+- A imagem transmite informação: o `alt` descreve essa informação. Na página do livro, a capa ajuda a reconhecê-lo na estante, e o `alt` descreve o que se vê: `alt="Capa azul com o título Primeiros passos na Web em letras brancas e o desenho de um globo terrestre."`.
+- A imagem é decorativa ou repete o que está escrito ao lado: o `alt` fica vazio, `alt=""`. É o logótipo da Estante Digital, ao lado do nome do site. Com um `alt` com texto, o leitor de ecrã diria o nome duas vezes.
+- A imagem é o único conteúdo de uma ligação: o `alt` é o texto da ligação. Diz para onde ela leva, e não o que a imagem mostra.
 
 ```html
 <a href="primeiros-passos-na-web.html"><img src="imagens/capa-primeiros-passos-na-web.svg" alt="Página do livro Primeiros passos na Web" width="60" height="80"></a>
 ```
 
-Diz que é uma ligação e lê o `alt` como o nome dela: "Página do livro Primeiros passos na Web".
+Aqui, a capa pequena é a única coisa em que se carrega. O leitor de ecrã anuncia uma ligação e lê o `alt` como o nome dela: "Página do livro Primeiros passos na Web". Se o `alt` descrevesse a capa, a pessoa ouvia as cores e o globo, e não sabia para onde ia.
 
-Leitura guiada: o `img` está dentro do `a`, e é o único conteúdo dele. Não há texto nenhum em que carregar além da imagem, e por isso o `alt` faz de texto da ligação. Se descrevesse a capa, a pessoa ouvia as cores e o globo, e não ficava a saber para onde a ligação leva. Se ficasse vazio, a ligação não tinha nome nenhum. As medidas, 60 por 80, mantêm a proporção da capa, que mede 240 por 320. O Clube de Robótica, nos exemplos da disciplina, tem uma ligação assim: o desenho de um calendário que leva ao horário dos treinos.
+Um `alt` vazio não é o mesmo que não ter `alt`. O `alt=""` diz "podes saltar esta imagem". Uma imagem sem `alt` não diz nada, e muitos leitores de ecrã leem então o nome do ficheiro, como "logotipo ponto svg". Toda a imagem tem o atributo `alt`: às vezes com texto, às vezes vazio, nunca ausente.
 
-Repara que a mesma imagem pode precisar de textos alternativos diferentes em sítios diferentes. A capa do livro, na página do livro, tem um `alt` descritivo. Imagina a mesma capa pequenina numa lista de livros, ao lado do título escrito. Aí o `alt` podia ficar vazio, porque o título já está ali. O `alt` depende do contexto, e não só da imagem.
+Para testar uma página inteira, lê-a de cima a baixo trocando cada imagem pelo seu `alt`. Se continuar a fazer sentido, sem faltar nada e sem repetições, os textos alternativos estão bem.
 
-Um teste simples para uma página inteira: lê-a de cima a baixo substituindo cada imagem pelo seu `alt`. Se a página continuar a fazer sentido, sem faltar nada e sem repetições, os textos alternativos estão bem.
+### Imagem com legenda: figure e figcaption
 
-Há três erros frequentes com o `alt`, e todos se corrigem com a pergunta do telefone. O primeiro é uma imagem sem o atributo. O segundo é um `alt` que só diz "imagem", ou que começa por "Imagem de". O terceiro é um `alt` que repete a legenda, como vais ver na secção seguinte. Uma imagem com informação tem um `alt` que descreve essa informação. Uma imagem decorativa, ou que repete o texto ao lado, tem `alt=""`. Nenhuma imagem fica sem o atributo.
-
-## Imagem com legenda: figure e figcaption
-
-Às vezes, uma imagem é um conteúdo com direito próprio, de que o texto fala, e tem uma legenda. Nesse caso, junta-se a imagem e a legenda num elemento `figure`. A legenda vai num `figcaption`:
+Às vezes, uma imagem é um conteúdo de que o texto fala, e tem uma legenda. Junta-se a imagem e a legenda num `figure`, e a legenda vai num `figcaption`, no princípio ou no fim do `figure`:
 
 ```html
 <figure>
@@ -539,101 +464,98 @@ Há três erros frequentes com o `alt`, e todos se corrigem com a pergunta do te
 </figure>
 ```
 
-No browser, a capa aparece com a legenda logo por baixo. As duas ficam um pouco afastadas da margem esquerda, que é o aspeto por omissão de um `figure`.
+No browser, a capa aparece com a legenda por baixo. O `figure` diz que as duas formam uma unidade: a legenda pertence àquela imagem, e não ao parágrafo seguinte.
 
-O `figure` diz ao browser que a imagem e a legenda formam uma unidade: a legenda pertence àquela imagem, e não ao parágrafo seguinte. O `figcaption` é o primeiro ou o último filho do `figure`.
+O `alt` e a legenda não fazem o mesmo trabalho, e por isso não se repetem. A legenda é vista por toda a gente e acrescenta contexto, como de onde vem a imagem. O `alt` só é lido por quem não vê a imagem, e diz o que ela mostra. Nem todas as imagens precisam de `figure`: o logótipo do cabeçalho não tem legenda, e o texto não fala dele.
 
-O `alt` e a legenda não fazem o mesmo trabalho, e por isso não devem repetir-se. A legenda é vista por toda a gente e acrescenta contexto: de onde vem a imagem, quando foi tirada, o que se deve notar nela. O `alt` só é lido por quem não vê a imagem, e diz o que a imagem mostra. No exemplo, a legenda diz de que edição é a capa e avisa que o livro é fictício. O `alt` diz o que a capa tem desenhado.
+## Parte 4: As zonas da página
 
-Nem todas as imagens precisam de `figure`. O logótipo no cabeçalho, por exemplo, não é um conteúdo de que o texto fale e não tem legenda; é só uma imagem.
+### As zonas da página: header, nav, main e footer
 
-## Comentários
-
-Um **comentário** é um texto escrito no ficheiro para as pessoas que leem o código, e que o browser ignora. Escreve-se entre `<!--` e `-->`:
-
-```html
-<!-- O alt fica vazio porque o nome do site está escrito ao lado. -->
-<img src="imagens/logotipo.svg" alt="" width="48" height="48">
-```
-
-Os comentários servem para explicar decisões que o código sozinho não explica, como o porquê de um `alt` vazio. Os ficheiros da Estante Digital estão cheios de comentários deste tipo, para que os possas ler e perceber. Um aviso: os comentários não aparecem na página, mas qualquer pessoa os pode ler, abrindo o código da página no browser. Nunca escrevas num comentário nada que não escreverias na própria página.
-
-## Os elementos semânticos
-
-**Semântica** quer dizer significado. Escrever HTML semântico é escolher cada elemento pelo que o conteúdo é, e não pelo aspeto que queres que tenha. Já o fizeste com os títulos, as listas e o `strong`. Agora vais fazê-lo com as grandes zonas da página.
-
-No guia 01 viste wireframes: esboços em que a página está dividida em zonas, como o cabeçalho, a navegação, o conteúdo principal e o rodapé. O HTML tem um elemento para cada uma dessas zonas:
+Um wireframe divide a página em zonas: o cabeçalho, a navegação, o conteúdo principal e o rodapé. O HTML tem um elemento para cada uma. **Semântica** quer dizer significado. Escrever HTML semântico é escolher cada elemento pelo que o conteúdo é, e não pelo aspeto.
 
 | Elemento | O que marca | Na Estante Digital |
 | --- | --- | --- |
-| `header` | O cabeçalho: o conteúdo de introdução, como o nome do site, o logótipo e a navegação principal | O logótipo, o nome "Estante Digital" e o menu |
-| `nav` | Um grupo de ligações de navegação principal, que leva às várias partes do site | A lista com Início e Sobre |
+| `header` | O cabeçalho: a introdução, como o nome do site, o logótipo e a navegação principal | O logótipo, o nome e o menu |
+| `nav` | A navegação principal, que leva às várias partes do site | A lista com Início e Sobre |
 | `main` | O conteúdo principal: o que é próprio desta página e não se repete nas outras | Tudo o que está entre o cabeçalho e o rodapé |
-| `section` | Uma parte temática do conteúdo, com o seu próprio título | "Livros", "Vídeos", "Sítios e aplicações" |
-| `article` | Um conteúdo completo em si mesmo, que faria sentido sozinho noutro sítio | A ficha do livro Primeiros passos na Web |
-| `aside` | Um conteúdo relacionado mas secundário, que se pode saltar sem perder o essencial | A caixa "Dica de quem já o leu" |
-| `footer` | O rodapé: informação final, como autoria, contactos ou avisos | A nota que diz que o site é um exemplo e o conteúdo é fictício |
+| `footer` | O rodapé: a informação final, como a autoria ou um aviso | A nota de que o site é um exemplo |
 
-Estas são as regras e os testes para escolheres bem:
+Cada um tem as suas regras:
 
-- **`main`**: há um só por página. Não pode estar dentro do `header`, do `footer`, do `nav`, do `article`, do `aside` nem de uma `section`. O teste é perguntar o que muda de página para página: o cabeçalho e o rodapé repetem-se, e o que muda é o conteúdo principal.
-- **`nav`**: não é para qualquer grupo de ligações. É para os blocos de navegação principais, como o menu do site. A ligação "Voltar à lista de recursos" no fim de uma página não precisa de estar num `nav`.
-- **`section`**: tem sempre um título. O teste é perguntar se consegues dar-lhe um título que faça sentido. Se não consegues, provavelmente não é uma secção.
-- **`article`**: o teste é imaginar que o copias sozinho para outro site. Uma notícia, uma publicação de um blogue, a ficha de um produto ou de um livro continuam a fazer sentido. Um parágrafo solto a meio de uma explicação não.
-- **`aside`**: o teste é perguntar se, ao saltares esse bloco, perdes alguma coisa essencial. Uma dica, uma caixa de "sabias que", ligações para assuntos parecidos: saltam-se, e o conteúdo principal continua completo.
-- **`header` e `footer`**: além do cabeçalho e do rodapé da página inteira, também podem ser o cabeçalho e o rodapé de um `article`. Não se põe um `header` nem um `footer` dentro de outro `header` ou de outro `footer`.
+- há um só `main` por página, e não fica dentro do `header` nem do `footer`;
+- o `nav` é só para a navegação principal, e uma ligação solta como "Voltar à lista" não precisa dele;
+- o `header` e o `footer` nunca ficam um dentro do outro.
 
-E quando nenhum destes elementos serve? Existe o elemento `div`, que é uma caixa genérica, sem significado nenhum. Não é proibido: vais usá-lo no CSS para agrupar coisas por razões de arrumação. Mas é o último recurso, e não o primeiro. Uma página feita só de `div` funciona para quem a vê, e não diz nada a mais ninguém.
+Para saber o que é o `main`, pergunta o que muda de página para página. O cabeçalho e o rodapé repetem-se em todas, e o que muda é o conteúdo principal.
 
-Quando estiveres indeciso, faz as perguntas por esta ordem:
+### As partes do conteúdo: section, article e aside
 
-1. É a zona que junta todo o conteúdo próprio desta página, entre o cabeçalho e o rodapé? Então é o `main`. Uma parte de dentro dela passa à pergunta seguinte.
-2. É o bloco de ligações que leva às partes principais do site? Então é um `nav`.
-3. É a zona de introdução do topo, ou a zona de informação final do fundo? Então é o `header` ou o `footer`.
-4. É secundário, e pode saltar-se sem perder nada? Então é um `aside`.
-5. Faria sentido sozinho, copiado para outro sítio? Então é um `article`.
-6. É uma parte do conteúdo a que consegues dar um título? Então é uma `section`.
-7. Nenhuma das anteriores? Então é talvez um `div`, ou talvez não precise de caixa nenhuma, e basta um parágrafo ou uma lista.
+Dentro do conteúdo principal, há partes diferentes. Na página do livro, há a ficha do livro, as partes dessa ficha, cada uma com o seu título, e uma dica ao lado. O HTML tem um elemento para cada tipo de parte:
 
-A ordem das perguntas conta. Quase tudo se pode pôr debaixo de um título, e por isso a pergunta da `section` fica para o fim. Se viesse antes, uma caixa secundária com título, como a dica da Estante Digital, ficava classificada como secção sem chegar à pergunta do `aside`.
+| Elemento | O que marca | Na Estante Digital |
+| --- | --- | --- |
+| `section` | Uma parte do conteúdo, com o seu próprio título | "Livros", "Vídeos", "Sítios e aplicações" |
+| `article` | Um conteúdo completo, que faria sentido sozinho noutro sítio | A ficha do livro Primeiros passos na Web |
+| `aside` | Um conteúdo relacionado, mas secundário, que se pode saltar | A caixa "Dica de quem já o leu" |
 
-### Os quatro leitores de uma página
+Uma `section` tem sempre um título, e se não lhe consegues dar um, não é uma secção. Um `article` faria sentido copiado sozinho para outro site, como uma notícia ou a ficha de um livro. Um `aside` salta-se sem perder nada do essencial, como uma dica.
 
-Uma página não é lida só por pessoas que olham para o ecrã. É lida por, pelo menos, quatro tipos de leitores, e a semântica serve a todos.
+Quando estiveres indeciso, faz as perguntas do diagrama, por esta ordem, e para na primeira a que respondes sim:
 
-O primeiro são as pessoas que usam tecnologias de apoio, como os leitores de ecrã. Para elas, os elementos semânticos são pontos de referência. O programa permite saltar diretamente para o conteúdo principal, para a navegação ou para o rodapé, sem ter de ouvir tudo o que está antes. Uma pessoa que visite dez páginas do teu site não quer ouvir o menu dez vezes: salta para o `main`. Numa página feita só de `div`, esse salto não existe.
+```mermaid
+flowchart TD
+    q1["É todo o conteúdo próprio desta página?"] -- sim --> main["main"]
+    q1 -- não --> q2["É a navegação principal do site?"]
+    q2 -- sim --> nav["nav"]
+    q2 -- não --> q3["É a introdução do topo ou a informação final do fundo?"]
+    q3 -- sim --> hf["header ou footer"]
+    q3 -- não --> q4["É secundário, e pode saltar-se?"]
+    q4 -- sim --> aside["aside"]
+    q4 -- não --> q5["Faria sentido sozinho noutro sítio?"]
+    q5 -- sim --> article["article"]
+    q5 -- não --> q6["Consegues dar-lhe um título?"]
+    q6 -- sim --> section["section"]
+    q6 -- não --> div["div, ou nenhuma caixa"]
+```
 
-O segundo são os motores de pesquisa. Usam os elementos para perceber que parte da página é o conteúdo e que parte se repete em todas as páginas.
+Pela ordem das perguntas, as respostas são `main`, `nav`, `header` ou `footer`, `aside`, `article` e `section`. As partes de dentro do `main` voltam às perguntas, a partir da segunda. A pergunta da `section` fica para o fim, porque quase tudo se pode pôr debaixo de um título.
 
-O terceiro são as pessoas que leem o código: os teus colegas, o teu professor e tu próprio daqui a uns meses. Um `nav` diz o que é logo à primeira. Um `div` obriga a ler o que está lá dentro para perceber.
-
-O quarto são as outras linguagens. No tema do CSS vais dar aspeto aos elementos escolhendo-os pelo nome, por exemplo todos os `nav` ou todos os `article`. No tema do JavaScript vais procurar elementos na página para lhes mudar o conteúdo. Uma estrutura com significado torna os dois trabalhos mais simples.
+Se nenhuma pergunta servir, há o `div`, uma caixa genérica, sem significado, que serve para agrupar coisas só para as arrumar. É o último recurso, e não o primeiro. Uma página feita só de `div` funciona para quem a vê, e não diz nada a mais ninguém. Não diz nada a quem usa um leitor de ecrã, aos motores de pesquisa nem a quem lê o código.
 
 ### A árvore de acessibilidade
 
-Já sabes que o browser constrói uma árvore em memória a partir do teu ficheiro, o DOM. A partir do DOM constrói ainda uma segunda árvore, mais simples, chamada **árvore de acessibilidade**. É essa árvore que os leitores de ecrã e outras tecnologias de apoio recebem.
+Um leitor de ecrã não lê o ecrã nem o ficheiro. A partir do DOM, o browser constrói uma segunda árvore, mais simples, só com o que interessa a quem não vê a página. É a **árvore de acessibilidade**, e é essa que o leitor de ecrã recebe.
 
-Na árvore de acessibilidade, cada coisa aparece com duas informações principais. O **papel** diz o que a coisa é: título, ligação, lista, imagem, navegação, conteúdo principal. O **nome** é o texto que a identifica: o texto de uma ligação, o `alt` de uma imagem. Um `div` tem só um papel genérico (em inglês, *generic*), que não diz nada sobre o conteúdo. Uma imagem com `alt=""` nem sequer aparece, porque foi marcada como decorativa. É por isto que a semântica importa tanto. O que não está no HTML não chega à árvore. E o que não chega à árvore não existe para quem usa um leitor de ecrã.
+Nela, cada coisa aparece com duas informações. O **papel** diz o que a coisa é: título, ligação, lista, imagem, navegação. O nome é o texto que a identifica, como o texto de uma ligação ou o `alt` de uma imagem. Um `div` tem um papel genérico (em inglês, *generic*), que não diz nada. Uma imagem com `alt=""` nem aparece, porque foi marcada como decorativa.
 
-Os elementos `header`, `nav`, `main`, `aside` e `footer` da página inteira aparecem nesta árvore como **pontos de referência** (em inglês, *landmarks*). Os papéis deles são, pela mesma ordem, *banner*, *navigation*, *main*, *complementary* e *contentinfo*. São esses nomes que vais encontrar se abrires a árvore nas ferramentas do programador, como vais fazer no laboratório.
+É por isto que a semântica importa. O que não está no HTML não chega à árvore. E o que não chega à árvore não existe para quem usa um leitor de ecrã. No separador Elements das ferramentas do programador, a árvore abre-se no painel Accessibility.
 
-## Tabelas de dados
+### Os pontos de referência
 
-Uma **tabela de dados** serve para mostrar dados que estão naturalmente organizados em linhas e colunas. Pode ser um horário, as notas de uma turma por disciplina, os preços de um produto por tamanho ou os resultados de um campeonato. O teste é este: cada valor da tabela responde a uma pergunta que junta uma linha e uma coluna? No horário da biblioteca, "a que horas fecha à quarta-feira?" responde-se cruzando a linha "Quarta-feira" com a coluna "Fecha". Se a informação se lê assim, é uma tabela.
+Uma pessoa que usa um leitor de ecrã e visita dez páginas do teu site não quer ouvir o menu dez vezes. Quer saltar logo para o conteúdo principal.
 
-Uma tabela usa vários elementos, que se encaixam uns nos outros:
+Na árvore de acessibilidade, o `nav`, o `main` e o `aside` são **pontos de referência** (em inglês, *landmarks*). O `header` e o `footer` da página inteira também são. São as zonas para onde o leitor de ecrã salta diretamente. Os papéis deles, que vês nas ferramentas do programador, são *navigation*, *main* e *complementary*, e *banner* e *contentinfo*. Numa página feita só de `div`, não há pontos de referência, e o salto não existe.
+
+## Parte 5: Tabelas
+
+### Uma tabela de dados cruza linhas e colunas
+
+Num horário, "a que horas fecha a biblioteca à quarta-feira?" responde-se cruzando a linha "Quarta-feira" com a coluna "Fecha". Quando cada valor responde a uma pergunta que junta uma linha e uma coluna, a informação é uma **tabela de dados**. São exemplos um horário, uma lista de preços por tamanho e os resultados de um campeonato.
+
+Uma tabela usa vários elementos, uns dentro dos outros:
 
 | Elemento | O que marca |
 | --- | --- |
 | `table` | A tabela inteira |
-| `caption` | A legenda: o nome da tabela. Vai logo a seguir à etiqueta de abertura do `table` |
-| `thead` | O grupo de linhas de cabeçalho, no topo |
-| `tbody` | O grupo de linhas de dados, o corpo da tabela |
+| `caption` | A legenda, o nome da tabela, logo a seguir à etiqueta de abertura do `table` |
+| `thead` | O grupo das linhas de cabeçalho, no topo |
+| `tbody` | O grupo das linhas de dados, o corpo da tabela |
 | `tr` | Uma linha (de *table row*) |
-| `th` | Uma célula de cabeçalho (de *table header*): diz o que é uma coluna ou uma linha |
-| `td` | Uma célula de dados (de *table data*): um valor |
+| `th` | Uma célula de cabeçalho (de *table header*), que diz o que é uma coluna ou uma linha |
+| `td` | Uma célula de dados (de *table data*), um valor |
 
-Vê como se constrói o horário da biblioteca, com as três primeiras linhas de dados. Antes de leres a explicação, tenta prever: no browser, as células aparecem separadas por linhas, como numa folha de cálculo?
+Este é o horário da biblioteca, com as três primeiras linhas de dados:
 
 ```html
 <table>
@@ -665,19 +587,21 @@ Vê como se constrói o horário da biblioteca, com as três primeiras linhas de
 </table>
 ```
 
-Não aparecem. Sem CSS, o browser não desenha linhas entre as células: os valores aparecem arrumados em colunas, só com um pequeno espaço entre eles. A legenda aparece centrada por cima da tabela. As células `th` aparecem a negrito e centradas, e as `td` em letra normal.
+Para ler o código, segue as linhas. Cada `tr` é uma linha, com as células lá dentro, da esquerda para a direita. A primeira linha, no `thead`, só tem cabeçalhos. Nas linhas do `tbody`, a primeira célula também é um cabeçalho, porque diz de que dia é a linha, e as outras são dados. No browser, sem CSS, os valores ficam arrumados em colunas, sem linhas entre as células.
 
-Leitura guiada: lê o código com calma. A tabela é feita linha a linha: cada `tr` é uma linha, e as células dessa linha estão lá dentro, da esquerda para a direita. A primeira linha, no `thead`, só tem cabeçalhos, que dizem o que é cada coluna. Nas linhas do `tbody`, a primeira célula também é um cabeçalho, porque diz de que dia é aquela linha, e as outras duas são dados.
+Se te esqueceres do `tbody`, o browser acrescenta-o ao DOM, e ele aparece no separador Elements sem estar no teu ficheiro. Rever: [O browser acrescenta o que falta no ficheiro](01-web-e-planeamento.md#o-browser-acrescenta-o-que-falta-no-ficheiro).
 
-O atributo `scope` diz a que se aplica cada cabeçalho. `scope="col"` quer dizer "sou o cabeçalho desta coluna", e `scope="row"` quer dizer "sou o cabeçalho desta linha". É isto que permite a um leitor de ecrã dizer a que linha e a que coluna pertence cada célula. Quando a pessoa chega à célula `13:00`, ouve algo como "Quarta-feira, Fecha, 13:00". Sem cabeçalhos, a pessoa ouviria "13:00" e não saberia de que dia nem se é a hora de abrir ou de fechar.
+### Os cabeçalhos e a legenda dizem o que é cada valor
 
-O `caption` é o nome da tabela, e é o que um leitor de ecrã anuncia quando a pessoa chega à tabela. É também útil a quem vê, porque diz de que trata a tabela antes de começar a ler números.
+Quem vê a tabela percebe, de relance, que `13:00` é a hora de fecho de quarta-feira. Quem a ouve num leitor de ecrã recebe as células uma a uma. Precisa que lhe digam a que linha e a que coluna pertence cada valor.
 
-Se te esqueceres do `tbody`, o browser acrescenta-o sozinho quando constrói o DOM. Não aparece no teu ficheiro, mas aparece no separador Elements. É um bom exemplo de que o DOM não é uma cópia exata do ficheiro, como viste no guia 01.
+São os `th` que o dizem. O atributo `scope` diz a que se aplica cada um: `scope="col"` à coluna, e `scope="row"` à linha. Com eles, na célula `13:00`, a pessoa ouve algo como "Quarta-feira, Fecha, 13:00". Sem cabeçalhos, ouvia só "13:00", sem saber de que dia nem se é a hora de abrir ou de fechar.
+
+O `caption` é o nome da tabela. É o que o leitor de ecrã anuncia quando chega a ela, e diz a quem vê de que trata a tabela antes dos números.
 
 ### Tabelas não servem para arrumar a página
 
-Nos anos 90, o CSS ainda não conseguia pôr coisas lado a lado em colunas. Para fazer páginas com um menu à esquerda e o conteúdo à direita, os sites usavam uma tabela enorme e invisível. A página inteira ficava lá dentro, célula a célula. Ainda vais encontrar código assim em sites antigos e em alguns tutoriais velhos. Parece-se com isto:
+Nos anos 90, os browsers ainda não arrumavam bem as coisas lado a lado com o CSS. Para fazer um menu à esquerda e o conteúdo à direita, os sites usavam uma tabela invisível, com a página inteira lá dentro. Ainda se encontra código assim em sites antigos:
 
 ```html
 <table>
@@ -694,9 +618,9 @@ Nos anos 90, o CSS ainda não conseguia pôr coisas lado a lado em colunas. Para
 </table>
 ```
 
-Para quem olha, fica um menu à esquerda e o texto à direita. Mas repara no que isto diz ao browser: "aqui há uma tabela de dados com uma linha e duas colunas". Os browsers tentam adivinhar quando uma tabela só serve para arrumar e, nesse caso, escondem-na do leitor de ecrã. Mas é um palpite. Quando falham, o leitor de ecrã anuncia uma tabela, lê-a célula a célula, e a pessoa fica à espera de dados que não existem. Mesmo quando acertam, não há navegação nem conteúdo principal na árvore de acessibilidade, porque não há `nav` nem `main`. Num telemóvel, para pôr as duas colunas uma debaixo da outra, é preciso desfazer a tabela com CSS. Ela foi feita para ser uma grelha de linhas e colunas. E para mudar o menu de sítio é preciso reescrever a tabela toda.
+Para quem olha, fica um menu à esquerda e o texto à direita. Mas isto diz ao browser que há uma tabela de dados com uma linha e duas colunas. O leitor de ecrã pode anunciar uma tabela e ficar à espera de dados que não existem. Também não há navegação nem conteúdo principal na árvore de acessibilidade, porque não há `nav` nem `main`. E, num telemóvel, as duas colunas não se põem uma por baixo da outra sem desfazer a tabela.
 
-A forma certa de escrever o mesmo é com os elementos semânticos. A arrumação em colunas fica para o CSS, nos temas do Flexbox e da Grid. Antes de leres, tenta prever: sem CSS, o menu desta versão aparece à esquerda do texto ou por cima dele?
+A forma certa usa os elementos semânticos, e deixa a arrumação para o CSS. Antes de leres, prevê: sem CSS, o menu desta versão aparece à esquerda do texto ou por cima dele?
 
 ```html
 <nav>
@@ -711,58 +635,50 @@ A forma certa de escrever o mesmo é com os elementos semânticos. A arrumação
 </main>
 ```
 
-Aparece por cima. Sem CSS, cada zona ocupa a largura toda e fica debaixo da anterior, pela ordem do ficheiro. Pôr o menu ao lado do texto é trabalho do CSS, e o HTML não precisa de mudar para isso.
+Aparece por cima. Sem CSS, cada zona ocupa a largura toda e fica debaixo da anterior, pela ordem do ficheiro. Pôr o menu ao lado é trabalho do CSS, e o HTML não muda para isso. Uma tabela é para dados em linhas e colunas, e nunca para pôr coisas lado a lado.
 
-Leitura guiada: o `nav` diz que as ligações são a navegação, e a lista diz que são opções do mesmo tipo. O `main` diz onde está o conteúdo principal, que começa pelo seu `h1`. Nenhuma linha fala de colunas nem de posições.
+## Parte 6: Erros e verificação
 
-A regra é simples. Uma tabela é para dados em linhas e colunas, e nunca para pôr coisas lado a lado. Se não há dados em linhas e colunas, não é uma tabela. Usa os elementos semânticos e deixa a arrumação para o CSS.
+### Como o browser lida com os erros
 
-## Como o browser lida com os erros
+Quando te enganas a escrever HTML, não aparece nenhuma mensagem de erro. O browser segue regras próprias para adivinhar o que querias dizer, corrige o DOM à sua maneira e desenha a página. Por um lado, uma página com um erro continua a aparecer. Por outro, não sabes que erraste, e o browser nem sempre adivinha bem.
 
-Já sabes que o HTML não dá mensagens de erro. Quando o browser encontra uma coisa mal escrita, não para. Segue regras próprias para adivinhar o que querias dizer, corrige o DOM à sua maneira e desenha a página. Isto tem um lado bom: uma página com um erro continua a aparecer. Tem também um lado mau: não sabes que erraste, e o browser nem sempre adivinha bem.
-
-Estes são quatro casos reais, experimentados no browser, com o que o browser faz a cada um:
+Estes são quatro casos, experimentados no browser:
 
 | O que escreveste | O que o browser faz no DOM | O que vês na página |
 | --- | --- | --- |
 | Um `strong` que nunca fechaste, a meio de um parágrafo que está logo dentro do `main` | Fecha-o no fim do parágrafo e abre outro em cada zona seguinte: um à volta do resto do `main` e mais um à volta do rodapé | Tudo o que vem a seguir fica a negrito, até ao fim da página. No Elements vês três `strong`, e só escreveste um |
 | Uma lista `ul` dentro de um `p` | Fecha o `p` antes da lista e cria um parágrafo vazio a seguir, com o `</p>` que sobrou | A lista aparece, mas o DOM tem um parágrafo vazio a mais |
-| Um `h2` fechado com `</h3>` | Aceita o `</h3>` como fecho do `h2`, porque qualquer etiqueta de fecho de título fecha o título que estiver aberto | Nada de estranho: o erro fica escondido até ao dia em que deixar de dar certo |
-| Uma ligação `a` dentro de outra `a` | Fecha a primeira ligação logo antes de abrir a segunda. O texto que vinha depois da segunda já não pertence a nenhuma ligação | Duas ligações seguidas, em vez de uma, e o fim do texto sem ligação |
+| Um `h2` fechado com `</h3>` | Aceita o `</h3>` como fecho do `h2`, porque qualquer fecho de título fecha o título aberto | Nada de estranho: o erro fica escondido |
+| Uma ligação `a` dentro de outra `a` | Fecha a primeira ligação antes de abrir a segunda, e o texto que vinha depois já não pertence a nenhuma | Duas ligações seguidas, em vez de uma, e o fim do texto sem ligação |
 
-Os dois primeiros casos são os mais frequentes nas primeiras páginas, e corrigem-se assim.
+Os dois primeiros são os mais frequentes nas primeiras páginas. Quando tudo fica a negrito a partir de certo ponto, falta o fecho de um `strong`, ou falta-lhe a barra: `<strong>` onde devia estar `</strong>`. Procura o último sítio onde o negrito estava certo. Quando aparece no Elements um parágrafo vazio a seguir a uma lista, há uma lista dentro de um `p`. Um parágrafo não pode conter listas, títulos, tabelas nem outros parágrafos. Se a frase introduz a lista, como "Os recursos são:", fica num parágrafo sozinha.
 
-Quando tudo fica a negrito a partir de certo ponto, a causa é um `strong` sem etiqueta de fecho. Pode também ser a barra esquecida: `<strong>` onde devia estar `</strong>`. Procura o último sítio onde o negrito estava certo e confirma que cada `<strong>` tem o seu `</strong>`.
+Para apanhar estes erros, compara o que escreveste com o que o browser construiu. No separador Elements, se a árvore for diferente do teu ficheiro, o browser corrigiu um erro teu. Há também o **validador** do W3C, em `validator.w3.org`, que lê um ficheiro HTML e faz a lista dos erros, com o número da linha. As mensagens estão em inglês, e as que não perceberes podes levar à aula.
 
-Às vezes aparece, no separador Elements, um parágrafo vazio a seguir a uma lista. A causa é um `ul` ou um `ol` escrito dentro de um `p`. Na página parece estar tudo bem. Um parágrafo não pode conter listas, títulos, tabelas nem outros parágrafos. Fecha o parágrafo antes da lista. Se a frase introduz a lista, como "Os recursos são:", fica num parágrafo sozinha, e a lista vem a seguir.
+### Verificar uma página
 
-A forma de apanhar estes erros é comparar o que escreveste com o que o browser construiu. Abre as ferramentas do programador, vai ao separador Elements e percorre a árvore. Se a árvore for diferente do teu ficheiro, o browser corrigiu um erro teu. Pode ser um parágrafo vazio que não escreveste, ou um elemento dentro de outro onde não o puseste. O laboratório tem uma fase só para isto.
+Uma página só está pronta depois de verificada. Neste tema, verificar quer dizer quatro coisas.
 
-Existe também um serviço público do W3C, a organização que escreve muitas das regras da Web. Lê um ficheiro HTML e faz a lista de todos os erros, com o número da linha. É o **validador**, em `validator.w3.org`. Podes enviar-lhe o teu ficheiro e ver o que ele encontra. As mensagens estão em inglês, e algumas são difíceis de ler no início. Nesse caso, leva-as à aula.
+Primeiro, seguir todas as ligações. Carrega em cada uma: tem de levar ao sítio certo, e cada página de destino tem de ter uma forma de voltar. Uma ligação que dá "Não foi possível aceder ao seu ficheiro" é uma ligação sem destino. Rever: [O mapa e os wireframes têm de concordar](01-web-e-planeamento.md#o-mapa-e-os-wireframes-têm-de-concordar).
 
-## Verificar uma página
+Segundo, ler a página pela ordem do HTML. Sem CSS, a página mostra o conteúdo pela ordem do ficheiro, e é essa a ordem em que um leitor de ecrã a percorre. Lê de cima a baixo e pergunta: a ordem faz sentido, o mais importante vem primeiro, e os títulos dizem de que trata cada parte?
 
-Uma página só está pronta depois de verificada. Neste tema, verificar quer dizer quatro coisas, que vais fazer no laboratório.
+Terceiro, percorrer a página só com o teclado, no Chrome ou no Edge. Carrega na tecla Tab várias vezes. O **foco**, a moldura que mostra onde estás, salta de ligação em ligação, pela ordem do HTML. Com Shift+Tab andas para trás, e com Enter segues a ligação. Se chegas a todas as ligações e percebes onde estás, a página passa este teste.
 
-**Seguir todas as ligações.** Abre a página no browser e carrega em cada ligação, uma de cada vez. Cada uma tem de levar ao sítio certo, e cada página de destino tem de ter uma forma de voltar. Uma ligação que dá a página de erro "Não foi possível aceder ao seu ficheiro" é uma ligação sem destino. É o erro que aprendeste a procurar no mapa do site, no guia 01.
-
-**Ler a página pela ordem do HTML.** Uma página sem CSS mostra o conteúdo pela ordem em que está escrito no ficheiro. Tem o aspeto por omissão do browser. As tuas páginas ainda não têm CSS, por isso o que vês é já essa leitura. Lê de cima a baixo e pergunta: a ordem faz sentido? O mais importante vem primeiro? Os títulos dizem de que trata cada parte? É assim que um leitor de ecrã percorre a página. É essa ordem que tem de continuar a fazer sentido quando, nos próximos temas, o CSS mudar o aspeto e a posição das coisas.
-
-**Percorrer a página só com o teclado.** Usa o Chrome ou o Edge. No Safari, o Tab não para nas ligações sem mudar uma opção do browser. Carrega na tecla Tab, várias vezes. O **foco**, a moldura que mostra onde estás, salta de ligação em ligação, pela ordem do HTML. Com Shift+Tab andas para trás, e com Enter segues a ligação onde estás. Há pessoas que não podem usar o rato e navegam sempre assim. Se consegues chegar a todas as ligações e perceber onde estás, a página passa este teste.
-
-**Ver a estrutura com as ferramentas do programador.** No separador Elements, confirma que a árvore é igual ao teu ficheiro. Depois abre a árvore de acessibilidade e confirma três coisas:
+Quarto, ver a estrutura com as ferramentas do programador. No separador Elements, confirma que a árvore é igual ao teu ficheiro. Na árvore de acessibilidade, confirma três coisas:
 
 - aparecem o cabeçalho, a navegação, o conteúdo principal e o rodapé;
-- os títulos estão na ordem certa;
-- cada imagem tem o nome que lhe deste no `alt`.
+- os títulos estão pela ordem certa;
+- cada imagem com texto alternativo tem o nome que lhe deste no `alt`, e as decorativas não aparecem.
 
 ## Exemplo guiado: as páginas da Estante Digital
 
-Neste exemplo vês construir, passo a passo, duas páginas do site da Estante Digital: a página inicial e a página de um recurso. A terceira página, "Sobre", é curta e aparece no fim. Os ficheiros completos estão na pasta [estante-digital](../exemplos/frontend/estante-digital/index.html), dos exemplos da disciplina. Podes abri-los no browser e no editor para comparar com o que vais lendo. Se ainda não tens o repositório da disciplina no computador, o professor diz-te como o obter. Uma forma é abrir a página do repositório no GitHub, carregar no botão verde Code e escolher Download ZIP. Depois descompactas o ficheiro numa pasta tua.
+Neste exemplo constroem-se, passo a passo, a página inicial e a página de um recurso da Estante Digital. No fim vem a página "Sobre". Os ficheiros completos estão na pasta [estante-digital](../exemplos/frontend/estante-digital/index.html) dos exemplos da disciplina, para os abrires no browser e no editor.
 
 ### Passo 1: Partir do plano
 
-No guia 01 fizemos o plano deste site. Fizemos o mapa do site, com as páginas e as ligações, e os wireframes da página inicial e da página de um recurso. O HTML não se inventa ao escrever: traduz o plano. Por isso, antes de abrir o editor, olha para o wireframe e dá nome a cada zona. Os wireframes destas páginas estão no exemplo do [guia 01](01-web-e-planeamento.md).
+O HTML não se inventa ao escrever: traduz o plano. Antes de abrir o editor, olha-se para o wireframe da página inicial e dá-se nome a cada zona. Os wireframes estão no exemplo guiado do guia 01. Rever: [Exemplo guiado: o plano da Estante Digital](01-web-e-planeamento.md#exemplo-guiado-o-plano-da-estante-digital).
 
 | Zona desenhada no wireframe | Elemento | Porquê |
 | --- | --- | --- |
@@ -772,17 +688,17 @@ No guia 01 fizemos o plano deste site. Fizemos o mapa do site, com as páginas e
 | Faixa de baixo, com a nota sobre o site | `footer` | É a informação final, e repete-se em todas as páginas |
 | Tudo o que fica entre o cabeçalho e o rodapé | `main` | É o conteúdo próprio desta página |
 
-Esta tabela é a decisão mais importante do exemplo. Tudo o que vem a seguir é escrever o que ela diz.
+Esta tabela é a decisão mais importante do exemplo: o resto é escrever o que ela diz.
 
 ### Passo 2: A pasta e os nomes dos ficheiros
 
-O site vive numa pasta chamada `estante-digital`, com os ficheiros HTML diretamente lá dentro e as imagens numa subpasta `imagens`. Todos os nomes seguem as regras da secção "Caminhos relativos": minúsculas, sem espaços, sem acentos e com hífenes.
+O site vive numa pasta chamada `estante-digital`, com os ficheiros HTML lá dentro e as imagens numa subpasta `imagens`. Os nomes seguem as regras dos caminhos relativos: minúsculas, sem espaços, sem acentos e com hífenes.
 
-A página inicial chama-se `index.html`. Este nome não é uma escolha nossa: é uma convenção da Web. Imagina que alguém escreve o endereço de um site sem indicar a página, como `https://www.exemplo.pt/`. A maior parte dos servidores procura então na pasta um ficheiro chamado `index.html` e envia-o. Chamar `index.html` à tua página inicial garante que ela aparece quando o site for publicado, no tema da publicação.
+A página inicial chama-se `index.html`, por uma convenção da Web. Quando alguém escreve o endereço de um site sem indicar a página, como `https://www.example.com/`, a maior parte dos servidores envia o ficheiro `index.html` dessa pasta. Assim, a página inicial aparece quando o site for publicado.
 
 ### Passo 3: O esqueleto da página inicial
 
-Começamos pelo esqueleto, com o título certo para esta página. Antes de abrires este ficheiro no browser, tenta prever: o que aparece na janela? E no separador?
+Começa-se pelo esqueleto, com o título desta página. Antes de abrires o ficheiro no browser, prevê: o que aparece na janela, e o que aparece no separador?
 
 ```html
 <!doctype html>
@@ -797,9 +713,7 @@ Começamos pelo esqueleto, com o título certo para esta página. Antes de abrir
 </html>
 ```
 
-A janela fica em branco, porque o `body` está vazio. Mas não está tudo vazio: no separador aparece "Início | Estante Digital". É a primeira confirmação de que o ficheiro foi lido.
-
-Leitura guiada: o doctype abre o ficheiro. Lá dentro do `html` estão os dois filhos, `head` e `body`. Tudo o que está no `head` é informação sobre a página, e por isso nada dele aparece na janela; o `title` aparece no separador. O `body` ainda não tem nada.
+A janela fica em branco, porque o `body` está vazio. Mas no separador aparece "Início | Estante Digital", que é a primeira confirmação de que o ficheiro foi lido.
 
 ### Passo 4: O cabeçalho e a navegação
 
@@ -820,15 +734,13 @@ Dentro do `body`, a primeira zona é o `header`:
 </header>
 ```
 
-No browser, aparecem o logótipo e o nome do site na mesma linha e, por baixo, uma lista com duas ligações, "Início" e "Sobre".
+No browser, aparecem o logótipo e o nome do site na mesma linha e, por baixo, uma lista com duas ligações, "Início" e "Sobre". Há três decisões a explicar.
 
-Há três decisões a explicar.
+O nome do site está num `p`, e não num `h1`. O assunto da página inicial são os recursos de estudo recomendados pela turma, e não o nome do site. Se o nome do site fosse o `h1`, todas as páginas teriam o mesmo assunto, e a página do livro teria dois `h1`.
 
-A primeira é o nome do site estar num `p`, e não num `h1`. O `h1` é o assunto da página. O assunto da página inicial é "recursos de estudo recomendados pela turma", e não o nome do site. Se o nome do site fosse o `h1` em todas as páginas, todas teriam o mesmo assunto principal. E a página do livro teria dois `h1`. Por isso o nome do site é um parágrafo, e cada página tem o seu `h1` dentro do `main`.
+O logótipo tem `alt=""`, porque é uma imagem decorativa, ao lado do nome escrito. O atributo está lá, vazio: não foi esquecido.
 
-A segunda é o `alt` vazio do logótipo. O desenho está mesmo ao lado do nome "Estante Digital". Um `alt` com texto faria o leitor de ecrã dizer o nome duas vezes. O `alt` vazio diz-lhe que salte a imagem. Repara que o atributo está lá, vazio: não foi esquecido.
-
-A terceira é a navegação ser uma lista de ligações dentro de um `nav`. É uma lista porque são várias opções do mesmo tipo, e um leitor de ecrã anuncia quantas são. Está num `nav` porque é a navegação principal do site. A página inicial tem uma ligação para si própria, "Início". Não faz mal, porque o menu é igual em todas as páginas, e numa página interior essa ligação é a forma de voltar ao princípio.
+A navegação é uma lista de ligações dentro de um `nav`. É uma lista porque são várias opções do mesmo tipo, e é um `nav` porque é a navegação principal. A ligação "Início" na própria página inicial não faz mal. O menu é igual em todas as páginas, e nas outras é a forma de voltar ao princípio.
 
 ### Passo 5: O conteúdo principal
 
@@ -865,11 +777,9 @@ A seguir ao `header` vem o `main`, com o `h1`, dois parágrafos de introdução 
 </main>
 ```
 
-Cada secção começa pelo seu `h2`, e o conteúdo é uma lista não ordenada, porque a ordem dos recursos não importa. Aplica o teste: trocar dois livros de lugar não torna a informação errada.
+Cada secção começa pelo seu `h2`, e o conteúdo é uma lista não ordenada, porque trocar dois livros de lugar não torna a informação errada.
 
-Repara que só o primeiro livro tem ligação. É o único que já tem página própria. Pôr uma ligação no segundo livro seria criar uma ligação sem destino, que dá erro quando alguém carrega nela. Um site pode estar em construção, desde que não tenha ligações para páginas que ainda não existem. Quando a página do dicionário existir, acrescenta-se a ligação.
-
-O texto da ligação é o título do livro, "Primeiros passos na Web", e não "ver mais" nem "clica aqui". Numa lista de ligações lida fora do contexto, continua a dizer para onde vai.
+Só o primeiro livro tem ligação, porque é o único que já tem página própria. Uma ligação no segundo livro seria uma ligação sem destino. Quando a página do dicionário existir, acrescenta-se a ligação. O texto da ligação é o título do livro, e não "ver mais". Por isso, continua a dizer para onde vai numa lista de ligações lida fora do contexto.
 
 ### Passo 6: O rodapé e a página completa
 
@@ -884,15 +794,13 @@ Depois do `main` vem o `footer`, com a nota final:
 </footer>
 ```
 
-Com as três zonas escritas, o `body` fica com três filhos, `header`, `main` e `footer`, pela ordem em que aparecem no wireframe. O ficheiro completo é o [index.html](../exemplos/frontend/estante-digital/index.html) da pasta de exemplo. Abre-o no editor e confirma que reconheces cada parte. Vais encontrar comentários a explicar as decisões, que são as mesmas que acabaste de ler.
+O `body` fica com três filhos, `header`, `main` e `footer`, pela ordem do wireframe. O ficheiro completo é o [index.html](../exemplos/frontend/estante-digital/index.html) da pasta de exemplo, com comentários a explicar as mesmas decisões.
 
 ### Passo 7: Abrir e ler de cima a baixo
 
-Antes de abrires o `index.html` no browser, tenta prever o que vais ver, de cima para baixo, e com que aspeto.
+No browser aparecem o logótipo e o nome do site, a lista do menu com as bolinhas, o título grande e os parágrafos. A seguir vêm os três títulos de secção, com as suas listas, e no fundo o rodapé. Não há cores nem colunas: é o aspeto que o browser dá por omissão, e está certo nesta fase.
 
-Vais ver o logótipo e o nome do site, a lista do menu com as bolinhas da lista, o título grande e os parágrafos. A seguir vêm os três títulos de secção, com as suas listas, e, no fundo, o rodapé. Não há cores nem colunas: é o aspeto por omissão do browser, e está certo que seja assim nesta fase.
-
-Faz agora a leitura pela ordem do HTML. Primeiro aparecem o nome do site e o menu. A seguir vêm o assunto da página e as três partes, e no fim a nota. É a ordem em que uma pessoa precisa das coisas. O índice dos títulos é este:
+A ordem do HTML é a ordem em que uma pessoa precisa das coisas. Primeiro o nome do site e o menu, depois o assunto da página e as três partes, e no fim a nota. O índice dos títulos é este:
 
 ```text
 h1  Recursos de estudo recomendados pela turma
@@ -901,20 +809,20 @@ h1  Recursos de estudo recomendados pela turma
     h2  Sítios e aplicações
 ```
 
-Um `h1`, três `h2` ao mesmo nível e nenhum salto.
+Tem um `h1`, três `h2` ao mesmo nível e nenhum salto.
 
 ### Passo 8: A segunda página parte do mesmo esqueleto
 
-A página do livro chama-se `primeiros-passos-na-web.html`, com o nome derivado do título do livro. Não se começa do zero. Copia-se o `index.html`, porque o esqueleto, o cabeçalho e o rodapé são iguais, e muda-se só o que é próprio desta página:
+A página do livro chama-se `primeiros-passos-na-web.html`, com o nome tirado do título do livro. Não se começa do zero. Copia-se o `index.html`, porque o esqueleto, o cabeçalho e o rodapé são iguais, e muda-se só o que é desta página:
 
 - o `title`, que passa a `Primeiros passos na Web | Estante Digital`;
 - todo o conteúdo do `main`.
 
-O cabeçalho e o rodapé ficam iguais em todas as páginas, por uma regra de navegação. Quem muda de página deve encontrar o menu no mesmo sítio, com as mesmas opções, para não ter de reaprender o site em cada página.
+O cabeçalho e o rodapé ficam iguais em todas as páginas. Assim, quem muda de página encontra o menu no mesmo sítio, com as mesmas opções.
 
 ### Passo 9: Um article com uma figura
 
-O conteúdo principal desta página é a ficha de um livro. Aplica o teste do `article`: se copiasses a ficha para o site da biblioteca, fazia sentido sozinha? Faz: tem título, descrição, capa e informações. Por isso fica num `article`, dentro do `main`:
+O conteúdo principal desta página é a ficha de um livro. Se copiasses a ficha para o site da biblioteca, fazia sentido sozinha, porque tem título, descrição, capa e informações. Por isso fica num `article`, dentro do `main`:
 
 ```html
 <main>
@@ -939,15 +847,11 @@ O conteúdo principal desta página é a ficha de um livro. Aplica o teste do `a
 </main>
 ```
 
-O raciocínio do `alt` foi o da secção "O texto alternativo". Nesta página, a capa serve para reconhecer o livro na estante da biblioteca. Por isso o `alt` descreve o que se vê na capa: a cor, o título e o desenho. Não começa por "Imagem de", e não repete a legenda.
-
-A legenda acrescenta o que o `alt` não diz: de que edição é a capa e o aviso de que o livro é fictício. Como a imagem e a legenda formam uma unidade, ficam juntas num `figure`.
-
-Os valores de `width` e `height` são 240 e 320, as medidas do desenho da capa. Como o desenho é SVG, podia ser mostrado maior sem perder qualidade, mas estas medidas dizem ao browser que espaço reservar.
+Nesta página, a capa serve para reconhecer o livro na estante. Por isso, o `alt` descreve o que se vê: a cor, o título e o desenho. A legenda acrescenta o que o `alt` não diz: de que edição é a capa e que o livro é fictício. As duas ficam juntas num `figure`. As medidas, 240 por 320, são as do desenho da capa.
 
 ### Passo 10: Duas listas, duas decisões
 
-A ficha tem uma secção "O que vais aprender" e uma secção "Como o usar". As duas são listas, mas de tipos diferentes:
+A ficha tem uma secção "O que vais aprender" e uma secção "Como o usar", e as duas são listas de tipos diferentes:
 
 ```html
 <section>
@@ -970,13 +874,11 @@ A ficha tem uma secção "O que vais aprender" e uma secção "Como o usar". As 
 </section>
 ```
 
-Aplica o teste das listas a cada uma. Trocar dois assuntos de "O que vais aprender" não torna a informação errada: é um `ul`. Trocar o primeiro e o último passo de "Como o usar" torna a informação errada. Não faz sentido levar as dúvidas à aula antes de ler: é um `ol`.
+Trocar dois assuntos de "O que vais aprender" não torna a informação errada: é um `ul`. Trocar o primeiro e o último passo de "Como o usar" torna, porque as dúvidas levam-se à aula depois de ler: é um `ol`.
 
 ### Passo 11: A tabela do horário
 
-A secção "Onde o encontrar" diz em que estante está o livro e mostra o horário da biblioteca. Um horário é informação em linhas e colunas, e cada valor responde a uma pergunta do tipo "a que horas fecha à quarta-feira?". Passa o teste da tabela de dados. A tabela completa tem uma linha por dia, de segunda a sexta-feira, com a forma que viste na secção "Tabelas de dados". Tem um `caption` com o nome da tabela, um `thead` com os três cabeçalhos de coluna e um `tbody` com uma linha por dia. Cada linha tem o dia num `th` de linha e as duas horas em `td`.
-
-O `caption` diz "(fictício)" porque o horário foi inventado para o exemplo. Uma tabela de dados verdadeiros deve dizer, sempre que possível, de onde vêm os dados.
+A secção "Onde o encontrar" diz em que estante está o livro e mostra o horário da biblioteca. Cada valor responde a uma pergunta como "a que horas fecha à quarta-feira?", e por isso é uma tabela de dados. Tem a forma do horário da secção das tabelas, com uma linha por dia, de segunda a sexta-feira. O `caption` diz "(fictício)", porque o horário foi inventado. Uma tabela com dados verdadeiros diz, sempre que pode, de onde vêm os dados.
 
 ### Passo 12: O aside e o caminho de volta
 
@@ -994,15 +896,13 @@ Depois do `article`, ainda dentro do `main`, há uma caixa com uma dica e uma li
 <p><a href="index.html">Voltar à lista de recursos</a></p>
 ```
 
-A dica é um `aside`: está relacionada com o livro, mas quem a saltar não perde nada da ficha. Fica fora do `article` porque não faz parte da ficha do livro. É um comentário ao lado dela.
+A dica é um `aside`: está relacionada com o livro, mas quem a saltar não perde nada da ficha. Fica fora do `article`, porque é um comentário ao lado da ficha, e não parte dela.
 
-A ligação "Voltar à lista de recursos" dá a esta página um caminho de volta à página de onde se veio, além do menu. Não está num `nav`, porque não é a navegação principal do site: é uma ligação solta no fim do conteúdo.
-
-O índice dos títulos desta página é o que viste na secção "Títulos: de h1 a h6". Tem um `h1` com o nome do livro e cinco `h2`, um por secção e um para a dica.
+A ligação "Voltar à lista de recursos" dá à página um caminho de volta, além do menu. Não está num `nav`, porque não é a navegação principal: é uma ligação solta no fim do conteúdo. O índice dos títulos desta página tem um `h1`, com o nome do livro, e cinco `h2`.
 
 ### Passo 13: A página Sobre e uma ligação para fora
 
-A terceira página, [sobre.html](../exemplos/frontend/estante-digital/sobre.html), segue o mesmo esqueleto, o mesmo cabeçalho e o mesmo rodapé. Tem um `h1`, "Sobre a Estante Digital", e três secções. A secção "Saber mais" tem a única ligação para outro site:
+A terceira página, [sobre.html](../exemplos/frontend/estante-digital/sobre.html), tem o mesmo esqueleto, o mesmo cabeçalho e o mesmo rodapé. Tem um `h1`, "Sobre a Estante Digital", e três secções. A secção "Saber mais" tem a única ligação para outro site:
 
 ```html
 <p>
@@ -1012,93 +912,83 @@ A terceira página, [sobre.html](../exemplos/frontend/estante-digital/sobre.html
 </p>
 ```
 
-O endereço é absoluto e começa por `https://`, porque o destino não está na pasta do site. O texto da ligação diz o que se vai encontrar. A frase avisa que a página está em português do Brasil, para que a pessoa não se surpreenda.
+O endereço é absoluto e começa por `https://`, porque o destino não está na pasta do site. O texto da ligação diz o que se vai encontrar, e a frase avisa que a página está em português do Brasil.
 
 ### Passo 14: Verificar
 
-Com as três páginas escritas, faz-se a verificação da secção "Verificar uma página".
+Com as três páginas escritas, faz-se a verificação.
 
-As ligações. Na página inicial, "Início" leva à própria página inicial e "Sobre" leva à página Sobre. "Primeiros passos na Web" leva à página do livro. Na página do livro, "Início" e "Voltar à lista de recursos" levam à página inicial, e "Sobre" leva à página Sobre. Na página Sobre, as duas ligações do menu funcionam, e a ligação para a MDN abre a página da MDN. Nenhuma ligação fica sem destino, e de todas as páginas se volta ao princípio.
+As ligações: na página inicial, "Início" leva à própria página, "Sobre" à página Sobre e "Primeiros passos na Web" à página do livro. Na página do livro, "Início" e "Voltar à lista de recursos" levam à página inicial. Na página Sobre, o menu funciona e a ligação para a MDN abre a página dela. Nenhuma ligação fica sem destino.
 
-O teclado. Na página inicial, a primeira tecla Tab leva o foco a "Início", a segunda a "Sobre" e a terceira a "Primeiros passos na Web". Com o foco nessa ligação, Enter abre a página do livro. A ordem do foco é a ordem do HTML, e é a ordem de leitura.
+O teclado: na página inicial, o primeiro Tab leva o foco a "Início", o segundo a "Sobre" e o terceiro a "Primeiros passos na Web". Com Enter, abre-se a página do livro. A ordem do foco é a ordem do HTML.
 
-A árvore. No separador Elements, a árvore de cada página tem os elementos do ficheiro, pela mesma ordem, sem parágrafos vazios nem elementos mudados de sítio. Isto quer dizer que o browser não teve de corrigir nenhum erro. Na árvore de acessibilidade da página do livro aparecem cinco pontos de referência. São o cabeçalho (*banner*), a navegação (*navigation*), o conteúdo principal (*main*), a caixa da dica (*complementary*) e o rodapé (*contentinfo*). A capa aparece como imagem, com o nome que lhe demos no `alt`. O logótipo não aparece, porque tem o `alt` vazio.
+A árvore: no separador Elements, cada página tem os elementos do ficheiro, pela mesma ordem, sem parágrafos vazios. O browser não teve de corrigir nenhum erro. Na árvore de acessibilidade da página do livro há cinco pontos de referência: *banner*, *navigation*, *main*, *complementary*, a dica, e *contentinfo*. A capa aparece como imagem, com o nome do `alt`, e o logótipo não aparece, porque tem o `alt` vazio.
 
-A página passou as quatro verificações. Está pronta, por agora. No próximo tema vai ganhar aspeto com CSS, e a verificação volta a fazer-se.
+As páginas passaram as quatro verificações, e estão prontas por agora.
 
 ## Erros frequentes
 
-Estes são os erros que mais aparecem nas primeiras páginas e que não ficaram nas secções da matéria. Para cada um tens o que se vê, porque acontece e como se corrige. Alguns erros estão explicados na secção da ideia a que pertencem. O "clica aqui" e o endereço sem `https://` estão em "Ligações". O caminho do disco que só funciona no teu computador está em "Caminhos relativos". Os títulos que saltam níveis estão em "Títulos: de h1 a h6", e o `alt` em falta em "O texto alternativo". A tabela para arrumar a página está em "Tabelas não servem para arrumar a página". O negrito que não acaba e a lista dentro de um parágrafo estão em "Como o browser lida com os erros".
-
 ### A imagem não aparece
 
-O que se vê: no sítio da imagem aparece um pequeno ícone de imagem partida, ou só o texto do `alt`, ou nada.
+O que se vê: no sítio da imagem aparece um ícone de imagem partida, ou só o texto do `alt`, ou nada.
 
-Porque acontece: quase sempre, o caminho do `src` não corresponde ao sítio onde a imagem está. As razões mais frequentes são quatro. A imagem pode estar noutra pasta, por exemplo ainda nas Transferências. O nome pode ter uma letra trocada, a mais ou a menos, como `fotografia.jpg` no disco e `fotogafia.jpg` no código. A extensão pode estar trocada, como `.jpeg` no disco e `.jpg` no código. Ou pode faltar a pasta no caminho, como `capa.svg` em vez de `imagens/capa.svg`. Uma diferença só de maiúsculas e minúsculas, como `Foto.jpg` no disco e `foto.jpg` no código, não faz falhar a imagem no teu computador. O Windows e o macOS tratam os dois nomes como o mesmo ficheiro. Faz falhar quando o site for publicado, como explica a secção "Caminhos relativos", e por isso também se corrige.
+Porque acontece: quase sempre, o caminho do `src` não corresponde ao sítio da imagem. A imagem pode estar noutra pasta, ainda nas Transferências. O nome pode ter uma letra trocada, como `fotogafia.jpg` no código e `fotografia.jpg` no disco. A extensão pode ser outra, como `.jpeg` no disco e `.jpg` no código. Ou pode faltar a pasta no caminho, como `capa.svg` em vez de `imagens/capa.svg`.
 
-Como se corrige: compara letra a letra o caminho do `src` com o que vês no explorador de ficheiros. Começa na pasta onde está a página.
+Como se corrige: compara letra a letra o caminho do `src` com o que vês no explorador de ficheiros, a partir da pasta da página. Uma diferença só de maiúsculas não faz falhar a imagem no teu computador, mas faz falhar no servidor, e por isso também se corrige.
 
 ### A ligação dá "Não foi possível aceder ao seu ficheiro"
 
-O que se vê: carregas na ligação e o browser mostra uma página de erro. No Chrome em português, diz "Não foi possível aceder ao seu ficheiro", com o código `ERR_FILE_NOT_FOUND`.
+O que se vê: carregas na ligação e o browser mostra uma página de erro, com o código `ERR_FILE_NOT_FOUND`.
 
-Porque acontece: a mesma razão dos caminhos das imagens, ou uma ligação para uma página que ainda não escreveste.
+Porque acontece: o caminho do `href` está errado, como nas imagens, ou a ligação aponta para uma página que ainda não escreveste.
 
-Como se corrige: confirma o nome do ficheiro de destino e a pasta onde está. Se a página ainda não existe, retira a ligação até ela existir.
+Como se corrige: confirma o nome do ficheiro de destino e a pasta onde está. Se a página ainda não existe, tira a ligação até ela existir.
 
 ### Mudei o ficheiro e a página não mudou
 
 O que se vê: alteraste o ficheiro no editor, mas o browser mostra a página como estava.
 
-Porque acontece: há três causas possíveis. Não guardaste o ficheiro, ou não recarregaste a página no browser, ou estás a editar uma cópia diferente da que está aberta no browser. No VS Code, um ficheiro por guardar tem uma bolinha no separador, no lugar da cruz de fechar.
+Porque acontece: não guardaste o ficheiro, não recarregaste a página, ou estás a editar uma cópia diferente da que está aberta. No VS Code, um ficheiro por guardar tem uma bolinha no separador, no lugar da cruz.
 
-Como se corrige: guarda (Ctrl+S no Windows, Cmd+S no Mac) e recarrega a página (F5 no Windows, Cmd+R no Mac). Se continuar igual, confirma na barra de endereço do browser qual é o ficheiro aberto.
+Como se corrige: guarda (Ctrl+S no Windows, Cmd+S no Mac) e recarrega a página (F5 no Windows, Cmd+R no Mac). Se continuar igual, vê na barra de endereço qual é o ficheiro aberto.
 
 ### O ficheiro abre como texto, ou chama-se `index.html.txt`
 
 O que se vê: o browser mostra as etiquetas como texto, em vez da página, ou o ficheiro abre noutro programa.
 
-Porque acontece: o ficheiro foi guardado num editor de texto simples, que acrescentou `.txt` ao nome. O Windows esconde muitas vezes as extensões, e por isso o nome parece certo.
+Porque acontece: o ficheiro foi guardado num editor de texto simples, que acrescentou `.txt` ao nome. O Windows esconde muitas vezes as extensões, e o nome parece certo.
 
-Como se corrige: usa o VS Code para criar os ficheiros. Se o problema já aconteceu, ativa no explorador de ficheiros a opção de mostrar as extensões dos nomes, e renomeia o ficheiro.
+Como se corrige: cria os ficheiros no VS Code. Se já aconteceu, mostra as extensões no explorador de ficheiros e muda o nome do ficheiro.
 
 ### Aparece um título onde devia estar texto normal
 
-O que se vê: o texto que vem depois de um título aparece também com letra de título, grande e a negrito. No separador Elements vês dois `h2` onde só escreveste um.
+O que se vê: o texto que vem depois de um título aparece também com letra de título. No separador Elements vês dois `h2`, e só escreveste um.
 
-Porque acontece: a barra esquecida numa etiqueta de fecho de um título. Sem a barra, o segundo `<h2>` de `<h2>Livros<h2>` é uma etiqueta de abertura. O browser fecha ali o primeiro título, abre outro, e o que vem a seguir fica dentro desse segundo título.
+Porque acontece: falta a barra na etiqueta de fecho. Em `<h2>Livros<h2>`, o segundo `<h2>` é uma etiqueta de abertura, e o que vem a seguir fica dentro desse título novo.
 
-Como se corrige: a etiqueta de fecho tem sempre a barra: `</h2>`.
+Como se corrige: a etiqueta de fecho leva sempre a barra, `</h2>`.
 
 ### A língua da página está errada
 
 O que se vê: no ficheiro, o `html` tem `lang="en"`. No ecrã não muda nada, mas um leitor de ecrã lê o teu português com pronúncia inglesa.
 
-Porque acontece: o esqueleto foi gerado automaticamente pelo editor. O VS Code tem um atalho que escreve o esqueleto sozinho, mas põe `lang="en"`.
+Porque acontece: o esqueleto foi escrito pelo atalho do VS Code, um `!` seguido de Tab, que põe `lang="en"`.
 
-Como se corrige: muda para `lang="pt-PT"`. Enquanto estás a aprender, escreve o esqueleto à mão, que é a melhor forma de o saber de cor.
+Como se corrige: muda para `lang="pt-PT"`. Enquanto aprendes, escreve o esqueleto à mão, que é a melhor forma de o saber de cor.
 
 ## Palavras novas deste guia
 
-- HTML: a linguagem de marcação que diz ao browser o que cada pedaço de conteúdo de uma página é.
 - Hipertexto: texto com ligações para outros textos, que se lê saltando de um para outro.
 - Marcação: as marcas escritas num texto para dizer o que cada pedaço é.
 - Etiqueta: uma palavra entre `<` e `>`, como `<h1>`. A de fecho leva uma barra, como `</h1>`.
-- Elemento: a etiqueta de abertura, o conteúdo e a etiqueta de fecho, juntos. É o que representa uma coisa na página.
 - Atributo: uma informação extra sobre um elemento, escrita na etiqueta de abertura com a forma `nome="valor"`.
 - Elemento vazio: um elemento sem conteúdo e sem etiqueta de fecho, como `img`, `meta` e `br`.
-- Aninhar: pôr um elemento dentro de outro. Fecha-se primeiro o que se abriu por último.
-- Pai, filho e irmãos: o elemento que contém outro diretamente é o pai dele, e o de dentro é o filho. Dois filhos do mesmo pai são irmãos.
-- Indentação: os espaços no início das linhas, que mostram quem está dentro de quem. O browser ignora-os.
 - Comentário: um texto entre `<!--` e `-->`, para quem lê o código, que o browser ignora.
-- Esqueleto: a estrutura com que todas as páginas começam: o doctype, o `html`, o `head` e o `body`.
-- Doctype: a primeira linha, `<!doctype html>`, que diz ao browser para seguir as regras modernas.
-- Modo de compatibilidade: o modo em que o browser entra quando falta o doctype, e que imita os browsers antigos.
-- Elemento raiz: o elemento `html`, que contém todos os outros.
-- Leitor de ecrã: um programa que lê a página em voz alta a pessoas cegas ou com pouca visão.
-- UTF-8: a tabela que transforma os bytes do ficheiro em letras, com as letras de todas as línguas.
+- Aninhar: pôr um elemento dentro de outro. Fecha-se primeiro o que se abriu por último.
+- Pai e filho: o elemento que contém outro diretamente é o pai dele, e o de dentro é o filho.
+- Indentação: os espaços no início das linhas, que mostram quem está dentro de quem. O browser ignora-os.
+- UTF-8: a tabela que transforma os números guardados no ficheiro em letras, com as letras de todas as línguas.
 - Índice da página: a lista dos títulos, com a indentação a mostrar os níveis.
-- Parágrafo: um bloco de texto corrido, com uma ideia, marcado com `p`.
 - Lista não ordenada: uma lista em que a ordem dos itens não importa, marcada com `ul`.
 - Lista ordenada: uma lista em que a ordem dos itens importa, marcada com `ol`.
 - Ligação: um elemento `a` que leva a outro sítio, com o destino no atributo `href`.
@@ -1110,8 +1000,7 @@ Como se corrige: muda para `lang="pt-PT"`. Enquanto estás a aprender, escreve o
 - Semântica: o significado. Escrever HTML semântico é escolher cada elemento pelo que o conteúdo é.
 - Árvore de acessibilidade: a árvore que o browser constrói a partir do DOM, e que os leitores de ecrã recebem.
 - Papel: o que uma coisa é, na árvore de acessibilidade, como título, ligação ou navegação.
-- Nome: o texto que identifica uma coisa na árvore de acessibilidade, como o texto de uma ligação ou o `alt` de uma imagem.
-- Ponto de referência: uma zona da página a que um leitor de ecrã salta diretamente, como a navegação ou o conteúdo principal.
+- Ponto de referência: uma zona da página para onde um leitor de ecrã salta diretamente, como a navegação ou o conteúdo principal.
 - Tabela de dados: uma tabela em que cada valor responde a uma pergunta que junta uma linha e uma coluna.
 - Validador: o serviço do W3C que lê um ficheiro HTML e faz a lista dos erros, com o número da linha.
 - Foco: a moldura que mostra em que ligação estás quando percorres a página com o teclado.
@@ -1134,56 +1023,14 @@ Os elementos deste guia, e o que cada um marca:
 Os atributos deste guia:
 
 - `lang`: a língua da página. `charset`: a tabela das letras.
-- `href`: o destino de uma ligação. `id`: o nome único de um elemento.
+- `href`: o destino de uma ligação.
 - `src`: o ficheiro de uma imagem. `alt`: o texto alternativo.
 - `width` e `height`: a largura e a altura de uma imagem.
 - `scope`: a que se aplica um cabeçalho de tabela.
 
-## Verificar o que aprendeste
-
-Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia. Se não conseguires, volta à secção que explica a ideia.
-
-1. Na linha `<a href="sobre.html">Sobre a Estante Digital</a>`, aponta o elemento, a etiqueta de abertura e a etiqueta de fecho. Aponta também o atributo e o valor dele. O que aparece na página?
-2. Porque é que `<img>` não tem `</img>`?
-3. Escreve de memória o esqueleto completo de uma página. Diz, para cada linha, para que serve.
-4. Uma página em português tem `lang="en"`. Quem é prejudicado, e como?
-5. Uma página tem estes títulos, por esta ordem: `h1` Torneios, `h3` Regras, `h2` Inscrições, `h4` Prémios. Onde estão os saltos de nível? Há algum que não seja um erro?
-6. Os passos para criar um ficheiro no VS Code vão numa lista ordenada ou não ordenada? E as cores do logótipo de um clube? Justifica cada uma com o teste da troca.
-7. Na pasta da Estante Digital, que `href` escreves no `index.html` para ligar ao `sobre.html`? Que `src` escreves para o logótipo? E se a página estivesse dentro de uma pasta `recursos`?
-8. Porque é que o nome do site da Estante Digital está num `p` e não num `h1`?
-9. Porque é que o logótipo da Estante Digital tem `alt=""` e a capa do livro tem um `alt` com texto? Que `alt` levaria a capa se aparecesse pequenina numa lista, ao lado do título do livro?
-10. Qual é a diferença entre uma ligação e um botão? Com que teclas se ativa cada um?
-11. Que elemento usas para cada uma destas zonas?
-    - O menu do site.
-    - Uma notícia que faria sentido sozinha noutro site.
-    - Uma caixa "Sabias que?" ao lado de uma explicação.
-    - A nota final com o ano letivo e o contacto.
-12. Numa tabela de horário, o que é que o `scope` permite a um leitor de ecrã dizer quando chega à célula `13:00`?
-13. Quais são as quatro verificações de uma página? O que procuras em cada uma?
-14. Este pedaço de uma página tem quatro erros. Encontra-os, diz para cada um o que o browser faz ou o que corre mal a quem usa a página, e escreve a versão corrigida.
-
-    ```html
-    <main>
-      <h1>Clube de fotografia da escola</h1>
-      <h3>As saídas deste período</h3>
-      <p>Às terças-feiras à tarde, saímos pela vila com a máquina. Este período vamos fotografar:
-        <ul>
-          <li>as árvores do jardim municipal</li>
-          <li>as fachadas de azulejo da rua principal</li>
-        </ul>
-      </p>
-      <img src="imagens/azulejos.jpg">
-      <p>Para veres as fotografias da última saída, <a href="ultima-saida.html">clica aqui</a>.</p>
-    </main>
-    ```
-
-15. O que te custou mais neste tema: o aninhamento, os caminhos, o texto alternativo, escolher entre os elementos semânticos ou as tabelas? Escreve duas ou três linhas e guarda-as junto do plano do teu site.
-
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) e depois a [ficha de exercícios](exercicios/02-html-e-semantica-exercicios.md). No laboratório vais construir no computador duas páginas do teu site, a partir do mapa e dos wireframes que fizeste no tema 01. Vais ligá-las nos dois sentidos e verificá-las com as quatro verificações do passo 14. Depois vais provocar de propósito os erros mais comuns, para aprenderes a reconhecê-los e a corrigi-los. A ficha treina as mesmas ideias, uma de cada vez, num site que não é o teu.
-
-O tema seguinte é CSS explicado e Flexbox. As tuas páginas têm agora estrutura e significado, mas têm o aspeto por omissão do browser: letra preta, fundo branco, tudo empilhado. No tema do CSS vais dar-lhes aspeto, com cores, tipos de letra, espaços e menus lado a lado, sem mudar uma única etiqueta do HTML. É aí que se vê o valor da divisão de trabalho: como a estrutura está certa, o CSS só tem de tratar do aspeto. No tema do Git aprendes a guardar versões da pasta do teu site, para que nenhuma alteração se perca.
+No tema seguinte, CSS explicado e Flexbox, dás aspeto às tuas páginas sem mudar o HTML.
 
 ## Para saber mais
 

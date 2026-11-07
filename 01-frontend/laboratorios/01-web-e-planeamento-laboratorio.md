@@ -2,164 +2,97 @@
 
 # Laboratório: A Web, os utilizadores e o planeamento
 
-Laboratório do tema A Web, os utilizadores e o planeamento, do módulo Conceber aplicações para a web na vertente frontend. Vais abrir as ferramentas do programador pela primeira vez e usá-las para ver por dentro como uma página chega ao teu ecrã. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](../01-web-e-planeamento.md) tem a teoria completa, para quem quiser saber mais.
-
 ## O que vais construir
 
-Neste laboratório não vais escrever código. Vais observar páginas por dentro e fazer experiências com elas. O que constróis é um ficheiro de registo, o `registo.md`, com oito observações escritas por ti. Cada observação é a prova de uma ideia sobre a Web.
+Neste laboratório não escreves código: vês as páginas por dentro, com as ferramentas do programador, e fazes experiências com elas. O que constróis é um ficheiro `registo.md`, com uma observação no fim de cada fase.
 
-No fim, sabes abrir as ferramentas do programador e encontrar na árvore de uma página qualquer parte dela. Sabes também mostrar que mudar essa árvore não muda o ficheiro, e ver os pedidos que uma página faz.
-
-| Fase | O que fazes | O que fica provado no fim |
-| --- | --- | --- |
-| 1 | Abres a Estante Digital a partir do teu disco | Uma página do teu disco não vem de um servidor |
-| 2 | Abres o separador Elements | Cada parte da página tem um ramo na árvore do DOM |
-| 3 | Mudas o título no DOM, vês o ficheiro e recarregas | Mudar o DOM não muda o ficheiro |
-| 4 | Visitas o primeiro site da história | O browser acrescenta ao DOM o que falta no ficheiro |
-| 5 | Segues um pedido no separador Network e provocas um 404 | Cada pedido tem um método e uma resposta com um código |
-| 6 | Contas os pedidos de uma página de hoje | Uma página de hoje faz muitos pedidos |
-
-## Palavras que vais usar
-
-- Browser: o programa que pede as páginas, lê os ficheiros e desenha a página no ecrã. Neste laboratório usas o Chrome ou o Edge. Para saber mais, vê a secção "O browser" do [guia](../01-web-e-planeamento.md).
-- HTML, CSS e JavaScript: as três linguagens de uma página. O HTML diz o que cada pedaço do conteúdo é, o CSS diz como se apresenta, e o JavaScript diz como se comporta.
-- Ficheiro: o texto de uma página, guardado no disco, tal como alguém o escreveu num editor.
-- DOM: a árvore que o browser constrói em memória a partir do ficheiro, com um ramo para cada parte da página. É a partir dela que a página é desenhada. Para saber mais, vê a secção "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
-- Elemento: cada parte de uma página, com um nome curto. O `h1` é o título principal, o `p` é um parágrafo e o `main` é o conteúdo principal. Na árvore, cada elemento é um ramo.
-- Etiqueta: o nome de um elemento entre `<` e `>`, como `<h1>`, que marca onde ele começa; `</h1>` marca onde acaba.
-- Esqueleto da página: as partes por que começam as páginas de hoje. O `html` embrulha tudo. Lá dentro, o `head` é a cabeça da página, que não aparece no meio dela. Tem o `title`, o título que se vê no separador. O `body` é o corpo, com tudo o que se vê.
-- `header`: o cabeçalho que se vê no topo de uma página, com o nome do site e o menu. Tem um nome parecido com o `head`, mas é outra coisa: o `head` não aparece, e o `header` aparece.
-- Código-fonte: o texto do ficheiro tal como chegou ao browser, antes de o browser construir a árvore.
-- Ferramentas do programador: ferramentas escondidas do browser para ver uma página por dentro. Estão arrumadas em separadores. O separador Elements mostra a árvore do DOM, e o separador Network mostra os pedidos.
-- Cliente e servidor: o cliente é quem pede, o teu browser. O servidor é um computador sempre ligado, que guarda os ficheiros de um site e os envia a quem os pede. Para saber mais, vê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
-- Pedido e resposta: o browser faz um pedido ao servidor para cada ficheiro de que precisa, e o servidor devolve uma resposta.
-- Endereço: o endereço de uma página, a que também se chama URL. Tem três partes principais: o protocolo, o domínio e o caminho. Para saber mais, vê a secção "O endereço de uma página" do [guia](../01-web-e-planeamento.md).
-- Método: a parte do pedido que diz o que o browser quer. O GET quer dizer "dá-me este ficheiro".
-- Código de resposta: o número de três algarismos com que o servidor diz como correu o pedido. O 200 quer dizer que correu bem, e o 404 que o que se pediu não existe. Para saber mais, vê a secção "O que se diz num pedido e numa resposta" do [guia](../01-web-e-planeamento.md).
-- Cache: a cópia que o browser guarda de uma página já visitada, para não ter de a pedir toda outra vez.
+1. [Fase 1: Uma página do teu disco não vem de um servidor](#fase-1-uma-página-do-teu-disco-não-vem-de-um-servidor)
+2. [Fase 2: O browser constrói uma árvore, o DOM](#fase-2-o-browser-constrói-uma-árvore-o-dom)
+3. [Fase 3: Mudar o DOM não muda o ficheiro](#fase-3-mudar-o-dom-não-muda-o-ficheiro)
+4. [Fase 4: O browser acrescenta o que falta no ficheiro](#fase-4-o-browser-acrescenta-o-que-falta-no-ficheiro)
+5. [Fase 5: O endereço de uma página](#fase-5-o-endereço-de-uma-página)
+6. [Fase 6: O pedido diz o que o browser quer](#fase-6-o-pedido-diz-o-que-o-browser-quer)
+7. [Fase 7: A resposta diz como correu o pedido](#fase-7-a-resposta-diz-como-correu-o-pedido)
+8. [Fase 8: Uma página de hoje faz muitos pedidos](#fase-8-uma-página-de-hoje-faz-muitos-pedidos)
 
 ## O que precisas
 
-- Um computador com o Chrome ou o Edge. Para confirmar, abre o browser: deve aparecer uma janela com a barra de endereço no topo. Os passos são iguais nos dois. No Firefox, as ferramentas existem e funcionam da mesma maneira, mas alguns nomes mudam. O separador Elements, por exemplo, chama-se Inspetor.
-- A pasta do repositório da disciplina no teu computador, com a pasta `exemplos`. Vais usar a Estante Digital, o site de exemplo dos guias, que está em `exemplos/frontend/estante-digital/`. Se ainda não tens a pasta, a secção "Preparar o projeto" diz como a obter.
-- Ligação à Internet, para as fases 4, 5 e 6. Para confirmar, abre um site qualquer.
-- O VS Code, o editor de código das aulas, para escreveres o ficheiro de registo. Para confirmar que o tens, abre-o: deve aparecer a janela do editor, com uma coluna de ícones do lado esquerdo.
-
-Vais precisar destes atalhos de teclado:
-
-| O que fazer | Windows | Mac |
-| --- | --- | --- |
-| Guardar o ficheiro no VS Code | Ctrl+S | Cmd+S |
-| Abrir e fechar as ferramentas do programador | F12 ou Ctrl+Shift+I | Cmd+Option+I |
-| Ver o código-fonte da página, tal como chegou do ficheiro | Ctrl+U | Cmd+Option+U |
-| Recarregar a página | F5 | Cmd+R |
-| Abrir um ficheiro do computador no browser | Ctrl+O | Cmd+O |
-
-## Se alguma coisa falhar
-
-1. As ferramentas do programador abriram? Se o F12 não abre nada, experimenta Fn+F12, ou Ctrl+Shift+I (Cmd+Option+I no Mac). Também podes carregar com o botão direito do rato na página e escolher Inspecionar.
-2. Os nomes estão em português? Elementos, Consola e Rede são Elements, Console e Network, e estão pela mesma ordem.
-3. As ferramentas estão abertas no separador certo do browser? Cada separador do browser tem as suas próprias ferramentas. Se mudaste de separador, abre-as outra vez.
-4. Tens Internet? As fases 4, 5 e 6 precisam dela. Se uma página da Internet não abre, avisa o professor.
-
-Se o problema for outro, procura-o em [problemas frequentes](#problemas-frequentes).
+- O Chrome ou o Edge: confirma que o tens abrindo-o. Deve aparecer uma janela com a barra de endereço no topo. Os passos são iguais nos dois.
+- O VS Code, o editor das aulas: confirma que o tens abrindo-o. Deve aparecer a janela do editor, com uma coluna de ícones à esquerda.
+- A pasta do repositório da disciplina, com a Estante Digital, o site de exemplo dos guias. Se ainda não a tens, "Preparar o projeto" diz como a obter.
+- Ligação à Internet, a partir da fase 4: confirma que a tens abrindo um site qualquer.
 
 ## Preparar o projeto
 
-1. Arranja a pasta do repositório da disciplina, se ainda não a tens. O professor pode dizer-te outra forma; se não disser, faz assim. Abre no browser o endereço `https://github.com/NunoMACastro/epms-2627-1ds-da`. Carrega no botão verde Code e escolhe Download ZIP (nomes confirmados a 16 de outubro de 2026). O browser descarrega um ficheiro ZIP, que guarda várias pastas num só ficheiro.
+1. Arranja a pasta do repositório da disciplina, se ainda não a tens, para teres a Estante Digital no teu disco. Se o professor não te disser outra forma, abre no browser o endereço `https://github.com/NunoMACastro/epms-2627-1ds-da`. Carrega no botão verde Code e escolhe Download ZIP. O browser descarrega um ficheiro ZIP, que guarda várias pastas num só ficheiro.
 
-2. Descompacta o ficheiro ZIP numa pasta tua, antes de abrires qualquer página lá de dentro. No Windows, carrega com o botão direito no ficheiro e escolhe a opção de extrair. No Mac, faz duplo clique no ficheiro. Descompacta-se primeiro porque, dentro do ZIP, as ligações entre as páginas e as imagens podem falhar. O que deves ver: uma pasta chamada `epms-2627-1ds-da-main`, com as pastas `01-frontend`, `exemplos`, `imagens`, `laboratorios` e `projeto` lá dentro. No Windows, pode aparecer uma pasta com o mesmo nome dentro da primeira: abre-a até veres `01-frontend`.
+2. Descompacta o ZIP numa pasta tua, antes de abrires qualquer página lá de dentro, porque dentro do ZIP as ligações entre as páginas podem falhar. No Windows, carrega com o botão direito no ficheiro e escolhe a opção de extrair. No Mac, faz duplo clique no ficheiro. O que deves ver: uma pasta `epms-2627-1ds-da-main`, com as pastas `01-frontend`, `exemplos`, `imagens` e `projeto` lá dentro. No Windows, pode aparecer outra pasta com o mesmo nome dentro da primeira: abre-a até veres `01-frontend`. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
 
-3. Cria o teu ficheiro de registo, onde vais escrever o que observas no fim de cada fase. É um ficheiro de texto chamado `registo.md`. Fica na pasta `epms-2627-1ds-da-main`, a que tem lá dentro `01-frontend` e `exemplos`, a não ser que o professor te indique outro sítio.
+3. Abre no VS Code a pasta `epms-2627-1ds-da-main`, a que tem `01-frontend` lá dentro, porque é lá que vai ficar o teu registo. No menu File, escolhe Open Folder... e depois a pasta. Se o VS Code perguntar se confias nos autores dos ficheiros, carrega em "Yes, I trust the authors", porque são os ficheiros da disciplina. O que deves ver: à esquerda, o painel Explorer, com as pastas `01-frontend` e `exemplos`.
 
-   Abre essa pasta no VS Code: no menu File, escolhe Open Folder... e depois a pasta. O VS Code pode perguntar se confias nos autores dos ficheiros da pasta. Carrega em "Yes, I trust the authors", que quer dizer "sim, confio nos autores". São os ficheiros do repositório da disciplina.
-
-   No painel Explorer, do lado esquerdo, carrega primeiro numa zona vazia, para o ficheiro não ficar dentro de outra pasta. Depois, passa o rato por cima do nome da pasta e carrega no ícone de ficheiro novo, New File.... Escreve `registo.md` e carrega em Enter. Os nomes foram confirmados no VS Code 1.142, a 16 de outubro de 2026.
+4. Cria o `registo.md`, o ficheiro onde escreves o que observas no fim de cada fase, a não ser que o professor te indique outro sítio. No painel Explorer, carrega numa zona vazia. Depois carrega no ícone de ficheiro novo, New File..., no topo do painel, ao lado do nome da pasta. Escreve `registo.md` e carrega em Enter.
 
    O que deves ver: o `registo.md` no painel Explorer, ao lado das pastas, e aberto, vazio, no meio da janela. Sempre que escreveres nele, guarda com Ctrl+S, ou Cmd+S no Mac.
 
-   Vais registar estas oito observações, uma em cada paragem, com o número de cada uma e o que viste:
+## Fase 1: Uma página do teu disco não vem de um servidor
 
-   | O que vais registar |
-   | --- |
-   | 1. O início do endereço da Estante Digital aberta do teu disco |
-   | 2. O elemento que ficou selecionado quando inspecionaste o título grande |
-   | 3. O que aconteceu ao título depois de recarregares a página |
-   | 4. O protocolo, o domínio e o caminho do endereço do primeiro site |
-   | 5. Os dois elementos que estão no DOM do primeiro site e não estão no ficheiro, e onde foi parar o `title` |
-   | 6. O método e o código de resposta do pedido de `TheProject.html` |
-   | 7. O código de resposta de `NaoExiste.html` |
-   | 8. O número de pedidos do primeiro site e o da página do repositório no GitHub |
+Abres a Estante Digital a partir do teu disco e vês, pelo endereço, que nenhum servidor a enviou. Rever: [Uma página do teu disco não vem de um servidor](../01-web-e-planeamento.md#uma-página-do-teu-disco-não-vem-de-um-servidor).
 
-## Fase 1: Uma página aberta do teu disco
+1. Abre a página inicial da Estante Digital. No browser, carrega em Ctrl+O (Cmd+O no Mac), vai à pasta do repositório e abre `exemplos/frontend/estante-digital/index.html`. O que deves ver: uma página com o título "Recursos de estudo recomendados pela turma" e listas de livros, vídeos e sítios. É texto preto sobre fundo branco, sem estilos. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
 
-Quando abres uma página de um site, o teu browser pede o ficheiro a um servidor, noutro computador. Quando abres um ficheiro que está no teu disco, não há servidor nenhum: o browser lê o ficheiro diretamente. O endereço mostra a diferença. Uma página que veio de um servidor começa por `https://` (ou `http://`), e um ficheiro do teu disco começa por `file://`. Para saber mais, lê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
+2. Antes de olhares para a barra de endereço, prevê: o endereço desta página começa por `https://` ou por outra coisa? Depois, carrega uma vez na barra de endereço, porque o Chrome esconde o início até carregares lá. O que deves ver: o endereço começa por `file:///`, seguido do caminho do ficheiro no teu disco, com `index.html` no fim. Isto quer dizer que o browser leu o ficheiro diretamente do disco, sem servidor nenhum.
 
-1. Abre a página inicial da Estante Digital. No browser, carrega em Ctrl+O (Cmd+O no Mac), vai à pasta do repositório e abre o ficheiro `exemplos/frontend/estante-digital/index.html`. Também podes fazer duplo clique no ficheiro, no explorador de ficheiros. O que deves ver: uma página com o título "Recursos de estudo recomendados pela turma" e listas de livros, vídeos e sítios. A página ainda não tem estilos: é texto preto em fundo branco, com as ligações a azul e sublinhadas.
-
-2. Antes de olhares para a barra de endereço, prevê: o endereço desta página começa por `https://` ou por outra coisa? Depois, carrega uma vez na barra de endereço, para veres o endereço completo. Alguns browsers, como o Chrome, escondem o início até carregares lá. O que deves ver: o endereço começa por `file:///`. A seguir vem o caminho do ficheiro no teu disco, com as pastas e o nome `index.html` no fim. Isto quer dizer que não há servidor nenhum: o browser leu o ficheiro diretamente do disco.
-
-3. Carrega na ligação "Sobre" e depois em "Início", no menu. O que deves ver: as páginas mudam, e o endereço muda com elas. Continua a começar por `file:///`, e só muda o nome do ficheiro no fim, de `index.html` para `sobre.html` e outra vez para `index.html`.
+3. Carrega na ligação "Sobre" e depois em "Início", no menu. O que deves ver: o endereço continua a começar por `file:///`. Só muda o nome do ficheiro no fim, de `index.html` para `sobre.html` e outra vez para `index.html`.
 
 ### Paragem 1
 
-Tens a Estante Digital aberta a partir do teu disco, e sabes, pela barra de endereço, que não veio de um servidor. Escreve no `registo.md` a observação 1, o início do endereço. O que deve ficar escrito: `file:///`, seguido do caminho da tua pasta.
+Tens a Estante Digital aberta a partir do teu disco. Escreve no `registo.md` a observação 1: o início do endereço, `file:///`, seguido do caminho da tua pasta.
 
-Pensa antes de continuares: se enviasses este endereço a um colega, por mensagem, ele via a página no computador dele? A resposta: não. O endereço aponta para um ficheiro no teu disco, e no computador do colega esse ficheiro não existe nesse sítio. Para ele ver o site, tinhas de lhe dar os ficheiros, ou o site tinha de estar num servidor.
+Pensa antes de continuares: se enviasses este endereço a um colega, por mensagem, ele via a página no computador dele? A resposta: não. O endereço aponta para um ficheiro no teu disco, e no computador do colega esse ficheiro não está nesse sítio.
 
-## Fase 2: A árvore do DOM no separador Elements
+## Fase 2: O browser constrói uma árvore, o DOM
 
-Quando o browser abre um ficheiro HTML, lê o texto de cima a baixo. Depois constrói em memória uma árvore, com um ramo para cada parte da página. A essa árvore chama-se DOM. É a partir dela, e não do ficheiro, que a página é desenhada. O separador Elements das ferramentas do programador mostra essa árvore. Para saber mais, lê a secção "O browser" do [guia](../01-web-e-planeamento.md).
+Abres as ferramentas do programador e encontras, na árvore do DOM, cada parte da página. Rever: [O browser constrói uma árvore, o DOM](../01-web-e-planeamento.md#o-browser-constrói-uma-árvore-o-dom) e [As ferramentas do programador](../01-web-e-planeamento.md#as-ferramentas-do-programador).
 
-1. Abre as ferramentas do programador. Com a página inicial da Estante Digital aberta, carrega em F12 (Cmd+Option+I no Mac). O que deves ver: as ferramentas abrem-se, normalmente do lado direito ou em baixo da janela. Se se abrirem noutro separador que não o Elements, carrega em Elements, na fila de separadores do topo das ferramentas. Em português pode aparecer como Elementos.
+1. Abre as ferramentas do programador, as ferramentas do browser que mostram a página por dentro. Com a Estante Digital aberta, carrega em F12 (Cmd+Option+I no Mac). O que deves ver: as ferramentas abrem-se à direita ou em baixo da janela, com uma fila de separadores no topo, como Elements e Console. Se não estiverem em Elements, carrega em Elements, que em português pode aparecer como Elementos. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
 
-2. Olha para a árvore. O que deves ver: `html` em cima e, lá dentro, `head` e `body`. Os pequenos triângulos à esquerda de cada linha abrem e fecham cada ramo. Abre o `body` e, lá dentro, o `main`.
+2. Olha para a árvore. O que deves ver: `html` em cima e, lá dentro, `head` e `body`. Antes do `html` aparecem o `<!doctype html>` e, a verde, comentários: notas para quem lê o código, que o browser não mostra na página. Os pequenos triângulos à esquerda de cada linha abrem e fecham cada ramo. Abre o `body` e, lá dentro, o `main`.
 
-3. Passa o rato devagar por cima das linhas da árvore, sem carregar. O que deves ver: na página, a parte que corresponde a cada linha fica pintada de azul. É assim que se descobre que ramo da árvore desenha que parte da página.
+3. Passa o rato devagar pelas linhas da árvore, sem carregar. O que deves ver: na página, a parte que corresponde a cada linha fica pintada de azul. Isto quer dizer que cada ramo da árvore desenha uma parte da página.
 
-4. Agora faz o caminho contrário, da página para a árvore. Na página, carrega com o botão direito do rato no título grande, "Recursos de estudo recomendados pela turma", e escolhe Inspecionar. O que deves ver: as ferramentas saltam para a linha desse título na árvore e deixam-na selecionada. A linha começa por `<h1>`: o título grande é um elemento `h1`, o título principal da página.
+4. Agora faz o caminho contrário, da página para a árvore. Na página, carrega com o botão direito no título grande e escolhe Inspecionar, ou Inspect, com o browser em inglês. O que deves ver: as ferramentas saltam para a linha desse título e deixam-na selecionada. A linha começa por `<h1>`: o título grande é um elemento `h1`.
 
-5. Há ainda uma terceira forma. No canto superior esquerdo das ferramentas há um ícone com uma seta a apontar para um quadrado. Carrega nele e depois passa o rato pela página: cada parte fica pintada, com o nome do elemento numa etiqueta. Carrega na ligação "Sobre" do menu. O que deves ver: fica selecionada na árvore uma linha que começa por `<a`. É assim que o HTML marca uma ligação, e vais aprendê-lo no tema 02.
+5. Há ainda uma terceira forma. No canto superior esquerdo das ferramentas, carrega no ícone com uma seta a apontar para um quadrado e depois carrega na ligação "Sobre" do menu. O que deves ver: fica selecionada uma linha que começa por `<a`, que é como o HTML marca uma ligação.
 
 ### Paragem 2
 
-Encontras na árvore a linha de qualquer parte da página, e na página a parte de qualquer linha da árvore. Escreve no `registo.md` a observação 2, o elemento do título grande. O que deve ficar escrito: `h1`.
+Encontras na árvore a linha de qualquer parte da página, e na página a parte de qualquer linha. Escreve no `registo.md` a observação 2: o elemento do título grande, `h1`.
 
-Pensa antes de continuares: quais são as três formas de ligar uma parte da página à sua linha na árvore? A resposta: há três formas.
+Pensa antes de continuares: das três formas de ligar a página à árvore, qual usavas para descobrir que elemento é o logótipo, e porquê? A resposta: a segunda ou a terceira, porque partem da página: já vês o logótipo e queres a sua linha na árvore. A primeira serve para o caminho contrário. A linha do logótipo começa por `<img`, que é como o HTML marca uma imagem.
 
-- Passar o rato pelas linhas da árvore e ver a parte pintada na página.
-- Carregar com o botão direito numa parte da página e escolher Inspecionar.
-- Carregar no ícone da seta e depois na parte da página.
+## Fase 3: Mudar o DOM não muda o ficheiro
 
-Agora escolhe: qual das três usavas para descobrir que elemento é o desenho do logótipo, no topo da página, e porquê? A resposta: serve a segunda ou a terceira, porque partem da página. Já vês o logótipo e queres encontrar a sua linha na árvore. A primeira serve para o caminho contrário: tens uma linha da árvore e queres saber que parte da página ela desenha. Se experimentares, a linha do logótipo começa por `<img`, que é como o HTML marca uma imagem.
+Mudas o título da página no DOM e confirmas que o ficheiro fica igual. Rever: [Mudar o DOM não muda o ficheiro](../01-web-e-planeamento.md#mudar-o-dom-não-muda-o-ficheiro).
 
-## Fase 3: Mudar o DOM sem mudar o ficheiro
-
-O ficheiro é o texto guardado no disco. O DOM é a árvore que o browser construiu a partir dele, em memória. O que mudas no separador Elements muda só o DOM, e nunca o ficheiro. Quando recarregas a página, o browser deita fora a árvore e volta a construí-la a partir do ficheiro. Para saber mais, lê a secção "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
-
-1. Na árvore, seleciona outra vez a linha do `h1`. Faz duplo clique no texto do título, que está entre `<h1>` e `</h1>`. O que deves ver: o texto passa a poder ser editado, como numa caixa de texto.
+1. Na árvore, seleciona outra vez a linha do `h1` e faz duplo clique no texto do título, entre `<h1>` e `</h1>`. O que deves ver: o texto passa a poder ser editado, como numa caixa de texto.
 
 2. Apaga o texto, escreve `Olá, sou o DOM` e carrega em Enter. O que deves ver: na página, o título passou a dizer "Olá, sou o DOM".
 
-3. Antes do passo seguinte, prevê: no código-fonte, que é o texto do ficheiro, o que diz agora o título? Depois carrega em Ctrl+U (Cmd+Option+U no Mac). O que deves ver: abre-se um separador novo com o código-fonte da página. Procura o `h1`. O texto continua a ser "Recursos de estudo recomendados pela turma", porque o ficheiro não mudou. Fecha esse separador.
+3. Antes do passo seguinte, prevê: no código-fonte da página, que é o texto do ficheiro, o que diz agora o título? Depois carrega em Ctrl+U (Cmd+Option+U no Mac), que abre o código-fonte num separador novo do browser. O que deves ver: o `h1` continua a dizer "Recursos de estudo recomendados pela turma", porque o ficheiro não mudou. Fecha esse separador. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
 
-4. Volta à página e recarrega-a com F5 (Cmd+R no Mac). O que deves ver: o título volta a ser "Recursos de estudo recomendados pela turma". O browser construiu um DOM novo a partir do ficheiro, e a tua mudança desapareceu.
+4. Volta à página e recarrega-a com F5 (Cmd+R no Mac). O que deves ver: o título volta a ser "Recursos de estudo recomendados pela turma". Isto quer dizer que o browser construiu um DOM novo a partir do ficheiro, e a tua mudança desapareceu.
 
-5. Escreve no `registo.md`, por palavras tuas, o que esta experiência mostrou, em duas ou três frases, com as palavras "ficheiro" e "DOM". Uma resposta completa diz três coisas. Por exemplo: "Mudei o DOM, a árvore que o browser tem em memória, e por isso a página mudou. O ficheiro no disco não mudou. Quando recarreguei, o browser construiu um DOM novo a partir do ficheiro, e a mudança desapareceu." Uma frase como "mudei a página e depois voltou" não chega, porque não diz o que mudou e o que ficou igual.
+5. Escreve no `registo.md`, como observação 3, por palavras tuas e com as palavras "ficheiro" e "DOM", o que esta experiência mostrou. Uma resposta completa diz o que mudou, o que ficou igual e porque é que a mudança desapareceu. Por exemplo: "Mudei o DOM, e por isso a página mudou. O ficheiro no disco não mudou. Quando recarreguei, o browser construiu um DOM novo a partir do ficheiro, e a mudança desapareceu."
 
 ### Paragem 3
 
-Mostraste com uma experiência que mudar o DOM não muda o ficheiro. Escreve no `registo.md` a observação 3, o que aconteceu ao título. O que deve ficar escrito: voltou ao texto original, "Recursos de estudo recomendados pela turma".
+Mostraste com uma experiência que mudar o DOM não muda o ficheiro, e não estragaste nada. A tua observação 3 diz o que mudou, o que ficou igual e porque é que a mudança desapareceu.
 
-Relê as frases que escreveste no passo 5 e compara-as com a resposta completa desse passo. Dizem as três coisas: o que mudou, o que ficou igual e porque é que a mudança desapareceu? Se faltar uma, acrescenta-a.
-
-Não estragaste nada. O que mudas no separador Elements fica só na tua cópia da página, até recarregares.
-
-Pensa antes de continuares: se o professor mudasse o título da Estante Digital nas ferramentas do programador do computador dele, o teu título mudava? A resposta: não. Ele mudava só o DOM da cópia que o browser dele tem em memória. O ficheiro de cada um ficava igual.
+Pensa antes de continuares: se o professor mudasse o título da Estante Digital nas ferramentas do programador do computador dele, o teu título mudava? A resposta: não. Ele mudava só o DOM da cópia que o browser dele tem aberta, e os ficheiros ficavam iguais.
 
 ## Fase 4: O browser acrescenta o que falta no ficheiro
 
-As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` e o `body` lá dentro. Uma página escrita em 1992 não seguia estas regras. Quando o browser de hoje a abre, constrói a árvore pelas regras de hoje e acrescenta o que falta no ficheiro. Para saber mais, lê as secções "Uma história curta da Web" e "O ficheiro e o DOM" do [guia](../01-web-e-planeamento.md).
+Visitas uma cópia do primeiro site da Web, de 1992, e encontras no DOM elementos que o ficheiro não tem. Rever: [O browser acrescenta o que falta no ficheiro](../01-web-e-planeamento.md#o-browser-acrescenta-o-que-falta-no-ficheiro).
 
 1. Num separador novo, escreve este endereço e carrega em Enter:
 
@@ -167,75 +100,104 @@ As páginas de hoje começam todas pelo mesmo esqueleto: o `html`, com o `head` 
    https://info.cern.ch/hypertext/WWW/TheProject.html
    ```
 
-   O que deves ver: uma página em inglês, com o título "World Wide Web". Tem só texto e ligações a azul e sublinhadas, sem imagens nem cores. É uma das primeiras páginas da Web, guardada pelo CERN tal como era. O ficheiro foi alterado pela última vez em 1992.
+   O que deves ver: uma página em inglês, com o título "World Wide Web", só com texto e ligações azuis e sublinhadas. É uma das primeiras páginas da Web, guardada pelo CERN tal como era. Se a página não abrir, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
 
-2. Parte o endereço nas suas partes. O protocolo é o que vem antes de `://`, e diz as regras da conversa com o servidor. O domínio é o nome do servidor, e vai até à primeira barra a seguir. O caminho é o resto: a pasta e o ficheiro dentro do servidor. A resposta: o protocolo é `https`, o domínio é `info.cern.ch` e o caminho é `/hypertext/WWW/TheProject.html`.
+2. Carrega em Ctrl+U (Cmd+Option+U no Mac) para ver o código-fonte. O que deves ver, em três pormenores:
 
-3. Carrega em Ctrl+U (Cmd+Option+U no Mac) para ver o código-fonte. O que deves ver, em três pormenores:
-
-   - as etiquetas estão escritas em maiúsculas, como `<TITLE>` e `<H1>`. Nos anos 90 escrevia-se assim; hoje usam-se minúsculas;
+   - os nomes entre `<` e `>` estão em maiúsculas, como `<TITLE>` e `<H1>`, como se escrevia nos anos 90;
    - não há `<!doctype html>` no início;
-   - no lugar onde hoje se escreveria `<head>` está uma etiqueta `<HEADER>`, e o `<TITLE>` está lá dentro.
+   - no lugar onde hoje se escreveria `<head>` está `<HEADER>`, com o `<TITLE>` lá dentro.
 
    Não feches o separador do código-fonte: vais compará-lo com a árvore no passo seguinte.
 
-4. Antes de abrires a árvore, prevê: vais encontrar lá elementos que o ficheiro não tem? Depois volta ao separador da página, abre as ferramentas do programador no separador Elements e compara o topo da árvore com o código-fonte. Abre também o `body` e, lá dentro, o `header`, e procura o `title` da página. O que deves ver: a árvore começa por `html`, com um `head` vazio e um `body`. Dentro do `body` está um `header`, e é dentro desse `header` que está o `title`. Ao lado do `title` está um elemento `nextid`, com `n="55"`. É uma etiqueta de 1992 que hoje já não quer dizer nada: o browser guarda-a na árvore, mas não faz nada com ela.
+3. Antes de abrires a árvore, prevê: vais encontrar lá elementos que o ficheiro não tem? Depois volta ao separador da página, abre as ferramentas do programador no separador Elements e compara o topo da árvore com o código-fonte. Abre também o `body`, e lá dentro o `header`. O que deves ver: a árvore começa por `html`, com um `head` vazio e um `body`, e o `header` está dentro do `body`.
 
-5. Descobre os dois elementos que estão na árvore do DOM e não estão no ficheiro, e dentro de que elemento foi parar o `title`. A resposta: o `html` e o `head`; o `title` foi parar dentro do `header`, que está no `body`. O `body` não conta, porque o ficheiro tem `<BODY>` na linha 5.
+4. Descobre os dois elementos que estão no DOM e não estão no ficheiro, e dentro de que elemento foi parar o `title`. A resposta: o `html` e o `head`, e o `title` foi parar dentro do `header`. O `body` não conta, porque o ficheiro tem `<BODY>` na linha 5. A seguir ao `title`, no mesmo `header`, está um elemento `nextid`, de 1992, que hoje não quer dizer nada.
 
 ### Paragem 4
 
-Viste numa página verdadeira que o DOM tem elementos que o ficheiro não tem. Escreve no `registo.md` a observação 4, o protocolo, o domínio e o caminho do passo 2. Escreve também a observação 5, o que encontraste no passo 5.
+Viste numa página verdadeira que o DOM tem elementos que o ficheiro não tem. Escreve no `registo.md` a observação 4: os dois elementos acrescentados, e onde foi parar o `title`.
 
-Pensa antes de continuares: porque é que o `title` foi parar dentro de um `header`, no `body`? A resposta: o browser acrescentou o `html` e o `head`, porque as regras de hoje os põem sempre na árvore. Mas não percebeu que o `HEADER` de 1992 queria dizer a cabeça da página. Para as regras de hoje, um `header` é um cabeçalho que se vê, e fica no `body`. O browser pô-lo lá, com o `title` dentro, e deixou o `head` vazio. Fez o melhor que pôde com um ficheiro escrito com regras antigas.
+Pensa antes de continuares: porque é que o `title` foi parar dentro de um `header`, no `body`? A resposta: para as regras de hoje, um `header` é um cabeçalho que se vê, e fica no `body`. O browser não percebeu que o `HEADER` de 1992 queria dizer a cabeça da página. Pô-lo no `body`, com o `title` dentro, e deixou o `head` vazio.
 
-## Fase 5: Um pedido e a sua resposta no separador Network
+## Fase 5: O endereço de uma página
 
-Para te mostrar o primeiro site, o browser fez um pedido ao servidor do CERN, e o servidor enviou uma resposta. Cada pedido tem um método, que diz o que o browser quer, e cada resposta tem um código, que diz como correu. O separador Network mostra cada pedido numa linha. Para saber mais, lê a secção "O que se diz num pedido e numa resposta" do [guia](../01-web-e-planeamento.md).
+Partes o endereço do primeiro site nas suas partes. Rever: [O endereço de uma página](../01-web-e-planeamento.md#o-endereço-de-uma-página).
 
-1. Ainda na página do primeiro site, com as ferramentas abertas, carrega no separador Network (em português, Rede). O que deves ver: a lista está vazia, porque as ferramentas só registam os pedidos feitos enquanto estão abertas. Na fila de cima do separador, marca a caixa Disable cache (em português, Desativar cache). Fazes isto porque o browser guardou uma cópia da página na primeira visita, a cache. Sem a caixa marcada, ao recarregar, o browser podia usar essa cópia em vez de pedir a página inteira ao servidor.
+1. Volta ao separador do primeiro site e carrega uma vez na barra de endereço, como na fase 1, para veres o endereço completo. Separa o protocolo, que vem antes de `://`, o domínio, que vai daí até à barra seguinte, e o caminho, que é o resto. A resposta: o protocolo é `https`, o domínio é `info.cern.ch` e o caminho é `/hypertext/WWW/TheProject.html`.
 
-2. Recarrega a página com F5 (Cmd+R no Mac). O que deves ver: aparece uma linha na lista, com o nome `TheProject.html`. É o pedido que o browser fez ao servidor. Na coluna Status aparece o código de resposta, 200. Na barra de baixo das ferramentas aparece o número total de pedidos: 1. Esta página precisou de um só pedido, porque é só texto, sem imagens, estilos nem JavaScript.
-
-3. Carrega na linha `TheProject.html`. Abre-se um painel com vários separadores. No separador Headers, procura três informações: o endereço do pedido (Request URL), o método (Request Method) e o código de resposta (Status Code). O que deves ver: o endereço é `https://info.cern.ch/hypertext/WWW/TheProject.html`, o mesmo da barra de endereço. O método é `GET` e o código é `200 OK`. Com as ferramentas em português, os nomes mudam: procura o endereço, o método e o código.
-
-4. Agora provoca um erro de propósito. Antes de o fazeres, prevê: que código de resposta vai dar uma página que não existe? Na barra de endereço, muda o fim do endereço de `TheProject.html` para `NaoExiste.html` e carrega em Enter. O que deves ver: a página mostra "Not Found". No separador Network, a lista passa a ter só a linha `NaoExiste.html`, com o código 404. O servidor respondeu, mas a dizer que o que pediste não existe. É o que acontece quando alguém carrega numa ligação sem destino.
+2. Compara com o endereço da Estante Digital, da fase 1. O que deves ver: o da Estante começa por `file:///` e não tem domínio, porque não veio de nenhum servidor.
 
 ### Paragem 5
 
-Seguiste um pedido do princípio ao fim, com o método, o endereço e o código da resposta. Depois viste o código de um pedido que falhou. Escreve no `registo.md` a observação 6, o método e o código de `TheProject.html`. O que deve ficar escrito: GET e 200. Escreve também a observação 7, o código de `NaoExiste.html`. O que deve ficar escrito: 404.
+Sabes dizer as partes de um endereço. Escreve no `registo.md` a observação 5: o protocolo, o domínio e o caminho do endereço do primeiro site.
 
-Pensa antes de continuares: o 404 começa por 4, e o 500, que quer dizer que o servidor avariou, começa por 5. O que diz o primeiro algarismo? A resposta: diz a família do código. Um código começado por 4 quer dizer que o pedido tem um problema, aqui uma página que não existe. Um código começado por 5 quer dizer que o problema é do servidor.
+Pensa antes de continuares: no caminho `/hypertext/WWW/TheProject.html`, o que é a parte `TheProject.html`? A resposta: o nome do ficheiro, dentro das pastas `hypertext` e `WWW` do servidor.
 
-## Fase 6: Uma página de hoje faz muitos pedidos
+## Fase 6: O pedido diz o que o browser quer
 
-A página de 1992 é um só ficheiro, só com texto. Uma página de hoje precisa também de imagens, ícones, folhas de estilos (os ficheiros com o CSS), ficheiros de JavaScript e tipos de letra. O browser faz um pedido à parte para cada um. Para saber mais, lê a secção "Cliente e servidor" do [guia](../01-web-e-planeamento.md).
+Segues, no separador Network, o pedido que o browser fez para mostrar o primeiro site. Rever: [O pedido diz o que o browser quer](../01-web-e-planeamento.md#o-pedido-diz-o-que-o-browser-quer).
 
-1. Abre um separador novo. As ferramentas do programador abrem-se em cada separador à parte. Por isso, carrega em F12 neste separador novo e escolhe o separador Network. Só depois escreve, na barra de endereço, o endereço da página do repositório da disciplina no GitHub, e carrega em Enter:
+1. Ainda na página do primeiro site, com as ferramentas abertas, carrega no separador Network (em português, Rede). O que deves ver: a lista está vazia, porque as ferramentas só registam os pedidos feitos enquanto estão abertas.
+
+2. Na fila de cima do separador, marca a caixa Disable cache (em português, Desativar cache). A cache é a cópia que o browser guardou da página na primeira visita. Sem a caixa marcada, ele podia usá-la em vez de pedir a página ao servidor.
+
+3. Recarrega a página com F5 (Cmd+R no Mac). O que deves ver: aparece uma linha com o nome `TheProject.html`. É o pedido que o browser fez ao servidor. Na barra de baixo das ferramentas, o total de pedidos é 1, porque esta página é só texto. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
+
+4. Carrega na linha `TheProject.html`. No painel que se abre, carrega no separador Headers, em português Cabeçalhos, que mostra o que foi no pedido e veio na resposta. Procura o endereço do pedido, Request URL, e o método, Request Method. O que deves ver: o endereço é o da barra de endereço, e o método é `GET`. Isto quer dizer que o browser pediu ao servidor "dá-me este ficheiro".
+
+### Paragem 6
+
+Seguiste um pedido, com o endereço e o método. Escreve no `registo.md` a observação 6: o método do pedido de `TheProject.html`, que é `GET`.
+
+Pensa antes de continuares: quando carregas numa ligação, que método usa o browser? A resposta: também o `GET`, porque está a pedir outro ficheiro ao servidor.
+
+## Fase 7: A resposta diz como correu o pedido
+
+Lês o código da resposta a um pedido que correu bem, e provocas um pedido que corre mal. Rever: [A resposta diz como correu o pedido](../01-web-e-planeamento.md#a-resposta-diz-como-correu-o-pedido).
+
+1. No separador Headers, que ainda tens aberto, procura o código de resposta, Status Code. O que deves ver: `200 OK`. Isto quer dizer que o servidor encontrou a página e a enviou. Fecha o painel do pedido, no X do canto, e o mesmo 200 aparece na coluna Status da lista. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
+
+2. Agora provoca um erro de propósito. Antes de o fazeres, prevê: que código de resposta vai dar uma página que não existe? Na barra de endereço, muda o fim do endereço de `TheProject.html` para `NaoExiste.html` e carrega em Enter. O que deves ver: a página mostra "Not Found", e no separador Network a linha `NaoExiste.html` tem o código 404. O servidor respondeu, mas a dizer que o que pediste não existe.
+
+### Paragem 7
+
+Leste o código de uma resposta certa e o de uma resposta a um pedido que falhou. Escreve no `registo.md` a observação 7: o código de `TheProject.html`, 200, e o de `NaoExiste.html`, 404.
+
+Pensa antes de continuares: o 404 começa por 4, e o 500, que quer dizer que o servidor avariou, começa por 5. O que diz o primeiro algarismo? A resposta: a família do código. Um código começado por 4 quer dizer que o problema está no pedido, aqui uma página que não existe. Um começado por 5 quer dizer que o problema é do servidor.
+
+## Fase 8: Uma página de hoje faz muitos pedidos
+
+Contas os pedidos de uma página de hoje e comparas com os do primeiro site. Rever: [Uma página de hoje faz muitos pedidos](../01-web-e-planeamento.md#uma-página-de-hoje-faz-muitos-pedidos).
+
+1. Abre um separador novo e, nele, as ferramentas do programador no separador Network. Abre-as antes de escrever o endereço, porque só registam os pedidos feitos com elas abertas. Depois escreve este endereço, o da página do repositório da disciplina, e carrega em Enter:
 
    ```text
    https://github.com/NunoMACastro/epms-2627-1ds-da
    ```
 
-   Abres o Network antes de escrever o endereço porque as ferramentas só registam os pedidos feitos enquanto estão abertas.
+2. Antes de olhares para a barra de baixo das ferramentas, prevê: esta página vai fazer mais ou menos pedidos do que o primeiro site? Depois olha para o total de pedidos. O que deves ver: mais de cem. O número exato muda de visita para visita.
 
-2. Antes de olhares para a barra de baixo das ferramentas, prevê: esta página vai fazer mais ou menos pedidos do que o primeiro site? Depois olha para o número de pedidos. O que deves ver: muitos pedidos, mais de cem. Em dois ensaios a 16 de outubro de 2026, foram entre 170 e 190. O número exato muda de visita para visita, e muda se tiveres uma sessão iniciada no GitHub.
+### Paragem 8
 
-### Paragem 6
+Viste que uma página de hoje faz muitos pedidos. Escreve no `registo.md` a observação 8: o número de pedidos do primeiro site, 1, e o da página do GitHub.
 
-Escreve no `registo.md` a observação 8, o número de pedidos do primeiro site e o da página do GitHub. O que deve ficar escrito: 1 no primeiro site, e o número que viste no GitHub, mais de cem.
+Pensa antes de terminares: porque é que a página do GitHub faz tantos mais pedidos do que a de 1992? A resposta: a de 1992 é um só ficheiro, só com texto. A do GitHub precisa também de imagens, ícones, folhas de estilos, JavaScript e tipos de letra, e cada ficheiro é um pedido.
 
-Pensa antes de terminares: porque é que a página do GitHub faz tantos mais pedidos do que a página de 1992? A resposta: a página de 1992 é um só ficheiro, só com texto, e o browser recebe-a com um único pedido. A página do GitHub precisa também de imagens, ícones, folhas de estilos, ficheiros de JavaScript e tipos de letra. Cada um desses ficheiros é um pedido à parte.
+O teu `registo.md` tem as oito observações. É o resultado deste laboratório.
 
-O teu `registo.md` tem as oito observações. É a evidência deste laboratório.
+## Se alguma coisa falhar
 
-## Problemas frequentes
+1. As ferramentas do programador abriram? Se o F12 não abre nada, experimenta Fn+F12 ou Ctrl+Shift+I (Cmd+Option+I no Mac). Também podes usar o botão direito do rato e Inspecionar.
+2. Os nomes estão em português? Elementos, Consola e Rede são Elements, Console e Network, pela mesma ordem.
+3. As ferramentas estão abertas no separador certo do browser? Cada separador tem as suas. Se mudaste de separador, abre-as outra vez.
+4. Tens Internet? As fases 4 a 8 precisam dela.
 
 ### O F12 não abre nada, ou muda o volume do som
 
-Em alguns portáteis, as teclas F só funcionam com a tecla Fn carregada. Usa Fn+F12, ou Ctrl+Shift+I, ou o botão direito do rato e Inspecionar.
+Em alguns portáteis, as teclas F só funcionam com a tecla Fn carregada. Usa Fn+F12, Ctrl+Shift+I, ou o botão direito do rato e Inspecionar.
 
-### No Edge, o F12 abre uma janela a perguntar se queres mesmo abrir as ferramentas do programador
+### No Edge, o F12 abre uma janela a perguntar se queres abrir as ferramentas do programador
 
 O Edge pede confirmação da primeira vez. Escolhe a opção de abrir as ferramentas.
 
@@ -245,23 +207,27 @@ Podem estar desativadas nos computadores da escola. Avisa o professor.
 
 ### As ferramentas abriram num sítio incómodo, a tapar a página
 
-Podem ficar à direita, em baixo ou numa janela à parte. No canto superior direito das ferramentas há um botão com três pontos. Em Dock side, escolhe outra posição.
+No canto superior direito das ferramentas há um botão com três pontos. Em Dock side, escolhe outra posição.
 
 ### Não encontro a pasta `01-frontend` dentro da pasta descompactada
 
-No Windows, a pasta descompactada pode ter outra pasta com o mesmo nome lá dentro. Abre-a até veres `01-frontend`, `exemplos` e as outras.
+No Windows, a pasta descompactada pode ter outra pasta com o mesmo nome lá dentro. Abre-a até veres `01-frontend` e `exemplos`.
 
 ### As ligações da Estante Digital não abrem, ou o logótipo não aparece
 
-Abriste a página dentro do ficheiro ZIP, sem o descompactar. Descompacta o ZIP, como diz o passo 2 de "Preparar o projeto", e abre a página a partir da pasta descompactada.
+Abriste a página dentro do ZIP, sem o descompactar. Descompacta-o, como diz o passo 2 de "Preparar o projeto", e abre a página a partir da pasta descompactada.
 
 ### Não consigo mudar o título no código-fonte
 
 O código-fonte, que se abre com Ctrl+U, mostra o ficheiro e não deixa editar. O título muda-se no separador Elements, com duplo clique no texto do `h1`.
 
-### Escrevi o `body` entre os elementos que faltam no ficheiro do primeiro site
+### O Ctrl+U não mostra nada
 
-Volta ao código-fonte e procura a linha 5: lá está o `<BODY>`. O ficheiro tem o `body`, e por isso não conta. Os que faltam são o `html` e o `head`.
+Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vazia da página e escolhe Ver código-fonte da página, ou View page source, com o browser em inglês.
+
+### A página do primeiro site não abre
+
+Não há ligação à Internet, ou a rede da escola bloqueia o endereço. Avisa o professor, que pode projetar o que se vê nas fases 4 a 8.
 
 ### O separador Network está vazio
 
@@ -271,31 +237,20 @@ As ferramentas só registam os pedidos feitos com elas abertas. Recarrega a pág
 
 O browser já tinha guardado uma cópia da página e só perguntou ao servidor se ela tinha mudado. O 304 quer dizer "não mudou, usa a cópia que tens". Marca a caixa Disable cache, na fila de cima do separador Network, e recarrega.
 
-### A página do primeiro site não abre
-
-Não há ligação à Internet, ou a rede da escola bloqueia o endereço. Avisa o professor. Ele pode projetar o que se vê nas fases 4, 5 e 6.
-
-### O Ctrl+U não mostra nada
-
-Em alguns browsers o atalho é outro. Carrega com o botão direito numa zona vazia da página e escolhe Ver código-fonte da página.
-
 ## Desafios
 
 Escreve as explicações dos desafios no fim do teu `registo.md`.
 
-1. Na Estante Digital, muda no DOM o texto da ligação "Sobre", do menu, para "Quem somos", e depois carrega nela. Antes de carregares, prevê: a ligação leva à mesma página que antes? E, na página a que chegas, o menu diz "Sobre" ou "Quem somos"? Explica o que viste com as palavras "ficheiro" e "DOM". Pista: pensa no que o browser faz sempre que abre uma página.
+1. Na Estante Digital, muda no DOM o texto da ligação "Sobre", do menu, para "Quem somos", e depois carrega nela. A ligação leva à mesma página que antes? Na página a que chegas, o menu diz "Sobre" ou "Quem somos"? Explica o que viste com as palavras "ficheiro" e "DOM". Pista: pensa no que o browser faz sempre que abre uma página.
 
-2. Na Estante Digital, antes de abrires o separador Elements, prevê: o browser vai acrescentar à árvore algum elemento, como fez com o primeiro site? Confirma, comparando o código-fonte com o topo da árvore, e explica o que viste. Pista: procura no código-fonte da Estante Digital as partes do esqueleto que faltavam ao ficheiro de 1992.
+2. Na Estante Digital, o browser acrescenta à árvore algum elemento, como fez com o primeiro site? Confirma, comparando o código-fonte com o topo da árvore, e explica o que viste. Pista: procura no código-fonte da Estante as partes que faltavam ao ficheiro de 1992.
 
 3. Na barra de endereço da Estante Digital, muda `index.html` para `naoexiste.html` e carrega em Enter. O que aparece? Porque é que não é um 404, como no primeiro site? Pista: pensa em quem responde ao pedido quando a página vem do teu disco.
 
 ## Antes de terminares
 
-- [ ] O teu `registo.md` tem as oito observações, e está guardado.
-- [ ] O `registo.md` tem também as frases da fase 3, com as palavras "ficheiro" e "DOM" e as três coisas da resposta completa.
-- [ ] Escolheste, na paragem 2, a forma de encontrar o logótipo na árvore, e sabes porquê.
+- [ ] O teu `registo.md` tem as oito observações e as frases da fase 3, e está guardado.
 - [ ] Sabes abrir as ferramentas do programador e encontrar na árvore qualquer parte de uma página.
 - [ ] Sabes seguir um pedido no separador Network e ler o método e o código de resposta.
-- [ ] Consegues explicar, por palavras tuas, porque é que o DOM pode ser diferente do ficheiro, e o que quer dizer um 404.
 
 ![Rodapé](../../imagens/rodape.png)

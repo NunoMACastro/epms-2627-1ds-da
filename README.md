@@ -2,31 +2,23 @@
 
 # Desenvolvimento de Aplicações · 10.º DS
 
-Materiais de Desenvolvimento de Aplicações do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Podes estudar estes materiais antes de a matéria ser dada na aula.
+Materiais de Desenvolvimento de Aplicações do 10.º ano do curso Técnico/a de Desenvolvimento de Software. Podes lê-los antes de serem dados na aula.
 
 ## Por onde começar
 
-Abre a área [Frontend](01-frontend/README.md), que tem os temas pela ordem de estudo e diz por onde a turma começou. Cada tema tem três tipos de documento:
+Abre a área [Frontend](01-frontend/README.md), com os temas pela ordem de estudo. Cada tema tem estes documentos:
 
-- o guia, para ler e estudar;
-- o laboratório, para seguir passo a passo no computador, sem precisares de abrir o guia;
-- a ficha de exercícios, para praticares sozinho.
+- o guia, com a matéria por escrito, para estudares;
+- o laboratório, para fazeres no computador, passo a passo;
+- a ficha de exercícios, para treinares sozinho.
 
-Em cada área, os guias estão na pasta da área. Os laboratórios estão na pasta `laboratorios` e as fichas na pasta `exercicios`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento. Se tinhas guardado a ligação para um laboratório ou uma ficha, procura o documento nessas pastas.
+Em cada área, os guias estão na pasta da área, os laboratórios na pasta `laboratorios` e as fichas na pasta `exercicios`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento.
 
 ## As áreas
 
 | Área | Módulo |
 | --- | --- |
 | [Frontend](01-frontend/README.md) | UC02833, Conceber aplicações para a web na vertente frontend |
-
-A disciplina tem também a UC00617, Utilizar serviços Git e GitHub, dada intercalada.
-
-## Como estudar
-
-Lê o guia antes de escreveres código: primeiro a explicação, depois o exemplo guiado. Antes de abrires uma página no browser, tenta prever o que vais ver. É aí que percebes se a ideia ficou entendida. As resoluções dos exercícios não estão aqui, porque se trabalham na aula.
-
-Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num material, avisa o professor.
 
 ## Outras pastas
 
