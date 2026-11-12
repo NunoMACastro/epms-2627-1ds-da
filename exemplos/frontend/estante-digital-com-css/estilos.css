@@ -1,0 +1,138 @@
+/* estilos.css: a folha de estilos da Estante Digital.
+   As três páginas ligam-se a ela com <link rel="stylesheet" href="estilos.css">.
+   As regras vão do geral, o corpo da página, para o particular, os cartões. */
+
+/* As cores e o espaço do site, cada um com um nome.
+   Para mudar a cor principal no site todo, muda-se só esta linha. */
+:root {
+  --cor-principal: #1f4e8c;
+  --cor-texto: #222222;
+  --cor-fundo: #f7f5f0;
+  --cor-cartao: #ffffff;
+  --cor-borda: #c9d3e0;
+  --espaco: 1rem;
+}
+
+/* Em todos os elementos, a largura passa a incluir o padding e a borda.
+   Sem isto, uma caixa com width: 100% e padding fica mais larga do que o pai. */
+* {
+  box-sizing: border-box;
+}
+
+/* O corpo da página: a letra e as cores de base.
+   A cor e a letra herdam-se, e por isso servem para todos os elementos de dentro. */
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+/* O cabeçalho: o nome do site de um lado e o menu do outro.
+   O flex-wrap deixa o menu passar para baixo do nome quando não cabe ao lado. */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco);
+  padding: var(--espaco);
+  color: #ffffff;
+  background-color: var(--cor-principal);
+}
+
+/* O parágrafo do logótipo e do nome: o desenho e o texto alinhados ao centro. */
+header p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* O menu: os itens da lista lado a lado, sem as bolinhas nem o recuo da lista. */
+nav ul {
+  display: flex;
+  gap: var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* As ligações do cabeçalho ficam brancas. Sem esta regra, ficavam azuis
+   sobre o fundo azul, porque a cor das ligações não se herda do header. */
+header a {
+  color: #ffffff;
+}
+
+/* O conteúdo principal não passa de uma largura confortável para ler.
+   A margem automática, à esquerda e à direita, põe-no ao centro. */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espaco);
+}
+
+/* Os títulos na cor principal, com as linhas mais juntas do que no texto. */
+h1,
+h2 {
+  color: var(--cor-principal);
+  line-height: 1.2;
+}
+
+/* As listas de recursos: os cartões lado a lado, e na linha seguinte
+   quando já não cabem. */
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+  padding: 0;
+  list-style: none;
+}
+
+/* Cada cartão: uma caixa branca com borda e cantos redondos.
+   Parte de 15rem de largura e cresce para ocupar o espaço livre da linha. */
+.cartoes li {
+  flex-basis: 15rem;
+  flex-grow: 1;
+  padding: var(--espaco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+  background-color: var(--cor-cartao);
+}
+
+/* A dica ao lado da ficha do livro: uma caixa branca com uma barra à esquerda. */
+aside {
+  margin-top: var(--espaco);
+  padding: var(--espaco);
+  border-left: 0.5rem solid var(--cor-principal);
+  background-color: var(--cor-cartao);
+}
+
+/* Ao passar o rato, o sublinhado da ligação fica mais grosso. */
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+/* O foco do teclado fica bem visível: uma moldura grossa, afastada da ligação. */
+a:focus-visible {
+  outline: 3px solid var(--cor-principal);
+  outline-offset: 2px;
+}
+
+/* No cabeçalho, o fundo já é da cor principal, e uma moldura dessa cor não se via.
+   Esta regra ganha à anterior porque o seletor é mais específico. */
+header a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* O rodapé: texto mais pequeno, ao centro, separado do conteúdo por uma linha. */
+footer {
+  padding: var(--espaco);
+  border-top: 1px solid var(--cor-borda);
+  font-size: 0.875rem;
+  text-align: center;
+}

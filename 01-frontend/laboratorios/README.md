@@ -10,5 +10,6 @@ Um laboratório não é uma ficha de exercícios. No laboratório, aprendes a fa
 | --- | --- |
 | 01 A Web, os utilizadores e o planeamento | [laboratório](01-web-e-planeamento-laboratorio.md) |
 | 02 HTML e semântica | [laboratório](02-html-e-semantica-laboratorio.md) |
+| 03 CSS e Flexbox | [laboratório](03-css-e-flexbox-laboratorio.md) |
 
 ![Rodapé](../../imagens/rodape.png)

@@ -1030,7 +1030,7 @@ Os atributos deste guia:
 
 ## O que vem a seguir
 
-No tema seguinte, CSS explicado e Flexbox, dás aspeto às tuas páginas sem mudar o HTML.
+No tema seguinte, CSS e Flexbox, dás aspeto às tuas páginas sem mudar o HTML.
 
 ## Para saber mais
 
