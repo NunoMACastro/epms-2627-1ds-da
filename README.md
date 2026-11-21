@@ -25,5 +25,7 @@ Em cada área, os guias estão na pasta da área, os laboratórios na pasta `lab
 
 - [Exemplos](exemplos/README.md): sites de exemplo, para abrir no browser e ler no editor.
 - [Projeto](projeto/README.md): os modelos para planear e documentar o teu site.
+- [Consulta rápida de HTML](consulta/html-esqueleto-e-etiquetas.md): o esqueleto de uma página e as etiquetas de HTML mais usadas, com um exemplo de cada uma.
+- [Consulta rápida de CSS](consulta/css-formas-e-propriedades.md): as formas de pôr CSS numa página, os seletores e as propriedades mais usadas, com um exemplo de cada uma.
 
 ![Rodapé](imagens/rodape.png)

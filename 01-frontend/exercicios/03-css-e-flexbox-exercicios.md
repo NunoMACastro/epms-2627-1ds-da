@@ -2,11 +2,11 @@
 
 # Ficha de exercícios: CSS e Flexbox
 
-Praticas as regras de CSS, a forma como o browser decide qual ganha, o modelo de caixa e o Flexbox. Os exercícios 1 a 8 são obrigatórios. Trabalha numa pasta só para esta ficha, fora da pasta do teu site. As respostas dos exercícios 1 a 5 vão para um ficheiro `respostas.md`, com o número do exercício e a letra da alínea. Os exercícios 6 a 8 fazem-se numa pasta `banda-da-escola`, dentro da pasta da ficha. No fim, entrega a pasta da ficha, com o `respostas.md` e a pasta `banda-da-escola`, como o professor indicar. Para rever: o [guia do tema](../03-css-e-flexbox.md) e o [laboratório](../laboratorios/03-css-e-flexbox-laboratorio.md).
+Praticas as regras de CSS, a forma como o browser decide qual ganha, o modelo de caixa, o Flexbox e o `position`. Os exercícios 1 a 9 são obrigatórios. Trabalha numa pasta só para esta ficha, fora da pasta do teu site. As respostas dos exercícios 1 a 5 vão para um ficheiro `respostas.md`, com o número do exercício e a letra da alínea. Os exercícios 6 a 9 fazem-se numa pasta `banda-da-escola`, dentro da pasta da ficha. No fim, entrega a pasta da ficha, com o `respostas.md` e a pasta `banda-da-escola`, como o professor indicar. Para rever: o [guia do tema](../03-css-e-flexbox.md) e o [laboratório](../laboratorios/03-css-e-flexbox-laboratorio.md).
 
 ## O cenário
 
-Os exercícios voltam ao site imaginário da Banda da Escola. A página dos concertos tem um cabeçalho, com o nome da banda e um menu, e a lista dos próximos concertos. Nos exercícios 6 a 8, dás-lhe o aspeto todo, com uma folha de estilos tua.
+Os exercícios voltam ao site imaginário da Banda da Escola. A página dos concertos tem um cabeçalho, com o nome da banda e um menu, e a lista dos próximos concertos. Nos exercícios 6 a 9, dás-lhe o aspeto todo, com uma folha de estilos tua.
 
 ## Exercício 1: As partes de uma regra
 
@@ -218,6 +218,32 @@ Percorre a página com a tecla Tab. Faz com que o foco nas duas ligações do me
 
 Rever: [As pseudo-classes :hover e :focus-visible](../03-css-e-flexbox.md#as-pseudo-classes-hover-e-focus-visible) e [O foco tem de se ver](../03-css-e-flexbox.md#o-foco-tem-de-se-ver).
 
+## Exercício 9: O concerto esgotado
+
+A Festa de Natal esgotou. No `concertos.html`, troca a linha do primeiro cartão por esta, com a etiqueta no início:
+
+```html
+<li><strong class="esgotado">Esgotado</strong> Festa de Natal: 12 de dezembro, no ginásio.</li>
+```
+
+No `estilos.css`, dá à etiqueta este aspeto:
+
+- fica no canto de baixo, à esquerda, do cartão, por dentro da borda e um pouco afastada dela;
+- tem um fundo próprio, com um contraste de 4,5 ou mais com o texto dela;
+- em nenhuma largura da janela tapa o texto do concerto;
+- os três cartões continuam a arrumar-se como no exercício 7.
+
+Testa numa janela larga, com o browser no ecrã todo, e na mais estreita que o browser deixar.
+
+Rever: [O position absolute e a caixa de referência](../03-css-e-flexbox.md#o-position-absolute-e-a-caixa-de-referência) e [O modelo de caixa](../03-css-e-flexbox.md#o-modelo-de-caixa).
+
+<details>
+<summary>Pista</summary>
+
+Se a etiqueta aparecer longe do cartão, pergunta-te a partir de que caixa o browser está a contar as distâncias.
+
+</details>
+
 ## Desafios
 
 1. No teu `estilos.css`, há cores que se repetem? Passa-as para variáveis de CSS, com nomes que digam para que servem, e confirma que a página fica igual.
@@ -238,10 +264,11 @@ Rever: [As pseudo-classes :hover e :focus-visible](../03-css-e-flexbox.md#as-pse
 ## Critérios de conclusão
 
 - O `respostas.md` tem as respostas aos exercícios 1 a 5, com o número do exercício e a letra da alínea.
-- O `concertos.html` está igual ao da ficha, e todo o aspeto vem do `estilos.css`.
+- O `concertos.html` está igual ao da ficha, com a etiqueta do exercício 9 a mais, e todo o aspeto vem do `estilos.css`.
 - O cabeçalho e os cartões ficam como os exercícios 6 e 7 pedem, numa janela larga e numa estreita.
 - Não aparece nenhuma barra de deslocamento horizontal.
 - O foco vê-se nas duas ligações do menu.
+- A etiqueta "Esgotado" fica no canto de baixo, à esquerda, do primeiro cartão, sem tapar o texto, numa janela larga e numa estreita.
 - O `estilos.css` tem os dois comentários pedidos: o contraste do cabeçalho e a largura de partida dos cartões.
 
 ![Rodapé](../../imagens/rodape.png)

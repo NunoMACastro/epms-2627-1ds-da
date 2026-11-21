@@ -2,7 +2,7 @@
 
 # CSS e Flexbox
 
-Neste guia aprendes a dar aspeto às tuas páginas com CSS, sem mudar o que o HTML diz. Vês como se escreve uma regra, como se escolhem os elementos e qual ganha quando duas regras discordam. Depois arrumas caixas lado a lado com o Flexbox. O exemplo é a Estante Digital, que ganha uma folha de estilos passo a passo.
+Neste guia aprendes a dar aspeto às tuas páginas com CSS, sem mudar o que o HTML diz. Vês como se escreve uma regra, como se escolhem os elementos e qual ganha quando duas regras discordam. Depois arrumas caixas lado a lado com o Flexbox e pões uma caixa num sítio exato com o `position`. O exemplo é a Estante Digital, que ganha uma folha de estilos passo a passo.
 
 Usa o que viste nos guias anteriores. Rever: [Três linguagens, três trabalhos](01-web-e-planeamento.md#três-linguagens-três-trabalhos), [As ferramentas do programador](01-web-e-planeamento.md#as-ferramentas-do-programador) e [Atributos](02-html-e-semantica.md#atributos). Para praticar: [laboratório](laboratorios/03-css-e-flexbox-laboratorio.md) e [ficha de exercícios](exercicios/03-css-e-flexbox-exercicios.md).
 
@@ -14,8 +14,9 @@ Usa o que viste nos guias anteriores. Rever: [Três linguagens, três trabalhos]
 4. [Parte 4: Texto, cor e unidades](#parte-4-texto-cor-e-unidades)
 5. [Parte 5: Cada elemento é uma caixa](#parte-5-cada-elemento-é-uma-caixa)
 6. [Parte 6: Arrumar com o Flexbox](#parte-6-arrumar-com-o-flexbox)
-7. [Parte 7: Estados e acessibilidade](#parte-7-estados-e-acessibilidade)
-8. [Exemplo guiado: a Estante Digital com CSS](#exemplo-guiado-a-estante-digital-com-css)
+7. [Parte 7: Tirar uma caixa do sítio com o position](#parte-7-tirar-uma-caixa-do-sítio-com-o-position)
+8. [Parte 8: Estados e acessibilidade](#parte-8-estados-e-acessibilidade)
+9. [Exemplo guiado: a Estante Digital com CSS](#exemplo-guiado-a-estante-digital-com-css)
 
 ## Parte 1: Uma folha de estilos
 
@@ -406,13 +407,6 @@ A diferença conta para o modelo de caixa. Num elemento em linha, o `width` e o 
 
 A propriedade `display` muda o comportamento de uma caixa: `display: block` torna-a de bloco, e `display: inline` torna-a em linha. O `display` tem mais um valor, que é o assunto da próxima parte: `flex`.
 
-<details>
-<summary>Para ires mais longe: o position</summary>
-
-A propriedade `position` tira uma caixa do sítio onde o browser a pôs. Com `position: relative`, a caixa desloca-se um pouco do seu lugar, com `top` ou `left`, e o espaço dela fica reservado. Com `position: absolute`, a caixa sai do fluxo e fica num ponto exato do pai, por cima do resto. Serve para casos raros, como uma etiqueta "Novo" no canto de um cartão. Para arrumar a página, usa-se o Flexbox, porque uma caixa posta à mão não se adapta ao ecrã.
-
-</details>
-
 ## Parte 6: Arrumar com o Flexbox
 
 ### O Flexbox põe os filhos lado a lado
@@ -505,7 +499,123 @@ O Flexbox tem também formas de mostrar os itens por outra ordem, como a proprie
 
 </details>
 
-## Parte 7: Estados e acessibilidade
+## Parte 7: Tirar uma caixa do sítio com o position
+
+### O fluxo normal e o position relative
+
+Até aqui, o browser pôs cada caixa no seu sítio. As de bloco ficam umas por baixo das outras, pela ordem do HTML, e os itens de um contentor flex lado a lado. Esta arrumação chama-se **fluxo normal**. Cada caixa ocupa o seu lugar, e esse lugar empurra as seguintes.
+
+A propriedade `position` diz como uma caixa se põe na página. O valor por omissão é `static`: a caixa fica no fluxo normal. Com `position: relative`, a caixa desloca-se a partir do sítio onde estaria, com as propriedades `top`, `right`, `bottom` e `left`.
+
+```css
+aside {
+  position: relative;
+  top: 0.5rem;
+  left: 1rem;
+}
+```
+
+A dica da página do livro, o `aside`, desce meio `rem` e avança `1rem` para a direita. O lugar onde estava continua reservado, e o que vem a seguir não sobe para o ocupar. A dica pode passar por cima do que está à volta.
+
+Os nomes das propriedades enganam. O `top: 0.5rem` afasta a caixa meio `rem` do topo do seu lugar, e por isso ela desce. Com `right: 1rem`, a caixa vai para a esquerda, e com `bottom`, sobe.
+
+### O position absolute e a caixa de referência
+
+Imagina que um livro acabado de chegar à Estante Digital leva uma etiqueta "Novo" no canto de cima, à direita, do seu cartão. No fluxo normal, a etiqueta ficava no início do texto e empurrava-o.
+
+Com `position: absolute`, a caixa sai do fluxo normal: deixa de ocupar lugar, e as outras arrumam-se como se ela não existisse. Fica num ponto exato de outra caixa, a **caixa de referência**, a uma distância dada pelo `top`, pelo `right`, pelo `bottom` e pelo `left`.
+
+No HTML, a etiqueta entra no início do cartão:
+
+```html
+<li>
+  <strong class="etiqueta">Novo</strong>
+  <a href="primeiros-passos-na-web.html">Primeiros passos na Web</a>:
+  livro para quem nunca escreveu uma página, disponível na biblioteca da escola.
+</li>
+```
+
+No CSS, o cartão passa a ser a caixa de referência, e a etiqueta vai para o canto:
+
+```css
+/* O cartão é a caixa de referência da etiqueta. */
+.cartoes li {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #1f4e8c;
+}
+```
+
+A etiqueta fica a meio `rem` do topo e da direita do cartão, por dentro da borda. Como não ocupa lugar, podia tapar o texto do cartão: o `padding-top` maior deixa-lhe espaço livre em cima.
+
+```text
+┌──────────────────────────────────────┐
+│                               Novo   │  a etiqueta, no canto do cartão
+│ Primeiros passos na Web: livro para  │
+│ quem nunca escreveu uma página, ...  │
+└──────────────────────────────────────┘
+```
+
+Para encontrar a caixa de referência, o browser sobe na árvore a partir da etiqueta: o pai, o pai do pai, e assim por diante. A primeira caixa com um `position` diferente de `static` é a caixa de referência. Por isso, o cartão leva `position: relative`, sem `top` nem `left`: não sai do seu lugar e passa a ser a referência.
+
+O erro típico é esquecer o `position: relative` no cartão. A etiqueta procura então outra caixa de referência. Se nenhuma tiver um `position` diferente de `static`, a referência é a primeira janela da página, a que vês antes de descer. A etiqueta vai para o canto de cima, à direita, dessa janela, longe do cartão.
+
+Para arrumar a página, continua a usar-se o Flexbox. Uma caixa posta num ponto exato não se adapta ao ecrã. O `position: absolute` fica para casos como este, uma caixa pequena por cima de outra.
+
+### O position sticky e o fixed prendem uma caixa à janela
+
+Numa página comprida, o menu desaparece quando desces. Com `position: sticky` e `top: 0`, o cabeçalho fica preso no topo da janela enquanto desces.
+
+```css
+header {
+  position: sticky;
+  top: 0;
+}
+```
+
+O `sticky` não tira a caixa do fluxo: o lugar dela continua reservado. Precisa de um limite, como o `top: 0`, e só fica preso enquanto o elemento que a contém está à vista. O cabeçalho da Estante Digital está dentro do `body`, e por isso fica preso até ao fim da página.
+
+Com `position: fixed`, a caixa sai do fluxo e fica presa à janela do browser, sempre no mesmo sítio, mesmo quando desces. Serve, por exemplo, para uma ligação "Voltar ao topo" no canto de baixo:
+
+```css
+.voltar-ao-topo {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+```
+
+Uma caixa fixa não ocupa lugar e fica por cima do conteúdo, e num telemóvel pode tapar parte dele. Por isso, usa-se pouco, e pequena.
+
+Os cinco valores do `position`, lado a lado:
+
+| Valor | Fica no fluxo normal? | A partir de onde contam o `top`, o `right`, o `bottom` e o `left` |
+| --- | --- | --- |
+| `static`, por omissão | Sim | Não contam |
+| `relative` | Sim, com o lugar reservado | Do lugar onde a caixa estaria |
+| `absolute` | Não | Da caixa de referência |
+| `fixed` | Não | Da janela do browser |
+| `sticky` | Sim, com o lugar reservado | Da janela, enquanto o elemento que a contém está à vista |
+
+<details>
+<summary>Para ires mais longe: o z-index</summary>
+
+Quando duas caixas com um `position` diferente de `static` se sobrepõem, a que vem depois no HTML fica à frente. Imagina a Estante Digital com os cartões em `position: relative` e o cabeçalho em `sticky`. Quando desces, os cartões passam por cima do cabeçalho, porque vêm depois dele.
+
+O `z-index` muda isso. Entre caixas com `position` diferente de `static`, a do número maior fica à frente. Com `z-index: 1` no cabeçalho, ele fica à frente dos cartões, que não têm `z-index`.
+
+</details>
+
+## Parte 8: Estados e acessibilidade
 
 ### As pseudo-classes :hover e :focus-visible
 
@@ -849,6 +959,8 @@ Como se corrige: põe o `display: flex` no elemento que contém diretamente as c
 - Elemento em linha: um elemento que fica no meio do texto, como o `a`.
 - Flexbox: a forma do CSS de arrumar os filhos de um elemento numa linha.
 - Contentor: o elemento com `display: flex`, cujos filhos diretos são os itens.
+- Fluxo normal: a arrumação que o browser dá às caixas, pela ordem do HTML, em que cada uma ocupa o seu lugar.
+- Caixa de referência: a caixa a partir da qual se põe uma caixa com `position: absolute`. É a primeira, a subir na árvore a partir dela, com um `position` diferente de `static`.
 - Pseudo-classe: um seletor de estado, como `:hover`, escrito com dois pontos a seguir ao seletor, que o browser aplica conforme o que acontece ao elemento.
 - Contraste: a diferença de claridade entre o texto e o fundo, medida de 1 a 21.
 
@@ -862,6 +974,7 @@ As propriedades deste guia, e o que cada uma faz:
 - `list-style`: as bolinhas ou os números de uma lista. `text-decoration-thickness`: a grossura do sublinhado.
 - `gap`, `justify-content`, `align-items` e `flex-wrap`: o espaço, a posição, o alinhamento e a passagem à linha seguinte dos itens de um contentor flex.
 - `flex-basis` e `flex-grow`: a largura de partida de um item e se ele cresce.
+- `position`: como a caixa se põe na página, com os valores `static`, `relative`, `absolute`, `fixed` e `sticky`. `top`, `right`, `bottom` e `left`: as distâncias que o `position` usa.
 - `outline` e `outline-offset`: a moldura por fora da borda e o afastamento dela.
 
 ## O que vem a seguir
