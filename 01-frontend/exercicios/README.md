@@ -11,5 +11,6 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | 01 A Web, os utilizadores e o planeamento | [ficha](01-web-e-planeamento-exercicios.md) |
 | 02 HTML e semântica | [ficha](02-html-e-semantica-exercicios.md) |
 | 03 CSS e Flexbox | [ficha](03-css-e-flexbox-exercicios.md) |
+| 04 Responsividade e Grid | [ficha](04-responsividade-e-grid-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)
