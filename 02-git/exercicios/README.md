@@ -9,5 +9,6 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | Tema | Ficha |
 | --- | --- |
 | 01 Guardar versões com o Git | [ficha](01-guardar-versoes-com-o-git-exercicios.md) |
+| 02 Partilhar versões com o GitHub | [ficha](02-partilhar-versoes-com-o-github-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)

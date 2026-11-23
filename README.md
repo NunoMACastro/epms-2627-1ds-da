@@ -6,7 +6,7 @@ Materiais de Desenvolvimento de Aplicações do 10.º ano do curso Técnico/a de
 
 ## Por onde começar
 
-Abre a área [Frontend](01-frontend/README.md), com os temas pela ordem de estudo. As duas áreas estudam-se intercaladas: o tema 01 de [Git e GitHub](02-git/README.md) vem a seguir ao tema 01 de frontend e antes do tema 03. Cada tema tem estes documentos:
+Abre a área [Frontend](01-frontend/README.md), com os temas pela ordem de estudo. As duas áreas estudam-se intercaladas. O tema 01 de [Git e GitHub](02-git/README.md) vem a seguir ao tema 01 de frontend e antes do tema 03. O tema 02 vem a seguir ao tema 03 de frontend e antes do tema 04. Cada tema tem estes documentos:
 
 - o guia, com a matéria por escrito, para estudares;
 - o laboratório, para fazeres no computador, passo a passo;

@@ -9,5 +9,6 @@ Um laboratório não é uma ficha de exercícios. No laboratório, aprendes a fa
 | Tema | Laboratório |
 | --- | --- |
 | 01 Guardar versões com o Git | [laboratório](01-guardar-versoes-com-o-git-laboratorio.md) |
+| 02 Partilhar versões com o GitHub | [laboratório](02-partilhar-versoes-com-o-github-laboratorio.md) |
 
 ![Rodapé](../../imagens/rodape.png)

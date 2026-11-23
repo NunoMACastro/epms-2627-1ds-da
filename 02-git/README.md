@@ -11,6 +11,7 @@ O Git guarda as versões do teu site, cada uma com a data, o autor e uma frase q
 | Tema | Guia | Laboratório | Ficha | Exemplos |
 | --- | --- | --- | --- | --- |
 | 01 Guardar versões com o Git | [guia](01-guardar-versoes-com-o-git.md) | [laboratório](laboratorios/01-guardar-versoes-com-o-git-laboratorio.md) | [ficha](exercicios/01-guardar-versoes-com-o-git-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md) |
+| 02 Partilhar versões com o GitHub | [guia](02-partilhar-versoes-com-o-github.md) | [laboratório](laboratorios/02-partilhar-versoes-com-o-github-laboratorio.md) | [ficha](exercicios/02-partilhar-versoes-com-o-github-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md) |
 
 Os guias, com a matéria de cada tema, estão nesta pasta. Os laboratórios estão em [laboratorios](laboratorios/README.md), e as fichas de exercícios, em [exercicios](exercicios/README.md).
 
