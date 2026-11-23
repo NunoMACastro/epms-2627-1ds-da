@@ -12,5 +12,6 @@ Um laboratório não é uma ficha de exercícios. No laboratório, aprendes a fa
 | 02 HTML e semântica | [laboratório](02-html-e-semantica-laboratorio.md) |
 | 03 CSS e Flexbox | [laboratório](03-css-e-flexbox-laboratorio.md) |
 | 04 Responsividade e Grid | [laboratório](04-responsividade-e-grid-laboratorio.md) |
+| 05 Acessibilidade e frameworks de CSS | [laboratório](05-acessibilidade-e-frameworks-de-css-laboratorio.md) |
 
 ![Rodapé](../../imagens/rodape.png)

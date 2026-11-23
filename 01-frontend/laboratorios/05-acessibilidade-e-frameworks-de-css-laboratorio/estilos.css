@@ -1,0 +1,81 @@
+/* estilos.css: a folha de estilos da página de treino do laboratório de acessibilidade.
+   Tem erros de acessibilidade de propósito, para os encontrares no laboratório. */
+
+/* As cores e o espaço da página, cada um com um nome. */
+:root {
+  --cor-principal: #2f4f3a;
+  --cor-texto: #222222;
+  --cor-fundo: #f4f1ea;
+  --espaco: 1rem;
+}
+
+/* A largura de cada caixa inclui o padding e a borda. */
+* {
+  box-sizing: border-box;
+}
+
+/* O corpo da página: a letra e as cores que os outros elementos herdam. */
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+/* O cabeçalho: o logótipo de um lado e o menu do outro. */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco);
+  padding: var(--espaco);
+  background-color: var(--cor-principal);
+}
+
+/* O menu: os itens lado a lado, sem bolinhas nem recuo. */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* As ligações do cabeçalho ficam brancas, sobre o fundo verde. */
+header a {
+  color: #ffffff;
+}
+
+/* A moldura do foco parecia feia, e por isso tirou-se. */
+a:focus {
+  outline: none;
+}
+
+/* O conteúdo ao centro, sem passar de uma largura confortável para ler. */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espaco);
+}
+
+/* Os títulos na cor principal. */
+h1,
+h4 {
+  color: var(--cor-principal);
+}
+
+/* A frase de destaque, em cinzento claro, para se distinguir do resto do texto. */
+.destaque {
+  color: #a8a8a8;
+  font-size: 1.25rem;
+}
+
+/* O rodapé: letra mais pequena, ao centro. */
+footer {
+  padding: var(--espaco);
+  font-size: 0.875rem;
+  text-align: center;
+}

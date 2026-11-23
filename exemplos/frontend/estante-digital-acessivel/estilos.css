@@ -1,0 +1,183 @@
+/* estilos.css: a folha de estilos da Estante Digital, que se adapta ao ecrã.
+   As páginas ligam-se a ela com <link rel="stylesheet" href="estilos.css">.
+   A página de comparação liga-se também ao Bootstrap, antes desta folha.
+   As regras vão do geral, o corpo da página, para o particular, os cartões.
+   As regras de base são as do ecrã estreito; a media query do fim só
+   acrescenta o que muda nos ecrãs largos. */
+
+/* As cores e o espaço do site, cada um com um nome.
+   Para mudar a cor principal no site todo, muda-se só esta linha. */
+:root {
+  --cor-principal: #1f4e8c;
+  --cor-texto: #222222;
+  --cor-fundo: #f7f5f0;
+  --cor-cartao: #ffffff;
+  --cor-borda: #c9d3e0;
+  --espaco: 1rem;
+}
+
+/* Em todos os elementos, a largura passa a incluir o padding e a borda.
+   Sem isto, uma caixa com width: 100% e padding fica mais larga do que o pai. */
+* {
+  box-sizing: border-box;
+}
+
+/* O corpo da página: a letra e as cores de base.
+   A cor e a letra herdam-se, e por isso servem para todos os elementos de dentro. */
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  /* Uma palavra que não cabe na largura da caixa parte-se, em vez de sair
+     pelo lado e criar uma barra de deslocamento horizontal. */
+  overflow-wrap: anywhere;
+}
+
+/* Nenhuma imagem passa da largura da caixa onde está.
+   Sem o height: auto, a altura escrita no HTML ficava igual quando a
+   largura encolhia, e a imagem ficava deformada. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* O cabeçalho: o nome do site de um lado e o menu do outro.
+   O flex-wrap deixa o menu passar para baixo do nome quando não cabe ao lado. */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco);
+  padding: var(--espaco);
+  color: #ffffff;
+  background-color: var(--cor-principal);
+}
+
+/* O parágrafo do logótipo e do nome: o desenho e o texto alinhados ao centro. */
+header p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* O menu: os itens da lista lado a lado, sem as bolinhas nem o recuo da lista. */
+nav ul {
+  display: flex;
+  gap: var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* As ligações do cabeçalho ficam brancas. Sem esta regra, ficavam azuis
+   sobre o fundo azul, porque a regra do browser para o a ganha à cor herdada do header. */
+header a {
+  color: #ffffff;
+}
+
+/* A ligação da página onde se está, a negrito. O aria-current diz ao leitor
+   de ecrã qual é a página atual, e esta regra mostra-o a quem vê a página.
+   O seletor de atributo, entre parênteses retos, escolhe só as ligações
+   que têm o atributo aria-current com o valor "page". */
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+/* O conteúdo principal não passa de uma largura confortável para ler.
+   A margem automática, à esquerda e à direita, põe-no ao centro. */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espaco);
+}
+
+/* Os títulos na cor principal, com as linhas mais juntas do que no texto. */
+h1,
+h2 {
+  color: var(--cor-principal);
+  line-height: 1.2;
+}
+
+/* Os três grupos de recursos: uma grelha com uma só coluna no ecrã
+   estreito, um grupo por baixo do outro. A media query do fim dá-lhe três. */
+.grupos {
+  display: grid;
+  gap: var(--espaco);
+}
+
+/* As listas de recursos: uma grelha com tantas colunas quantas couberem,
+   cada uma com pelo menos 15rem. Todas as colunas ficam com a mesma largura. */
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--espaco);
+  padding: 0;
+  list-style: none;
+}
+
+/* Cada cartão: uma caixa branca com borda e cantos redondos.
+   A largura vem da coluna da grelha. */
+.cartoes li {
+  padding: var(--espaco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+  background-color: var(--cor-cartao);
+}
+
+/* A dica ao lado da ficha do livro: uma caixa branca com uma barra à esquerda. */
+aside {
+  margin-top: var(--espaco);
+  padding: var(--espaco);
+  border-left: 0.5rem solid var(--cor-principal);
+  background-color: var(--cor-cartao);
+}
+
+/* Ao passar o rato, o sublinhado da ligação fica mais grosso. */
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+/* O foco do teclado fica bem visível: uma moldura grossa, afastada da ligação. */
+a:focus-visible {
+  outline: 3px solid var(--cor-principal);
+  outline-offset: 2px;
+}
+
+/* No cabeçalho, o fundo já é da cor principal, e uma moldura dessa cor não se via.
+   Esta regra ganha à anterior porque o seletor é mais específico. */
+header a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* O rodapé: texto mais pequeno, ao centro, separado do conteúdo por uma linha. */
+footer {
+  padding: var(--espaco);
+  border-top: 1px solid var(--cor-borda);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Na página de comparação, os cartões do Bootstrap ficam com a borda e o canto
+   dos cartões da Estante. O Bootstrap guarda estes valores em variáveis com
+   nomes que começam por --bs-, e esta regra dá-lhes outro valor. Esta folha
+   vem depois da do Bootstrap, e por isso ganha. */
+.card {
+  --bs-card-border-color: var(--cor-borda);
+  --bs-card-border-radius: 0.5rem;
+}
+
+/* A partir de 49rem, cada um dos três grupos tem pelo menos 15rem, a largura
+   de um cartão: 3 x 15rem, mais 2rem dos espaços entre os grupos e 2rem do
+   padding do main, são 49rem. Os grupos passam a ficar lado a lado. */
+@media (min-width: 49rem) {
+  .grupos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

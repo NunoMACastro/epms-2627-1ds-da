@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- Logótipo do Clube de Xadrez da página de treino: um peão verde num quadrado branco. Desenho fictício. -->
+  <rect width="48" height="48" rx="8" fill="#ffffff"/>
+  <circle cx="24" cy="14" r="6" fill="#2f4f3a"/>
+  <path d="M18 34 L21 21 H27 L30 34 Z" fill="#2f4f3a"/>
+  <rect x="13" y="34" width="22" height="6" rx="2" fill="#2f4f3a"/>
+</svg>

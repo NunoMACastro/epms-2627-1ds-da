@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- Página de comparação da Estante Digital: os cartões dos livros feitos com o
+     CSS da Estante e feitos com o Bootstrap, lado a lado. Não está no menu,
+     porque não faz parte do site: serve só para comparar. Conteúdo fictício. -->
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comparação com o Bootstrap | Estante Digital</title>
+    <!-- O CSS do Bootstrap 5.3.9, copiado da documentação oficial. Vem de um
+         servidor externo, o jsDelivr. O integrity é a impressão digital do
+         ficheiro: se o ficheiro que chegar for outro, o browser recusa-o. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <!-- A folha da Estante vem depois da do Bootstrap: quando as duas dão
+         valores diferentes à mesma propriedade, com seletores iguais, ganha a nossa. -->
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header>
+      <p>
+        <img src="imagens/logotipo.svg" alt="" width="48" height="48">
+        Estante Digital
+      </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Os livros com o CSS da Estante e com o Bootstrap</h1>
+      <p>
+        Esta página compara os cartões dos livros feitos de duas maneiras.
+        Não está no menu, porque não faz parte do site.
+      </p>
+
+      <section>
+        <h2>Com o CSS da Estante</h2>
+        <ul class="cartoes">
+          <li>
+            <a href="primeiros-passos-na-web.html">Primeiros passos na Web</a>:
+            livro para quem nunca escreveu uma página, disponível na biblioteca da escola.
+          </li>
+          <li>
+            Pequeno dicionário de HTML: consulta rápida das etiquetas mais usadas,
+            com um exemplo curto para cada uma.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Com o Bootstrap</h2>
+        <!-- Os mesmos dois livros, com as classes do Bootstrap.
+             row e g-3: uma linha da grelha do Bootstrap, com 1rem entre os cartões.
+             list-unstyled: a lista sem bolinhas nem recuo. Os exemplos da
+             documentação usam div, mas isto continua a ser uma lista. -->
+        <ul class="row g-3 list-unstyled">
+          <!-- col-sm-6: meia linha a partir de 576 píxeis.
+               col-lg-4: um terço da linha a partir de 992 píxeis. -->
+          <li class="col-sm-6 col-lg-4">
+            <!-- card e card-body: a caixa do cartão e o espaço por dentro.
+                 h-100: o cartão ocupa a altura toda da coluna. -->
+            <div class="card h-100">
+              <div class="card-body">
+                <a href="primeiros-passos-na-web.html">Primeiros passos na Web</a>:
+                livro para quem nunca escreveu uma página, disponível na biblioteca da escola.
+              </div>
+            </div>
+          </li>
+          <li class="col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                Pequeno dicionário de HTML: consulta rápida das etiquetas mais usadas,
+                com um exemplo curto para cada uma.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Estante Digital, site de exemplo dos materiais de Desenvolvimento de
+        Aplicações do 10.º ano. Conteúdo fictício.
+      </p>
+    </footer>
+  </body>
+</html>

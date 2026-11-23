@@ -14,6 +14,7 @@ O frontend é a parte de uma aplicação que corre no browser, a que o utilizado
 | 02 HTML e semântica | [guia](02-html-e-semantica.md) | [laboratório](laboratorios/02-html-e-semantica-laboratorio.md) | [ficha](exercicios/02-html-e-semantica-exercicios.md) | [Estante Digital](../exemplos/frontend/estante-digital/README.md); [Clube de Robótica](../exemplos/frontend/clube-de-robotica/README.md) |
 | 03 CSS e Flexbox | [guia](03-css-e-flexbox.md) | [laboratório](laboratorios/03-css-e-flexbox-laboratorio.md) | [ficha](exercicios/03-css-e-flexbox-exercicios.md) | [Estante Digital com CSS](../exemplos/frontend/estante-digital-com-css/README.md) |
 | 04 Responsividade e Grid | [guia](04-responsividade-e-grid.md) | [laboratório](laboratorios/04-responsividade-e-grid-laboratorio.md) | [ficha](exercicios/04-responsividade-e-grid-exercicios.md) | [Estante Digital responsiva](../exemplos/frontend/estante-digital-responsiva/README.md) |
+| 05 Acessibilidade e frameworks de CSS | [guia](05-acessibilidade-e-frameworks-de-css.md) | [laboratório](laboratorios/05-acessibilidade-e-frameworks-de-css-laboratorio.md) | [ficha](exercicios/05-acessibilidade-e-frameworks-de-css-exercicios.md) | [Estante Digital acessível](../exemplos/frontend/estante-digital-acessivel/README.md) |
 
 Os guias, com a matéria de cada tema, estão nesta pasta. Os laboratórios estão em [laboratorios](laboratorios/README.md), e as fichas de exercícios, em [exercicios](exercicios/README.md).
 

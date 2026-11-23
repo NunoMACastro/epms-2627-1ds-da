@@ -12,5 +12,6 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | 02 HTML e semântica | [ficha](02-html-e-semantica-exercicios.md) |
 | 03 CSS e Flexbox | [ficha](03-css-e-flexbox-exercicios.md) |
 | 04 Responsividade e Grid | [ficha](04-responsividade-e-grid-exercicios.md) |
+| 05 Acessibilidade e frameworks de CSS | [ficha](05-acessibilidade-e-frameworks-de-css-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)
